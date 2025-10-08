@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery & Portfolio - MJ FINSERV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1842b6',
+                        secondary: '#e52429',
+                        accent: '#0d2d7a',
+                        light: '#f8fafc',
+                        dark: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            overflow-x: hidden;
+        }
+        
+        /* Premium Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes slide-up {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animated-gradient {
+            background: linear-gradient(-45deg, #1842b6, #0d2d7a, #e52429, #1842b6);
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .hover-lift {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .fade-in-up {
+            animation: slide-up 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        
+        .premium-shadow {
+            box-shadow: 0 10px 40px rgba(24, 66, 182, 0.1);
+        }
+        
+        .premium-shadow-hover:hover {
+            box-shadow: 0 20px 60px rgba(24, 66, 182, 0.2);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #1842b6 0%, #e52429 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #1842b6, #e52429);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #0d2d7a, #1842b6);
+        }
+        
+        /* Navbar Scroll Effect */
+        .navbar-scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Premium Button */
+        .btn-premium {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s;
+            z-index: -1;
+        }
+        
+        .btn-premium:hover::before {
+            left: 100%;
+        }
+        
+        /* Particle Background */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.2;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Gallery Filter */
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn.active {
+            background: linear-gradient(135deg, #1842b6, #e52429);
+            color: white;
+        }
+        
+        /* Portfolio Cards */
+        .portfolio-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.5rem;
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(24, 66, 182, 0.8));
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .portfolio-card:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        /* Team Cards */
+        .team-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-social {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: linear-gradient(transparent, rgba(24, 66, 182, 0.9));
+            transition: bottom 0.4s ease;
+        }
+        
+        .team-card:hover .team-social {
+            bottom: 0;
+        }
+        
+        /* Modal */
+        .modal {
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal-content {
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        
+        .modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .modal.active .modal-content {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+
+   <!-- Top Bar with Premium Look -->
+    <div class="animated-gradient py-3 px-4 md:px-8 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="particle bg-white" style="width: 4px; height: 4px; top: 20%; left: 10%;"></div>
+            <div class="particle bg-white" style="width: 6px; height: 6px; top: 60%; left: 30%; animation-delay: 2s;"></div>
+            <div class="particle bg-white" style="width: 3px; height: 3px; top: 40%; left: 70%; animation-delay: 4s;"></div>
+        </div>
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center relative z-10">
+            <div class="flex flex-wrap justify-center md:justify-start space-x-6 text-sm text-white mb-2 md:mb-0">
+                <span class="flex items-center hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
+                </span>
+                <span class="flex items-center hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
+                </span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+   <!-- Premium Navbar -->
+<nav id="navbar" class="bg-white sticky top-0 z-50 transition-all duration-500">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="flex justify-between items-center py-4">
+            <div class="flex items-center group cursor-pointer">
+                <div class="bg-gradient-to-br from-primary to-accent text-white p-3 rounded-xl mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-shield-alt text-xl"></i>
+                </div>
+                <div class="text-2xl font-bold text-gradient">MJ FINSERV</div>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Home</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="about.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">About</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+
+                <!-- Desktop Services Dropdown -->
+                <div class="relative group">
+                    <button class="text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center">
+                        Services 
+                        <i class="fas fa-chevron-down ml-1 text-xs group-hover:rotate-180 transition-transform duration-300"></i>
+                    </button>
+                    <div class="absolute left-0 mt-6 w-72 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 border border-gray-100">
+                        <div class="py-2">
+                            <a href="business.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-briefcase mr-3 text-secondary"></i> 
+                                <span>Business Loan</span>
+                            </a>
+                            <a href="persional.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-user mr-3 text-secondary"></i> 
+                                <span>Personal Loan</span>
+                            </a>
+                            <a href="HomeLoan.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-home mr-3 text-secondary"></i> 
+                                <span>Home Loan</span>
+                            </a>
+                            <a href="car.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-car mr-3 text-secondary"></i> 
+                                <span>Car Loan</span>
+                            </a>
+                            <a href="Professionalloan.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-user-tie mr-3 text-secondary"></i> 
+                                <span>Professional Loan</span>
+                            </a>
+                            <a href="OverdraftFacility.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-university mr-3 text-secondary"></i> 
+                                <span>Overdraft Facility</span>
+                            </a>
+                            <a href="InsuranceInvestment.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-shield-alt mr-3 text-secondary"></i> 
+                                <span>Insurance Investment</span>
+                            </a>
+                            <a href="MutualFund.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-chart-line mr-3 text-secondary"></i> 
+                                <span>Mutual Fund</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="gallery.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Gallery</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="contect.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Contact</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+
+            <button id="quoteBtn" class="btn-premium bg-gradient-to-r from-secondary to-red-600 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl hidden md:block">
+                Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+
+            <button id="mobileMenuBtn" class="md:hidden text-dark">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden py-4 border-t border-gray-200 bg-white">
+            <a href="index.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-home mr-3 text-primary"></i> Home
+            </a>
+            <a href="about.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-info-circle mr-3 text-primary"></i> About
+            </a>
+
+            <!-- Mobile Services Dropdown Toggle -->
+            <div class="border-b border-gray-100">
+                <button id="mobileServicesToggle" class="w-full flex justify-between items-center py-3 text-dark hover:text-primary transition-colors duration-300">
+                    <span><i class="fas fa-concierge-bell mr-3 text-primary"></i> Services</span>
+                    <i class="fas fa-chevron-down text-xs"></i>
+                </button>
+                <div id="mobileServicesMenu" class="hidden pl-8 pb-3">
+                    <a href="business.html" class="block py-2 text-dark hover:text-primary">Business Loan</a>
+                    <a href="persional.html" class="block py-2 text-dark hover:text-primary">Personal Loan</a>
+                    <a href="HomeLoan.html" class="block py-2 text-dark hover:text-primary">Home Loan</a>
+                    <a href="car.html" class="block py-2 text-dark hover:text-primary">Car Loan</a>
+                    <a href="Professionalloan.html" class="block py-2 text-dark hover:text-primary">Professional Loan</a>
+                    <a href="OverdraftFacility.html" class="block py-2 text-dark hover:text-primary">Overdraft Facility</a>
+                    <a href="InsuranceInvestment.html" class="block py-2 text-dark hover:text-primary">Insurance Investment</a>
+                    <a href="MutualFund.html" class="block py-2 text-dark hover:text-primary">Mutual Fund</a>
+                </div>
+            </div>
+
+            <a href="gallery.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-images mr-3 text-primary"></i> Gallery
+            </a>
+            <a href="contect.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-envelope mr-3 text-primary"></i> Contact
+            </a>
+            <button id="mobileQuoteBtn" class="mt-4 bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium w-full">
+                Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+
+
+
+    <!-- Gallery Hero Section -->
+    <section class="py-24 animated-gradient text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="absolute inset-0">
+            <div class="particle bg-white" style="width: 8px; height: 8px; top: 10%; left: 15%;"></div>
+            <div class="particle bg-white" style="width: 6px; height: 6px; top: 70%; left: 80%; animation-delay: 2s;"></div>
+            <div class="particle bg-white" style="width: 10px; height: 10px; top: 30%; left: 60%; animation-delay: 4s;"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 fade-in-up leading-tight">Our <span class="text-white">Gallery</span></h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 fade-in-up delay-200">Explore our portfolio of successful projects, team members, and company achievements.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6 fade-in-up delay-400">
+                <a href="#portfolio" class="btn-premium bg-white text-primary px-12 py-5 rounded-xl font-bold text-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                    View Portfolio <i class="fas fa-briefcase ml-2"></i>
+                </a>
+                <a href="#team" class="btn-premium glass-effect text-white px-12 py-5 rounded-xl font-bold text-lg hover:bg-white hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">
+                    Meet Our Team <i class="fas fa-users ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6">Our <span class="text-gradient">Portfolio</span></h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">A showcase of our successful projects and client success stories across various insurance and financial services.</p>
+            </div>
+            
+            <!-- Portfolio Filter -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12 fade-in-up delay-200">
+                <button class="filter-btn active px-6 py-3 bg-white rounded-xl premium-shadow font-medium transition-all duration-300 hover:scale-105" data-filter="all">
+                    All Projects
+                </button>
+                <button class="filter-btn px-6 py-3 bg-white rounded-xl premium-shadow font-medium transition-all duration-300 hover:scale-105" data-filter="insurance">
+                    Insurance
+                </button>
+                <button class="filter-btn px-6 py-3 bg-white rounded-xl premium-shadow font-medium transition-all duration-300 hover:scale-105" data-filter="loans">
+                    Loans
+                </button>
+                <button class="filter-btn px-6 py-3 bg-white rounded-xl premium-shadow font-medium transition-all duration-300 hover:scale-105" data-filter="business">
+                    Business
+                </button>
+                <button class="filter-btn px-6 py-3 bg-white rounded-xl premium-shadow font-medium transition-all duration-300 hover:scale-105" data-filter="success">
+                    Success Stories
+                </button>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-card premium-shadow hover-lift fade-in-up" data-category="insurance">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Life Insurance Project" class="w-full h-80 object-cover">
+                    <div class="portfolio-overlay">
+                        <div class="text-white">
+                            <h3 class="text-2xl font-bold mb-2">Life Insurance Campaign</h3>
+                            <p class="mb-4">Comprehensive life insurance solutions for families</p>
+                            <button class="view-project-btn bg-white text-primary px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300" data-project="1">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-card premium-shadow hover-lift fade-in-up delay-100" data-category="loans">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Home Loan Project" class="w-full h-80 object-cover">
+                    <div class="portfolio-overlay">
+                        <div class="text-white">
+                            <h3 class="text-2xl font-bold mb-2">Home Loan Program</h3>
+                            <p class="mb-4">Affordable home financing for first-time buyers</p>
+                            <button class="view-project-btn bg-white text-primary px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300" data-project="2">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-card premium-shadow hover-lift fade-in-up delay-200" data-category="business">
+                    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Business Insurance Project" class="w-full h-80 object-cover">
+                    <div class="portfolio-overlay">
+                        <div class="text-white">
+                            <h3 class="text-2xl font-bold mb-2">Business Protection Plan</h3>
+                            <p class="mb-4">Comprehensive insurance for small businesses</p>
+                            <button class="view-project-btn bg-white text-primary px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300" data-project="3">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-card premium-shadow hover-lift fade-in-up delay-300" data-category="success">
+                    <img src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Success Story" class="w-full h-80 object-cover">
+                    <div class="portfolio-overlay">
+                        <div class="text-white">
+                            <h3 class="text-2xl font-bold mb-2">Client Success: Johnson Family</h3>
+                            <p class="mb-4">How we helped secure their financial future</p>
+                            <button class="view-project-btn bg-white text-primary px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300" data-project="4">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-card premium-shadow hover-lift fade-in-up delay-400" data-category="insurance">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Health Insurance Project" class="w-full h-80 object-cover">
+                    <div class="portfolio-overlay">
+                        <div class="text-white">
+                            <h3 class="text-2xl font-bold mb-2">Health Insurance Initiative</h3>
+                            <p class="mb-4">Affordable healthcare coverage for employees</p>
+                            <button class="view-project-btn bg-white text-primary px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300" data-project="5">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-card premium-shadow hover-lift fade-in-up delay-500" data-category="loans">
+                    <img src="https://images.unsplash.com/photo-1554224154-26032ffc8dbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Auto Loan Project" class="w-full h-80 object-cover">
+                    <div class="portfolio-overlay">
+                        <div class="text-white">
+                            <h3 class="text-2xl font-bold mb-2">Auto Financing Program</h3>
+                            <p class="mb-4">Flexible auto loans with competitive rates</p>
+                            <button class="view-project-btn bg-white text-primary px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300" data-project="6">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-24 bg-gradient-to-br from-light via-white to-light relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6">Meet Our <span class="text-gradient">Team</span></h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">Our dedicated team of financial experts is committed to providing you with the best insurance and loan solutions.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-card bg-white rounded-3xl premium-shadow overflow-hidden hover-lift fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="John Smith" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-dark mb-2">John Smith</h3>
+                        <p class="text-primary font-medium mb-4">CEO & Founder</p>
+                        <p class="text-gray-600">With over 20 years of experience in financial services, John leads our company with vision and expertise.</p>
+                    </div>
+                    <div class="team-social">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-card bg-white rounded-3xl premium-shadow overflow-hidden hover-lift fade-in-up delay-100">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sarah Johnson" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-dark mb-2">Sarah Johnson</h3>
+                        <p class="text-primary font-medium mb-4">Chief Financial Officer</p>
+                        <p class="text-gray-600">Sarah brings 15 years of financial management experience to ensure our clients get the best solutions.</p>
+                    </div>
+                    <div class="team-social">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-card bg-white rounded-3xl premium-shadow overflow-hidden hover-lift fade-in-up delay-200">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Michael Brown" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-dark mb-2">Michael Brown</h3>
+                        <p class="text-primary font-medium mb-4">Insurance Director</p>
+                        <p class="text-gray-600">Michael specializes in creating customized insurance plans that meet our clients' unique needs.</p>
+                    </div>
+                    <div class="team-social">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="team-card bg-white rounded-3xl premium-shadow overflow-hidden hover-lift fade-in-up delay-300">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Emily Davis" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-dark mb-2">Emily Davis</h3>
+                        <p class="text-primary font-medium mb-4">Loan Specialist</p>
+                        <p class="text-gray-600">Emily helps clients navigate the loan process and find the best financing options for their goals.</p>
+                    </div>
+                    <div class="team-social">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition Section -->
+    <section class="py-20 bg-white relative overflow-hidden">
+        <div class="absolute bottom-0 left-0 w-full h-full opacity-5">
+            <div class="absolute top-20 right-20 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6">Awards & <span class="text-gradient">Recognition</span></h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">Our commitment to excellence has been recognized by industry leaders and satisfied clients.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gradient-to-br from-white to-light rounded-3xl premium-shadow p-8 text-center hover-lift fade-in-up">
+                    <div class="bg-gradient-to-br from-primary to-accent text-white p-5 rounded-2xl inline-block mb-6 shadow-lg">
+                        <i class="fas fa-award text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Best Insurance Provider 2023</h3>
+                    <p class="text-gray-600">Recognized for outstanding service in the insurance industry</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-white to-light rounded-3xl premium-shadow p-8 text-center hover-lift fade-in-up delay-100">
+                    <div class="bg-gradient-to-br from-primary to-accent text-white p-5 rounded-2xl inline-block mb-6 shadow-lg">
+                        <i class="fas fa-trophy text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Excellence in Customer Service</h3>
+                    <p class="text-gray-600">Awarded for exceptional client satisfaction and support</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-white to-light rounded-3xl premium-shadow p-8 text-center hover-lift fade-in-up delay-200">
+                    <div class="bg-gradient-to-br from-primary to-accent text-white p-5 rounded-2xl inline-block mb-6 shadow-lg">
+                        <i class="fas fa-medal text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Top Financial Advisor</h3>
+                    <p class="text-gray-600">Recognized for expert financial guidance and advice</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-white to-light rounded-3xl premium-shadow p-8 text-center hover-lift fade-in-up delay-300">
+                    <div class="bg-gradient-to-br from-primary to-accent text-white p-5 rounded-2xl inline-block mb-6 shadow-lg">
+                        <i class="fas fa-star text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Innovation Award</h3>
+                    <p class="text-gray-600">For developing innovative insurance and loan products</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 animated-gradient text-white relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="particle bg-white" style="width: 6px; height: 6px; top: 15%; left: 20%;"></div>
+            <div class="particle bg-white" style="width: 8px; height: 8px; top: 65%; left: 75%; animation-delay: 2s;"></div>
+            <div class="particle bg-white" style="width: 5px; height: 5px; top: 45%; left: 50%; animation-delay: 4s;"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-black mb-8 fade-in-up">Ready to Work With <span class="text-white">Our Team?</span></h2>
+            <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto opacity-90 fade-in-up delay-200">Contact us today to discuss how we can help you achieve your financial goals with our premium services.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6 fade-in-up delay-400">
+                <a href="contact.html" class="btn-premium bg-white text-primary px-12 py-5 rounded-xl font-bold text-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                    Contact Us <i class="fas fa-envelope ml-2"></i>
+                </a>
+                <a href="tel:+18001234567" class="btn-premium glass-effect text-white px-12 py-5 rounded-xl font-bold text-lg hover:bg-white hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">
+                    Call Now: (800) 123-4567 <i class="fas fa-phone ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="modal-content bg-white rounded-3xl premium-shadow max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-8">
+                    <h3 id="modalTitle" class="text-3xl font-black text-dark">Project Details</h3>
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700 transition-colors duration-300 hover:rotate-90 transform">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                
+                <div id="modalContent" class="space-y-6">
+                    <!-- Content will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Footer -->
+    <footer class="bg-gradient-to-br from-dark via-gray-900 to-dark text-white pt-20 pb-10 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-20 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-80 h-80 bg-secondary rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="bg-gradient-to-br from-primary to-accent text-white p-3 rounded-xl mr-3 shadow-lg">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                        <div class="text-2xl font-black text-white">MJ FINSERV</div>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Your trusted partner for comprehensive insurance and loan solutions tailored to your financial needs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Home
+                        </a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> About Us
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Services
+                        </a></li>
+                        <li><a href="gallery.html" class="text-white flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Gallery
+                        </a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Contact
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Life Insurance
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Health Insurance
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Home Loans
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Business Loans
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Auto Insurance
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mr-3 mt-1"></i>
+                            <span class="text-gray-400">123 Financial District, Suite 500<br>New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-primary mr-3"></i>
+                            <span class="text-gray-400">+1 (800) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-primary mr-3"></i>
+                            <span class="text-gray-400">info@MJ FINSERV.com</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-white mb-4">Newsletter</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-3 bg-white bg-opacity-10 text-white rounded-l-xl focus:outline-none focus:ring-2 focus:ring-primary w-full placeholder-gray-400">
+                            <button class="bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-r-xl hover:shadow-lg transition-all duration-300 hover:scale-105">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 MJ FINSERV. All rights reserved. | 
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mx-2">Privacy Policy</a> | 
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mx-2">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+        
+        // Portfolio Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+        
+        // Project Modal
+        const projectModal = document.getElementById('projectModal');
+        const closeModalBtn = document.getElementById('closeModal');
+        const viewProjectBtns = document.querySelectorAll('.view-project-btn');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        
+        // Project data
+        const projects = {
+            1: {
+                title: "Life Insurance Campaign",
+                image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Our comprehensive life insurance campaign helped thousands of families secure their financial future with tailored coverage options.",
+                details: [
+                    "Developed customized life insurance plans for different age groups",
+                    "Increased client enrollment by 45% through targeted marketing",
+                    "Provided financial education resources to help clients make informed decisions",
+                    "Implemented digital tools for easy policy management"
+                ],
+                results: "The campaign resulted in a 60% increase in life insurance policy sales and improved client satisfaction scores by 35%."
+            },
+            2: {
+                title: "Home Loan Program",
+                image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Our affordable home financing program helped first-time buyers achieve their dream of homeownership with competitive rates and flexible terms.",
+                details: [
+                    "Created specialized mortgage products for first-time homebuyers",
+                    "Streamlined application process with digital documentation",
+                    "Partnered with real estate agencies for seamless home buying experience",
+                    "Offered financial counseling for credit improvement"
+                ],
+                results: "The program helped over 500 families purchase their first homes and maintained a 95% client satisfaction rate."
+            },
+            3: {
+                title: "Business Protection Plan",
+                image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Comprehensive insurance solutions designed specifically for small businesses to protect against various risks and uncertainties.",
+                details: [
+                    "Developed bundled insurance packages for small businesses",
+                    "Created industry-specific coverage options",
+                    "Implemented risk assessment tools for customized protection",
+                    "Provided 24/7 claims support for business clients"
+                ],
+                results: "Protected over 200 small businesses with tailored insurance solutions, reducing claim processing time by 40%."
+            },
+            4: {
+                title: "Client Success: Johnson Family",
+                image: "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "How our comprehensive financial planning helped the Johnson family secure their future and achieve their financial goals.",
+                details: [
+                    "Created a customized financial plan including insurance and investments",
+                    "Secured life insurance coverage for both parents",
+                    "Established education funds for their two children",
+                    "Developed a retirement savings strategy"
+                ],
+                results: "The Johnson family now has complete financial security with protected assets, education funds, and a clear path to retirement."
+            },
+            5: {
+                title: "Health Insurance Initiative",
+                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Affordable healthcare coverage solutions for employees, providing comprehensive medical protection at competitive rates.",
+                details: [
+                    "Developed group health insurance plans for businesses of all sizes",
+                    "Created flexible coverage options to suit different budgets",
+                    "Implemented telehealth services for convenient access to care",
+                    "Provided wellness programs to promote employee health"
+                ],
+                results: "Covered over 5,000 employees across 50 companies with an average premium savings of 15% compared to market rates."
+            },
+            6: {
+                title: "Auto Financing Program",
+                image: "https://images.unsplash.com/photo-1554224154-26032ffc8dbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Flexible auto loans with competitive rates, making vehicle ownership accessible and affordable for our clients.",
+                details: [
+                    "Created auto loan products with various term options",
+                    "Streamlined approval process with quick decision making",
+                    "Partnered with dealerships for exclusive financing offers",
+                    "Offered refinancing options for existing auto loans"
+                ],
+                results: "Financed over 1,000 vehicles with an average approval time of 24 hours and a 98% client satisfaction rate."
+            }
+        };
+        
+        function openProjectModal(projectId) {
+            const project = projects[projectId];
+            
+            modalTitle.textContent = project.title;
+            
+            modalContent.innerHTML = `
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-1/2">
+                        <img src="${project.image}" alt="${project.title}" class="w-full h-80 object-cover rounded-2xl">
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h4 class="text-xl font-bold text-dark mb-4">Project Overview</h4>
+                        <p class="text-gray-600 mb-6">${project.description}</p>
+                        
+                        <h4 class="text-xl font-bold text-dark mb-4">Key Features</h4>
+                        <ul class="space-y-2 mb-6">
+                            ${project.details.map(detail => `<li class="flex items-start">
+                                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                                <span class="text-gray-600">${detail}</span>
+                            </li>`).join('')}
+                        </ul>
+                        
+                        <h4 class="text-xl font-bold text-dark mb-4">Results</h4>
+                        <p class="text-gray-600">${project.results}</p>
+                    </div>
+                </div>
+            `;
+            
+            projectModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeProjectModal() {
+            projectModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        viewProjectBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const projectId = btn.getAttribute('data-project');
+                openProjectModal(projectId);
+            });
+        });
+        
+        closeModalBtn.addEventListener('click', closeProjectModal);
+        
+        // Close modal when clicking outside
+        projectModal.addEventListener('click', (e) => {
+            if (e.target === projectModal) {
+                closeProjectModal();
+            }
+        });
+        
+        // Fade in animations on scroll
+        const fadeElements = document.querySelectorAll('.fade-in-up');
+        
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            element.style.animationPlayState = 'paused';
+            fadeObserver.observe(element);
+        });
+    </script>
+</body>
+</html>

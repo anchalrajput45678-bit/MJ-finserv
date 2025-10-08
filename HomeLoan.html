@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Loans - MJ FINSERV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1842b6',
+                        secondary: '#e52429',
+                        accent: '#0d2d7a',
+                        light: '#f8fafc',
+                        dark: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            overflow-x: hidden;
+        }
+        
+        /* Premium Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes slide-up {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animated-gradient {
+            background: linear-gradient(-45deg, #1842b6, #0d2d7a, #e52429, #1842b6);
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .hover-lift {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .fade-in-up {
+            animation: slide-up 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        
+        .premium-shadow {
+            box-shadow: 0 10px 40px rgba(24, 66, 182, 0.1);
+        }
+        
+        .premium-shadow-hover:hover {
+            box-shadow: 0 20px 60px rgba(24, 66, 182, 0.2);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #1842b6 0%, #e52429 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #1842b6, #e52429);
+            border-radius: 5px;
+        }
+        
+        /* Navbar Scroll Effect */
+        .navbar-scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Premium Button */
+        .btn-premium {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s;
+            z-index: -1;
+        }
+        
+        .btn-premium:hover::before {
+            left: 100%;
+        }
+        
+        /* Particle Background */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.2;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Mortgage Calculator */
+        .calculator-input {
+            transition: all 0.3s ease;
+        }
+        
+        .calculator-input:focus {
+            box-shadow: 0 0 0 3px rgba(24, 66, 182, 0.1);
+        }
+        
+        /* Loan Types */
+        .loan-type-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .loan-type-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(24, 66, 182, 0.1), transparent);
+            transition: left 0.6s;
+        }
+        
+        .loan-type-card:hover::before {
+            left: 100%;
+        }
+        
+        /* Process Steps */
+        .process-step {
+            position: relative;
+        }
+        
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -40px;
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(to right, #1842b6, #e52429);
+        }
+        
+        @media (max-width: 768px) {
+            .process-step:not(:last-child)::after {
+                display: none;
+            }
+        }
+        
+        /* Interest Rate Tabs */
+        .rate-tab {
+            transition: all 0.3s ease;
+        }
+        
+        .rate-tab.active {
+            background: linear-gradient(135deg, #1842b6, #e52429);
+            color: white;
+        }
+        
+        /* Affordability Calculator */
+        .affordability-meter {
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .affordability-progress {
+            height: 100%;
+            background: linear-gradient(to right, #1842b6, #e52429);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        
+        /* Comparison Table */
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #f1f5f9;
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+
+ <!-- Top Bar with Premium Look -->
+    <div class="animated-gradient py-3 px-4 md:px-8 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="particle bg-white" style="width: 4px; height: 4px; top: 20%; left: 10%;"></div>
+            <div class="particle bg-white" style="width: 6px; height: 6px; top: 60%; left: 30%; animation-delay: 2s;"></div>
+            <div class="particle bg-white" style="width: 3px; height: 3px; top: 40%; left: 70%; animation-delay: 4s;"></div>
+        </div>
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center relative z-10">
+            <div class="flex flex-wrap justify-center md:justify-start space-x-6 text-sm text-white mb-2 md:mb-0">
+                <span class="flex items-center hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
+                </span>
+                <span class="flex items-center hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
+                </span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+   <!-- Premium Navbar -->
+<nav id="navbar" class="bg-white sticky top-0 z-50 transition-all duration-500">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="flex justify-between items-center py-4">
+            <div class="flex items-center group cursor-pointer">
+                <div class="bg-gradient-to-br from-primary to-accent text-white p-3 rounded-xl mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-shield-alt text-xl"></i>
+                </div>
+                <div class="text-2xl font-bold text-gradient">MJ FINSERV</div>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Home</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="about.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">About</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+
+                <!-- Desktop Services Dropdown -->
+                <div class="relative group">
+                    <button class="text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center">
+                        Services 
+                        <i class="fas fa-chevron-down ml-1 text-xs group-hover:rotate-180 transition-transform duration-300"></i>
+                    </button>
+                    <div class="absolute left-0 mt-6 w-72 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 border border-gray-100">
+                        <div class="py-2">
+                            <a href="business.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-briefcase mr-3 text-secondary"></i> 
+                                <span>Business Loan</span>
+                            </a>
+                            <a href="persional.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-user mr-3 text-secondary"></i> 
+                                <span>Personal Loan</span>
+                            </a>
+                            <a href="HomeLoan.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-home mr-3 text-secondary"></i> 
+                                <span>Home Loan</span>
+                            </a>
+                            <a href="car.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-car mr-3 text-secondary"></i> 
+                                <span>Car Loan</span>
+                            </a>
+                            <a href="Professionalloan.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-user-tie mr-3 text-secondary"></i> 
+                                <span>Professional Loan</span>
+                            </a>
+                            <a href="OverdraftFacility.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-university mr-3 text-secondary"></i> 
+                                <span>Overdraft Facility</span>
+                            </a>
+                            <a href="InsuranceInvestment.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-shield-alt mr-3 text-secondary"></i> 
+                                <span>Insurance Investment</span>
+                            </a>
+                            <a href="MutualFund.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-chart-line mr-3 text-secondary"></i> 
+                                <span>Mutual Fund</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="gallery.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Gallery</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="contect.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Contact</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+
+            <button id="quoteBtn" class="btn-premium bg-gradient-to-r from-secondary to-red-600 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl hidden md:block">
+                Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+
+            <button id="mobileMenuBtn" class="md:hidden text-dark">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden py-4 border-t border-gray-200 bg-white">
+            <a href="index.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-home mr-3 text-primary"></i> Home
+            </a>
+            <a href="about.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-info-circle mr-3 text-primary"></i> About
+            </a>
+
+            <!-- Mobile Services Dropdown Toggle -->
+            <div class="border-b border-gray-100">
+                <button id="mobileServicesToggle" class="w-full flex justify-between items-center py-3 text-dark hover:text-primary transition-colors duration-300">
+                    <span><i class="fas fa-concierge-bell mr-3 text-primary"></i> Services</span>
+                    <i class="fas fa-chevron-down text-xs"></i>
+                </button>
+                <div id="mobileServicesMenu" class="hidden pl-8 pb-3">
+                    <a href="business.html" class="block py-2 text-dark hover:text-primary">Business Loan</a>
+                    <a href="persional.html" class="block py-2 text-dark hover:text-primary">Personal Loan</a>
+                    <a href="HomeLoan.html" class="block py-2 text-dark hover:text-primary">Home Loan</a>
+                    <a href="car.html" class="block py-2 text-dark hover:text-primary">Car Loan</a>
+                    <a href="Professionalloan.html" class="block py-2 text-dark hover:text-primary">Professional Loan</a>
+                    <a href="OverdraftFacility.html" class="block py-2 text-dark hover:text-primary">Overdraft Facility</a>
+                    <a href="InsuranceInvestment.html" class="block py-2 text-dark hover:text-primary">Insurance Investment</a>
+                    <a href="MutualFund.html" class="block py-2 text-dark hover:text-primary">Mutual Fund</a>
+                </div>
+            </div>
+
+            <a href="gallery.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-images mr-3 text-primary"></i> Gallery
+            </a>
+            <a href="contect.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-envelope mr-3 text-primary"></i> Contact
+            </a>
+            <button id="mobileQuoteBtn" class="mt-4 bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium w-full">
+                Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- JS for Mobile Menu Toggle -->
+<script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+    const mobileServicesMenu = document.getElementById('mobileServicesMenu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileServicesToggle.addEventListener('click', () => {
+        mobileServicesMenu.classList.toggle('hidden');
+    });
+</script>
+
+
+
+    <!-- Home Loans Hero Section -->
+    <section class="py-24 animated-gradient text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="absolute inset-0">
+            <div class="particle bg-white" style="width: 8px; height: 8px; top: 10%; left: 15%;"></div>
+            <div class="particle bg-white" style="width: 6px; height: 6px; top: 70%; left: 80%; animation-delay: 2s;"></div>
+            <div class="particle bg-white" style="width: 10px; height: 10px; top: 30%; left: 60%; animation-delay: 4s;"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl md:text-7xl font-black mb-6 fade-in-up leading-tight">Home <span class="text-white">Loans</span></h1>
+                <p class="text-xl md:text-2xl mb-8 fade-in-up delay-200 opacity-90">Turn your dream of homeownership into reality with competitive mortgage rates and flexible financing options.</p>
+                <div class="flex flex-col sm:flex-row gap-4 fade-in-up delay-400">
+                    <button class="btn-premium bg-white text-primary px-10 py-4 rounded-xl font-bold text-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                        Apply Now <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                    <button class="btn-premium glass-effect text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">
+                        Check Rates <i class="fas fa-percentage ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Loan Features Section -->
+    <section class="py-20 bg-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6">Why Choose Our <span class="text-gradient">Home Loans</span></h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">Experience the difference with home loan solutions designed to make homeownership accessible and affordable.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gradient-to-br from-white to-light rounded-3xl premium-shadow p-8 text-center hover-lift fade-in-up">
+                    <div class="bg-gradient-to-br from-primary to-accent text-white p-5 rounded-2xl inline-block mb-6 shadow-lg">
+                        <i class="fas fa-percentage text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Low Interest Rates</h3>
+                    <p class="text-gray-600">Competitive rates starting from 6.5% with options for fixed and adjustable rates.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-white to-light rounded-3xl premium-shadow p-8 text-center hover-lift fade-in-up delay-100">
+                    <div class="bg-gradient-to-br from-primary to-accent text-white p-5 rounded-2xl inline-block mb-6 shadow-lg">
+                        <i class="fas fa-hand-holding-usd text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Low Down Payment</h3>
+                    <p class="text-gray-600">Options available with as little as 3% down payment for qualified buyers.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-white to-light rounded-3xl premium-shadow p-8 text-center hover-lift fade-in-up delay-200">
+                    <div class="bg-gradient-to-br from-primary to-accent text-white p-5 rounded-2xl inline-block mb-6 shadow-lg">
+                        <i class="fas fa-bolt text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Fast Approval</h3>
+                    <p class="text-gray-600">Streamlined process with pre-approval in 24 hours and closing in as little as 21 days.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-white to-light rounded-3xl premium-shadow p-8 text-center hover-lift fade-in-up delay-300">
+                    <div class="bg-gradient-to-br from-primary to-accent text-white p-5 rounded-2xl inline-block mb-6 shadow-lg">
+                        <i class="fas fa-user-shield text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Expert Guidance</h3>
+                    <p class="text-gray-600">Dedicated mortgage specialists to guide you through every step of the process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mortgage Calculator Section -->
+    <section class="py-24 bg-gradient-to-br from-light via-white to-light relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2 fade-in-up">
+                    <h2 class="text-4xl md:text-5xl font-black text-dark mb-6">Mortgage <span class="text-gradient">Calculator</span></h2>
+                    <p class="text-gray-600 mb-10 leading-relaxed text-lg">Estimate your monthly mortgage payments and understand the costs of homeownership.</p>
+                    
+                    <div class="bg-white rounded-3xl premium-shadow p-8">
+                        <form id="mortgageCalculator" class="space-y-6">
+                            <div>
+                                <label class="block text-dark mb-3 font-bold">Home Price ($)</label>
+                                <input type="range" id="homePrice" min="100000" max="2000000" step="10000" value="500000" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                                <div class="flex justify-between mt-2">
+                                    <span class="text-gray-500">$100,000</span>
+                                    <span id="homePriceValue" class="text-primary font-bold">$500,000</span>
+                                    <span class="text-gray-500">$2,000,000</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-dark mb-3 font-bold">Down Payment (%)</label>
+                                <input type="range" id="downPayment" min="3" max="50" step="1" value="20" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                                <div class="flex justify-between mt-2">
+                                    <span class="text-gray-500">3%</span>
+                                    <span id="downPaymentValue" class="text-primary font-bold">20%</span>
+                                    <span class="text-gray-500">50%</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-dark mb-3 font-bold">Loan Term (Years)</label>
+                                <input type="range" id="loanTerm" min="15" max="30" step="5" value="30" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                                <div class="flex justify-between mt-2">
+                                    <span class="text-gray-500">15 Years</span>
+                                    <span id="loanTermValue" class="text-primary font-bold">30 Years</span>
+                                    <span class="text-gray-500">30 Years</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-dark mb-3 font-bold">Interest Rate (%)</label>
+                                <input type="range" id="interestRate" min="3" max="10" step="0.1" value="6.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                                <div class="flex justify-between mt-2">
+                                    <span class="text-gray-500">3%</span>
+                                    <span id="interestRateValue" class="text-primary font-bold">6.5%</span>
+                                    <span class="text-gray-500">10%</span>
+                                </div>
+                            </div>
+                            
+                            <div class="pt-6 border-t border-gray-200">
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-gray-600">Monthly Payment:</span>
+                                    <span id="monthlyPayment" class="text-2xl font-black text-primary">$2,528</span>
+                                </div>
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-gray-600">Down Payment:</span>
+                                    <span id="downPaymentAmount" class="text-xl font-bold text-dark">$100,000</span>
+                                </div>
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-gray-600">Loan Amount:</span>
+                                    <span id="loanAmount" class="text-xl font-bold text-dark">$400,000</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-600">Total Interest:</span>
+                                    <span id="totalInterest" class="text-xl font-bold text-dark">$510,175</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 fade-in-up delay-300">
+                    <div class="bg-gradient-to-br from-white to-light rounded-3xl premium-shadow p-10 hover-lift">
+                        <h3 class="text-3xl font-black text-dark mb-8">Check Your <span class="text-gradient">Affordability</span></h3>
+                        
+                        <div class="space-y-6 mb-8">
+                            <div>
+                                <label class="block text-dark mb-3 font-bold">Annual Income ($)</label>
+                                <input type="number" id="annualIncome" value="75000" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300 calculator-input" placeholder="Enter your annual income">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-dark mb-3 font-bold">Monthly Debts ($)</label>
+                                <input type="number" id="monthlyDebts" value="500" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300 calculator-input" placeholder="Enter monthly debt payments">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-dark mb-3 font-bold">Credit Score</label>
+                                <select id="creditScore" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300">
+                                    <option value="580">Below 580 (Poor)</option>
+                                    <option value="620">580-619 (Fair)</option>
+                                    <option value="680" selected>620-679 (Good)</option>
+                                    <option value="720">680-719 (Very Good)</option>
+                                    <option value="800">720+ (Excellent)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-600">Affordable Home Price</span>
+                                <span id="affordablePrice" class="text-primary font-bold">$375,000</span>
+                            </div>
+                            <div class="affordability-meter">
+                                <div id="affordabilityProgress" class="affordability-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        
+                        <div id="affordabilityResult" class="p-4 rounded-xl bg-green-50 border border-green-200 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 text-xl mr-3"></i>
+                                <div>
+                                    <h4 class="font-bold text-green-800">Good affordability!</h4>
+                                    <p class="text-green-700 text-sm">Based on your income, you can comfortably afford homes up to $375,000.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-premium bg-gradient-to-r from-primary to-accent text-white px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 w-full">
+                            Get Pre-Approved <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Loan Types Section -->
+    <section class="py-20 bg-white relative overflow-hidden">
+        <div class="absolute bottom-0 left-0 w-full h-full opacity-5">
+            <div class="absolute top-20 right-20 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6">Home Loan <span class="text-gradient">Options</span></h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">Choose from a variety of home loan programs designed for different financial situations and homebuying goals.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Loan Type 1 -->
+                <div class="loan-type-card bg-gradient-to-br from-white to-light rounded-3xl premium-shadow overflow-hidden hover-lift fade-in-up">
+                    <div class="p-8">
+                        <div class="bg-gradient-to-br from-primary to-accent text-white p-5 rounded-2xl inline-block mb-6 shadow-lg">
+                            <i class="fas fa-home text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-4">Conventional Loans</h3>
+                        <p class="text-gray-600 mb-6 text-lg">Traditional mortgages with competitive rates for borrowers with good credit.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>Down payment: 3-20%</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>Loan terms: 15-30 years</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>Credit score: 620+</span>
+                            </li>
+                        </ul>
+                        <div class="text-lg font-bold text-primary mb-4">Rates from 6.5% APR</div>
+                        <a href="#" class="inline-flex items-center text-primary font-bold hover:text-accent transition-colors duration-300 group">
+                            Learn More 
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Loan Type 2 -->
+                <div class="loan-type-card bg-gradient-to-br from-white to-light rounded-3xl premium-shadow overflow-hidden hover-lift fade-in-up delay-100">
+                    <div class="p-8">
+                        <div class="bg-gradient-to-br from-primary to-accent text-white p-5 rounded-2xl inline-block mb-6 shadow-lg">
+                            <i class="fas fa-flag-usa text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-4">FHA Loans</h3>
+                        <p class="text-gray-600 mb-6 text-lg">Government-backed loans with flexible credit requirements and low down payments.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>Down payment: 3.5%</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>Credit score: 580+</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>Lower credit requirements</span>
+                            </li>
+                        </ul>
+                        <div class="text-lg font-bold text-primary mb-4">Rates from 6.25% APR</div>
+                        <a href="#" class="inline-flex items-center text-primary font-bold hover:text-accent transition-colors duration-300 group">
+                            Learn More 
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Loan Type 3 -->
+                <div class="loan-type-card bg-gradient-to-br from-white to-light rounded-3xl premium-shadow overflow-hidden hover-lift fade-in-up delay-200">
+                    <div class="p-8">
+                        <div class="bg-gradient-to-br from-primary to-accent text-white p-5 rounded-2xl inline-block mb-6 shadow-lg">
+                            <i class="fas fa-shield-alt text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-4">VA Loans</h3>
+                        <p class="text-gray-600 mb-6 text-lg">Zero down payment loans for active military, veterans, and eligible spouses.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>No down payment required</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>No mortgage insurance</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>Competitive interest rates</span>
+                            </li>
+                        </ul>
+                        <div class="text-lg font-bold text-primary mb-4">Rates from 6.0% APR</div>
+                        <a href="#" class="inline-flex items-center text-primary font-bold hover:text-accent transition-colors duration-300 group">
+                            Learn More 
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Loan Type 4 -->
+                <div class="loan-type-card bg-gradient-to-br from-white to-light rounded-3xl premium-shadow overflow-hidden hover-lift fade-in-up delay-300">
+                    <div class="p-8">
+                        <div class="bg-gradient-to-br from-primary to-accent text-white p-5 rounded-2xl inline-block mb-6 shadow-lg">
+                            <i class="fas fa-university text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-4">Jumbo Loans</h3>
+                        <p class="text-gray-600 mb-6 text-lg">Financing for high-value properties that exceed conventional loan limits.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>Loan amounts: $750,000+</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>Down payment: 10-20%</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>Strong credit required</span>
+                            </li>
+                        </ul>
+                        <div class="text-lg font-bold text-primary mb-4">Rates from 6.75% APR</div>
+                        <a href="#" class="inline-flex items-center text-primary font-bold hover:text-accent transition-colors duration-300 group">
+                            Learn More 
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Loan Type 5 -->
+                <div class="loan-type-card bg-gradient-to-br from-white to-light rounded-3xl premium-shadow overflow-hidden hover-lift fade-in-up delay-400">
+                    <div class="p-8">
+                        <div class="bg-gradient-to-br from-primary to-accent text-white p-5 rounded-2xl inline-block mb-6 shadow-lg">
+                            <i class="fas fa-tools text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-4">Renovation Loans</h3>
+                        <p class="text-gray-600 mb-6 text-lg">Finance both home purchase and renovations with a single loan.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>Purchase + renovation costs</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>Based on after-renovation value</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>Various program options</span>
+                            </li>
+                        </ul>
+                        <div class="text-lg font-bold text-primary mb-4">Rates from 6.8% APR</div>
+                        <a href="#" class="inline-flex items-center text-primary font-bold hover:text-accent transition-colors duration-300 group">
+                            Learn More 
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Loan Type 6 -->
+                <div class="loan-type-card bg-gradient-to-br from-white to-light rounded-3xl premium-shadow overflow-hidden hover-lift fade-in-up delay-500">
+                    <div class="p-8">
+                        <div class="bg-gradient-to-br from-primary to-accent text-white p-5 rounded-2xl inline-block mb-6 shadow-lg">
+                            <i class="fas fa-user-tie text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-4">First-Time Homebuyer</h3>
+                        <p class="text-gray-600 mb-6 text-lg">Special programs with down payment assistance and educational resources.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>Down payment assistance</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>Homebuyer education</span>
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                <span>Lower credit requirements</span>
+                            </li>
+                        </ul>
+                        <div class="text-lg font-bold text-primary mb-4">Rates from 6.3% APR</div>
+                        <a href="#" class="inline-flex items-center text-primary font-bold hover:text-accent transition-colors duration-300 group">
+                            Learn More 
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interest Rates Section -->
+    <section class="py-24 bg-gradient-to-br from-light via-white to-light relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6">Current <span class="text-gradient">Interest Rates</span></h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">Compare our competitive mortgage rates and find the best option for your home purchase or refinance.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Rate Tabs -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button class="rate-tab active px-6 py-3 bg-white rounded-xl premium-shadow font-medium transition-all duration-300 hover:scale-105" data-loan-type="conventional">
+                        Conventional
+                    </button>
+                    <button class="rate-tab px-6 py-3 bg-white rounded-xl premium-shadow font-medium transition-all duration-300 hover:scale-105" data-loan-type="fha">
+                        FHA
+                    </button>
+                    <button class="rate-tab px-6 py-3 bg-white rounded-xl premium-shadow font-medium transition-all duration-300 hover:scale-105" data-loan-type="va">
+                        VA
+                    </button>
+                    <button class="rate-tab px-6 py-3 bg-white rounded-xl premium-shadow font-medium transition-all duration-300 hover:scale-105" data-loan-type="jumbo">
+                        Jumbo
+                    </button>
+                </div>
+                
+                <!-- Rates Table -->
+                <div class="bg-white rounded-3xl premium-shadow overflow-hidden fade-in-up delay-200">
+                    <div class="overflow-x-auto">
+                        <table class="w-full comparison-table">
+                            <thead>
+                                <tr class="bg-gradient-to-r from-primary to-accent text-white">
+                                    <th class="px-6 py-4 text-left font-bold">Loan Term</th>
+                                    <th class="px-6 py-4 text-center font-bold">Interest Rate</th>
+                                    <th class="px-6 py-4 text-center font-bold">APR</th>
+                                    <th class="px-6 py-4 text-center font-bold">Monthly Payment*</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ratesTableBody">
+                                <!-- Rates will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="p-4 bg-gray-50 text-sm text-gray-600">
+                        *Monthly payment calculated for a $400,000 loan with 20% down payment. Actual rates may vary based on credit score, loan amount, and other factors.
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12 fade-in-up delay-400">
+                    <p class="text-gray-600 mb-6">Rates updated daily. Lock in your rate for 90 days!</p>
+                    <a href="#" class="btn-premium inline-block bg-gradient-to-r from-primary to-accent text-white px-12 py-5 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                        Lock Your Rate <i class="fas fa-lock ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Buying Process Section -->
+    <section class="py-20 bg-white relative overflow-hidden">
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary opacity-5 rounded-full blur-3xl"></div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6">Home Buying <span class="text-gradient">Process</span></h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">Our streamlined process makes buying a home straightforward and stress-free.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+                <div class="process-step text-center fade-in-up">
+                    <div class="bg-gradient-to-br from-primary to-accent text-white w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-search text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">1. Get Pre-Approved</h3>
+                    <p class="text-gray-600">Complete our quick application and get pre-approved in 24 hours.</p>
+                </div>
+                
+                <div class="process-step text-center fade-in-up delay-100">
+                    <div class="bg-gradient-to-br from-primary to-accent text-white w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-home text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">2. Find Your Home</h3>
+                    <p class="text-gray-600">Shop for your dream home with confidence knowing your budget.</p>
+                </div>
+                
+                <div class="process-step text-center fade-in-up delay-200">
+                    <div class="bg-gradient-to-br from-primary to-accent text-white w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-file-contract text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">3. Submit Offer</h3>
+                    <p class="text-gray-600">Make an offer with the support of our mortgage experts.</p>
+                </div>
+                
+                <div class="process-step text-center fade-in-up delay-300">
+                    <div class="bg-gradient-to-br from-primary to-accent text-white w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-clipboard-check text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">4. Loan Processing</h3>
+                    <p class="text-gray-600">We process your loan application and coordinate with all parties.</p>
+                </div>
+                
+                <div class="process-step text-center fade-in-up delay-400">
+                    <div class="bg-gradient-to-br from-primary to-accent text-white w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-key text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">5. Close & Move In</h3>
+                    <p class="text-gray-600">Sign final documents and get keys to your new home!</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16 fade-in-up delay-500">
+                <a href="#" class="btn-premium inline-block bg-gradient-to-r from-primary to-accent text-white px-12 py-5 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    Start Your Application <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+ <!-- Premium Footer -->
+    <footer class="bg-gradient-to-br from-dark via-gray-900 to-dark text-white pt-20 pb-10 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-20 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-80 h-80 bg-secondary rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="bg-gradient-to-br from-primary to-accent text-white p-3 rounded-xl mr-3 shadow-lg">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                        <div class="text-2xl font-black text-white">MJ FINSERV</div>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Your trusted partner for comprehensive insurance and loan solutions tailored to your financial needs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Home
+                        </a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> About Us
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Services
+                        </a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Gallery
+                        </a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Contact
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Life Insurance
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Health Insurance
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Home Loans
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Business Loans
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Auto Insurance
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mr-3 mt-1"></i>
+                            <span class="text-gray-400">123 Financial District, Suite 500<br>New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-primary mr-3"></i>
+                            <span class="text-gray-400">+1 (800) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-primary mr-3"></i>
+                            <span class="text-gray-400">info@MJ FINSERV.com</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-white mb-4">Newsletter</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-3 bg-white bg-opacity-10 text-white rounded-l-xl focus:outline-none focus:ring-2 focus:ring-primary w-full placeholder-gray-400">
+                            <button class="bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-r-xl hover:shadow-lg transition-all duration-300 hover:scale-105">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 MJ FINSERV. All rights reserved. | 
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mx-2">Privacy Policy</a> | 
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mx-2">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Premium Quote Modal -->
+    <div id="quoteModal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center z-50 hidden transition-opacity duration-300">
+        <div class="bg-white rounded-3xl premium-shadow max-w-lg w-full mx-4 transform transition-all duration-300 scale-95 opacity-0">
+            <div class="p-10">
+                <div class="flex justify-between items-center mb-8">
+                    <h3 class="text-3xl font-black text-dark">Get a <span class="text-gradient">Quote</span></h3>
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700 transition-colors duration-300 hover:rotate-90 transform">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Full Name</label>
+                        <input type="text" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Email Address</label>
+                        <input type="email" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Email" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Phone Number</label>
+                        <input type="tel" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Phone" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Service Type</label>
+                        <select class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="life">Life Insurance</option>
+                            <option value="health">Health Insurance</option>
+                            <option value="home">Home Loan</option>
+                            <option value="business">Business Insurance</option>
+                            <option value="auto">Auto Insurance</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-premium bg-gradient-to-r from-primary to-accent text-white px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 w-full">
+                        Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script>
+        // Mortgage Calculator Functionality
+        const homePrice = document.getElementById('homePrice');
+        const downPayment = document.getElementById('downPayment');
+        const loanTerm = document.getElementById('loanTerm');
+        const interestRate = document.getElementById('interestRate');
+        const homePriceValue = document.getElementById('homePriceValue');
+        const downPaymentValue = document.getElementById('downPaymentValue');
+        const loanTermValue = document.getElementById('loanTermValue');
+        const interestRateValue = document.getElementById('interestRateValue');
+        const monthlyPayment = document.getElementById('monthlyPayment');
+        const downPaymentAmount = document.getElementById('downPaymentAmount');
+        const loanAmount = document.getElementById('loanAmount');
+        const totalInterest = document.getElementById('totalInterest');
+
+        function calculateMortgage() {
+            const price = parseFloat(homePrice.value);
+            const downPercent = parseFloat(downPayment.value) / 100;
+            const years = parseFloat(loanTerm.value);
+            const rate = parseFloat(interestRate.value) / 100 / 12;
+            const months = years * 12;
+            
+            // Calculate amounts
+            const downAmount = price * downPercent;
+            const loan = price - downAmount;
+            
+            // Calculate monthly payment
+            const x = Math.pow(1 + rate, months);
+            const monthly = (loan * x * rate) / (x - 1);
+            
+            // Calculate totals
+            const totalPaid = monthly * months;
+            const interest = totalPaid - loan;
+            
+            // Update display
+            monthlyPayment.textContent = `$${Math.round(monthly).toLocaleString()}`;
+            downPaymentAmount.textContent = `$${Math.round(downAmount).toLocaleString()}`;
+            loanAmount.textContent = `$${Math.round(loan).toLocaleString()}`;
+            totalInterest.textContent = `$${Math.round(interest).toLocaleString()}`;
+        }
+
+        // Update values when sliders change
+        homePrice.addEventListener('input', () => {
+            homePriceValue.textContent = `$${parseInt(homePrice.value).toLocaleString()}`;
+            calculateMortgage();
+            calculateAffordability();
+        });
+
+        downPayment.addEventListener('input', () => {
+            downPaymentValue.textContent = `${parseInt(downPayment.value)}%`;
+            calculateMortgage();
+        });
+
+        loanTerm.addEventListener('input', () => {
+            loanTermValue.textContent = `${parseInt(loanTerm.value)} Years`;
+            calculateMortgage();
+        });
+
+        interestRate.addEventListener('input', () => {
+            interestRateValue.textContent = `${parseFloat(interestRate.value).toFixed(1)}%`;
+            calculateMortgage();
+        });
+
+        // Affordability Calculator
+        const annualIncome = document.getElementById('annualIncome');
+        const monthlyDebts = document.getElementById('monthlyDebts');
+        const creditScore = document.getElementById('creditScore');
+        const affordablePrice = document.getElementById('affordablePrice');
+        const affordabilityProgress = document.getElementById('affordabilityProgress');
+        const affordabilityResult = document.getElementById('affordabilityResult');
+
+        function calculateAffordability() {
+            const income = parseFloat(annualIncome.value) || 0;
+            const debts = parseFloat(monthlyDebts.value) || 0;
+            const credit = parseInt(creditScore.value);
+            
+            // Calculate affordable monthly payment (28% of monthly income for housing)
+            const monthlyIncome = income / 12;
+            const affordableMonthly = (monthlyIncome * 0.28) - debts;
+            
+            if (affordableMonthly <= 0) {
+                affordablePrice.textContent = '$0';
+                affordabilityProgress.style.width = '0%';
+                affordabilityResult.innerHTML = `
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle text-red-500 text-xl mr-3"></i>
+                        <div>
+                            <h4 class="font-bold text-red-800">Limited affordability</h4>
+                            <p class="text-red-700 text-sm">Your current debt payments may limit your home buying options.</p>
+                        </div>
+                    </div>
+                `;
+                affordabilityResult.className = 'p-4 rounded-xl bg-red-50 border border-red-200 mb-6';
+                return;
+            }
+            
+            // Calculate affordable home price based on current rates and terms
+            const currentRate = parseFloat(interestRate.value) / 100 / 12;
+            const currentTerm = parseFloat(loanTerm.value) * 12;
+            const x = Math.pow(1 + currentRate, currentTerm);
+            const affordableLoan = (affordableMonthly * (x - 1)) / (x * currentRate);
+            
+            // Adjust based on credit score
+            let creditMultiplier = 1.0;
+            if (credit >= 720) creditMultiplier = 1.0;
+            else if (credit >= 680) creditMultiplier = 0.95;
+            else if (credit >= 620) creditMultiplier = 0.90;
+            else if (credit >= 580) creditMultiplier = 0.80;
+            else creditMultiplier = 0.70;
+            
+            const adjustedLoan = affordableLoan * creditMultiplier;
+            const downPercent = parseFloat(downPayment.value) / 100;
+            const affordableHomePrice = adjustedLoan / (1 - downPercent);
+            
+            // Update display
+            affordablePrice.textContent = `$${Math.round(affordableHomePrice).toLocaleString()}`;
+            
+            // Calculate progress percentage (cap at current home price)
+            const currentPrice = parseFloat(homePrice.value);
+            const progressPercent = Math.min((affordableHomePrice / currentPrice) * 100, 100);
+            affordabilityProgress.style.width = `${progressPercent}%`;
+            
+            // Update result message
+            if (affordableHomePrice >= currentPrice) {
+                affordabilityResult.innerHTML = `
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 text-xl mr-3"></i>
+                        <div>
+                            <h4 class="font-bold text-green-800">Good affordability!</h4>
+                            <p class="text-green-700 text-sm">Based on your income, you can comfortably afford this home.</p>
+                        </div>
+                    </div>
+                `;
+                affordabilityResult.className = 'p-4 rounded-xl bg-green-50 border border-green-200 mb-6';
+            } else {
+                affordabilityResult.innerHTML = `
+                    <div class="flex items-center">
+                        <i class="fas fa-info-circle text-yellow-500 text-xl mr-3"></i>
+                        <div>
+                            <h4 class="font-bold text-yellow-800">Consider lower priced homes</h4>
+                            <p class="text-yellow-700 text-sm">This home may stretch your budget. Consider homes under $${Math.round(affordableHomePrice).toLocaleString()}.</p>
+                        </div>
+                    </div>
+                `;
+                affordabilityResult.className = 'p-4 rounded-xl bg-yellow-50 border border-yellow-200 mb-6';
+            }
+        }
+
+        // Update affordability when inputs change
+        annualIncome.addEventListener('input', calculateAffordability);
+        monthlyDebts.addEventListener('input', calculateAffordability);
+        creditScore.addEventListener('change', calculateAffordability);
+
+        // Interest Rates Table
+        const rateTabs = document.querySelectorAll('.rate-tab');
+        const ratesTableBody = document.getElementById('ratesTableBody');
+        
+        const ratesData = {
+            conventional: [
+                { term: '30-Year Fixed', rate: '6.50%', apr: '6.62%', payment: '$2,528' },
+                { term: '20-Year Fixed', rate: '6.25%', apr: '6.38%', payment: '$2,928' },
+                { term: '15-Year Fixed', rate: '5.99%', apr: '6.14%', payment: '$3,367' },
+                { term: '10-Year Fixed', rate: '5.75%', apr: '5.92%', payment: '$4,390' },
+                { term: '7/1 ARM', rate: '6.25%', apr: '7.12%', payment: '$2,462' }
+            ],
+            fha: [
+                { term: '30-Year Fixed', rate: '6.25%', apr: '6.97%', payment: '$2,462' },
+                { term: '15-Year Fixed', rate: '5.75%', apr: '6.52%', payment: '$3,310' }
+            ],
+            va: [
+                { term: '30-Year Fixed', rate: '6.00%', apr: '6.22%', payment: '$2,398' },
+                { term: '15-Year Fixed', rate: '5.50%', apr: '5.78%', payment: '$3,265' }
+            ],
+            jumbo: [
+                { term: '30-Year Fixed', rate: '6.75%', apr: '6.88%', payment: '$2,594' },
+                { term: '15-Year Fixed', rate: '6.25%', apr: '6.42%', payment: '$3,425' },
+                { term: '10/1 ARM', rate: '6.50%', apr: '7.45%', payment: '$2,528' }
+            ]
+        };
+
+        function updateRatesTable(loanType) {
+            const rates = ratesData[loanType];
+            ratesTableBody.innerHTML = '';
+            
+            rates.forEach(rate => {
+                const row = document.createElement('tr');
+                row.className = 'border-b border-gray-200';
+                row.innerHTML = `
+                    <td class="px-6 py-4 font-medium">${rate.term}</td>
+                    <td class="px-6 py-4 text-center">${rate.rate}</td>
+                    <td class="px-6 py-4 text-center">${rate.apr}</td>
+                    <td class="px-6 py-4 text-center font-bold text-primary">${rate.payment}</td>
+                `;
+                ratesTableBody.appendChild(row);
+            });
+        }
+
+        // Handle rate tab clicks
+        rateTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                rateTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                updateRatesTable(tab.getAttribute('data-loan-type'));
+            });
+        });
+
+        // Initialize calculators and tables
+        calculateMortgage();
+        calculateAffordability();
+        updateRatesTable('conventional');
+
+        // Fade in animations on scroll
+        const fadeElements = document.querySelectorAll('.fade-in-up');
+        
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            element.style.animationPlayState = 'paused';
+            fadeObserver.observe(element);
+        });
+    </script>
+</body>
+</html>
