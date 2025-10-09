@@ -258,37 +258,63 @@
 <body class="bg-light text-dark">
 
 <!-- Top Bar with Premium Look -->
-    <div class="animated-gradient py-3 px-4 md:px-8 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-            <div class="particle bg-white" style="width: 4px; height: 4px; top: 20%; left: 10%;"></div>
-            <div class="particle bg-white" style="width: 6px; height: 6px; top: 60%; left: 30%; animation-delay: 2s;"></div>
-            <div class="particle bg-white" style="width: 3px; height: 3px; top: 40%; left: 70%; animation-delay: 4s;"></div>
-        </div>
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center relative z-10">
-            <div class="flex flex-wrap justify-center md:justify-start space-x-6 text-sm text-white mb-2 md:mb-0">
-                <span class="flex items-center hover:scale-110 transition-transform duration-300">
-                    <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
-                </span>
-                <span class="flex items-center hover:scale-110 transition-transform duration-300">
-                    <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
-                </span>
-            </div>
-            <div class="flex space-x-4">
-                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </div>
-        </div>
+<div class="animated-gradient py-3 px-4 md:px-8 relative overflow-hidden">
+  <!-- Background particles -->
+  <div class="absolute inset-0 opacity-20 pointer-events-none">
+    <div class="particle bg-white" style="width: 4px; height: 4px; top: 20%; left: 10%;"></div>
+    <div class="particle bg-white" style="width: 6px; height: 6px; top: 60%; left: 30%; animation-delay: 2s;"></div>
+    <div class="particle bg-white" style="width: 3px; height: 3px; top: 40%; left: 70%; animation-delay: 4s;"></div>
+  </div>
+
+  <!-- Top bar content -->
+  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center relative z-10">
+
+    <!-- Email & Phone (responsive) -->
+    <div class="flex w-full md:w-auto md:flex-row justify-between items-center text-sm text-white mb-2 md:mb-0">
+
+      <!-- Mobile View: Left (Email) and Right (Phone) -->
+      <div class="flex w-full justify-between items-center md:hidden">
+        <!-- Email -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
+        </span>
+        <!-- Phone -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
+        </span>
+      </div>
+
+      <!-- Desktop View: Email & Phone stacked -->
+      <div class="hidden md:flex flex-row items-center space-x-6">
+        <!-- Email -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
+        </span>
+
+        <!-- Phone -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
+        </span>
+      </div>
     </div>
+
+    <!-- Social Icons - hidden on mobile -->
+    <div class="hidden md:flex space-x-4">
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+  </div>
+</div>
 
    <!-- Premium Navbar -->
 <nav id="navbar" class="bg-white sticky top-0 z-50 transition-all duration-500">
@@ -414,6 +440,7 @@
     </div>
 </nav>
 
+
 <!-- JS for Mobile Menu Toggle -->
 <script>
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -429,7 +456,6 @@
         mobileServicesMenu.classList.toggle('hidden');
     });
 </script>
-
 
 
 
@@ -877,7 +903,6 @@
             </div>
         </div>
     </footer>
-
     <!-- Premium Quote Modal -->
     <div id="quoteModal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center z-50 hidden transition-opacity duration-300">
         <div class="bg-white rounded-3xl premium-shadow max-w-lg w-full mx-4 transform transition-all duration-300 scale-95 opacity-0">
@@ -994,5 +1019,6 @@
             });
         });
     </script>
+
 </body>
 </html>

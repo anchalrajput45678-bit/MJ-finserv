@@ -26,41 +26,66 @@
 </head>
 <body class="bg-light text-dark">
     
+<!-- Top Bar with Premium Look -->
+<div class="animated-gradient py-3 px-4 md:px-8 relative overflow-hidden">
+  <!-- Background particles -->
+  <div class="absolute inset-0 opacity-20 pointer-events-none">
+    <div class="particle bg-white" style="width: 4px; height: 4px; top: 20%; left: 10%;"></div>
+    <div class="particle bg-white" style="width: 6px; height: 6px; top: 60%; left: 30%; animation-delay: 2s;"></div>
+    <div class="particle bg-white" style="width: 3px; height: 3px; top: 40%; left: 70%; animation-delay: 4s;"></div>
+  </div>
 
-    <!-- Top Bar with Premium Look -->
-    <div class="animated-gradient py-3 px-4 md:px-8 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-            <div class="particle bg-white" style="width: 4px; height: 4px; top: 20%; left: 10%;"></div>
-            <div class="particle bg-white" style="width: 6px; height: 6px; top: 60%; left: 30%; animation-delay: 2s;"></div>
-            <div class="particle bg-white" style="width: 3px; height: 3px; top: 40%; left: 70%; animation-delay: 4s;"></div>
-        </div>
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center relative z-10">
-            <div class="flex flex-wrap justify-center md:justify-start space-x-6 text-sm text-white mb-2 md:mb-0">
-                <span class="flex items-center hover:scale-110 transition-transform duration-300">
-                    <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
-                </span>
-                <span class="flex items-center hover:scale-110 transition-transform duration-300">
-                    <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
-                </span>
-            </div>
-            <div class="flex space-x-4">
-                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </div>
-        </div>
+  <!-- Top bar content -->
+  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center relative z-10">
+
+    <!-- Email & Phone (responsive) -->
+    <div class="flex w-full md:w-auto md:flex-row justify-between items-center text-sm text-white mb-2 md:mb-0">
+
+      <!-- Mobile View: Left (Email) and Right (Phone) -->
+      <div class="flex w-full justify-between items-center md:hidden">
+        <!-- Email -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
+        </span>
+        <!-- Phone -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
+        </span>
+      </div>
+
+      <!-- Desktop View: Email & Phone stacked -->
+      <div class="hidden md:flex flex-row items-center space-x-6">
+        <!-- Email -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
+        </span>
+
+        <!-- Phone -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
+        </span>
+      </div>
     </div>
 
-   <!-- Premium Navbar -->
+    <!-- Social Icons - hidden on mobile -->
+    <div class="hidden md:flex space-x-4">
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+    <!-- Premium Navbar -->
 <nav id="navbar" class="bg-white sticky top-0 z-50 transition-all duration-500">
     <div class="container mx-auto px-4 md:px-8">
         <div class="flex justify-between items-center py-4">
@@ -184,6 +209,21 @@
     </div>
 </nav>
 
+<!-- JS for Mobile Menu Toggle -->
+<script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+    const mobileServicesMenu = document.getElementById('mobileServicesMenu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileServicesToggle.addEventListener('click', () => {
+        mobileServicesMenu.classList.toggle('hidden');
+    });
+</script>
 
 
 
@@ -260,46 +300,59 @@
         
         <button class="slider-nav slider-prev absolute left-6 top-1/2 transform -translate-y-1/2 text-white text-2xl z-20 glass-effect w-14 h-14 rounded-full flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-all duration-300 hover:scale-110">
             <i class="fas fa-chevron-left"></i>
-        </button>
+        </button>   
         <button class="slider-nav slider-next absolute right-6 top-1/2 transform -translate-y-1/2 text-white text-2xl z-20 glass-effect w-14 h-14 rounded-full flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-all duration-300 hover:scale-110">
             <i class="fas fa-chevron-right"></i>
         </button>
     </section>
 
-    <!-- Premium Stats Section -->
-    <section class="py-20 bg-white relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full opacity-5">
-            <div class="absolute top-10 left-10 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
-            <div class="absolute bottom-10 right-10 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
-        </div>
-        <div class="container mx-auto px-4 md:px-8 relative z-10">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="text-center group">
-                    <div class="text-5xl md:text-6xl font-black text-gradient mb-2 counter" data-target="15000">0</div>
-                    <div class="text-dark font-medium">Happy Clients</div>
-                    <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-3 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-                </div>
-                <div class="text-center group">
-                    <div class="text-5xl md:text-6xl font-black text-gradient mb-2 counter" data-target="25">0</div>
-                    <div class="text-dark font-medium">Years Experience</div>
-                    <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-3 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-                </div>
-                <div class="text-center group">
-                    <div class="text-5xl md:text-6xl font-black text-gradient mb-2 counter" data-target="50">0</div>
-                    <div class="text-dark font-medium">Insurance Plans</div>
-                    <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-3 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-                </div>
-                <div class="text-center group">
-                    <div class="text-5xl md:text-6xl font-black text-gradient mb-2">24/7</div>
-                    <div class="text-dark font-medium">Customer Support</div>
-                    <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-3 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Premium Stats Section -->
+<section class="py-16 md:py-20 bg-white relative overflow-hidden">
+  <!-- Background blur circles -->
+  <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+    <div class="absolute top-10 left-10 w-40 h-40 md:w-64 md:h-64 bg-primary rounded-full blur-2xl md:blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-60 h-60 md:w-96 md:h-96 bg-secondary rounded-full blur-2xl md:blur-3xl"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="container mx-auto px-4 md:px-8 relative z-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+      
+      <!-- Stat Item -->
+      <div class="text-center group">
+        <div class="text-4xl sm:text-5xl font-extrabold text-gradient mb-1 counter" data-target="15000">15,000</div>
+        <div class="text-sm sm:text-base text-dark font-medium">Happy Clients</div>
+        <div class="w-12 sm:w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-2 sm:mt-3 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+      </div>
+
+      <!-- Stat Item -->
+      <div class="text-center group">
+        <div class="text-4xl sm:text-5xl font-extrabold text-gradient mb-1 counter" data-target="25">25</div>
+        <div class="text-sm sm:text-base text-dark font-medium">Years Experience</div>
+        <div class="w-12 sm:w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-2 sm:mt-3 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+      </div>
+
+      <!-- Stat Item -->
+      <div class="text-center group">
+        <div class="text-4xl sm:text-5xl font-extrabold text-gradient mb-1 counter" data-target="50">50</div>
+        <div class="text-sm sm:text-base text-dark font-medium">Insurance Plans</div>
+        <div class="w-12 sm:w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-2 sm:mt-3 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+      </div>
+
+      <!-- Stat Item -->
+      <div class="text-center group">
+        <div class="text-4xl sm:text-5xl font-extrabold text-gradient mb-1">24/7</div>
+        <div class="text-sm sm:text-base text-dark font-medium">Customer Support</div>
+        <div class="w-12 sm:w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-2 sm:mt-3 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- Premium About Section -->
-    <section id="about" class="py-24 bg-gradient-to-br from-light via-white to-light relative overflow-hidden">
+    <section id="about" class="py-24 bg-[#cacaca] from-light via-white to-light relative overflow-hidden">
         <div class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
         <div class="container mx-auto px-4 md:px-8 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-16">
