@@ -1,0 +1,1982 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJ FINSERV - Premium Financial Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1842b6',
+                        secondary: '#e52429',
+                        accent: '#0d2d7a',
+                        light: '#f8fafc',
+                        dark: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+   
+</head>
+<body class="bg-light text-dark">
+    
+<!-- Top Bar with Premium Look -->
+<div class="animated-gradient py-3 px-4 md:px-8 relative overflow-hidden">
+  <!-- Background particles -->
+  <div class="absolute inset-0 opacity-20 pointer-events-none">
+    <div class="particle bg-white" style="width: 4px; height: 4px; top: 20%; left: 10%;"></div>
+    <div class="particle bg-white" style="width: 6px; height: 6px; top: 60%; left: 30%; animation-delay: 2s;"></div>
+    <div class="particle bg-white" style="width: 3px; height: 3px; top: 40%; left: 70%; animation-delay: 4s;"></div>
+  </div>
+
+  <!-- Top bar content -->
+  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center relative z-10">
+
+    <!-- Email & Phone (responsive) -->
+    <div class="flex w-full md:w-auto md:flex-row justify-between items-center text-sm text-white mb-2 md:mb-0">
+
+      <!-- Mobile View: Left (Email) and Right (Phone) -->
+      <div class="flex w-full justify-between items-center md:hidden">
+        <!-- Email -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
+        </span>
+        <!-- Phone -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
+        </span>
+      </div>
+
+      <!-- Desktop View: Email & Phone stacked -->
+      <div class="hidden md:flex flex-row items-center space-x-6">
+        <!-- Email -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
+        </span>
+
+        <!-- Phone -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
+        </span>
+      </div>
+    </div>
+
+    <!-- Social Icons - hidden on mobile -->
+    <div class="hidden md:flex space-x-4">
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+    <!-- Premium Navbar -->
+<nav id="navbar" class="bg-white sticky top-0 z-50 transition-all duration-500">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="flex justify-between items-center py-4">
+            <div class="flex items-center group cursor-pointer">
+                <div class="bg-gradient-to-br from-primary to-accent text-white p-3 rounded-xl mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-shield-alt text-xl"></i>
+                </div>
+                <div class="text-2xl font-bold text-gradient">MJ FINSERV</div>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Home</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="./about.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">About</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+
+                <!-- Desktop Services Dropdown -->
+                <div class="relative group">
+                    <button class="text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center">
+                        Services 
+                        <i class="fas fa-chevron-down ml-1 text-xs group-hover:rotate-180 transition-transform duration-300"></i>
+                    </button>
+                    <div class="absolute left-0 mt-6 w-72 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 border border-gray-100">
+                        <div class="py-2">
+                            <a href="./unsecureloans.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-briefcase mr-3 text-secondary"></i> 
+                                <span> Unsecured Loans </span>
+                            </a>
+                             <a href="./securedloan.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-user mr-3 text-secondary"></i> 
+                                <span>Secure Loan</span>
+                            </a> 
+                              <a href="./insuranceservice.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-home mr-3 text-secondary"></i> 
+                                <span> Insurance</span>
+                            </a>
+                            <a href="./investment.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-car mr-3 text-secondary"></i> 
+                                <span>Investments  </span>
+                            </a>
+                            <a href="./InternationalInsurance.html " class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-user-tie mr-3 text-secondary"></i> 
+                                <span> International Insurance </span>
+                            </a>  
+                             <a href=" ./lifeinsurance.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-university mr-3 text-secondary"></i> 
+                                <span>Life Insurance</span>
+                            </a>
+                              
+                        </div>
+                    </div>
+                </div>
+
+                <a href="./gallery.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Gallery</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="./contect.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Contact</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+
+            <button id="quoteBtn" class="btn-premium bg-gradient-to-r from-secondary to-red-600 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl hidden md:block">
+                Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+
+            <button id="mobileMenuBtn" class="md:hidden text-dark">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden py-4 border-t border-gray-200 bg-white">
+            <a href="index.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-home mr-3 text-primary"></i> Home
+            </a>
+            <a href="about.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-info-circle mr-3 text-primary"></i> About
+            </a>
+
+            <!-- Mobile Services Dropdown Toggle -->
+            <div class="border-b border-gray-100">
+                <button id="mobileServicesToggle" class="w-full flex justify-between items-center py-3 text-dark hover:text-primary transition-colors duration-300">
+                    <span><i class="fas fa-concierge-bell mr-3 text-primary"></i> Services</span>
+                    <i class="fas fa-chevron-down text-xs"></i>
+                </button>
+                <div id="mobileServicesMenu" class="hidden pl-8 pb-3">
+                    <a href="./unsecureloans.html" class="block py-2 text-dark hover:text-primary">Unsecure Loans</a>
+                    <a href="./securedloan.html" class="block py-2 text-dark hover:text-primary">Secure Loans </a>
+                     <a href="./insuranceservice.html " class="block py-2 text-dark hover:text-primary"> Insurance</a>
+                    <a href="./investment.html" class="block py-2 text-dark hover:text-primary"> Investments</a>
+                    <a href="./InternationalInsurance.html" class="block py-2 text-dark hover:text-primary"> International Insurance</a>
+                    <a href="./lifeinsurance.html" class="block py-2 text-dark hover:text-primary"> Life Insurance</a>
+                    
+                    <!-- <a href="insuranceservice.html" class="block py-2 text-dark hover:text-primary">Insurance Investment</a>
+                    <a href="" class="block py-2 text-dark hover:text-primary">Mutual Fund</a>   -->
+                </div>
+            </div>
+
+            <a href="gallery.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-images mr-3 text-primary"></i> Gallery
+            </a>
+            <a href="contect.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-envelope mr-3 text-primary"></i> Contact
+            </a>
+            <button id="mobileQuoteBtn" class="mt-4 bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium w-full">
+                Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- JS for Mobile Menu Toggle -->
+<script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+    const mobileServicesMenu = document.getElementById('mobileServicesMenu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileServicesToggle.addEventListener('click', () => {
+        mobileServicesMenu.classList.toggle('hidden');
+    });
+</script>
+
+
+  
+
+    <!-- Hero Section -->
+    <div class="hero" background-color:#0f5e74;>
+        <div class="hero-content">
+            <h1>🛡️ Protect Your Future Today</h1>
+            <p class="hero-tagline">Comprehensive Insurance Solutions for Every Need</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Insurance Types</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Coverage</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shield Categories -->
+    <div class="shield-section">
+        <div class="shield-container">
+            <h2 class="shield-title">Choose Your Protection Shield</h2>
+            <p class="shield-subtitle">Select the category that matters most to you</p>
+            <div class="shield-grid">
+                <div class="shield-item" onclick="scrollToSection('life')">
+                    <div class="shield-icon">🧍‍♂️</div>
+                    <div class="shield-name">Life Insurance</div>
+                    <div class="shield-count">7 Types</div>
+                </div>
+                <div class="shield-item" onclick="scrollToSection('health')">
+                    <div class="shield-icon">💊</div>
+                    <div class="shield-name">Health Insurance</div>
+                    <div class="shield-count">7 Types</div>
+                </div>
+                <div class="shield-item" onclick="scrollToSection('general')">
+                    <div class="shield-icon">🚗</div>
+                    <div class="shield-name">General Insurance</div>
+                    <div class="shield-count">10 Types</div>
+                </div>
+                <div class="shield-item" onclick="scrollToSection('business')">
+                    <div class="shield-icon">🏢</div>
+                    <div class="shield-name">Business Insurance</div>
+                    <div class="shield-count">5 Types</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Calculator -->
+    <div class="calculator-section">
+        <div class="calculator-wrapper">
+            <div class="calc-info">
+                <h2>Calculate Your Premium</h2>
+                <p>Get instant premium estimates for your insurance needs. Our smart calculator helps you plan your protection budget effectively.</p>
+                <div class="calc-features">
+                    <div class="calc-feature">
+                        <span class="feature-icon">⚡</span>
+                        <div>
+                            <strong>Instant Results</strong><br>
+                            <span style="color: #666; font-size: 0.9em;">Get premium estimates in seconds</span>
+                        </div>
+                    </div>
+                    <div class="calc-feature">
+                        <span class="feature-icon">💰</span>
+                        <div>
+                            <strong>Compare Plans</strong><br>
+                            <span style="color: #666; font-size: 0.9em;">Find the best coverage for your budget</span>
+                        </div>
+                    </div>
+                    <div class="calc-feature">
+                        <span class="feature-icon">🎯</span>
+                        <div>
+                            <strong>Accurate Calculations</strong><br>
+                            <span style="color: #666; font-size: 0.9em;">Based on real market data</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calc-box">
+                <h3 class="calc-title">Life Insurance Calculator</h3>
+                <div class="calc-input-group">
+                    <label class="calc-label">Your Age</label>
+                    <input type="number" class="calc-input" id="age" value="30" min="18" max="65" onchange="calculatePremium()">
+                </div>
+                <div class="calc-input-group">
+                    <label class="calc-label">Coverage Amount (₹)</label>
+                    <input type="number" class="calc-input" id="coverage" value="5000000" step="100000" onchange="calculatePremium()">
+                </div>
+                <div class="calc-input-group">
+                    <label class="calc-label">Policy Term (Years)</label>
+                    <input type="number" class="calc-input" id="term" value="20" min="5" max="40" onchange="calculatePremium()">
+                </div>
+                <div class="calc-input-group">
+                    <label class="calc-label">Smoking Status</label>
+                    <select class="calc-select" id="smoking" onchange="calculatePremium()">
+                        <option value="no">Non-Smoker</option>
+                        <option value="yes">Smoker</option>
+                    </select>
+                </div>
+                <div class="calc-result">
+                    <div class="result-label">Estimated Monthly Premium</div>
+                    <div class="result-value" id="premiumResult">₹833</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Life Insurance Section -->
+    <div class="category-section" id="life">
+        <div class="category-header">
+            <div class="category-icon-big">🧍‍♂️</div>
+            <h2 class="category-title">Life Insurance Types</h2>
+            <p class="category-desc">Covers risk of death or survival — protects family financially</p>
+        </div>
+        <div class="insurance-grid">
+            
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">1</div>
+                    <div class="card-icon">🛡️</div>
+                    <div class="card-title">Term Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Pure protection plan with payout only on death during the policy term</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Lowest premium, highest coverage</li>
+                        <li><span class="feature-bullet">✓</span> No maturity benefit</li>
+                        <li><span class="feature-bullet">✓</span> Best for young families</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Term Insurance')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">2</div>
+                    <div class="card-icon">♾️</div>
+                    <div class="card-title">Whole Life Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Covers entire lifetime (usually up to 99-100 years)</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Death benefit + some savings</li>
+                        <li><span class="feature-bullet">✓</span> Lifetime coverage</li>
+                        <li><span class="feature-bullet">✓</span> Higher premium than term</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Whole Life Insurance')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">3</div>
+                    <div class="card-icon">💰</div>
+                    <div class="card-title">Endowment Plan</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Insurance + Savings - Pays sum assured on death or at maturity</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Dual benefit plan</li>
+                        <li><span class="feature-bullet">✓</span> Guaranteed maturity benefit</li>
+                        <li><span class="feature-bullet">✓</span> Savings component included</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Endowment Plan')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">4</div>
+                    <div class="card-icon">💵</div>
+                    <div class="card-title">Money Back Plan</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Periodic payouts during the policy term with remaining amount paid on maturity</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Regular income during policy</li>
+                        <li><span class="feature-bullet">✓</span> Survival benefits</li>
+                        <li><span class="feature-bullet">✓</span> Life cover continues</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Money Back Plan')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">5</div>
+                    <div class="card-icon">📈</div>
+                    <div class="card-title">ULIP</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Insurance + Investment in market-linked funds for dual benefit</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Protection + wealth creation</li>
+                        <li><span class="feature-bullet">✓</span> Market-linked returns</li>
+                        <li><span class="feature-bullet">✓</span> Flexible investment options</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('ULIP')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">6</div>
+                    <div class="card-icon">👶</div>
+                    <div class="card-title">Child Plan</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">For child's education or marriage with future benefits even if parent dies</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Secures child's future</li>
+                        <li><span class="feature-bullet">✓</span> Premium waiver on death</li>
+                        <li><span class="feature-bullet">✓</span> Education milestones covered</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Child Plan')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">7</div>
+                    <div class="card-icon">🧓</div>
+                    <div class="card-title">Pension / Retirement Plan</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Builds corpus for retirement with regular pension after maturity</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Retirement income</li>
+                        <li><span class="feature-bullet">✓</span> Tax benefits available</li>
+                        <li><span class="feature-bullet">✓</span> Guaranteed pension options</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Pension Plan')">Get Quote</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Health Insurance Section -->
+    <div class="category-section" id="health">
+        <div class="category-header">
+            <div class="category-icon-big">💊</div>
+            <h2 class="category-title">Health Insurance Types</h2>
+            <p class="category-desc">Covers medical expenses for illness or injury</p>
+        </div>
+        <div class="insurance-grid">
+            
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">1</div>
+                    <div class="card-icon">🧑</div>
+                    <div class="card-title">Individual Health Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Covers one person's medical costs including hospitalization and treatments</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Personalized coverage</li>
+                        <li><span class="feature-bullet">✓</span> Cashless hospitalization</li>
+                        <li><span class="feature-bullet">✓</span> Pre & post hospitalization</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Individual Health Insurance')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">2</div>
+                    <div class="card-icon">👨‍👩‍👧‍👦</div>
+                    <div class="card-title">Family Floater Policy</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Single sum insured shared among all family members</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Cost-effective for families</li>
+                        <li><span class="feature-bullet">✓</span> Covers entire family</li>
+                        <li><span class="feature-bullet">✓</span> One premium payment</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Family Floater')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">3</div>
+                    <div class="card-icon">🏥</div>
+                    <div class="card-title">Critical Illness Policy</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Lump sum payout on detection of serious diseases like cancer, heart attack</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Covers 30+ critical illnesses</li>
+                        <li><span class="feature-bullet">✓</span> Lump sum benefit</li>
+                        <li><span class="feature-bullet">✓</span> No hospitalization needed</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Critical Illness')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">4</div>
+                    <div class="card-icon">⬆️</div>
+                    <div class="card-title">Top-Up & Super Top-Up Plan</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Extra coverage after a certain deductible limit is crossed</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Affordable high coverage</li>
+                        <li><span class="feature-bullet">✓</span> Works after deductible</li>
+                        <li><span class="feature-bullet">✓</span> Supplements base policy</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Top-Up Plan')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">5</div>
+                    <div class="card-icon">🚑</div>
+                    <div class="card-title">Personal Accident Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Covers death or disability due to accidents</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Accidental death benefit</li>
+                        <li><span class="feature-bullet">✓</span> Permanent disability cover</li>
+                        <li><span class="feature-bullet">✓</span> Low premium</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Personal Accident')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">6</div>
+                    <div class="card-icon">👴</div>
+                    <div class="card-title">Senior Citizen Health Plan</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Tailored for people aged 60+ with age-specific coverage</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Covers pre-existing diseases</li>
+                        <li><span class="feature-bullet">✓</span> Higher sum insured options</li>
+                        <li><span class="feature-bullet">✓</span> Special senior benefits</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Senior Citizen Plan')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">7</div>
+                    <div class="card-icon">🤰</div>
+                    <div class="card-title">Maternity Health Plan</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Covers pregnancy and newborn expenses including delivery costs</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Normal & C-section delivery</li>
+                        <li><span class="feature-bullet">✓</span> Newborn baby coverage</li>
+                        <li><span class="feature-bullet">✓</span> Pre & post natal care</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Maternity Plan')">Get Quote</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- General Insurance Section -->
+    <div class="category-section" id="general">
+        <div class="category-header">
+            <div class="category-icon-big">🚗</div>
+            <h2 class="category-title">General Insurance Types</h2>
+            <p class="category-desc">Covers non-life risks — assets, vehicles, travel, and liability</p>
+        </div>
+        <div class="insurance-grid">
+            
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">1</div>
+                    <div class="card-icon">🚘</div>
+                    <div class="card-title">Motor Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Third Party (mandatory) or Comprehensive (own damage + third-party)</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Legal requirement</li>
+                        <li><span class="feature-bullet">✓</span> Accident damage cover</li>
+                        <li><span class="feature-bullet">✓</span> Third-party liability</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Motor Insurance')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">2</div>
+                    <div class="card-icon">🏡</div>
+                    <div class="card-title">Home Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Covers damage due to fire, theft, natural disasters</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Structure + contents</li>
+                        <li><span class="feature-bullet">✓</span> Natural calamity cover</li>
+                        <li><span class="feature-bullet">✓</span> Theft protection</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Home Insurance')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">3</div>
+                    <div class="card-icon">✈️</div>
+                    <div class="card-title">Travel Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Covers trip cancellation, luggage loss, medical emergencies abroad</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Medical emergencies</li>
+                        <li><span class="feature-bullet">✓</span> Trip cancellation</li>
+                        <li><span class="feature-bullet">✓</span> Lost baggage cover</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Travel Insurance')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">4</div>
+                    <div class="card-icon">🔥</div>
+                    <div class="card-title">Fire Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">For property/business against fire or explosion damage</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Fire & explosion</li>
+                        <li><span class="feature-bullet">✓</span> Lightning damage</li>
+                        <li><span class="feature-bullet">✓</span> Business interruption</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Fire Insurance')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">5</div>
+                    <div class="card-icon">🚢</div>
+                    <div class="card-title">Marine Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Covers goods transported by sea, air, or land</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Cargo protection</li>
+                        <li><span class="feature-bullet">✓</span> Transit damage</li>
+                        <li><span class="feature-bullet">✓</span> International shipping</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Marine Insurance')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">6</div>
+                    <div class="card-icon">🌾</div>
+                    <div class="card-title">Crop Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Protects farmers against crop loss due to natural calamities</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Weather protection</li>
+                        <li><span class="feature-bullet">✓</span> Government subsidized</li>
+                        <li><span class="feature-bullet">✓</span> Yield loss cover</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Crop Insurance')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">7</div>
+                    <div class="card-icon">🏭</div>
+                    <div class="card-title">Commercial Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Covers machinery, factory, goods, and stock for businesses</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Asset protection</li>
+                        <li><span class="feature-bullet">✓</span> Equipment coverage</li>
+                        <li><span class="feature-bullet">✓</span> Business continuity</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Commercial Insurance')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">8</div>
+                    <div class="card-icon">🏪</div>
+                    <div class="card-title">Shop Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">For shopkeepers — covers fire, theft, burglary, liability</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Stock protection</li>
+                        <li><span class="feature-bullet">✓</span> Shop structure cover</li>
+                        <li><span class="feature-bullet">✓</span> Theft & burglary</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Shop Insurance')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">9</div>
+                    <div class="card-icon">⚖️</div>
+                    <div class="card-title">Liability Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Covers legal liability for damage or injury to others</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Public liability</li>
+                        <li><span class="feature-bullet">✓</span> Product liability</li>
+                        <li><span class="feature-bullet">✓</span> Professional indemnity</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Liability Insurance')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">10</div>
+                    <div class="card-icon">🔓</div>
+                    <div class="card-title">Burglary / Theft Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Covers loss due to burglary or theft of property</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Break-in coverage</li>
+                        <li><span class="feature-bullet">✓</span> Stolen goods value</li>
+                        <li><span class="feature-bullet">✓</span> Property damage</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Burglary Insurance')">Get Quote</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Business Insurance Section -->
+    <div class="category-section" id="business">
+        <div class="category-header">
+            <div class="category-icon-big">🏢</div>
+            <h2 class="category-title">Business / Corporate Insurance</h2>
+            <p class="category-desc">For companies and employees protection</p>
+        </div>
+        <div class="insurance-grid">
+            
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">1</div>
+                    <div class="card-icon">👥</div>
+                    <div class="card-title">Group Health Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Health coverage for all company employees</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Employee benefit</li>
+                        <li><span class="feature-bullet">✓</span> Group discounts</li>
+                        <li><span class="feature-bullet">✓</span> Corporate wellness</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Group Health')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">2</div>
+                    <div class="card-icon">🛡️</div>
+                    <div class="card-title">Group Term Life Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Death benefit for employees during service period</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Employee security</li>
+                        <li><span class="feature-bullet">✓</span> Family protection</li>
+                        <li><span class="feature-bullet">✓</span> Affordable group rates</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Group Term Life')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">3</div>
+                    <div class="card-icon">🔑</div>
+                    <div class="card-title">Keyman Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Covers financial loss due to death of key employee</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Business continuity</li>
+                        <li><span class="feature-bullet">✓</span> Key person protection</li>
+                        <li><span class="feature-bullet">✓</span> Financial security</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Keyman Insurance')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">4</div>
+                    <div class="card-icon">👷</div>
+                    <div class="card-title">Employee Compensation</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Covers injury/death of employee during work</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Legal compliance</li>
+                        <li><span class="feature-bullet">✓</span> Work injury cover</li>
+                        <li><span class="feature-bullet">✓</span> Medical expenses</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('Employee Compensation')">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-number">5</div>
+                    <div class="card-icon">🎓</div>
+                    <div class="card-title">Directors & Officers Liability</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">Protects management against legal actions and claims</p>
+                    <ul class="card-features">
+                        <li><span class="feature-bullet">✓</span> Management protection</li>
+                        <li><span class="feature-bullet">✓</span> Legal defense costs</li>
+                        <li><span class="feature-bullet">✓</span> Decision liability cover</li>
+                    </ul>
+                    <button class="get-quote-btn" onclick="getQuote('D&O Liability')">Get Quote</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Why Insurance Section -->
+    <div class="why-section">
+        <div class="why-container">
+            <div class="category-header">
+                <h2 class="category-title">Why Insurance Matters</h2>
+                <p class="category-desc">Understanding the importance of protecting what matters most</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">🛡️</div>
+                    <h3 class="why-title">Financial Protection</h3>
+                    <p class="why-desc">Safeguards your family and assets from unexpected financial burdens during emergencies.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">😌</div>
+                    <h3 class="why-title">Peace of Mind</h3>
+                    <p class="why-desc">Live stress-free knowing you and your loved ones are protected against life's uncertainties.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">💰</div>
+                    <h3 class="why-title">Wealth Creation</h3>
+                    <p class="why-desc">Certain insurance plans help build long-term wealth while providing protection coverage.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">📋</div>
+                    <h3 class="why-title">Tax Benefits</h3>
+                    <p class="why-desc">Get tax deductions under Section 80C, 80D and save money while staying protected.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">👨‍👩‍👧‍👦</div>
+                    <h3 class="why-title">Family Security</h3>
+                    <p class="why-desc">Ensure your family's financial stability and future goals even in your absence.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🏥</div>
+                    <h3 class="why-title">Medical Support</h3>
+                    <p class="why-desc">Access quality healthcare without worrying about rising medical costs and expenses.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <div class="cta-content">
+            <h2>Start Your Protection Journey Today</h2>
+            <p>Choose from 25+ insurance types and secure your future in minutes</p>
+            <div class="cta-buttons">
+                <button class="cta-btn" onclick="getQuote('General Inquiry')">Get Free Quote</button>
+                <button class="cta-btn cta-btn-outline" onclick="getQuote('Compare Plans')">Compare Plans</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- style -->
+     <!-- nothing -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+         
+        
+        /* Hero Section */
+        .hero {
+            /* background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff); */
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+   
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.15) 0%, transparent 50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero-tagline {
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+        
+        .hero-stat {
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(10px);
+            padding: 20px 30px;
+            border-radius: 15px;
+            min-width: 150px;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: white;
+            display: block;
+        }
+        
+        .stat-label {
+            color: white;
+            font-size: 1em;
+            margin-top: 5px;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Protection Shield Animation */
+        .shield-section {
+            padding: 60px 20px;
+            background: white;
+            text-align: center;
+        }
+        
+        .shield-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .shield-title {
+            font-size: 2.8em;
+            color: #0077cc;
+            margin-bottom: 20px;
+        }
+        
+        .shield-subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 50px;
+        }
+        
+        .shield-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .shield-item {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+            padding: 30px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .shield-item::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0,170,255,0.1) 0%, transparent 70%);
+            transform: scale(0);
+            transition: transform 0.5s ease;
+        }
+        
+        .shield-item:hover::before {
+            transform: scale(1);
+        }
+        
+        .shield-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,170,255,0.2);
+        }
+        
+        .shield-icon {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+            position: relative;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .shield-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #0077cc;
+            margin-bottom: 10px;
+        }
+        
+        .shield-count {
+            color: #00aaff;
+            font-weight: 600;
+        }
+        
+        /* Premium Calculator */
+        .calculator-section {
+            padding: 60px 20px;
+            background: #f0f8ff;
+        }
+        
+        .calculator-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .calc-info h2 {
+            font-size: 2.8em;
+            color: #0077cc;
+            margin-bottom: 20px;
+        }
+        
+        .calc-info p {
+            font-size: 1.1em;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .calc-features {
+            margin-top: 25px;
+        }
+        
+        .calc-feature {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .calc-feature:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(0,170,255,0.15);
+        }
+        
+        .feature-icon {
+            font-size: 2em;
+        }
+        
+        .calc-box {
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 50px rgba(0,170,255,0.15);
+        }
+        
+        .calc-title {
+            font-size: 1.8em;
+            color: #0077cc;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .calc-input-group {
+            margin-bottom: 25px;
+        }
+        
+        .calc-label {
+            display: block;
+            color: #0077cc;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+        
+        .calc-input, .calc-select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #87ceeb;
+            border-radius: 10px;
+            font-size: 1.1em;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        
+        .calc-input:focus, .calc-select:focus {
+            border-color: #00aaff;
+            box-shadow: 0 0 0 3px rgba(0,170,255,0.1);
+        }
+        
+        .calc-result {
+            background: linear-gradient(-45deg, #00aaff, #0077cc);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+        
+        .result-label {
+            font-size: 1em;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .result-value {
+            font-size: 2.8em;
+            font-weight: bold;
+        }
+        
+        /* Category Sections */
+        .category-section {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .category-section:nth-child(even) {
+            background: #f0f8ff;
+        }
+        
+        .category-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .category-icon-big {
+            font-size: 4em;
+            margin-bottom: 15px;
+        }
+        
+        .category-title {
+            font-size: 2.8em;
+            color: #0077cc;
+            margin-bottom: 15px;
+        }
+        
+        .category-desc {
+            font-size: 1.2em;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .insurance-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .insurance-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,170,255,0.12);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+        
+        .insurance-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(135,206,235,0.2), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .insurance-card:hover::after {
+            left: 100%;
+        }
+        
+        .insurance-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(0,170,255,0.25);
+        }
+        
+        .card-header {
+            background: linear-gradient(-45deg, #00aaff, #0077cc);
+            color: white;
+            padding: 25px;
+            position: relative;
+        }
+        
+        .card-number {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .card-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .card-title {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .card-description {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+        
+        .card-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .card-features li {
+            padding: 8px 0;
+            color: #555;
+            display: flex;
+            align-items: start;
+            gap: 10px;
+            font-size: 0.9em;
+        }
+        
+        .feature-bullet {
+            color: #00aaff;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 2px;
+        }
+        
+        .get-quote-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(-45deg, #00aaff, #0077cc);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .get-quote-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .get-quote-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .get-quote-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,170,255,0.4);
+        }
+        
+        /* Why Insurance Section */
+        .why-section {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .why-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .why-card {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .why-card:hover {
+            border-color: #00aaff;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,170,255,0.2);
+        }
+        
+        .why-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+        
+        .why-title {
+            font-size: 1.5em;
+            color: #0077cc;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .why-desc {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 20px;
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: moveGrid 30s linear infinite;
+        }
+        
+        @keyframes moveGrid {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-section h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.3em;
+            margin-bottom: 35px;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            padding: 18px 45px;
+            background: white;
+            color: #0077cc;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .cta-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        
+        .cta-btn-outline {
+            background: transparent;
+            color: white;
+            border: 3px solid white;
+        }
+        
+        .cta-btn-outline:hover {
+            background: white;
+            color: #0077cc;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .shield-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .calculator-wrapper {
+                grid-template-columns: 1fr;
+            }
+            
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .hero-tagline {
+                font-size: 1.2em;
+            }
+            
+            .hero-stats {
+                gap: 20px;
+            }
+            
+            .shield-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .shield-title, .category-title {
+                font-size: 2em;
+            }
+            
+            .calc-box {
+                padding: 25px;
+            }
+            
+            .insurance-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-section h2 {
+                font-size: 2.2em;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                padding: 60px 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .hero-tagline {
+                font-size: 1em;
+            }
+            
+            .stat-number {
+                font-size: 2em;
+            }
+            
+            .shield-title {
+                font-size: 1.6em;
+            }
+            
+            .category-title {
+                font-size: 1.8em;
+            }
+            
+            .category-icon-big {
+                font-size: 3em;
+            }
+        }
+    </style>
+    <!-- end style -->
+    <script>
+        function calculatePremium() {
+            const age = parseInt(document.getElementById('age').value);
+            const coverage = parseInt(document.getElementById('coverage').value);
+            const term = parseInt(document.getElementById('term').value);
+            const isSmoker = document.getElementById('smoking').value === 'yes';
+            
+            // Basic premium calculation (simplified formula)
+            let baseRate = 0.0002; // Base rate per 1000 of coverage
+            
+            // Age factor
+            if (age > 40) baseRate += 0.0001;
+            if (age > 50) baseRate += 0.0002;
+            
+            // Smoking factor
+            if (isSmoker) baseRate += 0.0003;
+            
+            // Calculate annual premium
+            const annualPremium = coverage * baseRate;
+            const monthlyPremium = Math.round(annualPremium / 12);
+            
+            document.getElementById('premiumResult').textContent = '₹' + monthlyPremium.toLocaleString('en-IN');
+        }
+        
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+        
+        function getQuote(insuranceType) {
+            alert('Thank you for your interest in ' + insuranceType + '!\n\nThis is a demo page. In a live website, this would redirect you to the quote/inquiry form.');
+        }
+        
+        // Initialize premium calculation
+        calculatePremium();
+    </script>
+ <!-- footer -->
+  
+
+
+  <!-- Premium Footer -->
+    <footer class="bg-gradient-to-br from-dark via-gray-900 to-dark text-white pt-20 pb-10 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-20 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-80 h-80 bg-secondary rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="bg-gradient-to-br from-primary to-accent text-white p-3 rounded-xl mr-3 shadow-lg">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                        <div class="text-2xl font-black text-white">MJ FINSERV</div>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Your trusted partner for comprehensive insurance and loan solutions tailored to your financial needs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Home
+                        </a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> About Us
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Services
+                        </a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Gallery
+                        </a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Contact
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Life Insurance
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Health Insurance
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Home Loans
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Business Loans
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Auto Insurance
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mr-3 mt-1"></i>
+                            <span class="text-gray-400">123 Financial District, Suite 500<br>New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-primary mr-3"></i>
+                            <span class="text-gray-400">+1 (800) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-primary mr-3"></i>
+                            <span class="text-gray-400">info@MJ FINSERV.com</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-white mb-4">Newsletter</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-3 bg-white bg-opacity-10 text-white rounded-l-xl focus:outline-none focus:ring-2 focus:ring-primary w-full placeholder-gray-400">
+                            <button class="bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-r-xl hover:shadow-lg transition-all duration-300 hover:scale-105">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 MJ FINSERV. All rights reserved. | 
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mx-2">Privacy Policy</a> | 
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mx-2">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Premium Quote Modal -->
+    <div id="quoteModal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center z-50 hidden transition-opacity duration-300">
+        <div class="bg-white rounded-3xl premium-shadow max-w-lg w-full mx-4 transform transition-all duration-300 scale-95 opacity-0">
+            <div class="p-10">
+                <div class="flex justify-between items-center mb-8">
+                    <h3 class="text-3xl font-black text-dark">Get a <span class="text-gradient">Quote</span></h3>
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700 transition-colors duration-300 hover:rotate-90 transform">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Full Name</label>
+                        <input type="text" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Email Address</label>
+                        <input type="email" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Email" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Phone Number</label>
+                        <input type="tel" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Phone" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Service Type</label>
+                        <select class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="life">Life Insurance</option>
+                            <option value="health">Health Insurance</option>
+                            <option value="home">Home Loan</option>
+                            <option value="business">Business Insurance</option>
+                            <option value="auto">Auto Insurance</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-premium bg-gradient-to-r from-primary to-accent text-white px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 w-full">
+                        Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Quote Modal
+        const quoteBtn = document.getElementById('quoteBtn');
+        const mobileQuoteBtn = document.getElementById('mobileQuoteBtn');
+        const quoteModal = document.getElementById('quoteModal');
+        const closeModal = document.getElementById('closeModal');
+        
+        function openQuoteModal() {
+            quoteModal.classList.remove('hidden');
+            setTimeout(() => {
+                quoteModal.querySelector('div').classList.remove('scale-95', 'opacity-0');
+            }, 10);
+        }
+        
+        function closeQuoteModal() {
+            quoteModal.querySelector('div').classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                quoteModal.classList.add('hidden');
+            }, 300);
+        }
+        
+        quoteBtn.addEventListener('click', openQuoteModal);
+        mobileQuoteBtn.addEventListener('click', openQuoteModal);
+        closeModal.addEventListener('click', closeQuoteModal);
+        
+        // Close modal when clicking outside
+        quoteModal.addEventListener('click', (e) => {
+            if (e.target === quoteModal) {
+                closeQuoteModal();
+            }
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+        
+        // Hero Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        const prevBtn = document.querySelector('.slider-prev');
+        const nextBtn = document.querySelector('.slider-next');
+        
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            currentSlide = (n + slides.length) % slides.length;
+            
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+        
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+        
+        // Auto slide
+        setInterval(nextSlide, 5000);
+        
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        function animateCounter() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounter, 1);
+                } else {
+                    counter.innerText = target.toLocaleString();
+                }
+            });
+        }
+        
+        // Intersection Observer for counter animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        document.querySelectorAll('.counter').forEach(counter => {
+            observer.observe(counter);
+        });
+        
+        // Fade in animations on scroll
+        const fadeElements = document.querySelectorAll('.fade-in-up');
+        
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            element.style.animationPlayState = 'paused';
+            fadeObserver.observe(element);
+        });
+    </script>
+</body>
+</html>

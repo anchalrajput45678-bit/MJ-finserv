@@ -1,0 +1,1709 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJ FINSERV - Premium Financial Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1842b6',
+                        secondary: '#e52429',
+                        accent: '#0d2d7a',
+                        light: '#f8fafc',
+                        dark: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+   
+</head>
+<body class="bg-light text-dark">
+    
+<!-- Top Bar with Premium Look -->
+<div class="animated-gradient py-3 px-4 md:px-8 relative overflow-hidden">
+  <!-- Background particles -->
+  <div class="absolute inset-0 opacity-20 pointer-events-none">
+    <div class="particle bg-white" style="width: 4px; height: 4px; top: 20%; left: 10%;"></div>
+    <div class="particle bg-white" style="width: 6px; height: 6px; top: 60%; left: 30%; animation-delay: 2s;"></div>
+    <div class="particle bg-white" style="width: 3px; height: 3px; top: 40%; left: 70%; animation-delay: 4s;"></div>
+  </div>
+
+  <!-- Top bar content -->
+  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center relative z-10">
+
+    <!-- Email & Phone (responsive) -->
+    <div class="flex w-full md:w-auto md:flex-row justify-between items-center text-sm text-white mb-2 md:mb-0">
+
+      <!-- Mobile View: Left (Email) and Right (Phone) -->
+      <div class="flex w-full justify-between items-center md:hidden">
+        <!-- Email -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
+        </span>
+        <!-- Phone -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
+        </span>
+      </div>
+
+      <!-- Desktop View: Email & Phone stacked -->
+      <div class="hidden md:flex flex-row items-center space-x-6">
+        <!-- Email -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
+        </span>
+
+        <!-- Phone -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
+        </span>
+      </div>
+    </div>
+
+    <!-- Social Icons - hidden on mobile -->
+    <div class="hidden md:flex space-x-4">
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+    <!-- Premium Navbar -->
+<nav id="navbar" class="bg-white sticky top-0 z-50 transition-all duration-500">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="flex justify-between items-center py-4">
+            <div class="flex items-center group cursor-pointer">
+                <div class="bg-gradient-to-br from-primary to-accent text-white p-3 rounded-xl mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-shield-alt text-xl"></i>
+                </div>
+                <div class="text-2xl font-bold text-gradient">MJ FINSERV</div>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Home</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="./about.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">About</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+
+                <!-- Desktop Services Dropdown -->
+                <div class="relative group">
+                    <button class="text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center">
+                        Services 
+                        <i class="fas fa-chevron-down ml-1 text-xs group-hover:rotate-180 transition-transform duration-300"></i>
+                    </button>
+                    <div class="absolute left-0 mt-6 w-72 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 border border-gray-100">
+                        <div class="py-2">
+                            <a href="./unsecureloans.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-briefcase mr-3 text-secondary"></i> 
+                                <span> Unsecured Loans </span>
+                            </a>
+                             <a href="./securedloan.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-user mr-3 text-secondary"></i> 
+                                <span>Secure Loan</span>
+                            </a> 
+                              <a href="./insuranceservice.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-home mr-3 text-secondary"></i> 
+                                <span> Insurance</span>
+                            </a>
+                            <a href="./investment.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-car mr-3 text-secondary"></i> 
+                                <span>Investments  </span>
+                            </a>
+                            <a href="./InternationalInsurance.html " class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-user-tie mr-3 text-secondary"></i> 
+                                <span> International Insurance </span>
+                            </a>  
+                             <a href=" ./lifeinsurance.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-university mr-3 text-secondary"></i> 
+                                <span>Life Insurance</span>
+                            </a>
+                              
+                        </div>
+                    </div>
+                </div>
+
+                <a href="./gallery.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Gallery</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="./contect.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Contact</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+
+            <button id="quoteBtn" class="btn-premium bg-gradient-to-r from-secondary to-red-600 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl hidden md:block">
+                Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+
+            <button id="mobileMenuBtn" class="md:hidden text-dark">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden py-4 border-t border-gray-200 bg-white">
+            <a href="index.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-home mr-3 text-primary"></i> Home
+            </a>
+            <a href="about.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-info-circle mr-3 text-primary"></i> About
+            </a>
+
+            <!-- Mobile Services Dropdown Toggle -->
+            <div class="border-b border-gray-100">
+                <button id="mobileServicesToggle" class="w-full flex justify-between items-center py-3 text-dark hover:text-primary transition-colors duration-300">
+                    <span><i class="fas fa-concierge-bell mr-3 text-primary"></i> Services</span>
+                    <i class="fas fa-chevron-down text-xs"></i>
+                </button>
+                <div id="mobileServicesMenu" class="hidden pl-8 pb-3">
+                    <a href="./unsecureloans.html" class="block py-2 text-dark hover:text-primary">Unsecure Loans</a>
+                    <a href="./securedloan.html" class="block py-2 text-dark hover:text-primary">Secure Loans </a>
+                     <a href="./insuranceservice.html " class="block py-2 text-dark hover:text-primary"> Insurance</a>
+                    <a href="./investment.html" class="block py-2 text-dark hover:text-primary"> Investments</a>
+                    <a href="./InternationalInsurance.html" class="block py-2 text-dark hover:text-primary"> International Insurance</a>
+                    <a href="./lifeinsurance.html" class="block py-2 text-dark hover:text-primary"> Life Insurance</a>
+                    
+                    <!-- <a href="insuranceservice.html" class="block py-2 text-dark hover:text-primary">Insurance Investment</a>
+                    <a href="" class="block py-2 text-dark hover:text-primary">Mutual Fund</a>   -->
+                </div>
+            </div>
+
+            <a href="gallery.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-images mr-3 text-primary"></i> Gallery
+            </a>
+            <a href="contect.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-envelope mr-3 text-primary"></i> Contact
+            </a>
+            <button id="mobileQuoteBtn" class="mt-4 bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium w-full">
+                Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- JS for Mobile Menu Toggle -->
+<script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+    const mobileServicesMenu = document.getElementById('mobileServicesMenu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileServicesToggle.addEventListener('click', () => {
+        mobileServicesMenu.classList.toggle('hidden');
+    });
+</script>
+
+  
+ 
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>🌍 Global Protection Coverage</h1>
+            <p class="hero-tagline">Travel, Study, Work Abroad - Stay Protected Everywhere</p>
+            <p class="hero-subtitle">Comprehensive overseas insurance for Indians going abroad</p>
+            <div class="hero-badges">
+                <div class="badge">✓ 150+ Countries</div>
+                <div class="badge">✓ Instant Coverage</div>
+                <div class="badge">✓ 24/7 Support</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- World Coverage Section -->
+    <div class="world-map-section">
+        <div class="map-container">
+            <h2 class="map-title">Coverage Around The World</h2>
+            <p class="map-subtitle">Select your destination continent for tailored insurance</p>
+            <div class="continents-grid">
+                <div class="continent-card">
+                    <div class="continent-icon">🌏</div>
+                    <div class="continent-name">Asia</div>
+                    <div class="continent-coverage">Full Coverage</div>
+                </div>
+                <div class="continent-card">
+                    <div class="continent-icon">🗽</div>
+                    <div class="continent-name">North America</div>
+                    <div class="continent-coverage">USA • Canada</div>
+                </div>
+                <div class="continent-card">
+                    <div class="continent-icon">🗼</div>
+                    <div class="continent-name">Europe</div>
+                    <div class="continent-coverage">Schengen + UK</div>
+                </div>
+                <div class="continent-card">
+                    <div class="continent-icon">🦘</div>
+                    <div class="continent-name">Australia</div>
+                    <div class="continent-coverage">ANZ Region</div>
+                </div>
+                <div class="continent-card">
+                    <div class="continent-icon">🕌</div>
+                    <div class="continent-name">Middle East</div>
+                    <div class="continent-coverage">GCC Countries</div>
+                </div>
+                <div class="continent-card">
+                    <div class="continent-icon">🦁</div>
+                    <div class="continent-name">Africa</div>
+                    <div class="continent-coverage">All Countries</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Calculator -->
+    <div class="calculator-section">
+        <div class="calc-wrapper">
+            <div class="calc-info">
+                <h2>Calculate Your Premium</h2>
+                <p>Get instant premium estimates for international insurance. Plan your trip budget with accurate coverage costs.</p>
+                <div class="calc-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-icon">💰</span>
+                        <div>
+                            <strong>Best Rates</strong><br>
+                            <span style="color: #666; font-size: 0.9em;">Competitive pricing for all destinations</span>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🛡️</span>
+                        <div>
+                            <strong>Comprehensive Cover</strong><br>
+                            <span style="color: #666; font-size: 0.9em;">Medical, trip, baggage - all included</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calc-box">
+                <h3 class="calc-title">Travel Insurance Calculator</h3>
+                <div class="input-group">
+                    <label class="input-label">Destination Region</label>
+                    <select class="select-field" id="region" onchange="calculatePremium()">
+                        <option value="asia">Asia</option>
+                        <option value="europe">Europe (Schengen)</option>
+                        <option value="usa">USA/Canada</option>
+                        <option value="australia">Australia/NZ</option>
+                        <option value="gcc">GCC/Middle East</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Travel Duration (Days)</label>
+                    <input type="number" class="input-field" id="days" value="15" min="1" max="365" onchange="calculatePremium()">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Your Age</label>
+                    <input type="number" class="input-field" id="age" value="30" min="1" max="85" onchange="calculatePremium()">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Coverage Amount</label>
+                    <select class="select-field" id="coverage" onchange="calculatePremium()">
+                        <option value="50000">$50,000</option>
+                        <option value="100000">$100,000</option>
+                        <option value="250000">$250,000</option>
+                        <option value="500000">$500,000</option>
+                    </select>
+                </div>
+                <div class="result-box">
+                    <div class="result-label">Estimated Premium</div>
+                    <div class="result-value" id="premium">₹2,500</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Travel Insurance Section -->
+    <div class="category-section">
+        <div class="category-header">
+            <div class="category-icon-lg">✈️</div>
+            <h2 class="category-title">Travel Insurance Plans</h2>
+            <p class="category-desc">Protect your journey with comprehensive travel insurance for every destination</p>
+        </div>
+        <div class="insurance-grid">
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-num">01</div>
+                    <div class="card-icon">🌍</div>
+                    <div class="card-title">Overseas Travel Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-desc">Complete protection for international travel with medical emergencies, trip cancellation, and baggage coverage.</p>
+                    <ul class="card-features">
+                        <li><span class="check-mark">✓</span> Medical emergencies up to $500,000</li>
+                        <li><span class="check-mark">✓</span> Trip cancellation & interruption</li>
+                        <li><span class="check-mark">✓</span> Lost baggage & passport</li>
+                        <li><span class="check-mark">✓</span> 24/7 emergency assistance</li>
+                    </ul>
+                    <button class="quote-btn">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-num">02</div>
+                    <div class="card-icon">🎓</div>
+                    <div class="card-title">Student Travel Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-desc">Specially designed for students studying abroad with extended coverage and sponsor protection.</p>
+                    <ul class="card-features">
+                        <li><span class="check-mark">✓</span> Medical expenses coverage</li>
+                        <li><span class="check-mark">✓</span> Tuition fee refund protection</li>
+                        <li><span class="check-mark">✓</span> Sponsor protection benefit</li>
+                        <li><span class="check-mark">✓</span> Study interruption cover</li>
+                    </ul>
+                    <button class="quote-btn">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-num">03</div>
+                    <div class="card-icon">👴</div>
+                    <div class="card-title">Senior Citizen Travel</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-desc">Tailored coverage for travelers aged 60+ with enhanced medical benefits and support.</p>
+                    <ul class="card-features">
+                        <li><span class="check-mark">✓</span> Higher medical risk coverage</li>
+                        <li><span class="check-mark">✓</span> Pre-existing conditions (select plans)</li>
+                        <li><span class="check-mark">✓</span> Medical evacuation</li>
+                        <li><span class="check-mark">✓</span> Compassionate visit cover</li>
+                    </ul>
+                    <button class="quote-btn">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-num">04</div>
+                    <div class="card-icon">💼</div>
+                    <div class="card-title">Corporate Travel Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-desc">Group coverage for business travelers with flexible policies and comprehensive protection.</p>
+                    <ul class="card-features">
+                        <li><span class="check-mark">✓</span> Group employee coverage</li>
+                        <li><span class="check-mark">✓</span> Business equipment protection</li>
+                        <li><span class="check-mark">✓</span> Multi-trip annual plans</li>
+                        <li><span class="check-mark">✓</span> Priority claim processing</li>
+                    </ul>
+                    <button class="quote-btn">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Health Insurance Section -->
+    <div class="category-section">
+        <div class="category-header">
+            <div class="category-icon-lg">🏥</div>
+            <h2 class="category-title">International Health Insurance</h2>
+            <p class="category-desc">Long-term health coverage for expats, NRIs, and professionals working abroad</p>
+        </div>
+        <div class="insurance-grid">
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-num">01</div>
+                    <div class="card-icon">🌐</div>
+                    <div class="card-title">International Health Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-desc">Comprehensive global medical coverage for long-term residents and expats worldwide.</p>
+                    <ul class="card-features">
+                        <li><span class="check-mark">✓</span> Global hospitalization coverage</li>
+                        <li><span class="check-mark">✓</span> OPD & maternity benefits</li>
+                        <li><span class="check-mark">✓</span> Dental & vision care</li>
+                        <li><span class="check-mark">✓</span> Annual renewability</li>
+                    </ul>
+                    <button class="quote-btn">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-num">02</div>
+                    <div class="card-icon">⬆️</div>
+                    <div class="card-title">Global Top-Up Plan</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-desc">Extend your existing Indian health insurance for international treatments and emergencies.</p>
+                    <ul class="card-features">
+                        <li><span class="check-mark">✓</span> Extends Indian health cover</li>
+                        <li><span class="check-mark">✓</span> Worldwide treatment access</li>
+                        <li><span class="check-mark">✓</span> Additional sum insured</li>
+                        <li><span class="check-mark">✓</span> Cost-effective premium</li>
+                    </ul>
+                    <button class="quote-btn">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-num">03</div>
+                    <div class="card-icon">🏢</div>
+                    <div class="card-title">Expat Health Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-desc">Specialized coverage for individuals working abroad with routine healthcare benefits.</p>
+                    <ul class="card-features">
+                        <li><span class="check-mark">✓</span> Routine healthcare coverage</li>
+                        <li><span class="check-mark">✓</span> Emergency & evacuation</li>
+                        <li><span class="check-mark">✓</span> Mental health support</li>
+                        <li><span class="check-mark">✓</span> Repatriation coverage</li>
+                    </ul>
+                    <button class="quote-btn">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Employment Insurance Section -->
+    <div class="category-section">
+        <div class="category-header">
+            <div class="category-icon-lg">💼</div>
+            <h2 class="category-title">Overseas Employment Insurance</h2>
+            <p class="category-desc">Essential coverage for Indians working in foreign countries, especially GCC nations</p>
+        </div>
+        <div class="insurance-grid">
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-num">01</div>
+                    <div class="card-icon">🇮🇳</div>
+                    <div class="card-title">Pravasi Bharatiya Bima Yojana</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-desc">Government-backed mandatory insurance for Indian workers abroad with comprehensive protection.</p>
+                    <ul class="card-features">
+                        <li><span class="check-mark">✓</span> Death & disability cover</li>
+                        <li><span class="check-mark">✓</span> Repatriation of remains</li>
+                        <li><span class="check-mark">✓</span> Medical emergencies</li>
+                        <li><span class="check-mark">✓</span> Legal expense coverage</li>
+                    </ul>
+                    <button class="quote-btn">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-num">02</div>
+                    <div class="card-icon">🏭</div>
+                    <div class="card-title">Employer-Sponsored Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-desc">Company-provided coverage for foreign employees with medical and liability protection.</p>
+                    <ul class="card-features">
+                        <li><span class="check-mark">✓</span> Medical & accident cover</li>
+                        <li><span class="check-mark">✓</span> Liability protection</li>
+                        <li><span class="check-mark">✓</span> Work-related injuries</li>
+                        <li><span class="check-mark">✓</span> Family coverage option</li>
+                    </ul>
+                    <button class="quote-btn">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Special Coverage Section -->
+    <div class="category-section">
+        <div class="category-header">
+            <div class="category-icon-lg">🌟</div>
+            <h2 class="category-title">Special & Visa Insurance</h2>
+            <p class="category-desc">Specialized coverage for specific needs, visas, and unique situations</p>
+        </div>
+        <div class="insurance-grid">
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-num">01</div>
+                    <div class="card-icon">🛂</div>
+                    <div class="card-title">Schengen Visa Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-desc">Mandatory insurance for Schengen visa applications with €30,000 minimum coverage.</p>
+                    <ul class="card-features">
+                        <li><span class="check-mark">✓</span> €30,000+ medical cover</li>
+                        <li><span class="check-mark">✓</span> Embassy-approved policies</li>
+                        <li><span class="check-mark">✓</span> Medical repatriation</li>
+                        <li><span class="check-mark">✓</span> Instant policy issuance</li>
+                    </ul>
+                    <button class="quote-btn">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-num">02</div>
+                    <div class="card-icon">🎓</div>
+                    <div class="card-title">Student Tuition Fee Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-desc">Protection for study interruption due to illness or family emergency with fee refund.</p>
+                    <ul class="card-features">
+                        <li><span class="check-mark">✓</span> Tuition fee refund</li>
+                        <li><span class="check-mark">✓</span> Study interruption cover</li>
+                        <li><span class="check-mark">✓</span> Family emergency support</li>
+                        <li><span class="check-mark">✓</span> Medical illness coverage</li>
+                    </ul>
+                    <button class="quote-btn">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-num">03</div>
+                    <div class="card-icon">⚖️</div>
+                    <div class="card-title">International Liability Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-desc">Coverage for professionals and businesses conducting operations abroad.</p>
+                    <ul class="card-features">
+                        <li><span class="check-mark">✓</span> Professional liability</li>
+                        <li><span class="check-mark">✓</span> Business operations cover</li>
+                        <li><span class="check-mark">✓</span> Legal defense costs</li>
+                        <li><span class="check-mark">✓</span> Third-party claims</li>
+                    </ul>
+                    <button class="quote-btn">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="insurance-card">
+                <div class="card-header">
+                    <div class="card-num">04</div>
+                    <div class="card-icon">🏠</div>
+                    <div class="card-title">Overseas Property Insurance</div>
+                </div>
+                <div class="card-body">
+                    <p class="card-desc">Protect your house or assets owned abroad from fire, theft, and natural disasters.</p>
+                    <ul class="card-features">
+                        <li><span class="check-mark">✓</span> Fire & theft coverage</li>
+                        <li><span class="check-mark">✓</span> Natural disaster protection</li>
+                        <li><span class="check-mark">✓</span> Personal belongings cover</li>
+                        <li><span class="check-mark">✓</span> Temporary accommodation</li>
+                    </ul>
+                    <button class="quote-btn">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="benefits-section">
+        <div class="benefits-container">
+            <div class="category-header">
+                <h2 class="category-title">Why Choose Our Overseas Insurance?</h2>
+                <p class="category-desc">Experience peace of mind with our comprehensive protection and exceptional service</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <div class="benefit-title">Instant Approval</div>
+                    <p class="benefit-desc">Get your policy issued within minutes. No waiting, no hassle - just quick, reliable coverage.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌍</div>
+                    <div class="benefit-title">Global Network</div>
+                    <p class="benefit-desc">Access to 50,000+ hospitals and medical facilities worldwide for cashless treatment.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📞</div>
+                    <div class="benefit-title">24/7 Assistance</div>
+                    <p class="benefit-desc">Round-the-clock support in multiple languages for emergencies anywhere in the world.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💵</div>
+                    <div class="benefit-title">Best Rates</div>
+                    <p class="benefit-desc">Competitive premiums with maximum coverage. Get the best value for your money.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📱</div>
+                    <div class="benefit-title">Digital Claims</div>
+                    <p class="benefit-desc">File and track claims easily through our mobile app. Fast processing guaranteed.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">✅</div>
+                    <div class="benefit-title">Zero Deductibles</div>
+                    <p class="benefit-desc">Many plans with no deductibles - full coverage from day one of your journey.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Travel with Confidence?</h2>
+            <p>Get comprehensive overseas insurance coverage in minutes. Protect yourself and your loved ones today!</p>
+            <div class="cta-buttons">
+                <button class="cta-btn">Get Free Quote</button>
+                <button class="cta-btn cta-btn-outline">Talk to Expert</button>
+            </div>
+        </div>
+    </div>
+<!-- style -->
+ <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            padding: 90px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .hero::before {
+            content: '✈️';
+            position: absolute;
+            font-size: 20em;
+            opacity: 0.1;
+            animation: flyAcross 8s ease-in-out infinite;
+        }
+        
+        @keyframes flyAcross {
+            0%, 100% { transform: translate(-100px, 0) rotate(-10deg); }
+            50% { transform: translate(100vw, -50px) rotate(10deg); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero-tagline {
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 15px;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.1em;
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 35px;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+        
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+        
+        .badge {
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(10px);
+            padding: 12px 25px;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            font-size: 1em;
+        }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* World Map Section */
+        .world-map-section {
+            padding: 60px 20px;
+            background: #f0f8ff;
+            text-align: center;
+        }
+        
+        .map-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .map-title {
+            font-size: 2.8em;
+            color: #0077cc;
+            margin-bottom: 15px;
+        }
+        
+        .map-subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        
+        .continents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .continent-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 20px rgba(0,170,255,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .continent-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(135,206,235,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .continent-card:hover::before {
+            left: 100%;
+        }
+        
+        .continent-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,170,255,0.25);
+        }
+        
+        .continent-icon {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .continent-name {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #0077cc;
+            margin-bottom: 8px;
+        }
+        
+        .continent-coverage {
+            color: #00aaff;
+            font-weight: 600;
+        }
+        
+        /* Coverage Calculator */
+        .calculator-section {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .calc-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .calc-info h2 {
+            font-size: 2.8em;
+            color: #0077cc;
+            margin-bottom: 20px;
+        }
+        
+        .calc-info p {
+            font-size: 1.1em;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .calc-highlights {
+            margin-top: 25px;
+        }
+        
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: #f0f8ff;
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+        
+        .highlight-icon {
+            font-size: 2em;
+        }
+        
+        .calc-box {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 50px rgba(0,170,255,0.15);
+        }
+        
+        .calc-title {
+            font-size: 1.8em;
+            color: #0077cc;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-label {
+            display: block;
+            color: #0077cc;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .input-field, .select-field {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #87ceeb;
+            border-radius: 10px;
+            font-size: 1em;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        
+        .input-field:focus, .select-field:focus {
+            border-color: #00aaff;
+            box-shadow: 0 0 0 3px rgba(0,170,255,0.1);
+        }
+        
+        .result-box {
+            background: linear-gradient(-45deg, #00aaff, #0077cc);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+        
+        .result-label {
+            font-size: 1em;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .result-value {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        
+        /* Insurance Categories */
+        .category-section {
+            padding: 60px 20px;
+        }
+        
+        .category-section:nth-child(odd) {
+            background: white;
+        }
+        
+        .category-section:nth-child(even) {
+            background: #f0f8ff;
+        }
+        
+        .category-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .category-icon-lg {
+            font-size: 4em;
+            margin-bottom: 15px;
+        }
+        
+        .category-title {
+            font-size: 2.8em;
+            color: #0077cc;
+            margin-bottom: 15px;
+        }
+        
+        .category-desc {
+            font-size: 1.2em;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .insurance-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .insurance-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,170,255,0.12);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+        
+        .insurance-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(135,206,235,0.2), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .insurance-card:hover::after {
+            left: 100%;
+        }
+        
+        .insurance-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(0,170,255,0.25);
+        }
+        
+        .card-header {
+            background: linear-gradient(-45deg, #00aaff, #0077cc);
+            color: white;
+            padding: 25px;
+            position: relative;
+        }
+        
+        .card-num {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .card-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .card-desc {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .card-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .card-features li {
+            padding: 8px 0;
+            color: #555;
+            display: flex;
+            align-items: start;
+            gap: 10px;
+            font-size: 0.9em;
+        }
+        
+        .check-mark {
+            color: #00aaff;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .quote-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(-45deg, #00aaff, #0077cc);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quote-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .quote-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .quote-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,170,255,0.4);
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .benefits-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit-card {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .benefit-card:hover {
+            border-color: #00aaff;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,170,255,0.2);
+        }
+        
+        .benefit-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-title {
+            font-size: 1.5em;
+            color: #0077cc;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .benefit-desc {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 20px;
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '🌍';
+            position: absolute;
+            font-size: 20em;
+            opacity: 0.1;
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-section h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.3em;
+            margin-bottom: 35px;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            padding: 18px 45px;
+            background: white;
+            color: #0077cc;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .cta-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        
+        .cta-btn-outline {
+            background: transparent;
+            color: white;
+            border: 3px solid white;
+        }
+        
+        .cta-btn-outline:hover {
+            background: white;
+            color: #0077cc;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .calc-wrapper {
+                grid-template-columns: 1fr;
+            }
+            
+            .continents-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .insurance-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .hero-tagline {
+                font-size: 1.2em;
+            }
+            
+            .map-title, .category-title {
+                font-size: 2em;
+            }
+            
+            .calc-box {
+                padding: 25px;
+            }
+            
+            .insurance-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-section h2 {
+                font-size: 2.2em;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                padding: 60px 15px;
+                min-height: 400px;
+            }
+            
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .hero-tagline {
+                font-size: 1em;
+            }
+            
+            .hero-subtitle {
+                font-size: 0.95em;
+            }
+            
+            .badge {
+                font-size: 0.85em;
+                padding: 10px 18px;
+            }
+            
+            .continents-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .category-icon-lg {
+                font-size: 3em;
+            }
+            
+            .category-title {
+                font-size: 1.8em;
+            }
+            
+            .calc-info h2 {
+                font-size: 2em;
+            }
+            
+            .calc-title {
+                font-size: 1.4em;
+            }
+            
+            .card-title {
+                font-size: 1.3em;
+            }
+            
+            .result-value {
+                font-size: 2em;
+            }
+        }
+    </style>
+    <!-- end style -->
+    <script>
+        function calculatePremium() {
+            const region = document.getElementById('region').value;
+            const days = parseInt(document.getElementById('days').value) || 15;
+            const age = parseInt(document.getElementById('age').value) || 30;
+            const coverage = parseInt(document.getElementById('coverage').value) || 100000;
+            
+            // Base rates per region (per day)
+            const regionRates = {
+                'asia': 30,
+                'europe': 80,
+                'usa': 120,
+                'australia': 90,
+                'gcc': 50
+            };
+            
+            // Age factor
+            let ageFactor = 1;
+            if (age > 60) ageFactor = 2.5;
+            else if (age > 45) ageFactor = 1.8;
+            else if (age > 35) ageFactor = 1.3;
+            
+            // Coverage factor
+            const coverageFactor = coverage / 100000;
+            
+            // Calculate premium
+            const baseRate = regionRates[region] || 50;
+            const premium = Math.round(baseRate * days * ageFactor * coverageFactor);
+            
+            // Display with animation
+            const premiumElement = document.getElementById('premium');
+            premiumElement.style.transform = 'scale(1.2)';
+            premiumElement.style.transition = 'transform 0.3s ease';
+            
+            setTimeout(() => {
+                premiumElement.textContent = '₹' + premium.toLocaleString('en-IN');
+                premiumElement.style.transform = 'scale(1)';
+            }, 150);
+        }
+        
+        // Calculate on page load
+        calculatePremium();
+    </script>
+ 
+
+
+
+  <!-- Premium Footer -->
+    <footer class="bg-gradient-to-br from-dark via-gray-900 to-dark text-white pt-20 pb-10 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-20 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-80 h-80 bg-secondary rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="bg-gradient-to-br from-primary to-accent text-white p-3 rounded-xl mr-3 shadow-lg">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                        <div class="text-2xl font-black text-white">MJ FINSERV</div>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Your trusted partner for comprehensive insurance and loan solutions tailored to your financial needs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Home
+                        </a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> About Us
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Services
+                        </a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Gallery
+                        </a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Contact
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Life Insurance
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Health Insurance
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Home Loans
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Business Loans
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Auto Insurance
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mr-3 mt-1"></i>
+                            <span class="text-gray-400">123 Financial District, Suite 500<br>New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-primary mr-3"></i>
+                            <span class="text-gray-400">+1 (800) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-primary mr-3"></i>
+                            <span class="text-gray-400">info@MJ FINSERV.com</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-white mb-4">Newsletter</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-3 bg-white bg-opacity-10 text-white rounded-l-xl focus:outline-none focus:ring-2 focus:ring-primary w-full placeholder-gray-400">
+                            <button class="bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-r-xl hover:shadow-lg transition-all duration-300 hover:scale-105">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 MJ FINSERV. All rights reserved. | 
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mx-2">Privacy Policy</a> | 
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mx-2">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Premium Quote Modal -->
+    <div id="quoteModal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center z-50 hidden transition-opacity duration-300">
+        <div class="bg-white rounded-3xl premium-shadow max-w-lg w-full mx-4 transform transition-all duration-300 scale-95 opacity-0">
+            <div class="p-10">
+                <div class="flex justify-between items-center mb-8">
+                    <h3 class="text-3xl font-black text-dark">Get a <span class="text-gradient">Quote</span></h3>
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700 transition-colors duration-300 hover:rotate-90 transform">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Full Name</label>
+                        <input type="text" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Email Address</label>
+                        <input type="email" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Email" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Phone Number</label>
+                        <input type="tel" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Phone" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Service Type</label>
+                        <select class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="life">Life Insurance</option>
+                            <option value="health">Health Insurance</option>
+                            <option value="home">Home Loan</option>
+                            <option value="business">Business Insurance</option>
+                            <option value="auto">Auto Insurance</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-premium bg-gradient-to-r from-primary to-accent text-white px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 w-full">
+                        Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Quote Modal
+        const quoteBtn = document.getElementById('quoteBtn');
+        const mobileQuoteBtn = document.getElementById('mobileQuoteBtn');
+        const quoteModal = document.getElementById('quoteModal');
+        const closeModal = document.getElementById('closeModal');
+        
+        function openQuoteModal() {
+            quoteModal.classList.remove('hidden');
+            setTimeout(() => {
+                quoteModal.querySelector('div').classList.remove('scale-95', 'opacity-0');
+            }, 10);
+        }
+        
+        function closeQuoteModal() {
+            quoteModal.querySelector('div').classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                quoteModal.classList.add('hidden');
+            }, 300);
+        }
+        
+        quoteBtn.addEventListener('click', openQuoteModal);
+        mobileQuoteBtn.addEventListener('click', openQuoteModal);
+        closeModal.addEventListener('click', closeQuoteModal);
+        
+        // Close modal when clicking outside
+        quoteModal.addEventListener('click', (e) => {
+            if (e.target === quoteModal) {
+                closeQuoteModal();
+            }
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+        
+        // Hero Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        const prevBtn = document.querySelector('.slider-prev');
+        const nextBtn = document.querySelector('.slider-next');
+        
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            currentSlide = (n + slides.length) % slides.length;
+            
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+        
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+        
+        // Auto slide
+        setInterval(nextSlide, 5000);
+        
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        function animateCounter() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounter, 1);
+                } else {
+                    counter.innerText = target.toLocaleString();
+                }
+            });
+        }
+        
+        // Intersection Observer for counter animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        document.querySelectorAll('.counter').forEach(counter => {
+            observer.observe(counter);
+        });
+        
+        // Fade in animations on scroll
+        const fadeElements = document.querySelectorAll('.fade-in-up');
+        
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            element.style.animationPlayState = 'paused';
+            fadeObserver.observe(element);
+        });
+    </script>
+</body>
+</html>

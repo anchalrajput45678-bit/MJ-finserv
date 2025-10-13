@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - MJ FINSERV</title>
+    <title>MJ FINSERV - Premium Financial Solutions</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,219 +22,11 @@
             }
         }
     </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        
-        * {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        body {
-            overflow-x: hidden;
-        }
-        
-        /* Premium Animations */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        @keyframes gradient-shift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        @keyframes slide-up {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-       
-        
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .hover-lift {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-        
-        .fade-in-up {
-            animation: slide-up 0.8s ease-out forwards;
-            opacity: 0;
-        }
-        
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
-        .delay-400 { animation-delay: 0.4s; }
-        .delay-500 { animation-delay: 0.5s; }
-        
-        .premium-shadow {
-            box-shadow: 0 10px 40px rgba(24, 66, 182, 0.1);
-        }
-        
-        .premium-shadow-hover:hover {
-            box-shadow: 0 20px 60px rgba(24, 66, 182, 0.2);
-        }
-        
-        
-        
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #1842b6, #e52429);
-            border-radius: 5px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, #0d2d7a, #1842b6);
-        }
-        
-        /* Navbar Scroll Effect */
-        .navbar-scrolled {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Premium Button */
-        .btn-premium {
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .btn-premium::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.6s;
-            z-index: -1;
-        }
-        
-        .btn-premium:hover::before {
-            left: 100%;
-        }
-        
-        /* Particle Background */
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.2;
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        /* Timeline */
-        .timeline {
-            position: relative;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(to bottom, #1842b6, #e52429);
-            border-radius: 10px;
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 4rem;
-        }
-        
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-left: auto;
-            margin-right: 0;
-        }
-        
-        .timeline-dot {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #1842b6, #e52429);
-            border: 4px solid white;
-            box-shadow: 0 0 0 4px rgba(24, 66, 182, 0.2);
-            z-index: 10;
-        }
-        
-        /* Values Cards */
-        .value-card {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .value-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(24, 66, 182, 0.1), transparent);
-            transition: left 0.6s;
-        }
-        
-        .value-card:hover::before {
-            left: 100%;
-        }
-        
-        /* Team Cards */
-        .team-card {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .team-social {
-            position: absolute;
-            bottom: -50px;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            padding: 1rem;
-            background: linear-gradient(transparent, rgba(24, 66, 182, 0.9));
-            transition: bottom 0.4s ease;
-        }
-        
-        .team-card:hover .team-social {
-            bottom: 0;
-        }
-    </style>
+   
 </head>
 <body class="bg-light text-dark">
     
-   <!-- Top Bar with Premium Look -->
+<!-- Top Bar with Premium Look -->
 <div class="animated-gradient py-3 px-4 md:px-8 relative overflow-hidden">
   <!-- Background particles -->
   <div class="absolute inset-0 opacity-20 pointer-events-none">
@@ -293,7 +85,7 @@
   </div>
 </div>
 
-   <!-- Premium Navbar -->
+    <!-- Premium Navbar -->
 <nav id="navbar" class="bg-white sticky top-0 z-50 transition-all duration-500">
     <div class="container mx-auto px-4 md:px-8">
         <div class="flex justify-between items-center py-4">
@@ -309,7 +101,7 @@
                     <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Home</span>
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
                 </a>
-                <a href="about.html" class="nav-link relative group">
+                <a href="./about.html" class="nav-link relative group">
                     <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">About</span>
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
                 </a>
@@ -322,47 +114,40 @@
                     </button>
                     <div class="absolute left-0 mt-6 w-72 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 border border-gray-100">
                         <div class="py-2">
-                            <a href="business.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                            <a href="./unsecureloans.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
                                 <i class="fas fa-briefcase mr-3 text-secondary"></i> 
-                                <span>Business Loan</span>
+                                <span> Unsecured Loans </span>
                             </a>
-                            <a href="persional.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                             <a href="./securedloan.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
                                 <i class="fas fa-user mr-3 text-secondary"></i> 
-                                <span>Personal Loan</span>
-                            </a>
-                            <a href="HomeLoan.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <span>Secure Loan</span>
+                            </a> 
+                              <a href="./insuranceservice.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
                                 <i class="fas fa-home mr-3 text-secondary"></i> 
-                                <span>Home Loan</span>
+                                <span> Insurance</span>
                             </a>
-                            <a href="car.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                            <a href="./investment.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
                                 <i class="fas fa-car mr-3 text-secondary"></i> 
-                                <span>Car Loan</span>
+                                <span>Investments  </span>
                             </a>
-                            <a href="Professionalloan.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                            <a href="./InternationalInsurance.html " class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
                                 <i class="fas fa-user-tie mr-3 text-secondary"></i> 
-                                <span>Professional Loan</span>
-                            </a>
-                            <a href="OverdraftFacility.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <span> International Insurance </span>
+                            </a>  
+                             <a href=" ./lifeinsurance.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
                                 <i class="fas fa-university mr-3 text-secondary"></i> 
-                                <span>Overdraft Facility</span>
+                                <span>Life Insurance</span>
                             </a>
-                            <a href="InsuranceInvestment.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
-                                <i class="fas fa-shield-alt mr-3 text-secondary"></i> 
-                                <span>Insurance Investment</span>
-                            </a>
-                            <a href="MutualFund.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
-                                <i class="fas fa-chart-line mr-3 text-secondary"></i> 
-                                <span>Mutual Fund</span>
-                            </a>
+                              
                         </div>
                     </div>
                 </div>
 
-                <a href="gallery.html" class="nav-link relative group">
+                <a href="./gallery.html" class="nav-link relative group">
                     <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Gallery</span>
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
                 </a>
-                <a href="contect.html" class="nav-link relative group">
+                <a href="./contect.html" class="nav-link relative group">
                     <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Contact</span>
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
                 </a>
@@ -393,14 +178,15 @@
                     <i class="fas fa-chevron-down text-xs"></i>
                 </button>
                 <div id="mobileServicesMenu" class="hidden pl-8 pb-3">
-                    <a href="business.html" class="block py-2 text-dark hover:text-primary">Business Loan</a>
-                    <a href="persional.html" class="block py-2 text-dark hover:text-primary">Personal Loan</a>
-                    <a href="HomeLoan.html" class="block py-2 text-dark hover:text-primary">Home Loan</a>
-                    <a href="car.html" class="block py-2 text-dark hover:text-primary">Car Loan</a>
-                    <a href="Professionalloan.html" class="block py-2 text-dark hover:text-primary">Professional Loan</a>
-                    <a href="OverdraftFacility.html" class="block py-2 text-dark hover:text-primary">Overdraft Facility</a>
-                    <a href="InsuranceInvestment.html" class="block py-2 text-dark hover:text-primary">Insurance Investment</a>
-                    <a href="MutualFund.html" class="block py-2 text-dark hover:text-primary">Mutual Fund</a>
+                    <a href="./unsecureloans.html" class="block py-2 text-dark hover:text-primary">Unsecure Loans</a>
+                    <a href="./securedloan.html" class="block py-2 text-dark hover:text-primary">Secure Loans </a>
+                     <a href="./insuranceservice.html " class="block py-2 text-dark hover:text-primary"> Insurance</a>
+                    <a href="./investment.html" class="block py-2 text-dark hover:text-primary"> Investments</a>
+                    <a href="./InternationalInsurance.html" class="block py-2 text-dark hover:text-primary"> International Insurance</a>
+                    <a href="./lifeinsurance.html" class="block py-2 text-dark hover:text-primary"> Life Insurance</a>
+                    
+                    <!-- <a href="insuranceservice.html" class="block py-2 text-dark hover:text-primary">Insurance Investment</a>
+                    <a href="" class="block py-2 text-dark hover:text-primary">Mutual Fund</a>   -->
                 </div>
             </div>
 
@@ -432,6 +218,7 @@
         mobileServicesMenu.classList.toggle('hidden');
     });
 </script>
+
 
 
     <!-- About Hero Section -->
@@ -738,7 +525,7 @@
         </div>
     </section>
 
-    <!-- Premium Footer -->
+     <!-- Premium Footer -->
     <footer class="bg-gradient-to-br from-dark via-gray-900 to-dark text-white pt-20 pb-10 relative overflow-hidden">
         <div class="absolute inset-0 opacity-5">
             <div class="absolute top-20 left-20 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
@@ -773,19 +560,19 @@
                 <div>
                     <h3 class="text-xl font-bold mb-6 text-white">Quick Links</h3>
                     <ul class="space-y-3">
-                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
                             <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Home
                         </a></li>
-                        <li><a href="about.html" class="text-white flex items-center group">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
                             <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> About Us
                         </a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
                             <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Services
                         </a></li>
-                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
                             <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Gallery
                         </a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
                             <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Contact
                         </a></li>
                     </ul>
@@ -850,7 +637,7 @@
         </div>
     </footer>
 
-     <!-- Premium Quote Modal -->
+    <!-- Premium Quote Modal -->
     <div id="quoteModal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center z-50 hidden transition-opacity duration-300">
         <div class="bg-white rounded-3xl premium-shadow max-w-lg w-full mx-4 transform transition-all duration-300 scale-95 opacity-0">
             <div class="p-10">
@@ -897,14 +684,8 @@
         </div>
     </div>
 
-
     <!-- JavaScript -->
-
-    
     <script>
-
-
-
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
@@ -912,8 +693,8 @@
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-
-             // Quote Modal
+        
+        // Quote Modal
         const quoteBtn = document.getElementById('quoteBtn');
         const mobileQuoteBtn = document.getElementById('mobileQuoteBtn');
         const quoteModal = document.getElementById('quoteModal');
@@ -954,6 +735,74 @@
             }
         });
         
+        // Hero Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        const prevBtn = document.querySelector('.slider-prev');
+        const nextBtn = document.querySelector('.slider-next');
+        
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            currentSlide = (n + slides.length) % slides.length;
+            
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+        
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+        
+        // Auto slide
+        setInterval(nextSlide, 5000);
+        
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        function animateCounter() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounter, 1);
+                } else {
+                    counter.innerText = target.toLocaleString();
+                }
+            });
+        }
+        
+        // Intersection Observer for counter animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        document.querySelectorAll('.counter').forEach(counter => {
+            observer.observe(counter);
+        });
+        
         // Fade in animations on scroll
         const fadeElements = document.querySelectorAll('.fade-in-up');
         
@@ -971,8 +820,5 @@
             fadeObserver.observe(element);
         });
     </script>
-
-
-
 </body>
 </html>

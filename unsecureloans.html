@@ -1,0 +1,1563 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJ FINSERV - Premium Financial Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1842b6',
+                        secondary: '#e52429',
+                        accent: '#0d2d7a',
+                        light: '#f8fafc',
+                        dark: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+   
+</head>
+<body class="bg-light text-dark">
+    
+<!-- Top Bar with Premium Look -->
+<div class="animated-gradient py-3 px-4 md:px-8 relative overflow-hidden">
+  <!-- Background particles -->
+  <div class="absolute inset-0 opacity-20 pointer-events-none">
+    <div class="particle bg-white" style="width: 4px; height: 4px; top: 20%; left: 10%;"></div>
+    <div class="particle bg-white" style="width: 6px; height: 6px; top: 60%; left: 30%; animation-delay: 2s;"></div>
+    <div class="particle bg-white" style="width: 3px; height: 3px; top: 40%; left: 70%; animation-delay: 4s;"></div>
+  </div>
+
+  <!-- Top bar content -->
+  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center relative z-10">
+
+    <!-- Email & Phone (responsive) -->
+    <div class="flex w-full md:w-auto md:flex-row justify-between items-center text-sm text-white mb-2 md:mb-0">
+
+      <!-- Mobile View: Left (Email) and Right (Phone) -->
+      <div class="flex w-full justify-between items-center md:hidden">
+        <!-- Email -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
+        </span>
+        <!-- Phone -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
+        </span>
+      </div>
+
+      <!-- Desktop View: Email & Phone stacked -->
+      <div class="hidden md:flex flex-row items-center space-x-6">
+        <!-- Email -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
+        </span>
+
+        <!-- Phone -->
+        <span class="flex items-center hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
+        </span>
+      </div>
+    </div>
+
+    <!-- Social Icons - hidden on mobile -->
+    <div class="hidden md:flex space-x-4">
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+    <!-- Premium Navbar -->
+<nav id="navbar" class="bg-white sticky top-0 z-50 transition-all duration-500">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="flex justify-between items-center py-4">
+            <div class="flex items-center group cursor-pointer">
+                <div class="bg-gradient-to-br from-primary to-accent text-white p-3 rounded-xl mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-shield-alt text-xl"></i>
+                </div>
+                <div class="text-2xl font-bold text-gradient">MJ FINSERV</div>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Home</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="./about.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">About</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+
+                <!-- Desktop Services Dropdown -->
+                <div class="relative group">
+                    <button class="text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center">
+                        Services 
+                        <i class="fas fa-chevron-down ml-1 text-xs group-hover:rotate-180 transition-transform duration-300"></i>
+                    </button>
+                    <div class="absolute left-0 mt-6 w-72 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 border border-gray-100">
+                        <div class="py-2">
+                            <a href="./unsecureloans.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-briefcase mr-3 text-secondary"></i> 
+                                <span> Unsecured Loans </span>
+                            </a>
+                             <a href="./securedloan.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-user mr-3 text-secondary"></i> 
+                                <span>Secure Loan</span>
+                            </a> 
+                              <a href="./insuranceservice.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-home mr-3 text-secondary"></i> 
+                                <span> Insurance</span>
+                            </a>
+                            <a href="./investment.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-car mr-3 text-secondary"></i> 
+                                <span>Investments  </span>
+                            </a>
+                            <a href="./InternationalInsurance.html " class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-user-tie mr-3 text-secondary"></i> 
+                                <span> International Insurance </span>
+                            </a>  
+                             <a href=" ./lifeinsurance.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
+                                <i class="fas fa-university mr-3 text-secondary"></i> 
+                                <span>Life Insurance</span>
+                            </a>
+                              
+                        </div>
+                    </div>
+                </div>
+
+                <a href="./gallery.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Gallery</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="./contect.html" class="nav-link relative group">
+                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Contact</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+
+            <button id="quoteBtn" class="btn-premium bg-gradient-to-r from-secondary to-red-600 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl hidden md:block">
+                Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+
+            <button id="mobileMenuBtn" class="md:hidden text-dark">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden py-4 border-t border-gray-200 bg-white">
+            <a href="index.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-home mr-3 text-primary"></i> Home
+            </a>
+            <a href="about.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-info-circle mr-3 text-primary"></i> About
+            </a>
+
+            <!-- Mobile Services Dropdown Toggle -->
+            <div class="border-b border-gray-100">
+                <button id="mobileServicesToggle" class="w-full flex justify-between items-center py-3 text-dark hover:text-primary transition-colors duration-300">
+                    <span><i class="fas fa-concierge-bell mr-3 text-primary"></i> Services</span>
+                    <i class="fas fa-chevron-down text-xs"></i>
+                </button>
+                <div id="mobileServicesMenu" class="hidden pl-8 pb-3">
+                    <a href="./unsecureloans.html" class="block py-2 text-dark hover:text-primary">Unsecure Loans</a>
+                    <a href="./securedloan.html" class="block py-2 text-dark hover:text-primary">Secure Loans </a>
+                     <a href="./insuranceservice.html " class="block py-2 text-dark hover:text-primary"> Insurance</a>
+                    <a href="./investment.html" class="block py-2 text-dark hover:text-primary"> Investments</a>
+                    <a href="./InternationalInsurance.html" class="block py-2 text-dark hover:text-primary"> International Insurance</a>
+                    <a href="./lifeinsurance.html" class="block py-2 text-dark hover:text-primary"> Life Insurance</a>
+                    
+                    <!-- <a href="insuranceservice.html" class="block py-2 text-dark hover:text-primary">Insurance Investment</a>
+                    <a href="" class="block py-2 text-dark hover:text-primary">Mutual Fund</a>   -->
+                </div>
+            </div>
+
+            <a href="gallery.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-images mr-3 text-primary"></i> Gallery
+            </a>
+            <a href="contect.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-envelope mr-3 text-primary"></i> Contact
+            </a>
+            <button id="mobileQuoteBtn" class="mt-4 bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium w-full">
+                Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- JS for Mobile Menu Toggle -->
+<script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+    const mobileServicesMenu = document.getElementById('mobileServicesMenu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileServicesToggle.addEventListener('click', () => {
+        mobileServicesMenu.classList.toggle('hidden');
+    });
+</script>
+
+
+<!-- navbar finished here -->
+   
+
+    <!-- Hero Section -->
+    <div class="hero"   
+   >
+        <div class="hero-content"  >
+            <h1>💰 Find Your Perfect Loan</h1>
+            <p>No Collateral Required | Quick Approval | Flexible Tenure</p>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-number">24 hrs</div>
+                <div class="stat-label">Quick Approval</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Loan Types</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">💳</div>
+                <div class="stat-number">No</div>
+                <div class="stat-label">Collateral Needed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-number">₹75L</div>
+                <div class="stat-label">Maximum Limit</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loan Finder Tool -->
+    <div class="loan-finder">
+        <div class="finder-container">
+            <h2 class="finder-title">🔍 What Do You Need?</h2>
+            <p style="font-size: 1em; color: #666; margin-bottom: 15px;">Choose your purpose and we'll show you the best options</p>
+            <div class="finder-buttons">
+                <button class="finder-btn" onclick="scrollToLoan('personal')">Personal Needs</button>
+                <button class="finder-btn" onclick="scrollToLoan('business')">Business Growth</button>
+                <button class="finder-btn" onclick="scrollToLoan('education')">Education</button>
+                <button class="finder-btn" onclick="scrollToLoan('medical')">Medical Emergency</button>
+                <button class="finder-btn" onclick="scrollToLoan('vehicle')">Vehicle Purchase</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- All Loan Types -->
+    <div class="loans-section">
+        <h2 class="section-title">📋 Complete Guide to Unsecured Loans</h2>
+        <div class="loans-container">
+            
+            <!-- Personal Loan -->
+            <div class="loan-card" id="personal">
+                <div class="loan-header">
+                    <div class="loan-icon">💼</div>
+                    <div class="loan-title">Personal Loan</div>
+                </div>
+                <div class="loan-body">
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Purpose:</span>
+                        <span class="loan-detail-value">Medical, travel, home renovation, any personal need</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Eligibility:</span>
+                        <span class="loan-detail-value">Based on salary/income & credit score</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Tenure:</span>
+                        <span class="loan-detail-value">1-5 years</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Security:</span>
+                        <span class="loan-detail-value">No collateral required</span>
+                    </div>
+                    <button class="apply-btn" onclick="showInterest('Personal Loan')">Check Eligibility</button>
+                </div>
+            </div>
+
+            <!-- Business Loan -->
+            <div class="loan-card" id="business">
+                <div class="loan-header">
+                    <div class="loan-icon">🏢</div>
+                    <div class="loan-title">Business Loan (Unsecured)</div>
+                </div>
+                <div class="loan-body">
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Purpose:</span>
+                        <span class="loan-detail-value">Working capital, expansion, equipment</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">For:</span>
+                        <span class="loan-detail-value">Proprietorship, Partnership, Pvt Ltd, LLP</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Limit:</span>
+                        <span class="loan-detail-value">₹1 lakh - ₹75 lakh</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Documents:</span>
+                        <span class="loan-detail-value">ITR, GST, bank statements, KYC</span>
+                    </div>
+                    <button class="apply-btn" onclick="showInterest('Business Loan')">Apply Now</button>
+                </div>
+            </div>
+
+            <!-- Credit Card Loan -->
+            <div class="loan-card">
+                <div class="loan-header">
+                    <div class="loan-icon">💳</div>
+                    <div class="loan-title">Credit Card Loan</div>
+                </div>
+                <div class="loan-body">
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Purpose:</span>
+                        <span class="loan-detail-value">Instant cash or EMI conversion</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Limit:</span>
+                        <span class="loan-detail-value">Based on credit card limit</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Interest:</span>
+                        <span class="loan-detail-value">12%-36% per annum</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Approval:</span>
+                        <span class="loan-detail-value">Instant (if you have credit card)</span>
+                    </div>
+                    <button class="apply-btn" onclick="showInterest('Credit Card Loan')">Get Instant Cash</button>
+                </div>
+            </div>
+
+            <!-- Consumer Durable Loan -->
+            <div class="loan-card">
+                <div class="loan-header">
+                    <div class="loan-icon">🏠</div>
+                    <div class="loan-title">Consumer Durable Loan</div>
+                </div>
+                <div class="loan-body">
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Purpose:</span>
+                        <span class="loan-detail-value">Electronics, appliances purchase</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Security:</span>
+                        <span class="loan-detail-value">Product acts as soft collateral</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Providers:</span>
+                        <span class="loan-detail-value">Bajaj Finance, HDFC, NBFCs</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Benefit:</span>
+                        <span class="loan-detail-value">Easy EMI options at store</span>
+                    </div>
+                    <button class="apply-btn" onclick="showInterest('Consumer Durable Loan')">Shop on EMI</button>
+                </div>
+            </div>
+
+            <!-- Vehicle Loan -->
+            <div class="loan-card" id="vehicle">
+                <div class="loan-header">
+                    <div class="loan-icon">🚗</div>
+                    <div class="loan-title">Vehicle Loan Top-up</div>
+                </div>
+                <div class="loan-body">
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Type:</span>
+                        <span class="loan-detail-value">Unsecured top-up or used vehicle</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Note:</span>
+                        <span class="loan-detail-value">Regular vehicle loans are secured</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Purpose:</span>
+                        <span class="loan-detail-value">Additional funds on existing loan</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Eligibility:</span>
+                        <span class="loan-detail-value">Good repayment history needed</span>
+                    </div>
+                    <button class="apply-btn" onclick="showInterest('Vehicle Loan Top-up')">Explore Options</button>
+                </div>
+            </div>
+
+            <!-- Education Loan -->
+            <div class="loan-card" id="education">
+                <div class="loan-header">
+                    <div class="loan-icon">🧾</div>
+                    <div class="loan-title">Education Loan (Unsecured)</div>
+                </div>
+                <div class="loan-body">
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Purpose:</span>
+                        <span class="loan-detail-value">Higher studies, courses</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Limit:</span>
+                        <span class="loan-detail-value">Up to ₹7.5 lakh (without collateral)</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Benefit:</span>
+                        <span class="loan-detail-value">Moratorium period available</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">For:</span>
+                        <span class="loan-detail-value">Students pursuing higher education</span>
+                    </div>
+                    <button class="apply-btn" onclick="showInterest('Education Loan')">Fund Your Dreams</button>
+                </div>
+            </div>
+
+            <!-- Salary/PayDay Loan -->
+            <div class="loan-card" id="medical">
+                <div class="loan-header">
+                    <div class="loan-icon">🧍</div>
+                    <div class="loan-title">Salary / PayDay Loan</div>
+                </div>
+                <div class="loan-body">
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">For:</span>
+                        <span class="loan-detail-value">Salaried employees only</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Approval:</span>
+                        <span class="loan-detail-value">Quick with salary slip & bank statement</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Tenure:</span>
+                        <span class="loan-detail-value">3-24 months</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Speed:</span>
+                        <span class="loan-detail-value">Same day disbursal possible</span>
+                    </div>
+                    <button class="apply-btn" onclick="showInterest('Salary Loan')">Get Quick Cash</button>
+                </div>
+            </div>
+
+            <!-- Professional Loan -->
+            <div class="loan-card">
+                <div class="loan-header">
+                    <div class="loan-icon">🧑‍💼</div>
+                    <div class="loan-title">Professional Loan</div>
+                </div>
+                <div class="loan-body">
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">For:</span>
+                        <span class="loan-detail-value">Doctors, CAs, Architects, Lawyers</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Purpose:</span>
+                        <span class="loan-detail-value">Clinic setup, renovation, capital</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Limit:</span>
+                        <span class="loan-detail-value">₹5 lakh - ₹50 lakh</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Benefit:</span>
+                        <span class="loan-detail-value">Lower interest rates for professionals</span>
+                    </div>
+                    <button class="apply-btn" onclick="showInterest('Professional Loan')">Grow Your Practice</button>
+                </div>
+            </div>
+
+            <!-- Line of Credit -->
+            <div class="loan-card">
+                <div class="loan-header">
+                    <div class="loan-icon">🏦</div>
+                    <div class="loan-title">Line of Credit / Flexi Loan</div>
+                </div>
+                <div class="loan-body">
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Type:</span>
+                        <span class="loan-detail-value">Working capital for business/individuals</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Benefit:</span>
+                        <span class="loan-detail-value">Pay interest only on used amount</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Similar to:</span>
+                        <span class="loan-detail-value">Overdraft (OD) but unsecured</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Flexibility:</span>
+                        <span class="loan-detail-value">Withdraw & repay anytime</span>
+                    </div>
+                    <button class="apply-btn" onclick="showInterest('Line of Credit')">Get Flexible Credit</button>
+                </div>
+            </div>
+
+            <!-- Micro Finance Loan -->
+            <div class="loan-card">
+                <div class="loan-header">
+                    <div class="loan-icon">💰</div>
+                    <div class="loan-title">Micro Finance / Small Ticket Loan</div>
+                </div>
+                <div class="loan-body">
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">For:</span>
+                        <span class="loan-detail-value">Small shop owners, self-employed</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Amount:</span>
+                        <span class="loan-detail-value">₹10,000 - ₹2 lakh</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Type:</span>
+                        <span class="loan-detail-value">Often group-based lending</span>
+                    </div>
+                    <div class="loan-detail">
+                        <span class="loan-detail-label">Process:</span>
+                        <span class="loan-detail-value">Simple documentation & quick approval</span>
+                    </div>
+                    <button class="apply-btn" onclick="showInterest('Micro Finance Loan')">Start Small Business</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Comparison Section -->
+    <div class="comparison-section">
+        <div class="comparison-container">
+            <h2 class="section-title">⚖️ Why Choose Unsecured Loans?</h2>
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <h3>✅ No Collateral</h3>
+                    <p>Your property is safe</p>
+                </div>
+                <div class="comparison-card">
+                    <h3>⚡ Quick Process</h3>
+                    <p>Get funds in 24-48 hours</p>
+                </div>
+                <div class="comparison-card">
+                    <h3>📝 Simple Docs</h3>
+                    <p>Minimal paperwork needed</p>
+                </div>
+                <div class="comparison-card">
+                    <h3>🎯 Flexible Use</h3>
+                    <p>Use for any purpose</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+        <div class="faq-container">
+            <h2 class="section-title">❓ Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What is an unsecured loan?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    An unsecured loan is a loan that doesn't require any collateral or security. It's approved based on your creditworthiness, income, and repayment capacity. Your assets remain safe even if you default, though it may affect your credit score.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>How quickly can I get an unsecured loan?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Most unsecured loans can be approved within 24-48 hours. Some lenders offer instant approval and same-day disbursal, especially for personal loans and salary loans with proper documentation.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What documents are required?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Basic documents include: Identity proof (Aadhaar, PAN), Address proof, Income proof (salary slips/ITR), Bank statements (3-6 months), and Employment proof. Additional documents may be required based on loan type.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What is the minimum credit score needed?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Most lenders prefer a credit score of 750 or above for unsecured loans. However, some lenders may approve loans with scores as low as 650-700, but with higher interest rates.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Can I prepay my unsecured loan?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes, most unsecured loans allow prepayment. However, some lenders may charge a prepayment penalty (usually 2-5% of the outstanding amount). Check your loan agreement for specific terms.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <h2>Ready to Get Your Loan?</h2>
+        <p>Compare rates from top lenders and apply in minutes</p>
+        <button class="cta-btn" onclick="showInterest('General Inquiry')">Start Application Now</button>
+    </div>
+<!-- style -->
+   <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section */
+        .hero {
+              background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+   
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: moveGrid 20s linear infinite;
+        }
+        
+        @keyframes moveGrid {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 2.5em;
+            color: white;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.1em;
+            color: white;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Interactive Stats */
+        .stats-section {
+            padding: 50px 20px;
+            background: #f5f8ff;
+        }
+        
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,102,255,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,102,255,0.2);
+        }
+        
+        .stat-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            background: linear-gradient(-45deg, #0066ff, #0044cc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 1em;
+            margin-top: 8px;
+        }
+        
+        /* Loan Finder Tool */
+        .loan-finder {
+            padding: 50px 20px;
+            background: white;
+        }
+        
+        .finder-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .finder-title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #0044cc;
+        }
+        
+        .finder-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 25px;
+        }
+        
+        .finder-btn {
+            padding: 12px 25px;
+            background: linear-gradient(-45deg, #0066ff, #0044cc);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 0.95em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,102,255,0.3);
+        }
+        
+        .finder-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,102,255,0.4);
+        }
+        
+        /* Loans Section */
+        .loans-section {
+            padding: 50px 20px;
+            background: #f5f8ff;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 40px;
+            color: #0044cc;
+        }
+        
+        .loans-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .loan-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,102,255,0.1);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .loan-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,102,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .loan-card:hover::before {
+            left: 100%;
+        }
+        
+        .loan-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,102,255,0.2);
+        }
+        
+        .loan-header {
+            background: linear-gradient(-45deg, #0066ff, #0044cc);
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .loan-icon {
+            font-size: 2em;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+        
+        .loan-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .loan-body {
+            padding: 20px;
+        }
+        
+        .loan-detail {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: start;
+            font-size: 0.9em;
+        }
+        
+        .loan-detail-label {
+            font-weight: bold;
+            color: #0044cc;
+            min-width: 90px;
+        }
+        
+        .loan-detail-value {
+            color: #555;
+            flex: 1;
+        }
+        
+        .apply-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(-45deg, #0066ff, #0044cc);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.95em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 12px;
+        }
+        
+        .apply-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,102,255,0.4);
+        }
+        
+        /* Comparison Tool */
+        .comparison-section {
+            padding: 50px 20px;
+            background: white;
+        }
+        
+        .comparison-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 35px;
+        }
+        
+        .comparison-card {
+            padding: 25px;
+            background: #f5f8ff;
+            border-radius: 15px;
+            border: 2px solid #0088ff;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .comparison-card:hover {
+            background: linear-gradient(-45deg, #0066ff, #0044cc);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .comparison-card h3 {
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+        
+        .comparison-card p {
+            font-size: 0.9em;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            padding: 50px 20px;
+            background: #f5f8ff;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,102,255,0.1);
+        }
+        
+        .faq-question {
+            padding: 18px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #f5f8ff, white);
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .faq-question:hover {
+            background: linear-gradient(-45deg, #0066ff, #0044cc);
+            color: white;
+        }
+        
+        .faq-answer {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: #666;
+        }
+        
+        .faq-answer.active {
+            padding: 18px;
+            max-height: 500px;
+        }
+        
+        .faq-toggle {
+            font-size: 1.3em;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 60px 20px;
+            background: linear-gradient(-45deg, #0066ff, #0044cc, #0088ff, #0066ff);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-section h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+        }
+        
+        .cta-btn {
+            padding: 15px 40px;
+            background: white;
+            color: #0044cc;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .cta-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8em;
+            }
+            
+            .hero p {
+                font-size: 0.95em;
+            }
+            
+            .section-title {
+                font-size: 1.6em;
+            }
+            
+            .finder-title {
+                font-size: 1.6em;
+            }
+            
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .stat-card {
+                padding: 20px;
+            }
+            
+            .stat-number {
+                font-size: 1.6em;
+            }
+            
+            .stat-label {
+                font-size: 0.9em;
+            }
+            
+            .finder-buttons {
+                gap: 10px;
+            }
+            
+            .finder-btn {
+                padding: 10px 20px;
+                font-size: 0.85em;
+            }
+            
+            .loans-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .comparison-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .comparison-card {
+                padding: 20px;
+            }
+            
+            .comparison-card h3 {
+                font-size: 1em;
+            }
+            
+            .comparison-card p {
+                font-size: 0.85em;
+            }
+            
+            .cta-section h2 {
+                font-size: 1.6em;
+            }
+            
+            .cta-section p {
+                font-size: 0.95em;
+            }
+            
+            .cta-btn {
+                padding: 12px 30px;
+                font-size: 1em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                padding: 40px 15px;
+            }
+            
+            .hero h1 {
+                font-size: 1.5em;
+            }
+            
+            .hero p {
+                font-size: 0.85em;
+            }
+            
+            .stats-section, .loan-finder, .loans-section, .comparison-section, .faq-section {
+                padding: 35px 15px;
+            }
+            
+            .stats-container {
+                gap: 12px;
+            }
+            
+            .stat-card {
+                padding: 15px;
+            }
+            
+            .stat-icon {
+                font-size: 2em;
+            }
+            
+            .stat-number {
+                font-size: 1.4em;
+            }
+            
+            .stat-label {
+                font-size: 0.8em;
+            }
+            
+            .section-title {
+                font-size: 1.4em;
+            }
+            
+            .finder-title {
+                font-size: 1.4em;
+            }
+            
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .loan-detail {
+                flex-direction: column;
+            }
+            
+            .loan-detail-label {
+                margin-bottom: 3px;
+            }
+        }
+    </style>
+    <!-- end style -->
+    <script>
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').classList.remove('active');
+                }
+            });
+            
+            // Toggle current FAQ
+            faqItem.classList.toggle('active');
+            answer.classList.toggle('active');
+        }
+        
+        function scrollToLoan(type) {
+            const element = document.getElementById(type);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                element.style.animation = 'none';
+                setTimeout(() => {
+                    element.style.animation = 'pulse 0.5s ease';
+                }, 10);
+            }
+        }
+        
+        function showInterest(loanType) {
+            alert('Thank you for your interest in ' + loanType + '!\n\nThis is a demo page. In a live website, this would redirect you to the application form or contact page.');
+        }
+        
+        
+        // Add pulse animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+ 
+
+ <!-- footer  -->
+  <footer class="bg-gradient-to-br from-dark via-gray-900 to-dark text-white pt-20 pb-10 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-20 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-80 h-80 bg-secondary rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="bg-gradient-to-br from-primary to-accent text-white p-3 rounded-xl mr-3 shadow-lg">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                        <div class="text-2xl font-black text-white">MJ FINSERV</div>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Your trusted partner for comprehensive insurance and loan solutions tailored to your financial needs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Home
+                        </a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> About Us
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Services
+                        </a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Gallery
+                        </a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Contact
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Life Insurance
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Health Insurance
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Home Loans
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Business Loans
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Auto Insurance
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mr-3 mt-1"></i>
+                            <span class="text-gray-400">123 Financial District, Suite 500<br>New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-primary mr-3"></i>
+                            <span class="text-gray-400">+1 (800) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-primary mr-3"></i>
+                            <span class="text-gray-400">info@MJ FINSERV.com</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-white mb-4">Newsletter</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-3 bg-white bg-opacity-10 text-white rounded-l-xl focus:outline-none focus:ring-2 focus:ring-primary w-full placeholder-gray-400">
+                            <button class="bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-r-xl hover:shadow-lg transition-all duration-300 hover:scale-105">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 MJ FINSERV. All rights reserved. | 
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mx-2">Privacy Policy</a> | 
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mx-2">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Premium Quote Modal -->
+    <div id="quoteModal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center z-50 hidden transition-opacity duration-300">
+        <div class="bg-white rounded-3xl premium-shadow max-w-lg w-full mx-4 transform transition-all duration-300 scale-95 opacity-0">
+            <div class="p-10">
+                <div class="flex justify-between items-center mb-8">
+                    <h3 class="text-3xl font-black text-dark">Get a <span class="text-gradient">Quote</span></h3>
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700 transition-colors duration-300 hover:rotate-90 transform">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Full Name</label>
+                        <input type="text" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Email Address</label>
+                        <input type="email" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Email" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Phone Number</label>
+                        <input type="tel" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Phone" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Service Type</label>
+                        <select class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="life">Life Insurance</option>
+                            <option value="health">Health Insurance</option>
+                            <option value="home">Home Loan</option>
+                            <option value="business">Business Insurance</option>
+                            <option value="auto">Auto Insurance</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-premium bg-gradient-to-r from-primary to-accent text-white px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 w-full">
+                        Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Quote Modal
+        const quoteBtn = document.getElementById('quoteBtn');
+        const mobileQuoteBtn = document.getElementById('mobileQuoteBtn');
+        const quoteModal = document.getElementById('quoteModal');
+        const closeModal = document.getElementById('closeModal');
+        
+        function openQuoteModal() {
+            quoteModal.classList.remove('hidden');
+            setTimeout(() => {
+                quoteModal.querySelector('div').classList.remove('scale-95', 'opacity-0');
+            }, 10);
+        }
+        
+        function closeQuoteModal() {
+            quoteModal.querySelector('div').classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                quoteModal.classList.add('hidden');
+            }, 300);
+        }
+        
+        quoteBtn.addEventListener('click', openQuoteModal);
+        mobileQuoteBtn.addEventListener('click', openQuoteModal);
+        closeModal.addEventListener('click', closeQuoteModal);
+        
+        // Close modal when clicking outside
+        quoteModal.addEventListener('click', (e) => {
+            if (e.target === quoteModal) {
+                closeQuoteModal();
+            }
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+        
+        // Hero Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        const prevBtn = document.querySelector('.slider-prev');
+        const nextBtn = document.querySelector('.slider-next');
+        
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            currentSlide = (n + slides.length) % slides.length;
+            
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+        
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+        
+        // Auto slide
+        setInterval(nextSlide, 5000);
+        
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        function animateCounter() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounter, 1);
+                } else {
+                    counter.innerText = target.toLocaleString();
+                }
+            });
+        }
+        
+        // Intersection Observer for counter animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        document.querySelectorAll('.counter').forEach(counter => {
+            observer.observe(counter);
+        });
+        
+        // Fade in animations on scroll
+        const fadeElements = document.querySelectorAll('.fade-in-up');
+        
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            element.style.animationPlayState = 'paused';
+            fadeObserver.observe(element);
+        });
+    </script>
+</body>
+</html>
