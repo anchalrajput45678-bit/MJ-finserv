@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -219,26 +219,74 @@
     });
 </script>
 
-  
- 
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-content">
-            <h1>🌍 Global Protection Coverage</h1>
-            <p class="hero-tagline">Travel, Study, Work Abroad - Stay Protected Everywhere</p>
-            <p class="hero-subtitle">Comprehensive overseas insurance for Indians going abroad</p>
-            <div class="hero-badges">
-                <div class="badge">✓ 150+ Countries</div>
-                <div class="badge">✓ Instant Coverage</div>
-                <div class="badge">✓ 24/7 Support</div>
-            </div>
-        </div>
+
+
+    <!-- About Hero Section -->
+     <section class="animated-gradient text-white relative overflow-hidden"
+         style="background: url('https://img1.wsimg.com/isteam/getty/2179769227/:/cr=t:0%25,l:0%25,w:100%25,h:100%25') center top/cover no-repeat; min-height: 500px; padding-top:6rem; padding-bottom:6rem;">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <!-- Particles -->
+    <div class="absolute inset-0">
+        <div class="particle bg-white" style="width: 6px; height: 6px; top: 8%; left: 15%;"></div>
+        <div class="particle bg-white" style="width: 5px; height: 5px; top: 65%; left: 75%; animation-delay: 2s;"></div>
+        <div class="particle bg-white" style="width: 8px; height: 8px; top: 28%; left: 60%; animation-delay: 4s;"></div>
     </div>
 
+    <!-- Content -->
+    <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
+        <h1 class="desktop-only" 
+            style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:white; margin:20px 0;">
+              International Insurance </span>
+        </h1>
+        <p style="font-size:18px; margin-bottom:32px; opacity:0.9;" class="sm:text-lg md:text-2xl max-w-3xl mx-auto">
+             <!-- Discover various investment options categorized by risk, purpose, and potential returns. Build your wealth strategically -->
+              Comprehensive overseas insurance for Indians going abroad 
+            </p>
+    </div>
+</section>
+
+<style>
+    /* Mobile responsive adjustments */
+    @media (max-width: 768px) {
+        section {
+            background-position: center 30% !important;
+            background-size: 120% auto !important;
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+            min-height: 350px !important;
+        }
+        .particle {
+            width: 4px !important;
+            height: 4px !important;
+        }
+        h1 {
+            font-size: 24px !important;
+        }
+        p {
+            font-size: 16px !important;
+        }
+        /* Hide MJ FINSERV text on mobile */
+        .desktop-only {
+            display: none !important;
+        }
+    }
+
+    /* Show MJ FINSERV text on desktop */
+    @media (min-width: 769px) {
+        .desktop-only {
+            display: block !important;
+        }
+    }
+</style>
+
+ 
+     
     <!-- World Coverage Section -->
     <div class="world-map-section">
         <div class="map-container">
-            <h2 class="map-title">Coverage Around The World</h2>
+            <h2 class="map-title" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">Coverage Around The World</h2>
             <p class="map-subtitle">Select your destination continent for tailored insurance</p>
             <div class="continents-grid">
                 <div class="continent-card">
@@ -275,77 +323,18 @@
         </div>
     </div>
 
-    <!-- Premium Calculator -->
-    <div class="calculator-section">
-        <div class="calc-wrapper">
-            <div class="calc-info">
-                <h2>Calculate Your Premium</h2>
-                <p>Get instant premium estimates for international insurance. Plan your trip budget with accurate coverage costs.</p>
-                <div class="calc-highlights">
-                    <div class="highlight-item">
-                        <span class="highlight-icon">💰</span>
-                        <div>
-                            <strong>Best Rates</strong><br>
-                            <span style="color: #666; font-size: 0.9em;">Competitive pricing for all destinations</span>
-                        </div>
-                    </div>
-                    <div class="highlight-item">
-                        <span class="highlight-icon">🛡️</span>
-                        <div>
-                            <strong>Comprehensive Cover</strong><br>
-                            <span style="color: #666; font-size: 0.9em;">Medical, trip, baggage - all included</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="calc-box">
-                <h3 class="calc-title">Travel Insurance Calculator</h3>
-                <div class="input-group">
-                    <label class="input-label">Destination Region</label>
-                    <select class="select-field" id="region" onchange="calculatePremium()">
-                        <option value="asia">Asia</option>
-                        <option value="europe">Europe (Schengen)</option>
-                        <option value="usa">USA/Canada</option>
-                        <option value="australia">Australia/NZ</option>
-                        <option value="gcc">GCC/Middle East</option>
-                    </select>
-                </div>
-                <div class="input-group">
-                    <label class="input-label">Travel Duration (Days)</label>
-                    <input type="number" class="input-field" id="days" value="15" min="1" max="365" onchange="calculatePremium()">
-                </div>
-                <div class="input-group">
-                    <label class="input-label">Your Age</label>
-                    <input type="number" class="input-field" id="age" value="30" min="1" max="85" onchange="calculatePremium()">
-                </div>
-                <div class="input-group">
-                    <label class="input-label">Coverage Amount</label>
-                    <select class="select-field" id="coverage" onchange="calculatePremium()">
-                        <option value="50000">$50,000</option>
-                        <option value="100000">$100,000</option>
-                        <option value="250000">$250,000</option>
-                        <option value="500000">$500,000</option>
-                    </select>
-                </div>
-                <div class="result-box">
-                    <div class="result-label">Estimated Premium</div>
-                    <div class="result-value" id="premium">₹2,500</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    
     <!-- Travel Insurance Section -->
     <div class="category-section">
         <div class="category-header">
             <div class="category-icon-lg">✈️</div>
-            <h2 class="category-title">Travel Insurance Plans</h2>
+            <h2 class="category-title" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">Travel Insurance Plans</h2>
             <p class="category-desc">Protect your journey with comprehensive travel insurance for every destination</p>
         </div>
         <div class="insurance-grid">
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-num">01</div>
+                    <!-- <div class="card-num">01</div> -->
                     <div class="card-icon">🌍</div>
                     <div class="card-title">Overseas Travel Insurance</div>
                 </div>
@@ -357,13 +346,19 @@
                         <li><span class="check-mark">✓</span> Lost baggage & passport</li>
                         <li><span class="check-mark">✓</span> 24/7 emergency assistance</li>
                     </ul>
-                    <button class="quote-btn">Get Quote</button>
+                    <button class="quote-btn" 
+        onclick="window.location.href='contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                     
+                    <!-- <button class="quote-btn">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-num">02</div>
+                    <!-- <div class="card-num">02</div> -->
                     <div class="card-icon">🎓</div>
                     <div class="card-title">Student Travel Insurance</div>
                 </div>
@@ -375,13 +370,18 @@
                         <li><span class="check-mark">✓</span> Sponsor protection benefit</li>
                         <li><span class="check-mark">✓</span> Study interruption cover</li>
                     </ul>
-                    <button class="quote-btn">Get Quote</button>
+                    <button class="quote-btn" 
+        onclick="window.location.href='contact.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="quote-btn">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-num">03</div>
+                    <!-- <div class="card-num">03</div> -->
                     <div class="card-icon">👴</div>
                     <div class="card-title">Senior Citizen Travel</div>
                 </div>
@@ -393,13 +393,18 @@
                         <li><span class="check-mark">✓</span> Medical evacuation</li>
                         <li><span class="check-mark">✓</span> Compassionate visit cover</li>
                     </ul>
-                    <button class="quote-btn">Get Quote</button>
+                    <button class="quote-btn" 
+        onclick="window.location.href='contact.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="quote-btn">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-num">04</div>
+                    <!-- <div class="card-num">04</div> -->
                     <div class="card-icon">💼</div>
                     <div class="card-title">Corporate Travel Insurance</div>
                 </div>
@@ -411,7 +416,12 @@
                         <li><span class="check-mark">✓</span> Multi-trip annual plans</li>
                         <li><span class="check-mark">✓</span> Priority claim processing</li>
                     </ul>
-                    <button class="quote-btn">Get Quote</button>
+                    <button class="quote-btn" 
+        onclick="window.location.href='contact.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="quote-btn">Get Quote</button> -->
                 </div>
             </div>
         </div>
@@ -421,13 +431,13 @@
     <div class="category-section">
         <div class="category-header">
             <div class="category-icon-lg">🏥</div>
-            <h2 class="category-title">International Health Insurance</h2>
+            <h2 class="category-title" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">International Health Insurance</h2>
             <p class="category-desc">Long-term health coverage for expats, NRIs, and professionals working abroad</p>
         </div>
         <div class="insurance-grid">
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-num">01</div>
+                    <!-- <div class="card-num">01</div> -->
                     <div class="card-icon">🌐</div>
                     <div class="card-title">International Health Insurance</div>
                 </div>
@@ -439,13 +449,18 @@
                         <li><span class="check-mark">✓</span> Dental & vision care</li>
                         <li><span class="check-mark">✓</span> Annual renewability</li>
                     </ul>
-                    <button class="quote-btn">Get Quote</button>
+                    <button class="quote-btn" 
+        onclick="window.location.href='contact.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="quote-btn">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-num">02</div>
+                    <!-- <div class="card-num">02</div> -->
                     <div class="card-icon">⬆️</div>
                     <div class="card-title">Global Top-Up Plan</div>
                 </div>
@@ -457,13 +472,18 @@
                         <li><span class="check-mark">✓</span> Additional sum insured</li>
                         <li><span class="check-mark">✓</span> Cost-effective premium</li>
                     </ul>
-                    <button class="quote-btn">Get Quote</button>
+                    <button class="quote-btn" 
+        onclick="window.location.href='contact.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="quote-btn">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-num">03</div>
+                    <!-- <div class="card-num">03</div> -->
                     <div class="card-icon">🏢</div>
                     <div class="card-title">Expat Health Insurance</div>
                 </div>
@@ -475,7 +495,12 @@
                         <li><span class="check-mark">✓</span> Mental health support</li>
                         <li><span class="check-mark">✓</span> Repatriation coverage</li>
                     </ul>
-                    <button class="quote-btn">Get Quote</button>
+                    <button class="quote-btn" 
+        onclick="window.location.href='contact.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="quote-btn">Get Quote</button> -->
                 </div>
             </div>
         </div>
@@ -485,13 +510,13 @@
     <div class="category-section">
         <div class="category-header">
             <div class="category-icon-lg">💼</div>
-            <h2 class="category-title">Overseas Employment Insurance</h2>
+            <h2 class="category-title" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">Overseas Employment Insurance</h2>
             <p class="category-desc">Essential coverage for Indians working in foreign countries, especially GCC nations</p>
         </div>
         <div class="insurance-grid">
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-num">01</div>
+                    <!-- <div class="card-num">01</div> -->
                     <div class="card-icon">🇮🇳</div>
                     <div class="card-title">Pravasi Bharatiya Bima Yojana</div>
                 </div>
@@ -503,13 +528,18 @@
                         <li><span class="check-mark">✓</span> Medical emergencies</li>
                         <li><span class="check-mark">✓</span> Legal expense coverage</li>
                     </ul>
-                    <button class="quote-btn">Get Quote</button>
+                    <button class="quote-btn" 
+        onclick="window.location.href='contact.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="quote-btn">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-num">02</div>
+                    <!-- <div class="card-num">02</div> -->
                     <div class="card-icon">🏭</div>
                     <div class="card-title">Employer-Sponsored Insurance</div>
                 </div>
@@ -521,7 +551,12 @@
                         <li><span class="check-mark">✓</span> Work-related injuries</li>
                         <li><span class="check-mark">✓</span> Family coverage option</li>
                     </ul>
-                    <button class="quote-btn">Get Quote</button>
+                    <button class="quote-btn" 
+        onclick="window.location.href='contact.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="quote-btn">Get Quote</button> -->
                 </div>
             </div>
         </div>
@@ -531,13 +566,13 @@
     <div class="category-section">
         <div class="category-header">
             <div class="category-icon-lg">🌟</div>
-            <h2 class="category-title">Special & Visa Insurance</h2>
+            <h2 class="category-title" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">Special & Visa Insurance</h2>
             <p class="category-desc">Specialized coverage for specific needs, visas, and unique situations</p>
         </div>
         <div class="insurance-grid">
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-num">01</div>
+                    <!-- <div class="card-num">01</div> -->
                     <div class="card-icon">🛂</div>
                     <div class="card-title">Schengen Visa Insurance</div>
                 </div>
@@ -549,13 +584,18 @@
                         <li><span class="check-mark">✓</span> Medical repatriation</li>
                         <li><span class="check-mark">✓</span> Instant policy issuance</li>
                     </ul>
-                    <button class="quote-btn">Get Quote</button>
+                    <button class="quote-btn" 
+        onclick="window.location.href='contact.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="quote-btn">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-num">02</div>
+                    <!-- <div class="card-num">02</div> -->
                     <div class="card-icon">🎓</div>
                     <div class="card-title">Student Tuition Fee Insurance</div>
                 </div>
@@ -567,13 +607,18 @@
                         <li><span class="check-mark">✓</span> Family emergency support</li>
                         <li><span class="check-mark">✓</span> Medical illness coverage</li>
                     </ul>
-                    <button class="quote-btn">Get Quote</button>
+                    <button class="quote-btn" 
+        onclick="window.location.href='contact.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="quote-btn">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-num">03</div>
+                    <!-- <div class="card-num">03</div> -->
                     <div class="card-icon">⚖️</div>
                     <div class="card-title">International Liability Insurance</div>
                 </div>
@@ -585,13 +630,18 @@
                         <li><span class="check-mark">✓</span> Legal defense costs</li>
                         <li><span class="check-mark">✓</span> Third-party claims</li>
                     </ul>
-                    <button class="quote-btn">Get Quote</button>
+                    <button class="quote-btn" 
+        onclick="window.location.href='contact.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="quote-btn">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-num">04</div>
+                    <!-- <div class="card-num">04</div> -->
                     <div class="card-icon">🏠</div>
                     <div class="card-title">Overseas Property Insurance</div>
                 </div>
@@ -603,7 +653,12 @@
                         <li><span class="check-mark">✓</span> Personal belongings cover</li>
                         <li><span class="check-mark">✓</span> Temporary accommodation</li>
                     </ul>
-                    <button class="quote-btn">Get Quote</button>
+                    <button class="quote-btn" 
+        onclick="window.location.href='contact.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="quote-btn">Get Quote</button> -->
                 </div>
             </div>
         </div>
@@ -613,7 +668,7 @@
     <div class="benefits-section">
         <div class="benefits-container">
             <div class="category-header">
-                <h2 class="category-title">Why Choose Our Overseas Insurance?</h2>
+                <h2 class="category-title" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">Why Choose Our Overseas Insurance?</h2>
                 <p class="category-desc">Experience peace of mind with our comprehensive protection and exceptional service</p>
             </div>
             <div class="benefits-grid">
@@ -654,11 +709,16 @@
     <!-- CTA Section -->
     <div class="cta-section">
         <div class="cta-content">
-            <h2>Ready to Travel with Confidence?</h2>
+            <h2 style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:white; margin:20px 0;">Ready to Travel with Confidence?</h2>
             <p>Get comprehensive overseas insurance coverage in minutes. Protect yourself and your loved ones today!</p>
             <div class="cta-buttons">
-                <button class="cta-btn">Get Free Quote</button>
-                <button class="cta-btn cta-btn-outline">Talk to Expert</button>
+                <button class="cta-btn" 
+        onclick="window.location.href='contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                <!-- <button class="cta-btn">Get Free Quote</button>
+                <button class="cta-btn cta-btn-outline">Talk to Expert</button> -->
             </div>
         </div>
     </div>

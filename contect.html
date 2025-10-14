@@ -221,27 +221,69 @@
 
 
 
-    <!-- Contact Hero Section -->
-    <section class="py-24 animated-gradient text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="absolute inset-0">
-            <div class="particle bg-white" style="width: 8px; height: 8px; top: 10%; left: 15%;"></div>
-            <div class="particle bg-white" style="width: 6px; height: 6px; top: 70%; left: 80%; animation-delay: 2s;"></div>
-            <div class="particle bg-white" style="width: 10px; height: 10px; top: 30%; left: 60%; animation-delay: 4s;"></div>
-        </div>
-        <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
-            <h1 class="text-5xl md:text-7xl font-black mb-6 fade-in-up leading-tight">Contact <span class="text-white">Us</span></h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 fade-in-up delay-200">Get in touch with our team for personalized insurance and loan solutions tailored to your financial goals.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-6 fade-in-up delay-400">
-                <a href="#contact-form" class="btn-premium bg-white text-primary px-12 py-5 rounded-xl font-bold text-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-2xl">
-                    Send Message <i class="fas fa-paper-plane ml-2"></i>
-                </a>
-                <a href="tel:+18001234567" class="btn-premium glass-effect text-white px-12 py-5 rounded-xl font-bold text-lg hover:bg-white hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">
-                    Call Now: (800) 123-4567 <i class="fas fa-phone ml-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
+    <!-- About Hero Section -->
+     <section class="animated-gradient text-white relative overflow-hidden"
+         style="background: url('https://img1.wsimg.com/isteam/getty/2179769227/:/cr=t:0%25,l:0%25,w:100%25,h:100%25') center top/cover no-repeat; min-height: 500px; padding-top:6rem; padding-bottom:6rem;">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <!-- Particles -->
+    <div class="absolute inset-0">
+        <div class="particle bg-white" style="width: 6px; height: 6px; top: 8%; left: 15%;"></div>
+        <div class="particle bg-white" style="width: 5px; height: 5px; top: 65%; left: 75%; animation-delay: 2s;"></div>
+        <div class="particle bg-white" style="width: 8px; height: 8px; top: 28%; left: 60%; animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
+        <h1 class="desktop-only" 
+            style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:white; margin:20px 0;">
+             Contact <span class="text-white">Us</span>
+        </h1>
+        <p style="font-size:18px; margin-bottom:32px; opacity:0.9;" class="sm:text-lg md:text-2xl max-w-3xl mx-auto">
+          
+             Get in touch with our team for personalized insurance and loan solutions tailored to your financial goals
+        </p>
+    </div>
+</section>
+
+<style>
+    /* Mobile responsive adjustments */
+    @media (max-width: 768px) {
+        section {
+            background-position: center 30% !important;
+            background-size: 120% auto !important;
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+            min-height: 350px !important;
+        }
+        .particle {
+            width: 4px !important;
+            height: 4px !important;
+        }
+        h1 {
+            font-size: 24px !important;
+        }
+        p {
+            font-size: 16px !important;
+        }
+        /* Hide MJ FINSERV text on mobile */
+        .desktop-only {
+            display: none !important;
+        }
+    }
+
+    /* Show MJ FINSERV text on desktop */
+    @media (min-width: 769px) {
+        .desktop-only {
+            display: block !important;
+        }
+    }
+</style>
+
+
+
+     
 
     <!-- Contact Information Section -->
     <section class="py-20 bg-white relative overflow-hidden">
@@ -251,7 +293,7 @@
         </div>
         <div class="container mx-auto px-4 md:px-8 relative z-10">
             <div class="text-center mb-16 fade-in-up">
-                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6">Our <span class="text-gradient">Locations</span></h2>
+                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:black; margin:20px 0;">Our <span class="text-gradient">Locations</span></h2>
                 <p class="text-gray-600 max-w-3xl mx-auto text-lg">Visit us at any of our conveniently located offices for personalized financial consultation.</p>
             </div>
             

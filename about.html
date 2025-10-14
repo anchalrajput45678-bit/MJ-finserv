@@ -222,26 +222,65 @@
 
 
     <!-- About Hero Section -->
-    <section class="py-24 animated-gradient text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="absolute inset-0">
-            <div class="particle bg-white" style="width: 8px; height: 8px; top: 10%; left: 15%;"></div>
-            <div class="particle bg-white" style="width: 6px; height: 6px; top: 70%; left: 80%; animation-delay: 2s;"></div>
-            <div class="particle bg-white" style="width: 10px; height: 10px; top: 30%; left: 60%; animation-delay: 4s;"></div>
-        </div>
-        <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
-            <h1 class="text-5xl md:text-7xl font-black mb-6 fade-in-up leading-tight">About <span class="text-white">MJ FINSERV</span></h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 fade-in-up delay-200">For over 25 years, we've been providing trusted financial solutions that protect and empower our clients' futures.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-6 fade-in-up delay-400">
-                <a href="#story" class="btn-premium bg-white text-primary px-12 py-5 rounded-xl font-bold text-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-2xl">
-                    Our Story <i class="fas fa-book-open ml-2"></i>
-                </a>
-                <a href="#team" class="btn-premium glass-effect text-white px-12 py-5 rounded-xl font-bold text-lg hover:bg-white hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">
-                    Meet Our Team <i class="fas fa-users ml-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
+     <section class="animated-gradient text-white relative overflow-hidden"
+         style="background: url('https://img1.wsimg.com/isteam/getty/2179769227/:/cr=t:0%25,l:0%25,w:100%25,h:100%25') center top/cover no-repeat; min-height: 500px; padding-top:6rem; padding-bottom:6rem;">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <!-- Particles -->
+    <div class="absolute inset-0">
+        <div class="particle bg-white" style="width: 6px; height: 6px; top: 8%; left: 15%;"></div>
+        <div class="particle bg-white" style="width: 5px; height: 5px; top: 65%; left: 75%; animation-delay: 2s;"></div>
+        <div class="particle bg-white" style="width: 8px; height: 8px; top: 28%; left: 60%; animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
+        <h1 class="desktop-only" 
+            style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:white; margin:20px 0;">
+            About <span>MJ FINSERV</span>
+        </h1>
+        <p style="font-size:18px; margin-bottom:32px; opacity:0.9;" class="sm:text-lg md:text-2xl max-w-3xl mx-auto">
+            We've been providing trusted financial solutions that protect and empower our clients' futures.
+        </p>
+    </div>
+</section>
+
+<style>
+    /* Mobile responsive adjustments */
+    @media (max-width: 768px) {
+        section {
+            background-position: center 30% !important;
+            background-size: 120% auto !important;
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+            min-height: 350px !important;
+        }
+        .particle {
+            width: 4px !important;
+            height: 4px !important;
+        }
+        h1 {
+            font-size: 24px !important;
+        }
+        p {
+            font-size: 16px !important;
+        }
+        /* Hide MJ FINSERV text on mobile */
+        .desktop-only {
+            display: none !important;
+        }
+    }
+
+    /* Show MJ FINSERV text on desktop */
+    @media (min-width: 769px) {
+        .desktop-only {
+            display: block !important;
+        }
+    }
+</style>
+
+
 
     <!-- Company Story Section -->
     <section id="story" class="py-24 bg-white relative overflow-hidden">
@@ -252,18 +291,18 @@
         <div class="container mx-auto px-4 md:px-8 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-16">
                 <div class="lg:w-1/2 fade-in-up">
-                    <h2 class="text-4xl md:text-5xl font-black text-dark mb-6">Our <span class="text-gradient">Story</span></h2>
+                    <h2 class="text-4xl md:text-5xl font-black text-dark mb-6" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:black; margin:20px 0;">Our <span class="text-gradient">Story</span></h2>
                     <p class="text-gray-600 mb-6 leading-relaxed text-lg">Founded in 1998, MJ FINSERV began with a simple mission: to make quality insurance and loan services accessible to everyone. What started as a small local agency has grown into a trusted financial partner for thousands of clients nationwide.</p>
                     <p class="text-gray-600 mb-6 leading-relaxed text-lg">Our journey has been guided by a commitment to integrity, innovation, and personalized service. We believe that financial security shouldn't be complicated or out of reach.</p>
                     <p class="text-gray-600 mb-10 leading-relaxed text-lg">Today, we continue to evolve with the changing financial landscape while staying true to our core values of trust, transparency, and client-focused solutions.</p>
                     
                     <div class="grid grid-cols-2 gap-8">
                         <div class="text-center">
-                            <div class="text-4xl md:text-5xl font-black text-gradient mb-2">25+</div>
+                            <div class="text-4xl md:text-5xl font-black text-gradient mb-2" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">25+</div>
                             <div class="text-dark font-medium">Years Experience</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-4xl md:text-5xl font-black text-gradient mb-2">15K+</div>
+                            <div class="text-4xl md:text-5xl font-black text-gradient mb-2" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">15K+</div>
                             <div class="text-dark font-medium">Happy Clients</div>
                         </div>
                     </div>
@@ -292,7 +331,7 @@
         <div class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
         <div class="container mx-auto px-4 md:px-8 relative z-10">
             <div class="text-center mb-20 fade-in-up">
-                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6">Our <span class="text-gradient">Journey</span></h2>
+                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:black; margin:20px 0;">Our <span class="text-gradient">Journey</span></h2>
                 <p class="text-gray-600 max-w-3xl mx-auto text-lg">From our humble beginnings to becoming a trusted financial partner, here are the key milestones in our journey.</p>
             </div>
             
@@ -367,7 +406,7 @@
         </div>
         <div class="container mx-auto px-4 md:px-8 relative z-10">
             <div class="text-center mb-20 fade-in-up">
-                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6">Our <span class="text-gradient">Values</span></h2>
+                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:black; margin:20px 0;">Our <span class="text-gradient">Values</span></h2>
                 <p class="text-gray-600 max-w-3xl mx-auto text-lg">These core principles guide everything we do and define who we are as a company.</p>
             </div>
             
@@ -407,102 +446,7 @@
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="team" class="py-24 bg-gradient-to-br from-light via-white to-light relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
-        <div class="container mx-auto px-4 md:px-8 relative z-10">
-            <div class="text-center mb-16 fade-in-up">
-                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6">Leadership <span class="text-gradient">Team</span></h2>
-                <p class="text-gray-600 max-w-3xl mx-auto text-lg">Meet the experienced professionals who guide our company with vision and expertise.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Team Member 1 -->
-                <div class="team-card bg-white rounded-3xl premium-shadow overflow-hidden hover-lift fade-in-up">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="John Smith" class="w-full h-80 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-dark mb-2">John Smith</h3>
-                        <p class="text-primary font-medium mb-4">CEO & Founder</p>
-                        <p class="text-gray-600">With over 20 years of experience in financial services, John leads our company with vision and expertise.</p>
-                    </div>
-                    <div class="team-social">
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Team Member 2 -->
-                <div class="team-card bg-white rounded-3xl premium-shadow overflow-hidden hover-lift fade-in-up delay-100">
-                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sarah Johnson" class="w-full h-80 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-dark mb-2">Sarah Johnson</h3>
-                        <p class="text-primary font-medium mb-4">Chief Financial Officer</p>
-                        <p class="text-gray-600">Sarah brings 15 years of financial management experience to ensure our clients get the best solutions.</p>
-                    </div>
-                    <div class="team-social">
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Team Member 3 -->
-                <div class="team-card bg-white rounded-3xl premium-shadow overflow-hidden hover-lift fade-in-up delay-200">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Michael Brown" class="w-full h-80 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-dark mb-2">Michael Brown</h3>
-                        <p class="text-primary font-medium mb-4">Insurance Director</p>
-                        <p class="text-gray-600">Michael specializes in creating customized insurance plans that meet our clients' unique needs.</p>
-                    </div>
-                    <div class="team-social">
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Team Member 4 -->
-                <div class="team-card bg-white rounded-3xl premium-shadow overflow-hidden hover-lift fade-in-up delay-300">
-                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Emily Davis" class="w-full h-80 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-dark mb-2">Emily Davis</h3>
-                        <p class="text-primary font-medium mb-4">Loan Specialist</p>
-                        <p class="text-gray-600">Emily helps clients navigate the loan process and find the best financing options for their goals.</p>
-                    </div>
-                    <div class="team-social">
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+     
 
     <!-- CTA Section -->
     <section class="py-24 animated-gradient text-white relative overflow-hidden">
@@ -512,7 +456,7 @@
             <div class="particle bg-white" style="width: 5px; height: 5px; top: 45%; left: 50%; animation-delay: 4s;"></div>
         </div>
         <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
-            <h2 class="text-4xl md:text-5xl font-black mb-8 fade-in-up">Ready to Secure Your <span class="text-white">Financial Future?</span></h2>
+            <h2 class="text-4xl md:text-5xl font-black mb-8 fade-in-up" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:black; margin:20px 0;">Ready to Secure Your <span class="text-white">Financial Future?</span></h2>
             <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto opacity-90 fade-in-up delay-200">Join thousands of satisfied clients who trust MJ FINSERV for their insurance and loan needs.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-6 fade-in-up delay-400">
                 <a href="contact.html" class="btn-premium bg-white text-primary px-12 py-5 rounded-xl font-bold text-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-2xl">

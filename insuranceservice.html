@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -220,34 +220,80 @@
 </script>
 
 
+
+    <!-- About Hero Section -->
+     <section class="animated-gradient text-white relative overflow-hidden"
+         style="background: url('https://img1.wsimg.com/isteam/getty/2179769227/:/cr=t:0%25,l:0%25,w:100%25,h:100%25') center top/cover no-repeat; min-height: 500px; padding-top:6rem; padding-bottom:6rem;">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <!-- Particles -->
+    <div class="absolute inset-0">
+        <div class="particle bg-white" style="width: 6px; height: 6px; top: 8%; left: 15%;"></div>
+        <div class="particle bg-white" style="width: 5px; height: 5px; top: 65%; left: 75%; animation-delay: 2s;"></div>
+        <div class="particle bg-white" style="width: 8px; height: 8px; top: 28%; left: 60%; animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
+        <h1 class="desktop-only" 
+            style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:white; margin:20px 0;">
+             insurance <span class="text-white"> </span>
+        </h1>
+        <p style="font-size:18px; margin-bottom:32px; opacity:0.9;" class="sm:text-lg md:text-2xl max-w-3xl mx-auto">
+          
+               Comprehensive Insurance Solutions for Every Need
+            </p>
+    </div>
+</section>
+
+<style>
+    /* Mobile responsive adjustments */
+    @media (max-width: 768px) {
+        section {
+            background-position: center 30% !important;
+            background-size: 120% auto !important;
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+            min-height: 350px !important;
+        }
+        .particle {
+            width: 4px !important;
+            height: 4px !important;
+        }
+        h1 {
+            font-size: 24px !important;
+        }
+        p {
+            font-size: 16px !important;
+        }
+        /* Hide MJ FINSERV text on mobile */
+        .desktop-only {
+            display: none !important;
+        }
+    }
+
+    /* Show MJ FINSERV text on desktop */
+    @media (min-width: 769px) {
+        .desktop-only {
+            display: block !important;
+        }
+    }
+</style>
+
+
+
   
 
-    <!-- Hero Section -->
-    <div class="hero" background-color:#0f5e74;>
-        <div class="hero-content">
-            <h1>🛡️ Protect Your Future Today</h1>
-            <p class="hero-tagline">Comprehensive Insurance Solutions for Every Need</p>
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <span class="stat-number">25+</span>
-                    <span class="stat-label">Insurance Types</span>
-                </div>
-                <div class="hero-stat">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Coverage</span>
-                </div>
-                <div class="hero-stat">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">Support</span>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+        
+        
+
 
     <!-- Shield Categories -->
     <div class="shield-section">
         <div class="shield-container">
-            <h2 class="shield-title">Choose Your Protection Shield</h2>
+            <h2 class="shield-title" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">Choose Your Protection Shield</h2>
             <p class="shield-subtitle">Select the category that matters most to you</p>
             <div class="shield-grid">
                 <div class="shield-item" onclick="scrollToSection('life')">
@@ -274,77 +320,20 @@
         </div>
     </div>
 
-    <!-- Premium Calculator -->
-    <div class="calculator-section">
-        <div class="calculator-wrapper">
-            <div class="calc-info">
-                <h2>Calculate Your Premium</h2>
-                <p>Get instant premium estimates for your insurance needs. Our smart calculator helps you plan your protection budget effectively.</p>
-                <div class="calc-features">
-                    <div class="calc-feature">
-                        <span class="feature-icon">⚡</span>
-                        <div>
-                            <strong>Instant Results</strong><br>
-                            <span style="color: #666; font-size: 0.9em;">Get premium estimates in seconds</span>
-                        </div>
-                    </div>
-                    <div class="calc-feature">
-                        <span class="feature-icon">💰</span>
-                        <div>
-                            <strong>Compare Plans</strong><br>
-                            <span style="color: #666; font-size: 0.9em;">Find the best coverage for your budget</span>
-                        </div>
-                    </div>
-                    <div class="calc-feature">
-                        <span class="feature-icon">🎯</span>
-                        <div>
-                            <strong>Accurate Calculations</strong><br>
-                            <span style="color: #666; font-size: 0.9em;">Based on real market data</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="calc-box">
-                <h3 class="calc-title">Life Insurance Calculator</h3>
-                <div class="calc-input-group">
-                    <label class="calc-label">Your Age</label>
-                    <input type="number" class="calc-input" id="age" value="30" min="18" max="65" onchange="calculatePremium()">
-                </div>
-                <div class="calc-input-group">
-                    <label class="calc-label">Coverage Amount (₹)</label>
-                    <input type="number" class="calc-input" id="coverage" value="5000000" step="100000" onchange="calculatePremium()">
-                </div>
-                <div class="calc-input-group">
-                    <label class="calc-label">Policy Term (Years)</label>
-                    <input type="number" class="calc-input" id="term" value="20" min="5" max="40" onchange="calculatePremium()">
-                </div>
-                <div class="calc-input-group">
-                    <label class="calc-label">Smoking Status</label>
-                    <select class="calc-select" id="smoking" onchange="calculatePremium()">
-                        <option value="no">Non-Smoker</option>
-                        <option value="yes">Smoker</option>
-                    </select>
-                </div>
-                <div class="calc-result">
-                    <div class="result-label">Estimated Monthly Premium</div>
-                    <div class="result-value" id="premiumResult">₹833</div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <!-- Life Insurance Section -->
     <div class="category-section" id="life">
         <div class="category-header">
             <div class="category-icon-big">🧍‍♂️</div>
-            <h2 class="category-title">Life Insurance Types</h2>
+            <h2 class="category-title" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">Life Insurance </h2>
             <p class="category-desc">Covers risk of death or survival — protects family financially</p>
         </div>
         <div class="insurance-grid">
             
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">1</div>
+                    <!-- <div class="card-number"></div> -->
                     <div class="card-icon">🛡️</div>
                     <div class="card-title">Term Insurance</div>
                 </div>
@@ -355,13 +344,18 @@
                         <li><span class="feature-bullet">✓</span> No maturity benefit</li>
                         <li><span class="feature-bullet">✓</span> Best for young families</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Term Insurance')">Get Quote</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Term Insurance')">Get Quote</button> -->
+                     <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">2</div>
+                    <!-- <div class="card-number"></div> -->
                     <div class="card-icon">♾️</div>
                     <div class="card-title">Whole Life Insurance</div>
                 </div>
@@ -372,13 +366,18 @@
                         <li><span class="feature-bullet">✓</span> Lifetime coverage</li>
                         <li><span class="feature-bullet">✓</span> Higher premium than term</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Whole Life Insurance')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Whole Life Insurance')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">3</div>
+                    <!-- <div class="card-number"></div> -->
                     <div class="card-icon">💰</div>
                     <div class="card-title">Endowment Plan</div>
                 </div>
@@ -389,13 +388,18 @@
                         <li><span class="feature-bullet">✓</span> Guaranteed maturity benefit</li>
                         <li><span class="feature-bullet">✓</span> Savings component included</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Endowment Plan')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Endowment Plan')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">4</div>
+                    <!-- <div class="card-number">4</div> -->
                     <div class="card-icon">💵</div>
                     <div class="card-title">Money Back Plan</div>
                 </div>
@@ -406,13 +410,18 @@
                         <li><span class="feature-bullet">✓</span> Survival benefits</li>
                         <li><span class="feature-bullet">✓</span> Life cover continues</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Money Back Plan')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Money Back Plan')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">5</div>
+                    <!-- <div class="card-number">5</div> -->
                     <div class="card-icon">📈</div>
                     <div class="card-title">ULIP</div>
                 </div>
@@ -423,13 +432,18 @@
                         <li><span class="feature-bullet">✓</span> Market-linked returns</li>
                         <li><span class="feature-bullet">✓</span> Flexible investment options</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('ULIP')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('ULIP')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">6</div>
+                    <!-- <div class="card-number">6</div> -->
                     <div class="card-icon">👶</div>
                     <div class="card-title">Child Plan</div>
                 </div>
@@ -440,13 +454,18 @@
                         <li><span class="feature-bullet">✓</span> Premium waiver on death</li>
                         <li><span class="feature-bullet">✓</span> Education milestones covered</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Child Plan')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Child Plan')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">7</div>
+                    <!-- <div class="card-number">7</div> -->
                     <div class="card-icon">🧓</div>
                     <div class="card-title">Pension / Retirement Plan</div>
                 </div>
@@ -457,7 +476,12 @@
                         <li><span class="feature-bullet">✓</span> Tax benefits available</li>
                         <li><span class="feature-bullet">✓</span> Guaranteed pension options</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Pension Plan')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Pension Plan')">Get Quote</button> -->
                 </div>
             </div>
 
@@ -468,14 +492,14 @@
     <div class="category-section" id="health">
         <div class="category-header">
             <div class="category-icon-big">💊</div>
-            <h2 class="category-title">Health Insurance Types</h2>
+            <h2 class="category-title" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">Health Insurance  </h2>
             <p class="category-desc">Covers medical expenses for illness or injury</p>
         </div>
         <div class="insurance-grid">
             
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">1</div>
+                    <!-- <div class="card-number">1</div> -->
                     <div class="card-icon">🧑</div>
                     <div class="card-title">Individual Health Insurance</div>
                 </div>
@@ -486,13 +510,18 @@
                         <li><span class="feature-bullet">✓</span> Cashless hospitalization</li>
                         <li><span class="feature-bullet">✓</span> Pre & post hospitalization</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Individual Health Insurance')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Individual Health Insurance')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">2</div>
+                    <!-- <div class="card-number">2</div> -->
                     <div class="card-icon">👨‍👩‍👧‍👦</div>
                     <div class="card-title">Family Floater Policy</div>
                 </div>
@@ -503,13 +532,22 @@
                         <li><span class="feature-bullet">✓</span> Covers entire family</li>
                         <li><span class="feature-bullet">✓</span> One premium payment</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Family Floater')">Get Quote</button>
+                   <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+ 
+ 
+                   
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Family Floater')">Get Quote</button> -->
+               
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">3</div>
+                    <!-- <div class="card-number">3</div> -->
                     <div class="card-icon">🏥</div>
                     <div class="card-title">Critical Illness Policy</div>
                 </div>
@@ -520,13 +558,19 @@
                         <li><span class="feature-bullet">✓</span> Lump sum benefit</li>
                         <li><span class="feature-bullet">✓</span> No hospitalization needed</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Critical Illness')">Get Quote</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Critical Illness')">Get Quote</button>
+               -->
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">4</div>
+                    <!-- <div class="card-number">4</div> -->
                     <div class="card-icon">⬆️</div>
                     <div class="card-title">Top-Up & Super Top-Up Plan</div>
                 </div>
@@ -537,13 +581,18 @@
                         <li><span class="feature-bullet">✓</span> Works after deductible</li>
                         <li><span class="feature-bullet">✓</span> Supplements base policy</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Top-Up Plan')">Get Quote</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Top-Up Plan')">Get Quote</button> -->
+                     <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">5</div>
+                    <!-- <div class="card-number">5</div> -->
                     <div class="card-icon">🚑</div>
                     <div class="card-title">Personal Accident Insurance</div>
                 </div>
@@ -554,13 +603,18 @@
                         <li><span class="feature-bullet">✓</span> Permanent disability cover</li>
                         <li><span class="feature-bullet">✓</span> Low premium</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Personal Accident')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Personal Accident')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">6</div>
+                    <!-- <div class="card-number">6</div> -->
                     <div class="card-icon">👴</div>
                     <div class="card-title">Senior Citizen Health Plan</div>
                 </div>
@@ -571,13 +625,18 @@
                         <li><span class="feature-bullet">✓</span> Higher sum insured options</li>
                         <li><span class="feature-bullet">✓</span> Special senior benefits</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Senior Citizen Plan')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Senior Citizen Plan')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">7</div>
+                    <!-- <div class="card-number">7</div> -->
                     <div class="card-icon">🤰</div>
                     <div class="card-title">Maternity Health Plan</div>
                 </div>
@@ -588,7 +647,13 @@
                         <li><span class="feature-bullet">✓</span> Newborn baby coverage</li>
                         <li><span class="feature-bullet">✓</span> Pre & post natal care</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Maternity Plan')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- 
+                    <button class="get-quote-btn" onclick="getQuote('Maternity Plan')">Get Quote</button> -->
                 </div>
             </div>
 
@@ -599,14 +664,14 @@
     <div class="category-section" id="general">
         <div class="category-header">
             <div class="category-icon-big">🚗</div>
-            <h2 class="category-title">General Insurance Types</h2>
+            <h2 class="category-title" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">General Insurance  </h2>
             <p class="category-desc">Covers non-life risks — assets, vehicles, travel, and liability</p>
         </div>
         <div class="insurance-grid">
             
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">1</div>
+                    <!-- <div class="card-number">1</div> -->
                     <div class="card-icon">🚘</div>
                     <div class="card-title">Motor Insurance</div>
                 </div>
@@ -617,13 +682,18 @@
                         <li><span class="feature-bullet">✓</span> Accident damage cover</li>
                         <li><span class="feature-bullet">✓</span> Third-party liability</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Motor Insurance')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Motor Insurance')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">2</div>
+                    <!-- <div class="card-number">2</div> -->
                     <div class="card-icon">🏡</div>
                     <div class="card-title">Home Insurance</div>
                 </div>
@@ -634,13 +704,18 @@
                         <li><span class="feature-bullet">✓</span> Natural calamity cover</li>
                         <li><span class="feature-bullet">✓</span> Theft protection</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Home Insurance')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Home Insurance')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">3</div>
+                    <!-- <div class="card-number">3</div> -->
                     <div class="card-icon">✈️</div>
                     <div class="card-title">Travel Insurance</div>
                 </div>
@@ -651,13 +726,18 @@
                         <li><span class="feature-bullet">✓</span> Trip cancellation</li>
                         <li><span class="feature-bullet">✓</span> Lost baggage cover</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Travel Insurance')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Travel Insurance')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">4</div>
+                    <!-- <div class="card-number">4</div> -->
                     <div class="card-icon">🔥</div>
                     <div class="card-title">Fire Insurance</div>
                 </div>
@@ -668,13 +748,18 @@
                         <li><span class="feature-bullet">✓</span> Lightning damage</li>
                         <li><span class="feature-bullet">✓</span> Business interruption</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Fire Insurance')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Fire Insurance')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">5</div>
+                    <!-- <div class="card-number">5</div> -->
                     <div class="card-icon">🚢</div>
                     <div class="card-title">Marine Insurance</div>
                 </div>
@@ -685,13 +770,18 @@
                         <li><span class="feature-bullet">✓</span> Transit damage</li>
                         <li><span class="feature-bullet">✓</span> International shipping</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Marine Insurance')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Marine Insurance')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">6</div>
+                    <!-- <div class="card-number">6</div> -->
                     <div class="card-icon">🌾</div>
                     <div class="card-title">Crop Insurance</div>
                 </div>
@@ -702,13 +792,18 @@
                         <li><span class="feature-bullet">✓</span> Government subsidized</li>
                         <li><span class="feature-bullet">✓</span> Yield loss cover</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Crop Insurance')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Crop Insurance')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">7</div>
+                    <!-- <div class="card-number">7</div> -->
                     <div class="card-icon">🏭</div>
                     <div class="card-title">Commercial Insurance</div>
                 </div>
@@ -719,13 +814,18 @@
                         <li><span class="feature-bullet">✓</span> Equipment coverage</li>
                         <li><span class="feature-bullet">✓</span> Business continuity</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Commercial Insurance')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Commercial Insurance')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">8</div>
+                    <!-- <div class="card-number">8</div> -->
                     <div class="card-icon">🏪</div>
                     <div class="card-title">Shop Insurance</div>
                 </div>
@@ -736,13 +836,18 @@
                         <li><span class="feature-bullet">✓</span> Shop structure cover</li>
                         <li><span class="feature-bullet">✓</span> Theft & burglary</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Shop Insurance')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Shop Insurance')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">9</div>
+                    <!-- <div class="card-number">9</div> -->
                     <div class="card-icon">⚖️</div>
                     <div class="card-title">Liability Insurance</div>
                 </div>
@@ -753,13 +858,18 @@
                         <li><span class="feature-bullet">✓</span> Product liability</li>
                         <li><span class="feature-bullet">✓</span> Professional indemnity</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Liability Insurance')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Liability Insurance')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">10</div>
+                    <!-- <div class="card-number">10</div> -->
                     <div class="card-icon">🔓</div>
                     <div class="card-title">Burglary / Theft Insurance</div>
                 </div>
@@ -770,7 +880,12 @@
                         <li><span class="feature-bullet">✓</span> Stolen goods value</li>
                         <li><span class="feature-bullet">✓</span> Property damage</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Burglary Insurance')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Burglary Insurance')">Get Quote</button> -->
                 </div>
             </div>
 
@@ -781,14 +896,14 @@
     <div class="category-section" id="business">
         <div class="category-header">
             <div class="category-icon-big">🏢</div>
-            <h2 class="category-title">Business / Corporate Insurance</h2>
+            <h2 class="category-title" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">Business / Corporate Insurance</h2>
             <p class="category-desc">For companies and employees protection</p>
         </div>
         <div class="insurance-grid">
             
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">1</div>
+                    <!-- <div class="card-number">1</div> -->
                     <div class="card-icon">👥</div>
                     <div class="card-title">Group Health Insurance</div>
                 </div>
@@ -799,13 +914,18 @@
                         <li><span class="feature-bullet">✓</span> Group discounts</li>
                         <li><span class="feature-bullet">✓</span> Corporate wellness</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Group Health')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Group Health')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">2</div>
+                    <!-- <div class="card-number">2</div> -->
                     <div class="card-icon">🛡️</div>
                     <div class="card-title">Group Term Life Insurance</div>
                 </div>
@@ -816,13 +936,18 @@
                         <li><span class="feature-bullet">✓</span> Family protection</li>
                         <li><span class="feature-bullet">✓</span> Affordable group rates</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Group Term Life')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Group Term Life')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">3</div>
+                    <!-- <div class="card-number">3</div> -->
                     <div class="card-icon">🔑</div>
                     <div class="card-title">Keyman Insurance</div>
                 </div>
@@ -833,13 +958,18 @@
                         <li><span class="feature-bullet">✓</span> Key person protection</li>
                         <li><span class="feature-bullet">✓</span> Financial security</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Keyman Insurance')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Keyman Insurance')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">4</div>
+                    <!-- <div class="card-number">4</div> -->
                     <div class="card-icon">👷</div>
                     <div class="card-title">Employee Compensation</div>
                 </div>
@@ -850,13 +980,18 @@
                         <li><span class="feature-bullet">✓</span> Work injury cover</li>
                         <li><span class="feature-bullet">✓</span> Medical expenses</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('Employee Compensation')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('Employee Compensation')">Get Quote</button> -->
                 </div>
             </div>
 
             <div class="insurance-card">
                 <div class="card-header">
-                    <div class="card-number">5</div>
+                    <!-- <div class="card-number">5</div> -->
                     <div class="card-icon">🎓</div>
                     <div class="card-title">Directors & Officers Liability</div>
                 </div>
@@ -867,7 +1002,12 @@
                         <li><span class="feature-bullet">✓</span> Legal defense costs</li>
                         <li><span class="feature-bullet">✓</span> Decision liability cover</li>
                     </ul>
-                    <button class="get-quote-btn" onclick="getQuote('D&O Liability')">Get Quote</button>
+                    <button class="get-quote-btn" 
+        onclick="window.location.href='./contect.html'" 
+        style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">
+  Contact Us
+</button>
+                    <!-- <button class="get-quote-btn" onclick="getQuote('D&O Liability')">Get Quote</button> -->
                 </div>
             </div>
 
@@ -878,7 +1018,7 @@
     <div class="why-section">
         <div class="why-container">
             <div class="category-header">
-                <h2 class="category-title">Why Insurance Matters</h2>
+                <h2 class="category-title" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">Why Insurance Matters</h2>
                 <p class="category-desc">Understanding the importance of protecting what matters most</p>
             </div>
             <div class="why-grid">
@@ -919,11 +1059,11 @@
     <!-- CTA Section -->
     <div class="cta-section">
         <div class="cta-content">
-            <h2>Start Your Protection Journey Today</h2>
+            <h2 style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:white; margin:20px 0;">Start Your Protection Journey Today</h2>
             <p>Choose from 25+ insurance types and secure your future in minutes</p>
             <div class="cta-buttons">
-                <button class="cta-btn" onclick="getQuote('General Inquiry')">Get Free Quote</button>
-                <button class="cta-btn cta-btn-outline" onclick="getQuote('Compare Plans')">Compare Plans</button>
+                <!-- <button class="cta-btn" onclick="getQuote('General Inquiry')">Get Free Quote</button>
+                <button class="cta-btn cta-btn-outline" onclick="getQuote('Compare Plans')">Compare Plans</button> -->
             </div>
         </div>
     </div>

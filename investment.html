@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -219,972 +219,643 @@
     });
 </script>
 
-     
 
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <h1>Your Complete Investment Guide</h1>
-                <p class="subtitle">Discover various investment options categorized by risk, purpose, and potential returns. Build your wealth strategically.</p>
-                <a href="#investment-categories" class="cta-button">Explore Investments</a>
-            </div>
-        </div>
-    </header>
 
-    <!-- Risk Meter Section -->
-    <section class="risk-meter">
-        <div class="container">
-            <div class="meter-container">
-                <h2 class="meter-title">Find Your Investment Risk Profile</h2>
-                <div class="meter-scale">
-                    <div class="meter-segment" style="background-color: #28a745;">Low</div>
-                    <div class="meter-segment" style="background-color: #ffc107;">Low-Medium</div>
-                    <div class="meter-segment" style="background-color: #ff9800;">Medium</div>
-                    <div class="meter-segment" style="background-color: #fd7e14;">Medium-High</div>
-                    <div class="meter-segment" style="background-color: #dc3545;">High</div>
-                </div>
-                <div class="meter-labels">
-                    <div class="meter-label">Conservative</div>
-                    <div class="meter-label">Moderately Conservative</div>
-                    <div class="meter-label">Moderate</div>
-                    <div class="meter-label">Moderately Aggressive</div>
-                    <div class="meter-label">Aggressive</div>
-                </div>
-                <input type="range" min="1" max="5" value="3" class="risk-slider" id="risk-slider">
-                <div class="risk-result" id="risk-result">
-                    <h3 id="risk-title">Moderate Risk Profile</h3>
-                    <p id="risk-description">You're comfortable with moderate risk and seeking balanced growth. Consider a mix of safe and market-linked investments.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- About Hero Section -->
+     <section class="animated-gradient text-white relative overflow-hidden"
+         style="background: url('https://img1.wsimg.com/isteam/getty/2179769227/:/cr=t:0%25,l:0%25,w:100%25,h:100%25') center top/cover no-repeat; min-height: 500px; padding-top:6rem; padding-bottom:6rem;">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black opacity-50"></div>
 
-    <!-- Investment Categories Section -->
-    <section class="investment-categories" id="investment-categories">
-        <div class="container">
-            <h2 class="section-title">Investment Categories</h2>
-            
-            <div class="category-tabs">
-                <div class="category-tab active" data-category="fixed-income">Fixed Income</div>
-                <div class="category-tab" data-category="market-linked">Market Linked</div>
-                <div class="category-tab" data-category="physical-assets">Physical Assets</div>
-                <div class="category-tab" data-category="retirement">Retirement & Insurance</div>
-                <div class="category-tab" data-category="alternative">Alternative</div>
-                <div class="category-tab" data-category="international">International</div>
-                <div class="category-tab" data-category="tax-saving">Tax Saving</div>
-            </div>
-            
-            <!-- Fixed Income Investments -->
-            <div class="category-content active" id="fixed-income">
-                <div class="investment-cards">
-                    <!-- Fixed Deposit Card -->
-                    <div class="investment-card">
-                        <div class="card-header">
-                            <div class="card-icon">🏦</div>
-                            <h3 class="card-title">Bank Fixed Deposit (FD)</h3>
-                        </div>
-                        <div class="card-content">
-                            <p>Fixed interest for a set tenure with guaranteed returns.</p>
-                            <span class="risk-indicator risk-low">Low Risk</span>
-                            <div class="card-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Tenure:</span>
-                                    <span>3 months–10 years</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Returns:</span>
-                                    <span>Fixed, guaranteed</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Liquidity:</span>
-                                    <span>Easy to liquidate with penalty</span>
-                                </div>
-                            </div>
-                            <a class="toggle-details">View Details</a>
-                        </div>
-                    </div>
-                    
-                    <!-- PPF Card -->
-                    <div class="investment-card">
-                        <div class="card-header">
-                            <div class="card-icon">💰</div>
-                            <h3 class="card-title">Public Provident Fund (PPF)</h3>
-                        </div>
-                        <div class="card-content">
-                            <p>15-year government savings scheme with tax benefits.</p>
-                            <span class="risk-indicator risk-low">Low Risk</span>
-                            <div class="card-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Tenure:</span>
-                                    <span>15 years</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Tax Benefits:</span>
-                                    <span>Under Section 80C</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Returns:</span>
-                                    <span>Tax-free returns</span>
-                                </div>
-                            </div>
-                            <a class="toggle-details">View Details</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Government Bonds Card -->
-                    <div class="investment-card">
-                        <div class="card-header">
-                            <div class="card-icon">📄</div>
-                            <h3 class="card-title">Government Bonds</h3>
-                        </div>
-                        <div class="card-content">
-                            <p>Issued by Government of India with safe, predictable returns.</p>
-                            <span class="risk-indicator risk-low">Low Risk</span>
-                            <div class="card-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Issuer:</span>
-                                    <span>Government of India</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Risk Level:</span>
-                                    <span>Very Low</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Returns:</span>
-                                    <span>Predictable, fixed</span>
-                                </div>
-                            </div>
-                            <a class="toggle-details">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Market Linked Investments -->
-            <div class="category-content" id="market-linked">
-                <div class="investment-cards">
-                    <!-- Mutual Funds Card -->
-                    <div class="investment-card">
-                        <div class="card-header">
-                            <div class="card-icon">📊</div>
-                            <h3 class="card-title">Mutual Funds</h3>
-                        </div>
-                        <div class="card-content">
-                            <p>Professionally managed investment in equities, debt, or hybrid funds.</p>
-                            <span class="risk-indicator risk-medium">Medium Risk</span>
-                            <div class="card-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Types:</span>
-                                    <span>Equity, Debt, Hybrid, ELSS</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Management:</span>
-                                    <span>Professional fund managers</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Returns:</span>
-                                    <span>Market-linked, potential for high returns</span>
-                                </div>
-                            </div>
-                            <a class="toggle-details">View Details</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Direct Equity Card -->
-                    <div class="investment-card">
-                        <div class="card-header">
-                            <div class="card-icon">📈</div>
-                            <h3 class="card-title">Direct Equity (Shares)</h3>
-                        </div>
-                        <div class="card-content">
-                            <p>Investing directly in company stocks for potential high returns.</p>
-                            <span class="risk-indicator risk-high">High Risk</span>
-                            <div class="card-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Potential:</span>
-                                    <span>High return potential</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Risk:</span>
-                                    <span>High volatility</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Knowledge:</span>
-                                    <span>Requires market knowledge</span>
-                                </div>
-                            </div>
-                            <a class="toggle-details">View Details</a>
-                        </div>
-                    </div>
-                    
-                    <!-- ETFs Card -->
-                    <div class="investment-card">
-                        <div class="card-header">
-                            <div class="card-icon">📉</div>
-                            <h3 class="card-title">Exchange Traded Funds (ETFs)</h3>
-                        </div>
-                        <div class="card-content">
-                            <p>Trade on stock exchange like shares, tracking indexes like Nifty or Gold.</p>
-                            <span class="risk-indicator risk-medium">Medium Risk</span>
-                            <div class="card-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Trading:</span>
-                                    <span>Like stocks on exchange</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Tracking:</span>
-                                    <span>Follows indexes (Nifty, Gold, etc.)</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Cost:</span>
-                                    <span>Lower expense ratios</span>
-                                </div>
-                            </div>
-                            <a class="toggle-details">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Add other categories following the same pattern -->
-            
-        </div>
-    </section>
+    <!-- Particles -->
+    <div class="absolute inset-0">
+        <div class="particle bg-white" style="width: 6px; height: 6px; top: 8%; left: 15%;"></div>
+        <div class="particle bg-white" style="width: 5px; height: 5px; top: 65%; left: 75%; animation-delay: 2s;"></div>
+        <div class="particle bg-white" style="width: 8px; height: 8px; top: 28%; left: 60%; animation-delay: 4s;"></div>
+    </div>
 
-    <!-- Investment Calculator Section -->
-    <section class="calculator-section">
-        <div class="container">
-            <div class="calculator-container">
-                <h2 class="calculator-title">Investment Growth Calculator</h2>
-                <div class="calculator-form">
-                    <div class="form-group">
-                        <label for="investment-amount">Initial Investment (₹)</label>
-                        <input type="number" id="investment-amount" placeholder="e.g. 100000" min="1000" max="100000000">
-                    </div>
-                    <div class="form-group">
-                        <label for="monthly-contribution">Monthly Contribution (₹)</label>
-                        <input type="number" id="monthly-contribution" placeholder="e.g. 5000" min="0" max="1000000">
-                    </div>
-                    <div class="form-group">
-                        <label for="investment-period">Investment Period (Years)</label>
-                        <input type="number" id="investment-period" placeholder="e.g. 10" min="1" max="50">
-                    </div>
-                    <div class="form-group">
-                        <label for="expected-return">Expected Annual Return (%)</label>
-                        <input type="number" id="expected-return" placeholder="e.g. 12" min="1" max="30" step="0.1">
-                    </div>
-                    <button class="calculate-btn" id="calculate-investment">Calculate Growth</button>
-                    
-                    <div class="calculator-result" id="investment-result">
-                        <h3>Your Investment Projection</h3>
-                        <div class="result-item">
-                            <span>Total Investment:</span>
-                            <span id="total-investment">₹0</span>
-                        </div>
-                        <div class="result-item">
-                            <span>Estimated Returns:</span>
-                            <span id="estimated-returns">₹0</span>
-                        </div>
-                        <div class="result-item">
-                            <span>Total Value:</span>
-                            <span id="total-value">₹0</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Content -->
+    <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
+        <h1 class="desktop-only" 
+            style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:white; margin:20px 0;">
+              Your Complete  <span class="text-white">Investment Guide </span>
+        </h1>
+        <p style="font-size:18px; margin-bottom:32px; opacity:0.9;" class="sm:text-lg md:text-2xl max-w-3xl mx-auto">
+             Discover various investment options categorized by risk, purpose, and potential returns. Build your wealth strategically
+               
+            </p>
+    </div>
+</section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <h2 class="section-title">Investment FAQs</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What's the difference between saving and investing?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Saving is setting aside money for future use, typically in safe, low-return instruments. Investing involves putting money into assets with the expectation of generating returns over time, which carries some risk but offers higher potential returns.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How do I determine my risk tolerance?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Your risk tolerance depends on your financial goals, time horizon, and emotional comfort with market fluctuations. Consider factors like your age, income stability, financial obligations, and how you would react to potential investment losses.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What is diversification and why is it important?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Diversification means spreading your investments across different asset classes, sectors, and geographies to reduce risk. It helps ensure that a decline in one investment doesn't significantly impact your overall portfolio.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How much should I invest each month?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>A common guideline is to invest at least 15-20% of your income. However, the ideal amount depends on your financial goals, current expenses, debt obligations, and emergency fund status. Start with what you can afford and gradually increase as your income grows.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-     <!-- style -->
-     <style>
-        :root {
-            --primary-blue: #00aaff;
-            --secondary-blue: #0077cc;
-            --light-blue: #87ceeb;
-            --white: #ffffff;
-            --light-gray: #f5f9fc;
-            --text-dark: #333333;
-            --success-green: #28a745;
-            --warning-orange: #ff9800;
-            --danger-red: #dc3545;
+<style>
+    /* Mobile responsive adjustments */
+    @media (max-width: 768px) {
+        section {
+            background-position: center 30% !important;
+            background-size: 120% auto !important;
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+            min-height: 350px !important;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        .particle {
+            width: 4px !important;
+            height: 4px !important;
         }
-        
-        body {
-            background-color: var(--white);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header Styles */
-        header {
-            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        .header-content {
-            position: relative;
-            z-index: 2;
-        }
-        
         h1 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: var(--white);
-            color: var(--secondary-blue);
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        /* Risk Meter Section */
-        .risk-meter {
-            padding: 60px 0;
-            background-color: var(--light-gray);
-        }
-        
-        .meter-container {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            padding: 30px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .meter-title {
-            text-align: center;
-            margin-bottom: 30px;
-            color: var(--secondary-blue);
-        }
-        
-        .meter-scale {
-            display: flex;
-            height: 40px;
-            border-radius: 20px;
-            overflow: hidden;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .meter-segment {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 0.85rem;
-        }
-        
-        .meter-labels {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 30px;
-        }
-        
-        .meter-label {
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--text-dark);
-        }
-        
-        .risk-slider {
-            width: 100%;
-            margin: 20px 0;
-        }
-        
-        .risk-result {
-            text-align: center;
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 5px;
-            display: none;
-        }
-        
-        /* Investment Categories Section */
-        .investment-categories {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            color: var(--secondary-blue);
-            position: relative;
-        }
-        
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(to right, var(--primary-blue), var(--secondary-blue));
-            margin: 15px auto 0;
-            border-radius: 2px;
-        }
-        
-        .category-tabs {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 40px;
-        }
-        
-        .category-tab {
-            padding: 10px 20px;
-            background-color: var(--light-gray);
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 600;
-        }
-        
-        .category-tab.active {
-            background: linear-gradient(-45deg, #00aaff, #0077cc);
-            color: white;
-        }
-        
-        .category-content {
-            display: none;
-        }
-        
-        .category-content.active {
-            display: block;
-        }
-        
-        .investment-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-        }
-        
-        .investment-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.4s ease;
-            cursor: pointer;
-            border: 1px solid #eaeaea;
-        }
-        
-        .investment-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 119, 204, 0.1);
-        }
-        
-        .card-header {
-            background: linear-gradient(-45deg, #00aaff, #0077cc);
-            color: white;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .card-icon {
-            font-size: 2rem;
-            margin-right: 15px;
-        }
-        
-        .card-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-        
-        .card-content {
-            padding: 20px;
-        }
-        
-        .card-details {
-            margin-top: 15px;
-            display: none;
-        }
-        
-        .detail-item {
-            margin-bottom: 10px;
-            display: flex;
-        }
-        
-        .detail-label {
-            font-weight: 600;
-            min-width: 120px;
-        }
-        
-        .risk-indicator {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 15px;
-            color: white;
-            font-size: 0.8rem;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        
-        .risk-low {
-            background-color: var(--success-green);
-        }
-        
-        .risk-medium {
-            background-color: var(--warning-orange);
-        }
-        
-        .risk-high {
-            background-color: var(--danger-red);
-        }
-        
-        .toggle-details {
-            display: block;
-            margin-top: 15px;
-            color: var(--primary-blue);
-            text-decoration: none;
-            font-weight: 600;
-            cursor: pointer;
-        }
-        
-        /* Investment Calculator Section */
-        .calculator-section {
-            padding: 60px 0;
-            background-color: var(--light-gray);
-        }
-        
-        .calculator-container {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            padding: 30px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .calculator-title {
-            text-align: center;
-            margin-bottom: 30px;
-            color: var(--secondary-blue);
-        }
-        
-        .calculator-form {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-        
-        input, select {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border 0.3s;
-        }
-        
-        input:focus, select:focus {
-            border-color: var(--primary-blue);
-            outline: none;
-        }
-        
-        .calculator-result {
-            grid-column: 1 / -1;
-            background-color: var(--light-blue);
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 20px;
-            display: none;
-        }
-        
-        .result-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        
-        .calculate-btn {
-            grid-column: 1 / -1;
-            background: linear-gradient(-45deg, #00aaff, #0077cc);
-            color: white;
-            border: none;
-            padding: 15px;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .calculate-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 119, 204, 0.3);
-        }
-        
-        /* FAQ Section */
-        .faq-section {
-            padding: 60px 0;
-        }
-        
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            margin-bottom: 15px;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-        
-        .faq-question {
-            background-color: white;
-            padding: 15px 20px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-        }
-        
-        .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-            background-color: white;
-        }
-        
-        .faq-answer.active {
-            padding: 20px;
-            max-height: 500px;
-        }
-        
-        .faq-toggle {
-            font-size: 1.2rem;
-            transition: transform 0.3s;
-        }
-        
-        .faq-item.active .faq-toggle {
-            transform: rotate(45deg);
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--secondary-blue);
-            color: white;
-            padding: 40px 0 20px;
-            text-align: center;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .footer-section h3 {
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .footer-section h3::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--light-blue);
-        }
-        
-        .footer-links a {
-            display: block;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 10px;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-        }
-        
-        .copyright {
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            .calculator-form {
-                grid-template-columns: 1fr;
-            }
-            
-            .investment-cards {
-                grid-template-columns: 1fr;
-            }
-            
-            .category-tabs {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .category-tab {
-                width: 100%;
-                text-align: center;
-                margin-bottom: 10px;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .footer-section h3::after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
-    </style>
-<!-- end style -->
-    <script>
-        // Risk Meter Functionality
-        const riskSlider = document.getElementById('risk-slider');
-        const riskResult = document.getElementById('risk-result');
-        const riskTitle = document.getElementById('risk-title');
-        const riskDescription = document.getElementById('risk-description');
-        
-        const riskProfiles = {
-            1: {
-                title: "Conservative Risk Profile",
-                description: "You prefer safety and stability over high returns. Focus on fixed-income investments with guaranteed returns."
-            },
-            2: {
-                title: "Moderately Conservative Risk Profile",
-                description: "You're willing to take minimal risk for slightly better returns. Consider a mix of fixed-income and low-risk market-linked investments."
-            },
-            3: {
-                title: "Moderate Risk Profile",
-                description: "You're comfortable with moderate risk and seeking balanced growth. Consider a mix of safe and market-linked investments."
-            },
-            4: {
-                title: "Moderately Aggressive Risk Profile",
-                description: "You're willing to take calculated risks for higher returns. Consider a portfolio with significant allocation to equities and market-linked instruments."
-            },
-            5: {
-                title: "Aggressive Risk Profile",
-                description: "You're comfortable with high risk in pursuit of maximum returns. Consider a portfolio heavily weighted toward equities and alternative investments."
-            }
-        };
-        
-        riskSlider.addEventListener('input', function() {
-            const riskLevel = parseInt(this.value);
-            riskTitle.textContent = riskProfiles[riskLevel].title;
-            riskDescription.textContent = riskProfiles[riskLevel].description;
-            riskResult.style.display = 'block';
-            
-            // Change background color based on risk level
-            const colors = ['#28a745', '#ffc107', '#ff9800', '#fd7e14', '#dc3545'];
-            riskResult.style.backgroundColor = colors[riskLevel - 1];
-        });
-        
-        // Category Tabs Functionality
-        const categoryTabs = document.querySelectorAll('.category-tab');
-        const categoryContents = document.querySelectorAll('.category-content');
-        
-        categoryTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                const category = this.getAttribute('data-category');
+            font-size: 24px !important;
+        }
+        p {
+            font-size: 16px !important;
+        }
+        /* Hide MJ FINSERV text on mobile */
+        .desktop-only {
+            display: none !important;
+        }
+    }
+
+    /* Show MJ FINSERV text on desktop */
+    @media (min-width: 769px) {
+        .desktop-only {
+            display: block !important;
+        }
+    }
+</style>
+
+
+<!-- hero section -->
+  
+     <style>
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+    }
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+</style>
+
+<!-- Hero Section -->
+ 
+
+ <style>
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+    }
+    @keyframes slideUp {
+        from { opacity: 0; transform: translateY(50px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideRight {
+        from { opacity: 0; transform: translateX(-50px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+</style>
+
+<!-- Hero Section -->
+ 
+
+         
+
+<!-- Life Insurance Section -->
+ 
+       
+<!-- Investment Categories -->
+<div style="background: linear-gradient(135deg, #f0f9ff 0%, #e6f3ff 100%); padding: 80px 20px;">
+    <div style="max-width: 1400px; margin: 0 auto;">
+        
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">Investment Categories</h2>
+            <p style="color: #666; font-size: clamp(1rem, 2vw, 1.3rem);">Diversify your portfolio with smart investment choices</p>
+        </div>
+
+        <!-- A. FIXED-INCOME / SAFE INVESTMENTS -->
+        <div style="background: white; border-radius: 25px; padding: 40px; margin-bottom: 40px; box-shadow: 0 10px 40px rgba(0,119,204,0.1);">
+            <div style="display: flex; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
+                <div style="font-size: 3rem;">🏦</div>
+                <div>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">Fixed-Income / Safe Investments</h3>
+                    <p style="color: #4a90e2; margin: 0; font-weight: 600; font-size: 0.95rem;">LOW RISK • STABLE RETURNS • IDEAL FOR CONSERVATIVE INVESTORS</p>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
                 
-                // Remove active class from all tabs and contents
-                categoryTabs.forEach(t => t.classList.remove('active'));
-                categoryContents.forEach(c => c.classList.remove('active'));
+                <div style="background: linear-gradient(135deg, #f8fbff 0%, #f0f7ff 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #00aaff;">
+                    <h4 style="color: #0077cc; margin: 0 0 12px 0; font-size: 1.2rem;">1. Bank Fixed Deposit (FD)</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0 0 8px 0;">• Fixed interest for set tenure (3 months–10 years)</p>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Safe and easy to liquidate</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f8fbff 0%, #f0f7ff 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #00aaff;">
+                    <h4 style="color: #0077cc; margin: 0 0 12px 0; font-size: 1.2rem;">2. Recurring Deposit (RD)</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Monthly deposit plan with fixed interest</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f8fbff 0%, #f0f7ff 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #00aaff;">
+                    <h4 style="color: #0077cc; margin: 0 0 12px 0; font-size: 1.2rem;">3. Public Provident Fund (PPF)</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0 0 8px 0;">• 15-year government savings scheme</p>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Tax-free returns under Section 80C</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f8fbff 0%, #f0f7ff 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #00aaff;">
+                    <h4 style="color: #0077cc; margin: 0 0 12px 0; font-size: 1.2rem;">4. National Savings Certificate</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Post Office scheme, 5-year lock-in, fixed return</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f8fbff 0%, #f0f7ff 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #00aaff;">
+                    <h4 style="color: #0077cc; margin: 0 0 12px 0; font-size: 1.2rem;">5. Post Office MIS</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Regular monthly income with low risk</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f8fbff 0%, #f0f7ff 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #00aaff;">
+                    <h4 style="color: #0077cc; margin: 0 0 12px 0; font-size: 1.2rem;">6. Government Bonds / RBI</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0 0 8px 0;">• Issued by Govt. of India</p>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Safe, predictable returns</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f8fbff 0%, #f0f7ff 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #00aaff;">
+                    <h4 style="color: #0077cc; margin: 0 0 12px 0; font-size: 1.2rem;">7. Sukanya Samriddhi Yojana</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• For girl child, long-term saving with high interest and tax benefits</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- B. MARKET-LINKED INVESTMENTS -->
+        <div style="background: white; border-radius: 25px; padding: 40px; margin-bottom: 40px; box-shadow: 0 10px 40px rgba(0,119,204,0.1);">
+            <div style="display: flex; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
+                <div style="font-size: 3rem;">📈</div>
+                <div>
+                    <h3 style="color: #ff6b35; font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 8px 0; font-weight: 700;">Market-Linked Investments</h3>
+                    <p style="color: #ff8866; margin: 0; font-weight: 600; font-size: 0.95rem;">MODERATE TO HIGH RISK • HIGHER POTENTIAL RETURNS</p>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
                 
-                // Add active class to clicked tab and corresponding content
-                this.classList.add('active');
-                document.getElementById(category).classList.add('active');
-            });
-        });
-        
-        // Toggle Investment Card Details
-        const toggleButtons = document.querySelectorAll('.toggle-details');
-        toggleButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const cardDetails = this.previousElementSibling;
-                if (cardDetails.style.display === 'block') {
-                    cardDetails.style.display = 'none';
-                    this.textContent = 'View Details';
-                } else {
-                    cardDetails.style.display = 'block';
-                    this.textContent = 'Hide Details';
-                }
-            });
-        });
-        
-        // Investment Calculator Functionality
-        document.getElementById('calculate-investment').addEventListener('click', function() {
-            const initialAmount = parseFloat(document.getElementById('investment-amount').value);
-            const monthlyContribution = parseFloat(document.getElementById('monthly-contribution').value);
-            const years = parseInt(document.getElementById('investment-period').value);
-            const annualReturn = parseFloat(document.getElementById('expected-return').value);
-            
-            if (isNaN(initialAmount) || isNaN(monthlyContribution) || isNaN(years) || isNaN(annualReturn)) {
-                alert('Please enter valid values for all fields');
-                return;
-            }
-            
-            const monthlyRate = annualReturn / 12 / 100;
-            const months = years * 12;
-            
-            // Calculate future value of initial investment
-            const futureValueInitial = initialAmount * Math.pow(1 + monthlyRate, months);
-            
-            // Calculate future value of monthly contributions
-            const futureValueContributions = monthlyContribution * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
-            
-            const totalValue = futureValueInitial + futureValueContributions;
-            const totalInvestment = initialAmount + (monthlyContribution * months);
-            const estimatedReturns = totalValue - totalInvestment;
-            
-            document.getElementById('total-investment').textContent = '₹' + totalInvestment.toLocaleString('en-IN');
-            document.getElementById('estimated-returns').textContent = '₹' + estimatedReturns.toLocaleString('en-IN');
-            document.getElementById('total-value').textContent = '₹' + totalValue.toLocaleString('en-IN');
-            
-            document.getElementById('investment-result').style.display = 'block';
-        });
-        
-        // FAQ Toggle Functionality
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            const answer = item.querySelector('.faq-answer');
-            
-            question.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
+                <div style="background: linear-gradient(135deg, #fff9f5 0%, #fff2ed 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #ff8866;">
+                    <h4 style="color: #cc5500; margin: 0 0 12px 0; font-size: 1.2rem;">1. Mutual Funds</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0 0 8px 0;">• Professionally managed investment in equities, debt, or hybrid funds</p>
+                    <p style="color: #666; font-size: 0.85rem; margin: 0 0 4px 0; padding-left: 12px;">- Equity Mutual Fund</p>
+                    <p style="color: #666; font-size: 0.85rem; margin: 0 0 4px 0; padding-left: 12px;">- Debt Mutual Fund</p>
+                    <p style="color: #666; font-size: 0.85rem; margin: 0 0 4px 0; padding-left: 12px;">- Hybrid / Balanced Fund</p>
+                    <p style="color: #666; font-size: 0.85rem; margin: 0; padding-left: 12px;">- ELSS (Tax Saving Fund)</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #fff9f5 0%, #fff2ed 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #ff8866;">
+                    <h4 style="color: #cc5500; margin: 0 0 12px 0; font-size: 1.2rem;">2. Direct Equity (Shares)</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0 0 8px 0;">• Investing directly in company stocks</p>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• High return potential, high risk</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #fff9f5 0%, #fff2ed 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #ff8866;">
+                    <h4 style="color: #cc5500; margin: 0 0 12px 0; font-size: 1.2rem;">3. Exchange Traded Funds (ETFs)</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0 0 8px 0;">• Trade on stock exchange like shares</p>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Tracks index (Nifty, Gold, etc.)</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #fff9f5 0%, #fff2ed 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #ff8866;">
+                    <h4 style="color: #cc5500; margin: 0 0 12px 0; font-size: 1.2rem;">4. Index Funds</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Passive funds that mimic stock index performance</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #fff9f5 0%, #fff2ed 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #ff8866;">
+                    <h4 style="color: #cc5500; margin: 0 0 12px 0; font-size: 1.2rem;">5. Real Estate Investment Trusts</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Invests in commercial properties and earns rental income</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- C. PHYSICAL / REAL ASSETS -->
+        <div style="background: white; border-radius: 25px; padding: 40px; margin-bottom: 40px; box-shadow: 0 10px 40px rgba(0,119,204,0.1);">
+            <div style="display: flex; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
+                <div style="font-size: 3rem;">🪙</div>
+                <div>
+                    <h3 style="color: #cc8800; font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 8px 0; font-weight: 700;">Physical / Real Assets</h3>
+                    <p style="color: #ffaa00; margin: 0; font-weight: 600; font-size: 0.95rem;">MODERATE RISK • TANGIBLE ASSETS • LONG-TERM APPRECIATION</p>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
                 
-                // Close all FAQ items
-                faqItems.forEach(faq => {
-                    faq.classList.remove('active');
-                    faq.querySelector('.faq-answer').classList.remove('active');
-                });
+                <div style="background: linear-gradient(135deg, #fffbf0 0%, #fff8e6 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #ffaa00;">
+                    <h4 style="color: #cc8800; margin: 0 0 12px 0; font-size: 1.2rem;">1. Real Estate</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0 0 8px 0;">• Residential, commercial, or plot investment</p>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Rental + appreciation benefit</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #fffbf0 0%, #fff8e6 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #ffaa00;">
+                    <h4 style="color: #cc8800; margin: 0 0 12px 0; font-size: 1.2rem;">2. Gold Investment</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Physical gold, digital gold, Gold ETFs, or Sovereign Gold Bonds</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #fffbf0 0%, #fff8e6 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #ffaa00;">
+                    <h4 style="color: #cc8800; margin: 0 0 12px 0; font-size: 1.2rem;">3. Silver / Precious Metals</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Investment in silver coins, bars, or ETFs</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- D. RETIREMENT & INSURANCE-BASED -->
+        <div style="background: white; border-radius: 25px; padding: 40px; margin-bottom: 40px; box-shadow: 0 10px 40px rgba(0,119,204,0.1);">
+            <div style="display: flex; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
+                <div style="font-size: 3rem;">💼</div>
+                <div>
+                    <h3 style="color: #0369a1; font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 8px 0; font-weight: 700;">Retirement & Insurance-Based Investments</h3>
+                    <p style="color: #38bdf8; margin: 0; font-weight: 600; font-size: 0.95rem;">LOW-MODERATE RISK • LONG-TERM WEALTH & PROTECTION</p>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
                 
-                // If the clicked item wasn't active, open it
-                if (!isActive) {
-                    item.classList.add('active');
-                    answer.classList.add('active');
-                }
-            });
-        });
-    </script>
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #38bdf8;">
+                    <h4 style="color: #0369a1; margin: 0 0 12px 0; font-size: 1.2rem;">1. National Pension System (NPS)</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0 0 8px 0;">• Government-backed retirement plan</p>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Tax benefits and market-linked growth</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #38bdf8;">
+                    <h4 style="color: #0369a1; margin: 0 0 12px 0; font-size: 1.2rem;">2. Pension / Annuity Plans</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0 0 8px 0;">• Offered by insurance companies</p>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Provides regular income after retirement</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #38bdf8;">
+                    <h4 style="color: #0369a1; margin: 0 0 12px 0; font-size: 1.2rem;">3. Unit Linked Insurance Plan</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Combines investment and life insurance</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #38bdf8;">
+                    <h4 style="color: #0369a1; margin: 0 0 12px 0; font-size: 1.2rem;">4. Endowment / Money-Back</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Traditional insurance with savings component</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- E. ALTERNATIVE INVESTMENTS -->
+        <div style="background: white; border-radius: 25px; padding: 40px; margin-bottom: 40px; box-shadow: 0 10px 40px rgba(0,119,204,0.1);">
+            <div style="display: flex; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
+                <div style="font-size: 3rem;">💰</div>
+                <div>
+                    <h3 style="color: #7c3aed; font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 8px 0; font-weight: 700;">Alternative Investments</h3>
+                    <p style="color: #a78bfa; margin: 0; font-weight: 600; font-size: 0.95rem;">MODERATE-HIGH RISK • FOR ADVANCED INVESTORS</p>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                
+                <div style="background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #a78bfa;">
+                    <h4 style="color: #7c3aed; margin: 0 0 12px 0; font-size: 1.2rem;">1. Corporate Bonds / NCDs</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Issued by companies with fixed interest rate</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #a78bfa;">
+                    <h4 style="color: #7c3aed; margin: 0 0 12px 0; font-size: 1.2rem;">2. Peer-to-Peer (P2P) Lending</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Online lending to individuals/businesses for interest</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #a78bfa;">
+                    <h4 style="color: #7c3aed; margin: 0 0 12px 0; font-size: 1.2rem;">3. Venture Capital / Private Equity</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Investing in startups or private businesses</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #a78bfa;">
+                    <h4 style="color: #7c3aed; margin: 0 0 12px 0; font-size: 1.2rem;">4. Cryptocurrency / Digital Assets</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Digital currencies (Bitcoin, Ethereum, etc.) — very high risk</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #a78bfa;">
+                    <h4 style="color: #7c3aed; margin: 0 0 12px 0; font-size: 1.2rem;">5. Commodity Trading</h4>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">• Gold, silver, crude oil, agri commodities</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- F. INTERNATIONAL INVESTMENTS -->
+        <div style="background: white; border-radius: 25px; padding: 40px; margin-bottom: 40px; box-shadow: 0 10px 40px rgba(0,119,204,0.1);">
+            <div style="display: flex; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
+                <div style="font-size: 3rem;">🌍</div>
+                <div>
+                    <h3 style="color: #059669; font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 8px 0; font-weight: 700;">International Investments</h3>
+                    <p style="color: #10b981; margin: 0; font-weight: 600; font-size: 0.95rem;">GLOBAL DIVERSIFICATION • ACCESS WORLDWIDE MARKETS</p>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 25px; border-radius: 15px; border-left: 4px solid #10b981;">
+                <p style="color: #666; font-size: 0.95rem; margin: 0 0 10px 0;">• Investing in global stocks, mutual funds, or ETFs</p>
+                <p style="color: #666; font-size: 0.95rem; margin: 0;">• Example: Apple, Tesla, or global index funds</p>
+            </div>
+        </div>
+
+        <!-- G. TAX-SAVING INVESTMENTS -->
+        <div style="background: white; border-radius: 25px; padding: 40px; box-shadow: 0 10px 40px rgba(0,119,204,0.1);">
+            <div style="display: flex; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
+                <div style="font-size: 3rem;">🧾</div>
+                <div>
+                    <h3 style="color: #16a34a; font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 8px 0; font-weight: 700;">Tax-Saving Investments (Section 80C)</h3>
+                    <p style="color: #4ade80; margin: 0; font-weight: 600; font-size: 0.95rem;">SAVE TAXES • BUILD WEALTH • UP TO ₹1.5 LAKH DEDUCTION</p>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 20px; border-radius: 12px; text-align: center;">
+                    <p style="color: #16a34a; margin: 0; font-weight: 600; font-size: 1rem;">PPF</p>
+                </div>
+                <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 20px; border-radius: 12px; text-align: center;">
+                    <p style="color: #16a34a; margin: 0; font-weight: 600; font-size: 1rem;">ELSS Mutual Funds</p>
+                </div>
+                <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 20px; border-radius: 12px; text-align: center;">
+                    <p style="color: #16a34a; margin: 0; font-weight: 600; font-size: 1rem;">Life Insurance</p>
+                </div>
+                <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 20px; border-radius: 12px; text-align: center;">
+                    <p style="color: #16a34a; margin: 0; font-weight: 600; font-size: 1rem;">NSC</p>
+                </div>
+                <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 20px; border-radius: 12px; text-align: center;">
+                    <p style="color: #16a34a; margin: 0; font-weight: 600; font-size: 1rem;">Pension Plans</p>
+                </div>
+                <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 20px; border-radius: 12px; text-align: center;">
+                    <p style="color: #16a34a; margin: 0; font-weight: 600; font-size: 1rem;">SSY</p>
+                </div>
+                <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 20px; border-radius: 12px; text-align: center;">
+                    <p style="color: #16a34a; margin: 0; font-weight: 600; font-size: 1rem;">Home Loan Principal</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Loan Types Section -->
+<div style="background: white; padding: 80px 20px;">
+    <div style="max-width: 1400px; margin: 0 auto;">
+        
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">Loan Solutions</h2>
+            <p style="color: #666; font-size: clamp(1rem, 2vw, 1.3rem);">Find the perfect loan for every need with flexible terms and competitive rates</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+            
+            <!-- Home Loan -->
+            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,119,204,0.15); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 2rem;">🏠</div>
+                <h3 style="color: #0077cc; margin: 0 0 12px 0; font-size: 1.5rem; font-weight: 700;">Home Loan</h3>
+                <p style="color: #666; font-size: 0.95rem; margin: 0 0 20px 0; line-height: 1.6;">Finance your dream home with the lowest interest rates and flexible repayment options up to 30 years</p>
+                <div style="background: white; padding: 12px 18px; border-radius: 10px; display: inline-block;">
+                    <span style="color: #0077cc; font-weight: 600; font-size: 0.9rem;">⏱️ Up to 30 years tenure</span>
+                </div>
+            </div>
+
+            <!-- Car Loan -->
+            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,119,204,0.15); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 2rem;">🚗</div>
+                <h3 style="color: #0077cc; margin: 0 0 12px 0; font-size: 1.5rem; font-weight: 700;">Car Loan</h3>
+                <p style="color: #666; font-size: 0.95rem; margin: 0 0 20px 0; line-height: 1.6;">Drive your dream car today with easy EMIs, quick approval, and minimal documentation required</p>
+                <div style="background: white; padding: 12px 18px; border-radius: 10px; display: inline-block;">
+                    <span style="color: #0077cc; font-weight: 600; font-size: 0.9rem;">⚡ Quick approval</span>
+                </div>
+            </div>
+
+            <!-- Personal Loan -->
+            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,119,204,0.15); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 2rem;">👤</div>
+                <h3 style="color: #0077cc; margin: 0 0 12px 0; font-size: 1.5rem; font-weight: 700;">Personal Loan</h3>
+                <p style="color: #666; font-size: 0.95rem; margin: 0 0 20px 0; line-height: 1.6;">Instant funds for any personal need - weddings, travel, medical emergencies, or debt consolidation</p>
+                <div style="background: white; padding: 12px 18px; border-radius: 10px; display: inline-block;">
+                    <span style="color: #0077cc; font-weight: 600; font-size: 0.9rem;">🔓 No collateral needed</span>
+                </div>
+            </div>
+
+            <!-- Education Loan -->
+            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,119,204,0.15); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 2rem;">🎓</div>
+                <h3 style="color: #0077cc; margin: 0 0 12px 0; font-size: 1.5rem; font-weight: 700;">Education Loan</h3>
+                <p style="color: #666; font-size: 0.95rem; margin: 0 0 20px 0; line-height: 1.6;">Invest in your future education with low-interest loans for domestic and international studies</p>
+                <div style="background: white; padding: 12px 18px; border-radius: 10px; display: inline-block;">
+                    <span style="color: #0077cc; font-weight: 600; font-size: 0.9rem;">💼 Tax benefits available</span>
+                </div>
+            </div>
+
+            <!-- Business Loan -->
+            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,119,204,0.15); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 2rem;">💼</div>
+                <h3 style="color: #0077cc; margin: 0 0 12px 0; font-size: 1.5rem; font-weight: 700;">Business Loan</h3>
+                <p style="color: #666; font-size: 0.95rem; margin: 0 0 20px 0; line-height: 1.6;">Grow your business with flexible funding options, working capital, and expansion loans</p>
+                <div style="background: white; padding: 12px 18px; border-radius: 10px; display: inline-block;">
+                    <span style="color: #0077cc; font-weight: 600; font-size: 0.9rem;">📈 High loan amount</span>
+                </div>
+            </div>
+
+            <!-- Credit Card -->
+            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,119,204,0.15); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 2rem;">💳</div>
+                <h3 style="color: #0077cc; margin: 0 0 12px 0; font-size: 1.5rem; font-weight: 700;">Credit Card</h3>
+                <p style="color: #666; font-size: 0.95rem; margin: 0 0 20px 0; line-height: 1.6;">Revolving credit for everyday expenses with exclusive rewards, cashback, and travel benefits</p>
+                <div style="background: white; padding: 12px 18px; border-radius: 10px; display: inline-block;">
+                    <span style="color: #0077cc; font-weight: 600; font-size: 0.9rem;">🎁 Rewards & cashback</span>
+                </div>
+            </div>
+
+            <!-- Gold Loan -->
+            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,119,204,0.15); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 2rem;">🥇</div>
+                <h3 style="color: #0077cc; margin: 0 0 12px 0; font-size: 1.5rem; font-weight: 700;">Gold Loan</h3>
+                <p style="color: #666; font-size: 0.95rem; margin: 0 0 20px 0; line-height: 1.6;">Unlock the value of your gold with instant loans, minimal paperwork, and competitive rates</p>
+                <div style="background: white; padding: 12px 18px; border-radius: 10px; display: inline-block;">
+                    <span style="color: #0077cc; font-weight: 600; font-size: 0.9rem;">⚡ Instant disbursal</span>
+                </div>
+            </div>
+
+            <!-- Property Loan -->
+            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,119,204,0.15); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 2rem;">🏢</div>
+                <h3 style="color: #0077cc; margin: 0 0 12px 0; font-size: 1.5rem; font-weight: 700;">Loan Against Property</h3>
+                <p style="color: #666; font-size: 0.95rem; margin: 0 0 20px 0; line-height: 1.6;">Leverage your property for high-value loans with lower interest rates and longer tenure</p>
+                <div style="background: white; padding: 12px 18px; border-radius: 10px; display: inline-block;">
+                    <span style="color: #0077cc; font-weight: 600; font-size: 0.9rem;">💰 High loan value</span>
+                </div>
+            </div>
+
+            <!-- Two Wheeler Loan -->
+            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,119,204,0.15); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 2rem;">🏍️</div>
+                <h3 style="color: #0077cc; margin: 0 0 12px 0; font-size: 1.5rem; font-weight: 700;">Two Wheeler Loan</h3>
+                <p style="color: #666; font-size: 0.95rem; margin: 0 0 20px 0; line-height: 1.6;">Get your dream bike or scooter with affordable EMIs and hassle-free documentation</p>
+                <div style="background: white; padding: 12px 18px; border-radius: 10px; display: inline-block;">
+                    <span style="color: #0077cc; font-weight: 600; font-size: 0.9rem;">🚀 Fast processing</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Why Choose Us Section -->
+<div style="background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff); background-size: 400% 400%; animation: gradientShift 15s ease infinite; padding: 80px 20px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2  style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:white; margin:20px 0;">Why Choose Us?</h2>
+            <p style="color: rgba(255,255,255,0.95); font-size: clamp(1rem, 2vw, 1.3rem);">Your trusted partner in achieving financial freedom</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+            
+            <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 20px; padding: 35px; text-align: center; border: 2px solid rgba(255,255,255,0.3); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="width: 80px; height: 80px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">✓</div>
+                <h3 style="color: white; margin: 0 0 12px 0; font-size: 1.4rem; font-weight: 700;">Expert Guidance</h3>
+                <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95rem; line-height: 1.6;">Professional financial advisors to help you make informed decisions</p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 20px; padding: 35px; text-align: center; border: 2px solid rgba(255,255,255,0.3); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="width: 80px; height: 80px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">🔒</div>
+                <h3 style="color: white; margin: 0 0 12px 0; font-size: 1.4rem; font-weight: 700;">100% Secure</h3>
+                <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95rem; line-height: 1.6;">Bank-level encryption and security for all your financial transactions</p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 20px; padding: 35px; text-align: center; border: 2px solid rgba(255,255,255,0.3); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="width: 80px; height: 80px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">⚡</div>
+                <h3 style="color: white; margin: 0 0 12px 0; font-size: 1.4rem; font-weight: 700;">Quick Process</h3>
+                <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95rem; line-height: 1.6;">Fast loan approval and instant investment processing within hours</p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 20px; padding: 35px; text-align: center; border: 2px solid rgba(255,255,255,0.3); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="width: 80px; height: 80px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">💎</div>
+                <h3 style="color: white; margin: 0 0 12px 0; font-size: 1.4rem; font-weight: 700;">Best Rates</h3>
+                <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95rem; line-height: 1.6;">Competitive interest rates and maximum returns on your investments</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Investment vs Loan Comparison -->
+<div style="background: white; padding: 80px 20px;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+        
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2  style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">Investment vs Loan</h2>
+            <p style="color: #666; font-size: clamp(1rem, 2vw, 1.3rem);">Understanding the difference for smarter financial planning</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+            
+            <!-- Investment -->
+            <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-radius: 25px; padding: 45px; box-shadow: 0 15px 50px rgba(22,163,74,0.2); border-top: 6px solid #16a34a;">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <div style="font-size: 4rem; margin-bottom: 15px;">📈</div>
+                    <h3 style="color: #16a34a; font-size: 2.2rem; margin: 0; font-weight: 800;">Investment</h3>
+                </div>
+                
+                <div style="display: flex; align-items: start; margin-bottom: 18px;">
+                    <div style="color: #4ade80; margin-right: 12px; font-size: 1.4rem; min-width: 24px;">✓</div>
+                    <p style="color: #555; margin: 0; font-size: 1rem; line-height: 1.5;">You put money to grow wealth over time</p>
+                </div>
+                <div style="display: flex; align-items: start; margin-bottom: 18px;">
+                    <div style="color: #4ade80; margin-right: 12px; font-size: 1.4rem; min-width: 24px;">✓</div>
+                    <p style="color: #555; margin: 0; font-size: 1rem; line-height: 1.5;">Generates passive returns and income</p>
+                </div>
+                <div style="display: flex; align-items: start; margin-bottom: 18px;">
+                    <div style="color: #4ade80; margin-right: 12px; font-size: 1.4rem; min-width: 24px;">✓</div>
+                    <p style="color: #555; margin: 0; font-size: 1rem; line-height: 1.5;">Builds long-term financial security</p>
+                </div>
+                <div style="display: flex; align-items: start; margin-bottom: 18px;">
+                    <div style="color: #4ade80; margin-right: 12px; font-size: 1.4rem; min-width: 24px;">✓</div>
+                    <p style="color: #555; margin: 0; font-size: 1rem; line-height: 1.5;">Tax benefits on select investments</p>
+                </div>
+                <div style="display: flex; align-items: start;">
+                    <div style="color: #4ade80; margin-right: 12px; font-size: 1.4rem; min-width: 24px;">✓</div>
+                    <p style="color: #555; margin: 0; font-size: 1rem; line-height: 1.5;">Multiple options for all risk appetites</p>
+                </div>
+            </div>
+
+            <!-- Loan -->
+            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 25px; padding: 45px; box-shadow: 0 15px 50px rgba(0,119,204,0.2); border-top: 6px solid #0077cc;">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <div style="font-size: 4rem; margin-bottom: 15px;">💰</div>
+                    <h3 style="color: #0077cc; font-size: 2.2rem; margin: 0; font-weight: 800;">Loan</h3>
+                </div>
+                
+                <div style="display: flex; align-items: start; margin-bottom: 18px;">
+                    <div style="color: #00aaff; margin-right: 12px; font-size: 1.4rem; min-width: 24px;">✓</div>
+                    <p style="color: #555; margin: 0; font-size: 1rem; line-height: 1.5;">You borrow money for immediate needs</p>
+                </div>
+                <div style="display: flex; align-items: start; margin-bottom: 18px;">
+                    <div style="color: #00aaff; margin-right: 12px; font-size: 1.4rem; min-width: 24px;">✓</div>
+                    <p style="color: #555; margin: 0; font-size: 1rem; line-height: 1.5;">Repay with interest through EMIs</p>
+                </div>
+                <div style="display: flex; align-items: start; margin-bottom: 18px;">
+                    <div style="color: #00aaff; margin-right: 12px; font-size: 1.4rem; min-width: 24px;">✓</div>
+                    <p style="color: #555; margin: 0; font-size: 1rem; line-height: 1.5;">Fulfill immediate financial goals</p>
+                </div>
+                <div style="display: flex; align-items: start; margin-bottom: 18px;">
+                    <div style="color: #00aaff; margin-right: 12px; font-size: 1.4rem; min-width: 24px;">✓</div>
+                    <p style="color: #555; margin: 0; font-size: 1rem; line-height: 1.5;">Flexible tenure and repayment options</p>
+                </div>
+                <div style="display: flex; align-items: start;">
+                    <div style="color: #00aaff; margin-right: 12px; font-size: 1.4rem; min-width: 24px;">✓</div>
+                    <p style="color: #555; margin: 0; font-size: 1rem; line-height: 1.5;">Quick approval and disbursal process</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- CTA Section -->
+<div style="background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff); background-size: 400% 400%; animation: gradientShift 15s ease infinite; padding: 100px 20px; text-align: center; position: relative; overflow: hidden;">
+    
+    <!-- Floating Elements -->
+    <div style="position: absolute; top: 20%; left: 10%; width: 100px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 50%; animation: float 6s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: 20%; right: 10%; width: 120px; height: 120px; background: rgba(255,255,255,0.08); border-radius: 50%; animation: float 8s ease-in-out infinite;"></div>
+
+    <div style="max-width: 700px; margin: 0 auto; position: relative; z-index: 1;">
+        <h2 style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:400; color:white; margin:20px 0;">Ready to Start Your Financial Journey?</h2>
+        <p style="color: rgba(255,255,255,0.95); font-size: clamp(1.1rem, 2.5vw, 1.5rem); margin-bottom: 50px; line-height: 1.6; max-width: 700px; margin-left: auto; margin-right: auto;">Whether you want to invest for the future or need a loan today, we're here to guide you every step of the way</p>
+        
+         
+        <!-- Trust Badges -->
+       
+    </div>
+</div>
+
+
   <!-- Premium Footer -->
     <footer class="bg-gradient-to-br from-dark via-gray-900 to-dark text-white pt-20 pb-10 relative overflow-hidden">
         <div class="absolute inset-0 opacity-5">

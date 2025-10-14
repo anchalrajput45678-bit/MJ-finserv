@@ -219,21 +219,70 @@
     });
 </script>
 
-     
-<body>
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-content">
-            <h1>🏦 Secured Loans Made Simple</h1>
-            <p class="hero-subtitle">Lower Interest Rates | Higher Loan Amounts | Longer Tenure</p>
-            <div class="hero-features">
-                <div class="hero-feature">✓ Up to 70% LTV</div>
-                <div class="hero-feature">✓ 30 Years Tenure</div>
-                <div class="hero-feature">✓ Minimal Documentation</div>
-            </div>
-        </div>
+
+
+    <!-- About Hero Section -->
+     <section class="animated-gradient text-white relative overflow-hidden"
+         style="background: url('https://img1.wsimg.com/isteam/getty/2179769227/:/cr=t:0%25,l:0%25,w:100%25,h:100%25') center top/cover no-repeat; min-height: 500px; padding-top:6rem; padding-bottom:6rem;">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <!-- Particles -->
+    <div class="absolute inset-0">
+        <div class="particle bg-white" style="width: 6px; height: 6px; top: 8%; left: 15%;"></div>
+        <div class="particle bg-white" style="width: 5px; height: 5px; top: 65%; left: 75%; animation-delay: 2s;"></div>
+        <div class="particle bg-white" style="width: 8px; height: 8px; top: 28%; left: 60%; animation-delay: 4s;"></div>
     </div>
 
+    <!-- Content -->
+    <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
+        <h1 class="desktop-only" 
+            style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:white; margin:20px 0;">
+              Secure <span class="text-white"> Loans</span>
+        </h1>
+        <p style="font-size:18px; margin-bottom:32px; opacity:0.9;" class="sm:text-lg md:text-2xl max-w-3xl mx-auto">
+          
+              Borrow Smart, Stay Secure, and Protect Your Future
+            </p>
+    </div>
+</section>
+
+<style>
+    /* Mobile responsive adjustments */
+    @media (max-width: 768px) {
+        section {
+            background-position: center 30% !important;
+            background-size: 120% auto !important;
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+            min-height: 350px !important;
+        }
+        .particle {
+            width: 4px !important;
+            height: 4px !important;
+        }
+        h1 {
+            font-size: 24px !important;
+        }
+        p {
+            font-size: 16px !important;
+        }
+        /* Hide MJ FINSERV text on mobile */
+        .desktop-only {
+            display: none !important;
+        }
+    }
+
+    /* Show MJ FINSERV text on desktop */
+    @media (min-width: 769px) {
+        .desktop-only {
+            display: block !important;
+        }
+    }
+</style>
+
+
+   
     <!-- Benefits Ticker -->
     <div class="benefits-ticker">
         <div class="ticker-content">
@@ -251,7 +300,7 @@
     </div>
 
     <!-- Loan Calculator -->
-    <div class="calculator-section">
+    <!-- <div class="calculator-section">
         <div class="calculator-container">
             <div class="calculator-info">
                 <h2>Calculate Your EMI</h2>
@@ -277,11 +326,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Comparison Section -->
     <div class="comparison-section">
-        <div class="comparison-intro">
+        <div class="comparison-intro" >
             <h2>Secured vs Unsecured Loans</h2>
             <p>Understanding the key differences to make the right choice</p>
         </div>
@@ -320,7 +369,7 @@
     <!-- All Loan Types -->
     <div class="loans-section">
         <div class="section-header">
-            <h2 class="section-title">Complete Range of Secured Loans</h2>
+            <h2 class="section-title" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">Complete Range of Secured Loans</h2>
             <p class="section-subtitle">Choose the right loan backed by your assets</p>
         </div>
         <div class="loans-grid">
@@ -360,7 +409,12 @@
                             <span class="detail-value">Up to 15-20 years</span>
                         </div>
                     </div>
-                    <button class="apply-btn" onclick="showInterest('Loan Against Property')">Apply Now</button>
+                     <a href="./contect.html" style="text-decoration:none;">
+  <button class="apply-btn" style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;">
+    Contact Us
+  </button>
+</a>
+                    <!-- <button class="apply-btn" onclick="showInterest('Loan Against Property')">Apply Now</button> -->
                 </div>
             </div>
 
@@ -395,11 +449,16 @@
                     <div class="loan-detail">
                         <span class="detail-icon">📋</span>
                         <div class="detail-content">
-                            <span class="detail-label">Types</span>
+                            <span class="detail-label"> </span>
                             <span class="detail-value">Purchase, Construction, Improvement, Plot+Construction</span>
                         </div>
                     </div>
-                    <button class="apply-btn" onclick="showInterest('Home Loan')">Get Home Loan</button>
+                     <a href="./contect.html" style="text-decoration:none;">
+  <button class="apply-btn" style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;">
+    Contact Us
+  </button>
+</a>
+                    <!-- <button class="apply-btn" onclick="showInterest('Home Loan')">Get Home Loan</button> -->
                 </div>
             </div>
 
@@ -438,7 +497,12 @@
                             <span class="detail-value">Up to 90% on-road price financing</span>
                         </div>
                     </div>
-                    <button class="apply-btn" onclick="showInterest('Vehicle Loan')">Finance Your Vehicle</button>
+                     <a href="./contect.html" style="text-decoration:none;">
+  <button class="apply-btn" style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;">
+    Contact Us
+  </button>
+</a>
+                    <!-- <button class="apply-btn" onclick="showInterest('Vehicle Loan')">Finance Your Vehicle</button> -->
                 </div>
             </div>
 
@@ -477,7 +541,12 @@
                             <span class="detail-value">3 months - 3 years</span>
                         </div>
                     </div>
-                    <button class="apply-btn" onclick="showInterest('Gold Loan')">Get Instant Cash</button>
+                     <a href="./contect.html" style="text-decoration:none;">
+  <button class="apply-btn" style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;">
+    Contact Us
+  </button>
+</a>
+                    <!-- <button class="apply-btn" onclick="showInterest('Gold Loan')">Get Instant Cash</button> -->
                 </div>
             </div>
 
@@ -516,7 +585,12 @@
                             <span class="detail-value">Up to 90-95% of FD value</span>
                         </div>
                     </div>
-                    <button class="apply-btn" onclick="showInterest('FD Loan')">Apply Against FD</button>
+                     <a href="./contect.html" style="text-decoration:none;">
+  <button class="apply-btn" style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;">
+    Contact Us
+  </button>
+</a>
+                    <!-- <button class="apply-btn" onclick="showInterest('FD Loan')">Apply Against FD</button> -->
                 </div>
             </div>
 
@@ -555,7 +629,12 @@
                             <span class="detail-value">Keep earning returns on investments</span>
                         </div>
                     </div>
-                    <button class="apply-btn" onclick="showInterest('Loan Against Securities')">Leverage Your Portfolio</button>
+                     <a href="./contect.html" style="text-decoration:none;">
+  <button class="apply-btn" style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;">
+    Contact Us
+  </button>
+</a>
+                    <!-- <button class="apply-btn" onclick="showInterest('Loan Against Securities')">Leverage Your Portfolio</button> -->
                 </div>
             </div>
 
@@ -594,7 +673,12 @@
                             <span class="detail-value">Policy remains active</span>
                         </div>
                     </div>
-                    <button class="apply-btn" onclick="showInterest('Insurance Policy Loan')">Use Your Policy</button>
+                     <a href="./contect.html" style="text-decoration:none;">
+  <button class="apply-btn" style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;">
+    Contact Us
+  </button>
+</a>
+                    <!-- <button class="apply-btn" onclick="showInterest('Insurance Policy Loan')">Use Your Policy</button> -->
                 </div>
             </div>
 
@@ -633,7 +717,12 @@
                             <span class="detail-value">Only on used amount</span>
                         </div>
                     </div>
-                    <button class="apply-btn" onclick="showInterest('Working Capital')">Get Business Finance</button>
+                     <a href="./contect.html" style="text-decoration:none;">
+  <button class="apply-btn" style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;">
+    Contact Us
+  </button>
+</a>
+                    <!-- <button class="apply-btn" onclick="showInterest('Working Capital')">Get Business Finance</button> -->
                 </div>
             </div>
 
@@ -672,7 +761,12 @@
                             <span class="detail-value">Up to 80% machinery cost</span>
                         </div>
                     </div>
-                    <button class="apply-btn" onclick="showInterest('Machinery Loan')">Finance Equipment</button>
+                     <a href="./contect.html" style="text-decoration:none;">
+  <button class="apply-btn" style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;">
+    Contact Us
+  </button>
+</a>
+                    <!-- <button class="apply-btn" onclick="showInterest('Machinery Loan')">Finance Equipment</button> -->
                 </div>
             </div>
 
@@ -711,7 +805,12 @@
                             <span class="detail-value">3-5 years</span>
                         </div>
                     </div>
-                    <button class="apply-btn" onclick="showInterest('Commercial Vehicle Loan')">Finance Your Fleet</button>
+                     <a href="./contect.html" style="text-decoration:none;">
+  <button class="apply-btn" style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;">
+    Contact Us
+  </button>
+</a>
+                    <!-- <button class="apply-btn" onclick="showInterest('Commercial Vehicle Loan')">Finance Your Fleet</button> -->
                 </div>
             </div>
 
@@ -750,7 +849,12 @@
                             <span class="detail-value">Crop loan, tractor loan, farm equipment</span>
                         </div>
                     </div>
-                    <button class="apply-btn" onclick="showInterest('Agriculture Loan')">Grow Your Farm</button>
+                     <a href="./contect.html" style="text-decoration:none;">
+  <button class="apply-btn" style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;">
+    Contact Us
+  </button>
+</a>
+                    <!-- <button class="apply-btn" onclick="showInterest('Agriculture Loan')">Grow Your Farm</button> -->
                 </div>
             </div>
 
@@ -789,7 +893,12 @@
                             <span class="detail-value">Lowest interest rates available</span>
                         </div>
                     </div>
-                    <button class="apply-btn" onclick="showInterest('Mortgage Loan')">Explore Options</button>
+                     <a href="./contect.html" style="text-decoration:none;">
+  <button class="apply-btn" style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;">
+    Contact Us
+  </button>
+</a>
+                    <!-- <button class="apply-btn" onclick="showInterest('Mortgage Loan')">Explore Options</button> -->
                 </div>
             </div>
 
@@ -800,7 +909,7 @@
     <div class="process-section">
         <div class="process-container">
             <div class="section-header">
-                <h2 class="section-title">How to Get a Secured Loan?</h2>
+                <h2 class="section-title" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">How to Get a Secured Loan?</h2>
                 <p class="section-subtitle">Simple 5-step process to get your loan approved</p>
             </div>
             <div class="process-timeline">
@@ -852,11 +961,16 @@
     <!-- CTA Section -->
     <div class="cta-section">
         <div class="cta-content">
-            <h2>Ready to Unlock Your Asset's Value?</h2>
+            <h2 style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:white; margin:20px 0;">Ready to Unlock Your Asset's Value?</h2>
             <p>Get the best secured loan rates and maximize your borrowing potential</p>
             <div class="cta-buttons">
-                <button class="cta-btn" onclick="showInterest('General Application')">Apply Now</button>
-                <button class="cta-btn cta-btn-secondary" onclick="showInterest('Compare Loans')">Compare Loans</button>
+                 <a href="./contect.html" style="text-decoration:none;">
+  <button class="apply-btn" style="padding:10px 20px;background:#0066ff;color:#fff;border:none;border-radius:8px;cursor:pointer;">
+    Contact Us
+  </button>
+</a>
+                <!-- <button class="cta-btn" onclick="showInterest('General Application')">Apply Now</button> -->
+                <!-- <button class="cta-btn cta-btn-secondary" onclick="showInterest('Compare Loans')">Compare Loans</button> -->
             </div>
         </div>
     </div>
@@ -1241,7 +1355,7 @@
             color: white;
             padding: 30px 25px;
             position: relative;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            /* clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); */
             padding-bottom: 40px;
         }
         
