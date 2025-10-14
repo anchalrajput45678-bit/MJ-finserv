@@ -1,223 +1,385 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MJ FINSERV - Premium Financial Solutions</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1842b6',
-                        secondary: '#e52429',
-                        accent: '#0d2d7a',
-                        light: '#f8fafc',
-                        dark: '#1e293b'
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1842b6",
+              secondary: "#e52429",
+              accent: "#0d2d7a",
+              light: "#f8fafc",
+              dark: "#1e293b",
+            },
+          },
+        },
+      };
     </script>
-   
-</head>
-<body class="bg-light text-dark">
-    
-<!-- Top Bar with Premium Look -->
-<div class="animated-gradient py-3 px-4 md:px-8 relative overflow-hidden">
-  <!-- Background particles -->
-  <div class="absolute inset-0 opacity-20 pointer-events-none">
-    <div class="particle bg-white" style="width: 4px; height: 4px; top: 20%; left: 10%;"></div>
-    <div class="particle bg-white" style="width: 6px; height: 6px; top: 60%; left: 30%; animation-delay: 2s;"></div>
-    <div class="particle bg-white" style="width: 3px; height: 3px; top: 40%; left: 70%; animation-delay: 4s;"></div>
-  </div>
-
-  <!-- Top bar content -->
-  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center relative z-10">
-
-    <!-- Email & Phone (responsive) -->
-    <div class="flex w-full md:w-auto md:flex-row justify-between items-center text-sm text-white mb-2 md:mb-0">
-
-      <!-- Mobile View: Left (Email) and Right (Phone) -->
-      <div class="flex w-full justify-between items-center md:hidden">
-        <!-- Email -->
-        <span class="flex items-center hover:scale-110 transition-transform duration-300">
-          <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
-        </span>
-        <!-- Phone -->
-        <span class="flex items-center hover:scale-110 transition-transform duration-300">
-          <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
-        </span>
+  </head>
+  <body class="bg-light text-dark">
+    <!-- Top Bar with Premium Look -->
+    <div class="animated-gradient py-3 px-4 md:px-8 relative overflow-hidden">
+      <!-- Background particles -->
+      <div class="absolute inset-0 opacity-20 pointer-events-none">
+        <div
+          class="particle bg-white"
+          style="width: 4px; height: 4px; top: 20%; left: 10%"
+        ></div>
+        <div
+          class="particle bg-white"
+          style="
+            width: 6px;
+            height: 6px;
+            top: 60%;
+            left: 30%;
+            animation-delay: 2s;
+          "
+        ></div>
+        <div
+          class="particle bg-white"
+          style="
+            width: 3px;
+            height: 3px;
+            top: 40%;
+            left: 70%;
+            animation-delay: 4s;
+          "
+        ></div>
       </div>
-
-      <!-- Desktop View: Email & Phone stacked -->
-      <div class="hidden md:flex flex-row items-center space-x-6">
-        <!-- Email -->
-        <span class="flex items-center hover:scale-110 transition-transform duration-300">
-          <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
-        </span>
-
-        <!-- Phone -->
-        <span class="flex items-center hover:scale-110 transition-transform duration-300">
-          <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
-        </span>
+      <!-- Top bar content -->
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center relative z-10"
+      >
+        <!-- Email & Phone (responsive) -->
+        <div
+          class="flex w-full md:w-auto md:flex-row justify-between items-center text-sm text-white mb-2 md:mb-0"
+        >
+          <!-- Mobile View: Left (Email) and Right (Phone) -->
+          <div class="flex w-full justify-between items-center md:hidden">
+            <!-- Email -->
+            <span
+              class="flex items-center hover:scale-110 transition-transform duration-300"
+            >
+              <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
+            </span>
+            <!-- Phone -->
+            <span
+              class="flex items-center hover:scale-110 transition-transform duration-300"
+            >
+              <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
+            </span>
+          </div>
+          <!-- Desktop View: Email & Phone stacked -->
+          <div class="hidden md:flex flex-row items-center space-x-6">
+            <!-- Email -->
+            <span
+              class="flex items-center hover:scale-110 transition-transform duration-300"
+            >
+              <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
+            </span>
+            <!-- Phone -->
+            <span
+              class="flex items-center hover:scale-110 transition-transform duration-300"
+            >
+              <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
+            </span>
+          </div>
+        </div>
+        <!-- Social Icons - hidden on mobile -->
+        <div class="hidden md:flex space-x-4">
+          <a
+            href="#"
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="#"
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="#"
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="#"
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
       </div>
     </div>
-
-    <!-- Social Icons - hidden on mobile -->
-    <div class="hidden md:flex space-x-4">
-      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </div>
-  </div>
+    <!-- Premium Navbar -->
+    <nav
+      id="navbar"
+      class="bg-white sticky top-0 z-50 transition-all duration-500 shadow-sm"
+    >
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex justify-between items-center">
+          <!-- ✅ LOGO SECTION -->
+           <div class="flex items-center group cursor-pointer">
+  <img
+    src="./logomjfinserve.png"
+    alt="MJ FINSERV Logo"
+    class="logo min-h-[105px] min-w-[130px] object-contain mr-3 group-hover:scale-110 transition-transform duration-300"
+  />
 </div>
 
-    <!-- Premium Navbar -->
-<nav id="navbar" class="bg-white sticky top-0 z-50 transition-all duration-500">
-    <div class="container mx-auto px-4 md:px-8">
-        <div class="flex justify-between items-center py-4">
-            <div class="flex items-center group cursor-pointer">
-                <div class="bg-gradient-to-br from-primary to-accent text-white p-3 rounded-xl mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <i class="fas fa-shield-alt text-xl"></i>
+<style>
+  /* ✅ Responsive transparent logo style */
+  .logo {
+    width: 80px;
+    height: auto;
+    transition: all 0.3s ease;
+  }
+
+  @media (min-width: 768px) {
+    .logo {
+      width: 120px;
+      height: auto;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .logo {
+      width: 140px;
+      height: auto;
+    }
+  }
+</style>
+
+          <!-- ✅ NAV LINKS -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="nav-link relative group">
+              <span
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium"
+                >Home</span
+              >
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a href="./about.html" class="nav-link relative group">
+              <span
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium"
+                >About</span
+              >
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <!-- ✅ SERVICES DROPDOWN -->
+            <div class="relative group">
+              <button
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center"
+              >
+                Services
+                <i
+                  class="fas fa-chevron-down ml-1 text-xs group-hover:rotate-180 transition-transform duration-300"
+                ></i>
+              </button>
+              <div
+                class="absolute left-0 mt-6 w-72 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 border border-gray-100"
+              >
+                <div class="py-2">
+                  <a
+                    href="./unsecureloans.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-briefcase mr-3 text-secondary"></i>
+                    Unsecured Loans
+                  </a>
+                  <a
+                    href="./securedloan.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-user mr-3 text-secondary"></i> Secure Loan
+                  </a>
+                  <a
+                    href="./insuranceservice.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-home mr-3 text-secondary"></i> Insurance
+                  </a>
+                  <a
+                    href="./investment.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-car mr-3 text-secondary"></i> Investments
+                  </a>
+                  <a
+                    href="./InternationalInsurance.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-user-tie mr-3 text-secondary"></i>
+                    International Insurance
+                  </a>
+                  <a
+                    href="./lifeinsurance.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-university mr-3 text-secondary"></i> Life
+                    Insurance
+                  </a>
                 </div>
-                <div class="text-2xl font-bold text-gradient">MJ FINSERV</div>
+              </div>
             </div>
-
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="nav-link relative group">
-                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Home</span>
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="./about.html" class="nav-link relative group">
-                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">About</span>
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
-                </a>
-
-                <!-- Desktop Services Dropdown -->
-                <div class="relative group">
-                    <button class="text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center">
-                        Services 
-                        <i class="fas fa-chevron-down ml-1 text-xs group-hover:rotate-180 transition-transform duration-300"></i>
-                    </button>
-                    <div class="absolute left-0 mt-6 w-72 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 border border-gray-100">
-                        <div class="py-2">
-                            <a href="./unsecureloans.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
-                                <i class="fas fa-briefcase mr-3 text-secondary"></i> 
-                                <span> Unsecured Loans </span>
-                            </a>
-                             <a href="./securedloan.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
-                                <i class="fas fa-user mr-3 text-secondary"></i> 
-                                <span>Secure Loan</span>
-                            </a> 
-                              <a href="./insuranceservice.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
-                                <i class="fas fa-home mr-3 text-secondary"></i> 
-                                <span> Insurance</span>
-                            </a>
-                            <a href="./investment.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
-                                <i class="fas fa-car mr-3 text-secondary"></i> 
-                                <span>Investments  </span>
-                            </a>
-                            <a href="./InternationalInsurance.html " class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
-                                <i class="fas fa-user-tie mr-3 text-secondary"></i> 
-                                <span> International Insurance </span>
-                            </a>  
-                             <a href=" ./lifeinsurance.html" class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center">
-                                <i class="fas fa-university mr-3 text-secondary"></i> 
-                                <span>Life Insurance</span>
-                            </a>
-                              
-                        </div>
-                    </div>
+            <!-- ✅ PRODUCTS DROPDOWN -->
+            <div class="relative group">
+              <button
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center"
+              >
+                Products
+                <i
+                  class="fas fa-chevron-down ml-1 text-xs group-hover:rotate-180 transition-transform duration-300"
+                ></i>
+              </button>
+              <div
+                class="absolute left-0 mt-6 w-72 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 border border-gray-100"
+              >
+                <div class="py-2">
+                  <a
+                    href="./loanProducts.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-briefcase mr-3 text-secondary"></i> Loan
+                    Products
+                  </a>
+                  <a
+                    href="./investmentProducts.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-user mr-3 text-secondary"></i> Investment
+                    Products
+                  </a>
+                  <a
+                    href="./InsuranceProducts.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-home mr-3 text-secondary"></i> Insurance
+                    Products
+                  </a>
+                  <a
+                    href="./digitalProducts.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-car mr-3 text-secondary"></i> Digital
+                    Products
+                  </a>
+                  <a
+                    href="./businessProducts.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-user-tie mr-3 text-secondary"></i> Business
+                    Products
+                  </a>
                 </div>
-
-                <a href="./gallery.html" class="nav-link relative group">
-                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Gallery</span>
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a href="./contect.html" class="nav-link relative group">
-                    <span class="text-dark hover:text-primary transition-colors duration-300 font-medium">Contact</span>
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
-                </a>
+              </div>
             </div>
-
-            <button id="quoteBtn" class="btn-premium bg-gradient-to-r from-secondary to-red-600 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl hidden md:block">
-                Get a Quote <i class="fas fa-arrow-right ml-2"></i>
-            </button>
-
-            <button id="mobileMenuBtn" class="md:hidden text-dark">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
+            <a href="./gallery.html" class="nav-link relative group">
+              <span
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium"
+                >Gallery</span
+              >
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a href="./contect.html" class="nav-link relative group">
+              <span
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium"
+                >Contact</span
+              >
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+          </div>
+          <!-- ✅ QUOTE BUTTON (Desktop) -->
+          <button
+            id="quoteBtn"
+            class="btn-premium bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl hidden md:block"
+          >
+            Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+          <!-- ✅ MOBILE MENU BUTTON -->
+          <button id="mobileMenuBtn" class="md:hidden text-dark">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
         </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="md:hidden hidden py-4 border-t border-gray-200 bg-white">
-            <a href="index.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
-                <i class="fas fa-home mr-3 text-primary"></i> Home
-            </a>
-            <a href="about.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
-                <i class="fas fa-info-circle mr-3 text-primary"></i> About
-            </a>
-
-            <!-- Mobile Services Dropdown Toggle -->
-            <div class="border-b border-gray-100">
-                <button id="mobileServicesToggle" class="w-full flex justify-between items-center py-3 text-dark hover:text-primary transition-colors duration-300">
-                    <span><i class="fas fa-concierge-bell mr-3 text-primary"></i> Services</span>
-                    <i class="fas fa-chevron-down text-xs"></i>
-                </button>
-                <div id="mobileServicesMenu" class="hidden pl-8 pb-3">
-                    <a href="./unsecureloans.html" class="block py-2 text-dark hover:text-primary">Unsecure Loans</a>
-                    <a href="./securedloan.html" class="block py-2 text-dark hover:text-primary">Secure Loans </a>
-                     <a href="./insuranceservice.html " class="block py-2 text-dark hover:text-primary"> Insurance</a>
-                    <a href="./investment.html" class="block py-2 text-dark hover:text-primary"> Investments</a>
-                    <a href="./InternationalInsurance.html" class="block py-2 text-dark hover:text-primary"> International Insurance</a>
-                    <a href="./lifeinsurance.html" class="block py-2 text-dark hover:text-primary"> Life Insurance</a>
-                    
-                    <!-- <a href="insuranceservice.html" class="block py-2 text-dark hover:text-primary">Insurance Investment</a>
-                    <a href="" class="block py-2 text-dark hover:text-primary">Mutual Fund</a>   -->
-                </div>
-            </div>
-
-            <a href="gallery.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
-                <i class="fas fa-images mr-3 text-primary"></i> Gallery
-            </a>
-            <a href="contect.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
-                <i class="fas fa-envelope mr-3 text-primary"></i> Contact
-            </a>
-            <button id="mobileQuoteBtn" class="mt-4 bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium w-full">
-                Get a Quote <i class="fas fa-arrow-right ml-2"></i>
-            </button>
+        <!-- ✅ MOBILE MENU -->
+        <div
+          id="mobileMenu"
+          class="md:hidden hidden py-4 border-t border-gray-200 bg-white"
+        >
+          <a
+            href="index.html"
+            class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100"
+          >
+            <i class="fas fa-home mr-3 text-primary"></i> Home
+          </a>
+          <a
+            href="about.html"
+            class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100"
+          >
+            <i class="fas fa-info-circle mr-3 text-primary"></i> About
+          </a>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
+    <style>
+      /* ✅ Logo responsive adjustments */
+      @media (max-width: 768px) {
+        #navbar img {
+          width: 55px !important;
+          height: 55px !important;
+          margin-right: 10px;
+          border-radius: 15px;
+        }
+        #navbar .text-gradient {
+          font-size: 1.25rem !important;
+        }
+      }
+      @media (min-width: 769px) {
+        #navbar img {
+          width: 80px !important;
+          height: 80px !important;
+          border-radius: 20px;
+        }
+      }
+    </style>
+    <!--end Premium Navbar -->
+    <!-- JS for Mobile Menu Toggle -->
+    <script>
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileServicesToggle = document.getElementById(
+        "mobileServicesToggle"
+      );
+      const mobileServicesMenu = document.getElementById("mobileServicesMenu");
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+      mobileServicesToggle.addEventListener("click", () => {
+        mobileServicesMenu.classList.toggle("hidden");
+      });
+    </script>
 
-<!-- JS for Mobile Menu Toggle -->
-<script>
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileServicesToggle = document.getElementById('mobileServicesToggle');
-    const mobileServicesMenu = document.getElementById('mobileServicesMenu');
-
-    mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-
-    mobileServicesToggle.addEventListener('click', () => {
-        mobileServicesMenu.classList.toggle('hidden');
-    });
-</script>
 
 
 
@@ -236,7 +398,7 @@
 
     <!-- Content -->
     <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
-        <h1 class="desktop-only" 
+        <h1  
             style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:white; margin:20px 0;">
               Secure <span class="text-white"> Loans</span>
         </h1>

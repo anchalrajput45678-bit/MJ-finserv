@@ -1,0 +1,1036 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MJ FINSERV - Premium Financial Solutions</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1842b6",
+              secondary: "#e52429",
+              accent: "#0d2d7a",
+              light: "#f8fafc",
+              dark: "#1e293b",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-light text-dark">
+    <!-- Top Bar with Premium Look -->
+    <div class="animated-gradient py-3 px-4 md:px-8 relative overflow-hidden">
+      <!-- Background particles -->
+      <div class="absolute inset-0 opacity-20 pointer-events-none">
+        <div
+          class="particle bg-white"
+          style="width: 4px; height: 4px; top: 20%; left: 10%"
+        ></div>
+        <div
+          class="particle bg-white"
+          style="
+            width: 6px;
+            height: 6px;
+            top: 60%;
+            left: 30%;
+            animation-delay: 2s;
+          "
+        ></div>
+        <div
+          class="particle bg-white"
+          style="
+            width: 3px;
+            height: 3px;
+            top: 40%;
+            left: 70%;
+            animation-delay: 4s;
+          "
+        ></div>
+      </div>
+      <!-- Top bar content -->
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center relative z-10"
+      >
+        <!-- Email & Phone (responsive) -->
+        <div
+          class="flex w-full md:w-auto md:flex-row justify-between items-center text-sm text-white mb-2 md:mb-0"
+        >
+          <!-- Mobile View: Left (Email) and Right (Phone) -->
+          <div class="flex w-full justify-between items-center md:hidden">
+            <!-- Email -->
+            <span
+              class="flex items-center hover:scale-110 transition-transform duration-300"
+            >
+              <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
+            </span>
+            <!-- Phone -->
+            <span
+              class="flex items-center hover:scale-110 transition-transform duration-300"
+            >
+              <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
+            </span>
+          </div>
+          <!-- Desktop View: Email & Phone stacked -->
+          <div class="hidden md:flex flex-row items-center space-x-6">
+            <!-- Email -->
+            <span
+              class="flex items-center hover:scale-110 transition-transform duration-300"
+            >
+              <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
+            </span>
+            <!-- Phone -->
+            <span
+              class="flex items-center hover:scale-110 transition-transform duration-300"
+            >
+              <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
+            </span>
+          </div>
+        </div>
+        <!-- Social Icons - hidden on mobile -->
+        <div class="hidden md:flex space-x-4">
+          <a
+            href="#"
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="#"
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="#"
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="#"
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Premium Navbar -->
+    <nav
+      id="navbar"
+      class="bg-white sticky top-0 z-50 transition-all duration-500 shadow-sm"
+    >
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex justify-between items-center">
+          <!-- ✅ LOGO SECTION -->
+           <div class="flex items-center group cursor-pointer">
+  <img
+    src="./logomjfinserve.png"
+    alt="MJ FINSERV Logo"
+    class="logo min-h-[105px] min-w-[130px] object-contain mr-3 group-hover:scale-110 transition-transform duration-300"
+  />
+</div>
+
+<style>
+  /* ✅ Responsive transparent logo style */
+  .logo {
+    width: 80px;
+    height: auto;
+    transition: all 0.3s ease;
+  }
+
+  @media (min-width: 768px) {
+    .logo {
+      width: 120px;
+      height: auto;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .logo {
+      width: 140px;
+      height: auto;
+    }
+  }
+</style>
+
+          <!-- ✅ NAV LINKS -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="nav-link relative group">
+              <span
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium"
+                >Home</span
+              >
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a href="./about.html" class="nav-link relative group">
+              <span
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium"
+                >About</span
+              >
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <!-- ✅ SERVICES DROPDOWN -->
+            <div class="relative group">
+              <button
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center"
+              >
+                Services
+                <i
+                  class="fas fa-chevron-down ml-1 text-xs group-hover:rotate-180 transition-transform duration-300"
+                ></i>
+              </button>
+              <div
+                class="absolute left-0 mt-6 w-72 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 border border-gray-100"
+              >
+                <div class="py-2">
+                  <a
+                    href="./unsecureloans.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-briefcase mr-3 text-secondary"></i>
+                    Unsecured Loans
+                  </a>
+                  <a
+                    href="./securedloan.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-user mr-3 text-secondary"></i> Secure Loan
+                  </a>
+                  <a
+                    href="./insuranceservice.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-home mr-3 text-secondary"></i> Insurance
+                  </a>
+                  <a
+                    href="./investment.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-car mr-3 text-secondary"></i> Investments
+                  </a>
+                  <a
+                    href="./InternationalInsurance.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-user-tie mr-3 text-secondary"></i>
+                    International Insurance
+                  </a>
+                  <a
+                    href="./lifeinsurance.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-university mr-3 text-secondary"></i> Life
+                    Insurance
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- ✅ PRODUCTS DROPDOWN -->
+            <div class="relative group">
+              <button
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center"
+              >
+                Products
+                <i
+                  class="fas fa-chevron-down ml-1 text-xs group-hover:rotate-180 transition-transform duration-300"
+                ></i>
+              </button>
+              <div
+                class="absolute left-0 mt-6 w-72 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 border border-gray-100"
+              >
+                <div class="py-2">
+                  <a
+                    href="./loanProducts.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-briefcase mr-3 text-secondary"></i> Loan
+                    Products
+                  </a>
+                  <a
+                    href="./investmentProducts.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-user mr-3 text-secondary"></i> Investment
+                    Products
+                  </a>
+                  <a
+                    href="./InsuranceProducts.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-home mr-3 text-secondary"></i> Insurance
+                    Products
+                  </a>
+                  <a
+                    href="./digitalProducts.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-car mr-3 text-secondary"></i> Digital
+                    Products
+                  </a>
+                  <a
+                    href="./businessProducts.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-user-tie mr-3 text-secondary"></i> Business
+                    Products
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="./gallery.html" class="nav-link relative group">
+              <span
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium"
+                >Gallery</span
+              >
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a href="./contect.html" class="nav-link relative group">
+              <span
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium"
+                >Contact</span
+              >
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+          </div>
+          <!-- ✅ QUOTE BUTTON (Desktop) -->
+          <button
+            id="quoteBtn"
+            class="btn-premium bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl hidden md:block"
+          >
+            Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+          <!-- ✅ MOBILE MENU BUTTON -->
+          <button id="mobileMenuBtn" class="md:hidden text-dark">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+        <!-- ✅ MOBILE MENU -->
+        <div
+          id="mobileMenu"
+          class="md:hidden hidden py-4 border-t border-gray-200 bg-white"
+        >
+          <a
+            href="index.html"
+            class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100"
+          >
+            <i class="fas fa-home mr-3 text-primary"></i> Home
+          </a>
+          <a
+            href="about.html"
+            class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100"
+          >
+            <i class="fas fa-info-circle mr-3 text-primary"></i> About
+          </a>
+        </div>
+      </div>
+    </nav>
+    <style>
+      /* ✅ Logo responsive adjustments */
+      @media (max-width: 768px) {
+        #navbar img {
+          width: 55px !important;
+          height: 55px !important;
+          margin-right: 10px;
+          border-radius: 15px;
+        }
+        #navbar .text-gradient {
+          font-size: 1.25rem !important;
+        }
+      }
+      @media (min-width: 769px) {
+        #navbar img {
+          width: 80px !important;
+          height: 80px !important;
+          border-radius: 20px;
+        }
+      }
+    </style>
+    <!--end Premium Navbar -->
+    <!-- JS for Mobile Menu Toggle -->
+    <script>
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileServicesToggle = document.getElementById(
+        "mobileServicesToggle"
+      );
+      const mobileServicesMenu = document.getElementById("mobileServicesMenu");
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+      mobileServicesToggle.addEventListener("click", () => {
+        mobileServicesMenu.classList.toggle("hidden");
+      });
+    </script>
+
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: #f8fafc;
+            color: #333;
+            line-height: 1.6;
+        } */
+        
+        .loan-section {
+            padding: 80px 20px;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 60px;
+            position: relative;
+            color: #1e293b;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            margin: 20px auto 0;
+            border-radius: 5px;
+            animation: gradientShift 3s ease infinite;
+            background-size: 400% 400%;
+        }
+        
+        .loan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .loan-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px 25px;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 2px solid #f1f5f9;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .loan-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            background-size: 400% 400%;
+            transition: height 0.4s ease;
+            z-index: -1;
+            animation: gradientShift 5s ease infinite;
+        }
+        
+        .loan-card:hover::before {
+            height: 100%;
+        }
+        
+        .loan-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,119,204,0.15);
+            border-color: #00aaff;
+        }
+        
+        .loan-card:hover .loan-icon {
+            background: white;
+            color: #0077cc;
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .loan-card:hover h3,
+        .loan-card:hover p,
+        .loan-card:hover .loan-features li {
+            color: white;
+        }
+        
+        .loan-card:hover .loan-features li i {
+            color: #00ff95;
+        }
+        
+        .loan-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            background-size: 400% 400%;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 2.8rem;
+            transition: all 0.4s ease;
+            animation: gradientShift 5s ease infinite, float 6s ease-in-out infinite;
+        }
+        
+        .loan-card h3 {
+            color: #0077cc;
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .loan-card p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+        
+        .loan-features {
+            list-style: none;
+            text-align: left;
+            margin-top: 20px;
+        }
+        
+        .loan-features li {
+            padding: 8px 0;
+            color: #555;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .loan-features li i {
+            color: #00cc66;
+            margin-right: 10px;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .features-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 40px 25px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            background-size: 400% 400%;
+            transition: height 0.4s ease;
+            z-index: 0;
+            animation: gradientShift 5s ease infinite;
+        }
+        
+        .feature:hover::before {
+            height: 100%;
+        }
+        
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature:hover .feature-icon {
+            background: white;
+            color: #0077cc;
+            transform: scale(1.1);
+        }
+        
+        .feature:hover h3,
+        .feature:hover p {
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            background-size: 400% 400%;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2.2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 1;
+            animation: gradientShift 5s ease infinite, float 6s ease-in-out infinite;
+        }
+        
+        .feature h3 {
+            color: #0077cc;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .feature p {
+            color: #666;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            background-size: 400% 400%;
+            padding: 60px 20px;
+            color: white;
+            text-align: center;
+            animation: gradientShift 5s ease infinite;
+        }
+        
+        .stat {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: countUp 2s ease-out;
+        }
+        
+        .stat-label {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        
+        .floating-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            border-radius: 50%;
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            animation: float 15s infinite linear;
+        }
+        
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+        
+        .shape:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 70%;
+            left: 80%;
+            animation-delay: 2s;
+        }
+        
+        .shape:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            top: 40%;
+            left: 90%;
+            animation-delay: 4s;
+        }
+        
+        .shape:nth-child(4) {
+            width: 100px;
+            height: 100px;
+            top: 80%;
+            left: 10%;
+            animation-delay: 6s;
+        }
+        
+        .shape:nth-child(5) {
+            width: 70px;
+            height: 70px;
+            top: 20%;
+            left: 70%;
+            animation-delay: 8s;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+        
+        @keyframes countUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .loan-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .loan-card {
+                padding: 25px 20px;
+            }
+            
+            .loan-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 2.2rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .loan-section, .features-section {
+                padding: 60px 15px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .loan-icon, .feature-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loan Products Section -->
+    <section class="loan-section" id="loan-products">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="container">
+            <h2 class="section-title" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:black; margin:20px 0;">Loan Products</h2>
+            <div class="loan-grid">
+                <!-- Personal Loan -->
+                <div class="loan-card">
+                    <div class="loan-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Personal Loan</h3>
+                    <p>Quick funds for any personal need with minimal paperwork and fast approval process.</p>
+                    <ul class="loan-features">
+                        <li><i class="fas fa-check"></i> Quick 24-hour approval</li>
+                        <li><i class="fas fa-check"></i> Flexible tenure up to 5 years</li>
+                        <li><i class="fas fa-check"></i> Minimal documentation</li>
+                    </ul>
+                </div>
+
+                <!-- Home Loan -->
+                <div class="loan-card">
+                    <div class="loan-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Home Loan</h3>
+                    <p>Turn your dream of owning a home into reality with our competitive interest rates.</p>
+                    <ul class="loan-features">
+                        <li><i class="fas fa-check"></i> Low interest rates from 6.5%</li>
+                        <li><i class="fas fa-check"></i> Tenure up to 30 years</li>
+                        <li><i class="fas fa-check"></i> Tax benefits available</li>
+                    </ul>
+                </div>
+
+                <!-- Car / Vehicle Loan -->
+                <div class="loan-card">
+                    <div class="loan-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Car / Vehicle Loan</h3>
+                    <p>Drive your dream vehicle with easy financing options and quick approval process.</p>
+                    <ul class="loan-features">
+                        <li><i class="fas fa-check"></i> 100% on-road price funding</li>
+                        <li><i class="fas fa-check"></i> Easy EMI options</li>
+                        <li><i class="fas fa-check"></i> Quick processing in 48 hours</li>
+                    </ul>
+                </div>
+
+                <!-- Gold Loan -->
+                <div class="loan-card">
+                    <div class="loan-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Gold Loan</h3>
+                    <p>Get instant cash by pledging your gold with attractive interest rates and secure storage.</p>
+                    <ul class="loan-features">
+                        <li><i class="fas fa-check"></i> Instant disbursal in 30 mins</li>
+                        <li><i class="fas fa-check"></i> Attractive rates from 7%</li>
+                        <li><i class="fas fa-check"></i> Safe and secure storage</li>
+                    </ul>
+                </div>
+
+                <!-- Education Loan -->
+                <div class="loan-card">
+                    <div class="loan-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Education Loan</h3>
+                    <p>Invest in your future with comprehensive education financing for higher studies.</p>
+                    <ul class="loan-features">
+                        <li><i class="fas fa-check"></i> Covers tuition & living expenses</li>
+                        <li><i class="fas fa-check"></i> Moratorium period available</li>
+                        <li><i class="fas fa-check"></i> Easy documentation process</li>
+                    </ul>
+                </div>
+
+                <!-- Loan Against Property -->
+                <div class="loan-card">
+                    <div class="loan-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>Loan Against Property</h3>
+                    <p>Unlock liquidity from your residential or commercial property for any financial requirement.</p>
+                    <ul class="loan-features">
+                        <li><i class="fas fa-check"></i> High loan amounts up to ₹10Cr</li>
+                        <li><i class="fas fa-check"></i> Flexible repayment tenure</li>
+                        <li><i class="fas fa-check"></i> Competitive interest rates</li>
+                    </ul>
+                </div>
+
+                <!-- Credit Card Loan / EMI on Card -->
+                <div class="loan-card">
+                    <div class="loan-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Credit Card Loan / EMI on Card</h3>
+                    <p>Convert your credit card purchases into easy EMIs instantly with zero documentation.</p>
+                    <ul class="loan-features">
+                        <li><i class="fas fa-check"></i> Instant online approval</li>
+                        <li><i class="fas fa-check"></i> Zero documentation required</li>
+                        <li><i class="fas fa-check"></i> Flexible tenure 3-24 months</li>
+                    </ul>
+                </div>
+
+                <!-- Consumer Durable Loan -->
+                <div class="loan-card">
+                    <div class="loan-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3>Consumer Durable Loan</h3>
+                    <p>Buy electronics and appliances with easy financing options and zero down payment.</p>
+                    <ul class="loan-features">
+                        <li><i class="fas fa-check"></i> Zero down payment option</li>
+                        <li><i class="fas fa-check"></i> Instant approval process</li>
+                        <li><i class="fas fa-check"></i> No cost EMI available</li>
+                    </ul>
+                </div>
+
+                <!-- Top-up Loan -->
+                <div class="loan-card">
+                    <div class="loan-icon">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <h3>Top-up Loan</h3>
+                    <p>Get additional funds on your existing loan with minimal hassle and same competitive rates.</p>
+                    <ul class="loan-features">
+                        <li><i class="fas fa-check"></i> Quick approval for existing customers</li>
+                        <li><i class="fas fa-check"></i> Minimal documentation needed</li>
+                        <li><i class="fas fa-check"></i> Same competitive rates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="container">
+            <h2 class="section-title" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:black; margin:20px 0;">Why Choose Our Loan Products?</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Quick Approval</h3>
+                    <p>Get your loan approved in as little as 24 hours with our streamlined digital process and minimal documentation.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Low Interest Rates</h3>
+                    <p>Enjoy competitive interest rates starting from 6.5% that won't burden your monthly finances.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure & Safe</h3>
+                    <p>Your financial and personal data is protected with bank-grade security and encrypted transactions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     
+    <script>
+        // Animation for counter elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            counters.forEach(counter => {
+                const targetText = counter.innerText;
+                let target;
+                
+                // Handle different formats (5L+, ₹2500Cr+, etc.)
+                if (targetText.includes('L+')) {
+                    target = parseFloat(targetText) * 100000;
+                } else if (targetText.includes('Cr+')) {
+                    target = parseFloat(targetText.replace('₹', '')) * 10000000;
+                } else if (targetText.includes('%')) {
+                    target = parseFloat(targetText);
+                } else {
+                    target = parseFloat(targetText);
+                }
+                
+                let count = 0;
+                const duration = 2000; // 2 seconds
+                const increment = target / (duration / 16); // 60fps
+                
+                const updateCount = () => {
+                    if (count < target) {
+                        count += increment;
+                        
+                        // Format the number based on the original format
+                        if (targetText.includes('L+')) {
+                            counter.innerText = Math.ceil(count/100000) + 'L+';
+                        } else if (targetText.includes('Cr+')) {
+                            counter.innerText = '₹' + Math.ceil(count/10000000) + 'Cr+';
+                        } else if (targetText.includes('%')) {
+                            counter.innerText = Math.ceil(count) + '%';
+                        } else {
+                            counter.innerText = Math.ceil(count).toLocaleString();
+                        }
+                        
+                        setTimeout(updateCount, 16);
+                    } else {
+                        counter.innerText = targetText;
+                    }
+                };
+                
+                // Start counting when element is in viewport
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCount();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                
+                observer.observe(counter);
+            });
+        });
+    </script>
+</body>
+</html>
