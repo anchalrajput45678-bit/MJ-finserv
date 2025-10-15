@@ -1,851 +1,270 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MJ FINSERV - Premium Financial Solutions</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#1842b6",
-              secondary: "#e52429",
-              accent: "#0d2d7a",
-              light: "#f8fafc",
-              dark: "#1e293b",
-            },
-          },
-        },
-      };
-    </script>
-  </head>
-  <body class="bg-light text-dark">
-    <!-- Top Bar with Premium Look -->
-    <div class="animated-gradient py-3 px-4 md:px-8 relative overflow-hidden">
-      <!-- Background particles -->
-      <div class="absolute inset-0 opacity-20 pointer-events-none">
-        <div
-          class="particle bg-white"
-          style="width: 4px; height: 4px; top: 20%; left: 10%"
-        ></div>
-        <div
-          class="particle bg-white"
-          style="
-            width: 6px;
-            height: 6px;
-            top: 60%;
-            left: 30%;
-            animation-delay: 2s;
-          "
-        ></div>
-        <div
-          class="particle bg-white"
-          style="
-            width: 3px;
-            height: 3px;
-            top: 40%;
-            left: 70%;
-            animation-delay: 4s;
-          "
-        ></div>
-      </div>
-      <!-- Top bar content -->
-      <div
-        class="container mx-auto flex flex-col md:flex-row justify-between items-center relative z-10"
-      >
-        <!-- Email & Phone (responsive) -->
-        <div
-          class="flex w-full md:w-auto md:flex-row justify-between items-center text-sm text-white mb-2 md:mb-0"
-        >
-          <!-- Mobile View: Left (Email) and Right (Phone) -->
-          <div class="flex w-full justify-between items-center md:hidden">
-            <!-- Email -->
-            <span
-              class="flex items-center hover:scale-110 transition-transform duration-300"
-            >
-              <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
-            </span>
-            <!-- Phone -->
-            <span
-              class="flex items-center hover:scale-110 transition-transform duration-300"
-            >
-              <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
-            </span>
-          </div>
-          <!-- Desktop View: Email & Phone stacked -->
-          <div class="hidden md:flex flex-row items-center space-x-6">
-            <!-- Email -->
-            <span
-              class="flex items-center hover:scale-110 transition-transform duration-300"
-            >
-              <i class="fas fa-envelope mr-2"></i> info@MJ FINSERV.com
-            </span>
-            <!-- Phone -->
-            <span
-              class="flex items-center hover:scale-110 transition-transform duration-300"
-            >
-              <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
-            </span>
-          </div>
-        </div>
-        <!-- Social Icons - hidden on mobile -->
-        <div class="hidden md:flex space-x-4">
-          <a
-            href="#"
-            class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a
-            href="#"
-            class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
-          >
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a
-            href="#"
-            class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
-          >
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a
-            href="#"
-            class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
-          >
-            <i class="fab fa-twitter"></i>
-          </a>
-        </div>
-      </div>
+ 
+  
+ 
+    <!-- Secured Loans Section -->
+    <section style="padding: 20px 20px; background: white; position: relative;">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 60px; animation: fadeInUp 0.8s ease;">
+                <h2 style="font-size: 42px; font-weight: 800; color: #1e293b; margin-bottom: 15px; position: relative; display: inline-block;">
+                    Secured Loans
+                    <span style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: linear-gradient(to right, #e52429, #1842b6); border-radius: 2px;"></span>
+                </h2>
+                <p style="font-size: 18px; color: #64748b; max-width: 600px; margin: 30px auto 0; line-height: 1.6;">
+                    Get better terms and lower interest rates by securing your loan with valuable assets
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                
+                <!-- Loan Against Property Card -->
+                <div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.4s ease; cursor: pointer; animation: fadeInUp 0.8s ease 0.1s backwards;" onmouseover="this.style.transform='translateY(-15px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; height: 250px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="Loan Against Property" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.15)';" onmouseout="this.style.transform='scale(1)';">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(59,130,246,0.8), transparent);"></div>
+                    </div>
+                    <div style="padding: 25px; background: white;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                            <h3 style="font-size: 22px; font-weight: 700; color: #1e293b; margin: 0;">Loan Against Property</h3>
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-building" style="color: white; font-size: 22px;"></i>
+                            </div>
+                        </div>
+                        <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0 0 20px 0;">
+                            Use your residential, commercial or industrial property as collateral for business or personal needs
+                        </p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Loan Card -->
+                <div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.4s ease; cursor: pointer; animation: fadeInUp 0.8s ease 0.2s backwards;" onmouseover="this.style.transform='translateY(-15px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; height: 250px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="Home Loan" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.15)';" onmouseout="this.style.transform='scale(1)';">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(34,197,94,0.8), transparent);"></div>
+                    </div>
+                    <div style="padding: 25px; background: white;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                            <h3 style="font-size: 22px; font-weight: 700; color: #1e293b; margin: 0;">Home Loan</h3>
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #22c55e, #16a34a); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-home" style="color: white; font-size: 22px;"></i>
+                            </div>
+                        </div>
+                        <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0 0 20px 0;">
+                            Purchase, construct or renovate your dream home with flexible repayment options
+                        </p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Loan Card -->
+                <div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.4s ease; cursor: pointer; animation: fadeInUp 0.8s ease 0.3s backwards;" onmouseover="this.style.transform='translateY(-15px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; height: 250px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80" alt="Vehicle Loan" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.15)';" onmouseout="this.style.transform='scale(1)';">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(245,158,11,0.8), transparent);"></div>
+                    </div>
+                    <div style="padding: 25px; background: white;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                            <h3 style="font-size: 22px; font-weight: 700; color: #1e293b; margin: 0;">Vehicle Loan</h3>
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-car" style="color: white; font-size: 22px;"></i>
+                            </div>
+                        </div>
+                        <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0 0 20px 0;">
+                            Finance your new or used car, bike, or commercial vehicle with the vehicle as security
+                        </p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                             
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gold Loan Card -->
+                <div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.4s ease; cursor: pointer; animation: fadeInUp 0.8s ease 0.4s backwards;" onmouseover="this.style.transform='translateY(-15px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; height: 250px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80" alt="Gold Loan" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.15)';" onmouseout="this.style.transform='scale(1)';">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(234,179,8,0.8), transparent);"></div>
+                    </div>
+                    <div style="padding: 25px; background: white;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                            <h3 style="font-size: 22px; font-weight: 700; color: #1e293b; margin: 0;">Gold Loan</h3>
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #eab308, #ca8a04); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-gem" style="color: white; font-size: 22px;"></i>
+                            </div>
+                        </div>
+                        <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0 0 20px 0;">
+                            Get instant funds against your gold ornaments or coins for any personal or business purpose
+                        </p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                             
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loan Against FD Card -->
+                <div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.4s ease; cursor: pointer; animation: fadeInUp 0.8s ease 0.5s backwards;" onmouseover="this.style.transform='translateY(-15px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; height: 250px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80" alt="Loan Against FD" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.15)';" onmouseout="this.style.transform='scale(1)';">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(168,85,247,0.8), transparent);"></div>
+                    </div>
+                    <div style="padding: 25px; background: white;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                            <h3 style="font-size: 22px; font-weight: 700; color: #1e293b; margin: 0;">Loan Against FD</h3>
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #a855f7, #9333ea); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-file-invoice-dollar" style="color: white; font-size: 22px;"></i>
+                            </div>
+                        </div>
+                        <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0 0 20px 0;">
+                            Access funds without breaking your fixed deposit - your FD continues to earn interest
+                        </p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                             
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loan Against Securities Card -->
+                <div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.4s ease; cursor: pointer; animation: fadeInUp 0.8s ease 0.6s backwards;" onmouseover="this.style.transform='translateY(-15px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; height: 250px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80" alt="Loan Against Securities" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.15)';" onmouseout="this.style.transform='scale(1)';">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(239,68,68,0.8), transparent);"></div>
+                    </div>
+                    <div style="padding: 25px; background: white;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                            <h3 style="font-size: 22px; font-weight: 700; color: #1e293b; margin: 0;">Loan Against Securities</h3>
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #ef4444, #dc2626); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-chart-line" style="color: white; font-size: 22px;"></i>
+                            </div>
+                        </div>
+                        <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0 0 20px 0;">
+                            Get liquidity without selling your shares, mutual funds, bonds, or insurance policies
+                        </p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                             
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Working Capital / OD Limit Card -->
+<div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.4s ease; cursor: pointer; animation: fadeInUp 0.8s ease 0.7s backwards;" onmouseover="this.style.transform='translateY(-15px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';">
+    <div style="position: relative; height: 250px; overflow: hidden;">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Working Capital Loan" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.15)';" onmouseout="this.style.transform='scale(1)';">
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,165,233,0.8), transparent);"></div>
     </div>
-    <!-- Premium Navbar -->
-    <nav
-      id="navbar"
-      class="bg-white sticky top-0 z-50 transition-all duration-500 shadow-sm"
-    >
-      <div class="container mx-auto px-4 md:px-8">
-        <div class="flex justify-between items-center">
-          <!-- ✅ LOGO SECTION -->
-           <div class="flex items-center group cursor-pointer">
-  <img
-    src="./logomjfinserve.png"
-    alt="MJ FINSERV Logo"
-    class="logo min-h-[105px] min-w-[130px] object-contain mr-3 group-hover:scale-110 transition-transform duration-300"
-  />
+    <div style="padding: 25px; background: white;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+            <h3 style="font-size: 22px; font-weight: 700; color: #1e293b; margin: 0;">Working Capital OD</h3>
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #0ea5e9, #0284c7); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-money-bill-wave" style="color: white; font-size: 22px;"></i>
+            </div>
+        </div>
+        <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0 0 20px 0;">
+            Secured cash credit and overdraft facilities for daily business operations with interest only on used amount
+        </p>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+             
+        </div>
+    </div>
 </div>
 
-<style>
-  /* ✅ Responsive transparent logo style */
-  .logo {
-    width: 80px;
-    height: auto;
-    transition: all 0.3s ease;
-  }
-
-  @media (min-width: 768px) {
-    .logo {
-      width: 120px;
-      height: auto;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .logo {
-      width: 140px;
-      height: auto;
-    }
-  }
-</style>
-
-          <!-- ✅ NAV LINKS -->
-          <div class="hidden md:flex items-center space-x-8">
-            <a href="index.html" class="nav-link relative group">
-              <span
-                class="text-dark hover:text-primary transition-colors duration-300 font-medium"
-                >Home</span
-              >
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
-              ></span>
-            </a>
-            <a href="./about.html" class="nav-link relative group">
-              <span
-                class="text-dark hover:text-primary transition-colors duration-300 font-medium"
-                >About</span
-              >
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
-              ></span>
-            </a>
-            <!-- ✅ SERVICES DROPDOWN -->
-            <div class="relative group">
-              <button
-                class="text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center"
-              >
-                Services
-                <i
-                  class="fas fa-chevron-down ml-1 text-xs group-hover:rotate-180 transition-transform duration-300"
-                ></i>
-              </button>
-              <div
-                class="absolute left-0 mt-6 w-72 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 border border-gray-100"
-              >
-                <div class="py-2">
-                  <a
-                    href="./unsecureloans.html"
-                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
-                  >
-                    <i class="fas fa-briefcase mr-3 text-secondary"></i>
-                    Unsecured Loans
-                  </a>
-                  <a
-                    href="./securedloan.html"
-                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
-                  >
-                    <i class="fas fa-user mr-3 text-secondary"></i> Secure Loan
-                  </a>
-                  <a
-                    href="./insuranceservice.html"
-                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
-                  >
-                    <i class="fas fa-home mr-3 text-secondary"></i> Insurance
-                  </a>
-                  <a
-                    href="./investment.html"
-                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
-                  >
-                    <i class="fas fa-car mr-3 text-secondary"></i> Investments
-                  </a>
-                  <a
-                    href="./InternationalInsurance.html"
-                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
-                  >
-                    <i class="fas fa-user-tie mr-3 text-secondary"></i>
-                    International Insurance
-                  </a>
-                  <a
-                    href="./lifeinsurance.html"
-                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
-                  >
-                    <i class="fas fa-university mr-3 text-secondary"></i> Life
-                    Insurance
-                  </a>
-                </div>
-              </div>
+<!-- Machinery / Equipment Loan Card -->
+<div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.4s ease; cursor: pointer; animation: fadeInUp 0.8s ease 0.8s backwards;" onmouseover="this.style.transform='translateY(-15px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';">
+    <div style="position: relative; height: 250px; overflow: hidden;">
+        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80" alt="Machinery Loan" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.15)';" onmouseout="this.style.transform='scale(1)';">
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(251,146,60,0.8), transparent);"></div>
+    </div>
+    <div style="padding: 25px; background: white;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+            <h3 style="font-size: 22px; font-weight: 700; color: #1e293b; margin: 0;">Machinery Loan</h3>
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #fb923c, #ea580c); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-cogs" style="color: white; font-size: 22px;"></i>
             </div>
-            <!-- ✅ PRODUCTS DROPDOWN -->
-            <div class="relative group">
-              <button
-                class="text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center"
-              >
-                Products
-                <i
-                  class="fas fa-chevron-down ml-1 text-xs group-hover:rotate-180 transition-transform duration-300"
-                ></i>
-              </button>
-              <div
-                class="absolute left-0 mt-6 w-72 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 border border-gray-100"
-              >
-                <div class="py-2">
-                  <a
-                    href="./loanProducts.html"
-                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
-                  >
-                    <i class="fas fa-briefcase mr-3 text-secondary"></i> Loan
-                    Products
-                  </a>
-                  <a
-                    href="./investmentProducts.html"
-                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
-                  >
-                    <i class="fas fa-user mr-3 text-secondary"></i> Investment
-                    Products
-                  </a>
-                  <a
-                    href="./InsuranceProducts.html"
-                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
-                  >
-                    <i class="fas fa-home mr-3 text-secondary"></i> Insurance
-                    Products
-                  </a>
-                  <a
-                    href="./digitalProducts.html"
-                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
-                  >
-                    <i class="fas fa-car mr-3 text-secondary"></i> Digital
-                    Products
-                  </a>
-                  <a
-                    href="./businessProducts.html"
-                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
-                  >
-                    <i class="fas fa-user-tie mr-3 text-secondary"></i> Business
-                    Products
-                  </a>
-                </div>
-              </div>
-            </div>
-            <a href="./gallery.html" class="nav-link relative group">
-              <span
-                class="text-dark hover:text-primary transition-colors duration-300 font-medium"
-                >Gallery</span
-              >
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
-              ></span>
-            </a>
-            <a href="./contect.html" class="nav-link relative group">
-              <span
-                class="text-dark hover:text-primary transition-colors duration-300 font-medium"
-                >Contact</span
-              >
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
-              ></span>
-            </a>
-          </div>
-          <!-- ✅ QUOTE BUTTON (Desktop) -->
-          <button
-            id="quoteBtn"
-            class="btn-premium bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl hidden md:block"
-          >
-            Get a Quote <i class="fas fa-arrow-right ml-2"></i>
-          </button>
-          <!-- ✅ MOBILE MENU BUTTON -->
-          <button id="mobileMenuBtn" class="md:hidden text-dark">
-            <i class="fas fa-bars text-2xl"></i>
-          </button>
         </div>
-        <!-- ✅ MOBILE MENU -->
-        <div
-          id="mobileMenu"
-          class="md:hidden hidden py-4 border-t border-gray-200 bg-white"
-        >
-          <a
-            href="index.html"
-            class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100"
-          >
-            <i class="fas fa-home mr-3 text-primary"></i> Home
-          </a>
-          <a
-            href="about.html"
-            class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100"
-          >
-            <i class="fas fa-info-circle mr-3 text-primary"></i> About
-          </a>
-        </div>
-      </div>
-    </nav>
-    <style>
-      /* ✅ Logo responsive adjustments */
-      @media (max-width: 768px) {
-        #navbar img {
-          width: 55px !important;
-          height: 55px !important;
-          margin-right: 10px;
-          border-radius: 15px;
-        }
-        #navbar .text-gradient {
-          font-size: 1.25rem !important;
-        }
-      }
-      @media (min-width: 769px) {
-        #navbar img {
-          width: 80px !important;
-          height: 80px !important;
-          border-radius: 20px;
-        }
-      }
-    </style>
-    <!--end Premium Navbar -->
-    <!-- JS for Mobile Menu Toggle -->
-    <script>
-      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const mobileServicesToggle = document.getElementById(
-        "mobileServicesToggle"
-      );
-      const mobileServicesMenu = document.getElementById("mobileServicesMenu");
-      mobileMenuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-      mobileServicesToggle.addEventListener("click", () => {
-        mobileServicesMenu.classList.toggle("hidden");
-      });
-    </script>
-
-
-    <!-- About Hero Section -->
-    <section
-      class="animated-gradient text-white relative overflow-hidden"
-      style="
-        background: url('https://img1.wsimg.com/isteam/getty/2179769227/:/cr=t:0%25,l:0%25,w:100%25,h:100%25')
-          center top/cover no-repeat;
-        min-height: 500px;
-        padding-top: 6rem;
-        padding-bottom: 6rem;
-      "
-    >
-      <!-- Dark overlay -->
-      <div class="absolute inset-0 bg-black opacity-50"></div>
-
-      <!-- Particles -->
-      <div class="absolute inset-0">
-        <div
-          class="particle bg-white"
-          style="width: 6px; height: 6px; top: 8%; left: 15%"
-        ></div>
-        <div
-          class="particle bg-white"
-          style="
-            width: 5px;
-            height: 5px;
-            top: 65%;
-            left: 75%;
-            animation-delay: 2s;
-          "
-        ></div>
-        <div
-          class="particle bg-white"
-          style="
-            width: 8px;
-            height: 8px;
-            top: 28%;
-            left: 60%;
-            animation-delay: 4s;
-          "
-        ></div>
-      </div>
-
-      <!-- Content -->
-      <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
-        <h1
-          style="
-            font-family: 'Poppins', sans-serif;
-            font-size: 36px;
-            font-weight: 700;
-            color: white;
-            margin: 20px 0;
-          "
-        >
-          Contact <span class="text-white">Us</span>
-        </h1>
-        <p
-          style="font-size: 18px; margin-bottom: 32px; opacity: 0.9"
-          class="sm:text-lg md:text-2xl max-w-3xl mx-auto"
-        >
-          Get in touch with our team for personalized insurance and loan
-          solutions tailored to your financial goals
+        <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0 0 20px 0;">
+            Finance industrial machinery and equipment for manufacturers, workshops, and production units
         </p>
-      </div>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+             
+        </div>
+    </div>
+</div>
+
+<!-- Commercial Vehicle Loan Card -->
+<div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.4s ease; cursor: pointer; animation: fadeInUp 0.8s ease 0.9s backwards;" onmouseover="this.style.transform='translateY(-15px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';">
+    <div style="position: relative; height: 250px; overflow: hidden;">
+        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80" alt="Commercial Vehicle Loan" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.15)';" onmouseout="this.style.transform='scale(1)';">
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(139,92,246,0.8), transparent);"></div>
+    </div>
+    <div style="padding: 25px; background: white;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+            <h3 style="font-size: 22px; font-weight: 700; color: #1e293b; margin: 0;">Commercial Vehicle Loan</h3>
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-truck" style="color: white; font-size: 22px;"></i>
+            </div>
+        </div>
+        <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0 0 20px 0;">
+            Finance commercial vehicles and construction equipment for transport and logistics businesses
+        </p>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+             
+        </div>
+    </div>
+</div>
+
+<!-- Agriculture / Farm Loan Card -->
+<div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.4s ease; cursor: pointer; animation: fadeInUp 0.8s ease 1.0s backwards;" onmouseover="this.style.transform='translateY(-15px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';">
+    <div style="position: relative; height: 250px; overflow: hidden;">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80" alt="Agriculture Loan" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.15)';" onmouseout="this.style.transform='scale(1)';">
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(101,163,13,0.8), transparent);"></div>
+    </div>
+    <div style="padding: 25px; background: white;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+            <h3 style="font-size: 22px; font-weight: 700; color: #1e293b; margin: 0;">Agriculture Loan</h3>
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #65a30d, #4d7c0f); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-tractor" style="color: white; font-size: 22px;"></i>
+            </div>
+        </div>
+        <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0 0 20px 0;">
+            Support for farm development, crop production, irrigation, and agricultural activities
+        </p>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+             
+        </div>
+    </div>
+</div>
+
+<!-- Mortgage Loan Card -->
+<div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.4s ease; cursor: pointer; animation: fadeInUp 0.8s ease 1.1s backwards;" onmouseover="this.style.transform='translateY(-15px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';">
+    <div style="position: relative; height: 250px; overflow: hidden;">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="Mortgage Loan" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.15)';" onmouseout="this.style.transform='scale(1)';">
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(124,58,237,0.8), transparent);"></div>
+    </div>
+    <div style="padding: 25px; background: white;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+            <h3 style="font-size: 22px; font-weight: 700; color: #1e293b; margin: 0;">Mortgage Loan</h3>
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #7c3aed, #6d28d9); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-file-contract" style="color: white; font-size: 22px;"></i>
+            </div>
+        </div>
+        <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0 0 20px 0;">
+            General mortgage facilities using immovable property as security for various financial needs
+        </p>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
     </section>
 
-    <style>
-      /* Mobile responsive adjustments */
-      @media (max-width: 768px) {
-        section {
-          background-position: center 30% !important;
-          background-size: 120% auto !important;
-          padding-top: 3rem !important;
-          padding-bottom: 3rem !important;
-          min-height: 350px !important;
-        }
-        .particle {
-          width: 4px !important;
-          height: 4px !important;
-        }
-        h1 {
-          font-size: 24px !important;
-        }
-        p {
-          font-size: 16px !important;
-        }
-        /* Hide MJ FINSERV text on mobile */
-        .desktop-only {
-          display: none !important;
-        }
-      }
-
-      /* Show MJ FINSERV text on desktop */
-      @media (min-width: 769px) {
-        .desktop-only {
-          display: block !important;
-        }
-      }
-    </style>
-
-    <div class="container mx-auto px-4 py-8 max-w-4xl">
-      <!-- Header -->
-      <header class="bg-white rounded-lg shadow-md p-6 mb-8">
-        <div class="flex items-center justify-between">
-          <div>
-            <h1 class="text-2xl font-bold text-primary">
-              Customer Finance Application
-            </h1>
-            <p class="text-gray-600">
-              Please fill out all the required details accurately
-            </p>
-          </div>
-          <div class="bg-primary text-white p-3 rounded-lg">
-            <i class="fas fa-file-invoice-dollar text-2xl"></i>
-          </div>
-        </div>
-      </header>
-
-      <!-- Main Form -->
-      <main class="bg-white rounded-lg shadow-md p-6 mb-8">
-        <form id="financeForm" class="space-y-6">
-          <!-- Customer Details Section -->
-          <div>
-            <h2
-              class="text-xl font-semibold text-primary mb-4 pb-2 border-b border-gray-200"
-            >
-              <i class="fas fa-user mr-2"></i>Customer Details
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label
-                  for="customerName"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Customer Name *</label
-                >
-                <input
-                  type="text"
-                  id="customerName"
-                  name="customerName"
-                  required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                />
-              </div>
-              <div>
-                <label
-                  for="mobileNumber"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Mobile Number *</label
-                >
-                <input
-                  type="tel"
-                  id="mobileNumber"
-                  name="mobileNumber"
-                  required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                />
-              </div>
-            </div>
-          </div>
-
-          <!-- Product Details Section -->
-          <div>
-            <h2
-              class="text-xl font-semibold text-primary mb-4 pb-2 border-b border-gray-200"
-            >
-              <i class="fas fa-shopping-bag mr-2"></i>Product Details
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label
-                  for="brand"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Brand *</label
-                >
-                <input
-                  type="text"
-                  id="brand"
-                  name="brand"
-                  required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                />
-              </div>
-              <div>
-                <label
-                  for="productValue"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Product Value *</label
-                >
-                <input
-                  type="number"
-                  id="productValue"
-                  name="productValue"
-                  required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                />
-              </div>
-            </div>
-          </div>
-
-          <!-- Finance Details Section -->
-          <div>
-            <h2
-              class="text-xl font-semibold text-primary mb-4 pb-2 border-b border-gray-200"
-            >
-              <i class="fas fa-money-bill-wave mr-2"></i>Finance Details
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label
-                  for="downPayment"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Down Payment *</label
-                >
-                <input
-                  type="number"
-                  id="downPayment"
-                  name="downPayment"
-                  required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                />
-              </div>
-              <div>
-                <label
-                  for="financeAmount"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Finance Amount *</label
-                >
-                <input
-                  type="number"
-                  id="financeAmount"
-                  name="financeAmount"
-                  required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                />
-              </div>
-              <div>
-                <label
-                  for="financeCharges"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Finance Charges *</label
-                >
-                <input
-                  type="number"
-                  id="financeCharges"
-                  name="financeCharges"
-                  required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                />
-              </div>
-              <div>
-                <label
-                  for="emiMonths"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >EMI Months *</label
-                >
-                <select
-                  id="emiMonths"
-                  name="emiMonths"
-                  required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                >
-                  <option value="">Select EMI Months</option>
-                  <option value="6">6 Months</option>
-                  <option value="12">12 Months</option>
-                  <option value="18">18 Months</option>
-                  <option value="24">24 Months</option>
-                  <option value="36">36 Months</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <!-- Finance Company & Promoter Section -->
-          <div>
-            <h2
-              class="text-xl font-semibold text-primary mb-4 pb-2 border-b border-gray-200"
-            >
-              <i class="fas fa-building mr-2"></i>Finance Company & Promoter
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label
-                  for="financeCompany"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Finance Company Name</label
-                >
-                <input
-                  type="text"
-                  id="financeCompany"
-                  name="financeCompany"
-                  value="MJ"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                />
-              </div>
-              <div>
-                <label
-                  for="promoterName"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Promoter Name *</label
-                >
-                <input
-                  type="text"
-                  id="promoterName"
-                  name="promoterName"
-                  required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                />
-              </div>
-              <div>
-                <label
-                  for="promoterMobile"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Promoter Mobile Number *</label
-                >
-                <input
-                  type="tel"
-                  id="promoterMobile"
-                  name="promoterMobile"
-                  required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                />
-              </div>
-            </div>
-          </div>
-
-          <!-- Granter Details Section -->
-          <div>
-            <h2
-              class="text-xl font-semibold text-primary mb-4 pb-2 border-b border-gray-200"
-            >
-              <i class="fas fa-user-friends mr-2"></i>Granter Details
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label
-                  for="granterName"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Granter Name *</label
-                >
-                <input
-                  type="text"
-                  id="granterName"
-                  name="granterName"
-                  required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                />
-              </div>
-              <div>
-                <label
-                  for="granterNumber"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Granter Number *</label
-                >
-                <input
-                  type="tel"
-                  id="granterNumber"
-                  name="granterNumber"
-                  required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                />
-              </div>
-            </div>
-          </div>
-
-          <!-- EMI & Address Section -->
-          <div>
-            <h2
-              class="text-xl font-semibold text-primary mb-4 pb-2 border-b border-gray-200"
-            >
-              <i class="fas fa-calendar-alt mr-2"></i>EMI & Address Details
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label
-                  for="firstEmiDate"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >1st EMI Date *</label
-                >
-                <input
-                  type="date"
-                  id="firstEmiDate"
-                  name="firstEmiDate"
-                  required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                />
-              </div>
-              <div>
-                <label
-                  for="address"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Address *</label
-                >
-                <textarea
-                  id="address"
-                  name="address"
-                  rows="2"
-                  required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                ></textarea>
-              </div>
-              <div>
-                <label
-                  for="landmark"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Landmark</label
-                >
-                <input
-                  type="text"
-                  id="landmark"
-                  name="landmark"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                />
-              </div>
-            </div>
-          </div>
-
-          <!-- Office Details Section -->
-          <div>
-            <h2
-              class="text-xl font-semibold text-primary mb-4 pb-2 border-b border-gray-200"
-            >
-              <i class="fas fa-briefcase mr-2"></i>Office Details
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label
-                  for="officeName"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Office Name</label
-                >
-                <input
-                  type="text"
-                  id="officeName"
-                  name="officeName"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                />
-              </div>
-              <div>
-                <label
-                  for="officeAddress"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Office Address</label
-                >
-                <textarea
-                  id="officeAddress"
-                  name="officeAddress"
-                  rows="2"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
-                ></textarea>
-              </div>
-            </div>
-          </div>
-
-          <!-- Submit Button -->
-          <div class="flex justify-center pt-4">
-            <button
-              type="submit"
-              class="bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-lg transition duration-300 flex items-center"
-            >
-              <i class="fas fa-paper-plane mr-2"></i> Submit Application
-            </button>
-          </div>
-        </form>
-      </main>
-
-      <!-- Footer -->
-    </div>
-  </body>
-</html>
+    <script>
+        // Add any interactive functionality here if needed
+        document.addEventListener('DOMContentLoaded', function() {
+            // You can add any JavaScript interactions here
+        });
+    </script>
+ 
