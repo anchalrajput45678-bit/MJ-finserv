@@ -423,9 +423,7 @@
 
 
 
-
-
-    <!-- About Hero Section -->
+<!-- About Hero Section -->
      <section class="animated-gradient text-white relative overflow-hidden"
          style="background: url('https://img1.wsimg.com/isteam/getty/2179769227/:/cr=t:0%25,l:0%25,w:100%25,h:100%25') center top/cover no-repeat; min-height: 500px; padding-top:6rem; padding-bottom:6rem;">
     <!-- Dark overlay -->
@@ -440,14 +438,14 @@
 
     <!-- Content -->
     <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
-        <h1 class="" 
+        <h1  
             style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:white; margin:20px 0;">
-             Investment Products</span>
+               Business Banking Products
         </h1>
         <p style="font-size:18px; margin-bottom:32px; opacity:0.9;" class="sm:text-lg md:text-2xl max-w-3xl mx-auto">
           
-             Get in touch with our team for personalized insurance and loan solutions tailored to your financial goals
-        </p>
+              Borrow Smart, Stay Secure, and Protect Your Future
+            </p>
     </div>
 </section>
 
@@ -485,116 +483,697 @@
     }
 </style>
 
-
-
-
-  
-    
  
-    
-
-     
-
-    <!-- Investment Products Section -->
-    <section class="investment-section" id="investment-products">
+ 
+ 
+ <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: #f8fafc;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .business-section {
+            padding: 80px 20px;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 60px;
+            position: relative;
+            color: #1e293b;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            margin: 20px auto 0;
+            border-radius: 5px;
+            animation: gradientShift 3s ease infinite;
+            background-size: 400% 400%;
+        }
+        
+        .business-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .business-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px 25px;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 2px solid #f1f5f9;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .business-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            background-size: 400% 400%;
+            transition: height 0.4s ease;
+            z-index: -1;
+            animation: gradientShift 5s ease infinite;
+        }
+        
+        .business-card:hover::before {
+            height: 100%;
+        }
+        
+        .business-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,119,204,0.15);
+            border-color: #00aaff;
+        }
+        
+        .business-card:hover .business-icon {
+            background: white;
+            color: #0077cc;
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .business-card:hover h3,
+        .business-card:hover p,
+        .business-card:hover .business-table th,
+        .business-card:hover .business-table td,
+        .business-card:hover .business-features li {
+            color: white;
+        }
+        
+        .business-card:hover .business-features li i {
+            color: #00ff95;
+        }
+        
+        .business-card:hover .business-table {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .business-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            background-size: 400% 400%;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 2.8rem;
+            transition: all 0.4s ease;
+            animation: gradientShift 5s ease infinite, float 6s ease-in-out infinite;
+        }
+        
+        .business-card h3 {
+            color: #0077cc;
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .business-card p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+        
+        .business-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .business-table th {
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            background-size: 400% 400%;
+            color: white;
+            padding: 12px 15px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-align: left;
+            animation: gradientShift 5s ease infinite;
+            transition: color 0.3s ease;
+        }
+        
+        .business-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            color: #555;
+            text-align: left;
+            transition: color 0.3s ease, background 0.3s ease;
+        }
+        
+        .business-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .business-table tr:hover td {
+            background: rgba(0, 119, 204, 0.05);
+        }
+        
+        .business-features {
+            list-style: none;
+            text-align: left;
+            margin-top: 20px;
+        }
+        
+        .business-features li {
+            padding: 8px 0;
+            color: #555;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .business-features li i {
+            color: #00cc66;
+            margin-right: 10px;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .features-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 40px 25px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            background-size: 400% 400%;
+            transition: height 0.4s ease;
+            z-index: 0;
+            animation: gradientShift 5s ease infinite;
+        }
+        
+        .feature:hover::before {
+            height: 100%;
+        }
+        
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature:hover .feature-icon {
+            background: white;
+            color: #0077cc;
+            transform: scale(1.1);
+        }
+        
+        .feature:hover h3,
+        .feature:hover p {
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            background-size: 400% 400%;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2.2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 1;
+            animation: gradientShift 5s ease infinite, float 6s ease-in-out infinite;
+        }
+        
+        .feature h3 {
+            color: #0077cc;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .feature p {
+            color: #666;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            background-size: 400% 400%;
+            padding: 60px 20px;
+            color: white;
+            text-align: center;
+            animation: gradientShift 5s ease infinite;
+        }
+        
+        .stat {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: countUp 2s ease-out;
+        }
+        
+        .stat-label {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        
+        .floating-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            border-radius: 50%;
+            background: linear-gradient(-45deg, #00aaff, #0077cc, #87ceeb, #00aaff);
+            animation: float 15s infinite linear;
+        }
+        
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+        
+        .shape:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 70%;
+            left: 80%;
+            animation-delay: 2s;
+        }
+        
+        .shape:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            top: 40%;
+            left: 90%;
+            animation-delay: 4s;
+        }
+        
+        .shape:nth-child(4) {
+            width: 100px;
+            height: 100px;
+            top: 80%;
+            left: 10%;
+            animation-delay: 6s;
+        }
+        
+        .shape:nth-child(5) {
+            width: 70px;
+            height: 70px;
+            top: 20%;
+            left: 70%;
+            animation-delay: 8s;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+        
+        @keyframes countUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .business-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .business-card {
+                padding: 25px 20px;
+            }
+            
+            .business-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 2.2rem;
+            }
+            
+            .business-table {
+                font-size: 0.9rem;
+            }
+            
+            .business-table th,
+            .business-table td {
+                padding: 10px 12px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .business-section, .features-section {
+                padding: 60px 15px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .business-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .business-card {
+                padding: 20px 15px;
+            }
+            
+            .business-table {
+                font-size: 0.85rem;
+            }
+            
+            .business-table th,
+            .business-table td {
+                padding: 8px 10px;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .business-icon, .feature-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+ 
+    <!-- SME / Business Banking Products Section -->
+    <section class="business-section" id="business-products">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
         <div class="container">
-            <h2 class="section-title">Investment & Wealth Products</h2>
-            <div class="investment-grid">
-                <!-- Mutual Funds -->
-                <div class="investment-card">
-                    <div class="investment-icon">
+            <h2 class="section-title"      style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:black; margin:20px 0;">SME / Business Banking Products</h2>
+            <div class="business-grid">
+                <!-- Current Account -->
+                <div class="business-card">
+                    <div class="business-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Current Account (Business)</h3>
+                    <p>Designed for businesses with high transaction volumes and specialized banking needs.</p>
+                    <table class="business-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Current Account (Business)</td>
+                                <td>High transaction account</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="business-features">
+                        <li><i class="fas fa-check"></i> Unlimited transactions</li>
+                        <li><i class="fas fa-check"></i> Overdraft facility available</li>
+                        <li><i class="fas fa-check"></i> Dedicated relationship manager</li>
+                    </ul>
+                </div>
+
+                <!-- Business Loan -->
+                <div class="business-card">
+                    <div class="business-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Business Loan (Unsecured)</h3>
+                    <p>Flexible financing solutions for working capital and business expansion without collateral.</p>
+                    <table class="business-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Business Loan (Unsecured)</td>
+                                <td>For working capital expansion</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="business-features">
+                        <li><i class="fas fa-check"></i> No collateral required</li>
+                        <li><i class="fas fa-check"></i> Quick approval process</li>
+                        <li><i class="fas fa-check"></i> Flexible repayment options</li>
+                    </ul>
+                </div>
+
+                <!-- Working Capital -->
+                <div class="business-card">
+                    <div class="business-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Mutual Funds</h3>
-                    <p>Market-linked investment with professional fund management.</p>
-                    <ul class="investment-features">
-                        <li><i class="fas fa-check"></i> Diversified portfolio options</li>
-                        <li><i class="fas fa-check"></i> Systematic Investment Plans (SIP)</li>
-                        <li><i class="fas fa-check"></i> Professional fund management</li>
+                    <h3>Working Capital OD / CC Limit</h3>
+                    <p>Flexible credit facilities to manage your business cash flow and operational expenses.</p>
+                    <table class="business-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Working Capital OD / CC Limit</td>
+                                <td>Based on turnover stock</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="business-features">
+                        <li><i class="fas fa-check"></i> Pay interest only on amount used</li>
+                        <li><i class="fas fa-check"></i> Revolving credit facility</li>
+                        <li><i class="fas fa-check"></i> Easy withdrawal options</li>
                     </ul>
                 </div>
 
-                <!-- Bonds / Debentures -->
-                <div class="investment-card">
-                    <div class="investment-icon">
+                <!-- Term Loan -->
+                <div class="business-card">
+                    <div class="business-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Term Loan</h3>
+                    <p>Long-term financing for business expansion, machinery purchase, and infrastructure development.</p>
+                    <table class="business-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Term Loan</td>
+                                <td>For machinery, expansion, etc.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="business-features">
+                        <li><i class="fas fa-check"></i> Long repayment tenure</li>
+                        <li><i class="fas fa-check"></i> Competitive interest rates</li>
+                        <li><i class="fas fa-check"></i> Structured repayment schedule</li>
+                    </ul>
+                </div>
+
+                <!-- Loan Against Property -->
+                <div class="business-card">
+                    <div class="business-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>Loan Against Property (Commercial)</h3>
+                    <p>Unlock the value of your commercial property to fund business growth and expansion.</p>
+                    <table class="business-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Loan Against Property (Commercial)</td>
+                                <td>Secured business funding</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="business-features">
+                        <li><i class="fas fa-check"></i> High loan-to-value ratio</li>
+                        <li><i class="fas fa-check"></i> Lower interest rates</li>
+                        <li><i class="fas fa-check"></i> Extended repayment period</li>
+                    </ul>
+                </div>
+
+                <!-- Bill Discounting -->
+                <div class="business-card">
+                    <div class="business-icon">
                         <i class="fas fa-file-invoice-dollar"></i>
                     </div>
-                    <h3>Bonds / Debentures</h3>
-                    <p>Fixed-income instruments providing regular returns.</p>
-                    <ul class="investment-features">
-                        <li><i class="fas fa-check"></i> Fixed income with capital protection</li>
-                        <li><i class="fas fa-check"></i> Regular interest payments</li>
-                        <li><i class="fas fa-check"></i> Various maturity options</li>
+                    <h3>Bill Discounting / Invoice Financing</h3>
+                    <p>Convert your unpaid invoices into immediate cash to improve your working capital cycle.</p>
+                    <table class="business-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bill Discounting / Invoice Financing</td>
+                                <td>Early payment invoices</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="business-features">
+                        <li><i class="fas fa-check"></i> Improve cash flow</li>
+                        <li><i class="fas fa-check"></i> No collateral required</li>
+                        <li><i class="fas fa-check"></i> Quick processing</li>
                     </ul>
                 </div>
 
-                <!-- Sovereign Gold Bonds -->
-                <div class="investment-card">
-                    <div class="investment-icon">
-                        <i class="fas fa-medal"></i>
+                <!-- Bank Guarantee -->
+                <div class="business-card">
+                    <div class="business-icon">
+                        <i class="fas fa-file-contract"></i>
                     </div>
-                    <h3>Sovereign Gold Bonds</h3>
-                    <p>RBI-backed gold investment with additional interest.</p>
-                    <ul class="investment-features">
-                        <li><i class="fas fa-check"></i> Sovereign guarantee by RBI</li>
-                        <li><i class="fas fa-check"></i> Interest income plus capital appreciation</li>
-                        <li><i class="fas fa-check"></i> No storage or security concerns</li>
-                    </ul>
-                </div>
-
-                <!-- Insurance -->
-                <div class="investment-card">
-                    <div class="investment-icon">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <h3>Insurance</h3>
-                    <p>Life, health, and general insurance for complete protection.</p>
-                    <ul class="investment-features">
-                        <li><i class="fas fa-check"></i> Life coverage and savings</li>
-                        <li><i class="fas fa-check"></i> Health coverage for medical emergencies</li>
-                        <li><i class="fas fa-check"></i> General insurance for assets</li>
-                    </ul>
-                </div>
-
-                <!-- NPS -->
-                <div class="investment-card">
-                    <div class="investment-icon">
-                        <i class="fas fa-piggy-bank"></i>
-                    </div>
-                    <h3>NPS</h3>
-                    <p>National Pension System for long-term retirement planning.</p>
-                    <ul class="investment-features">
-                        <li><i class="fas fa-check"></i> Tax benefits under 80C and 80CCD</li>
-                        <li><i class="fas fa-check"></i> Market-linked returns</li>
-                        <li><i class="fas fa-check"></i> Low cost pension scheme</li>
-                    </ul>
-                </div>
-
-                <!-- Demat & Trading Account -->
-                <div class="investment-card">
-                    <div class="investment-icon">
-                        <i class="fas fa-laptop"></i>
-                    </div>
-                    <h3>Demat & Trading Account</h3>
-                    <p>For equity investments with real-time trading capabilities.</p>
-                    <ul class="investment-features">
-                        <li><i class="fas fa-check"></i> Easy online trading platform</li>
-                        <li><i class="fas fa-check"></i> Real-time market data</li>
-                        <li><i class="fas fa-check"></i> Secure and fast transactions</li>
-                    </ul>
-                </div>
-
-                <!-- Structured Products / PMS / AIF -->
-                <div class="investment-card">
-                    <div class="investment-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3>Structured Products / PMS / AIF</h3>
-                    <p>Customized investment solutions for HNIs and wealth management.</p>
-                    <ul class="investment-features">
-                        <li><i class="fas fa-check"></i> Customized investment solutions</li>
-                        <li><i class="fas fa-check"></i> Professional portfolio management</li>
-                        <li><i class="fas fa-check"></i> Access to alternative investments</li>
+                    <h3>Bank Guarantee</h3>
+                    <p>Financial assurance for your business contracts and commitments with third parties.</p>
+                    <table class="business-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bank Guarantee</td>
+                                <td>Financial assurance</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="business-features">
+                        <li><i class="fas fa-check"></i> Enhances business credibility</li>
+                        <li><i class="fas fa-check"></i> Facilitates contract awards</li>
+                        <li><i class="fas fa-check"></i> Various types available</li>
                     </ul>
                 </div>
             </div>
@@ -603,535 +1182,120 @@
 
     <!-- Features Section -->
     <section class="features-section" id="features">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
         <div class="container">
-            <h2 class="section-title">Why Choose Our Investment Solutions?</h2>
+            <h2 class="section-title"      style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:black; margin:20px 0;">Why Choose Our Business Banking Solutions?</h2>
             <div class="features">
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <h3>Diversified Portfolio</h3>
-                    <p>Build a well-balanced portfolio across various asset classes to maximize returns and minimize risk.</p>
-                </div>
                 <div class="feature">
                     <div class="feature-icon">
                         <i class="fas fa-user-tie"></i>
                     </div>
-                    <h3>Expert Advisory</h3>
-                    <p>Get personalized investment advice from certified financial advisors and wealth managers.</p>
+                    <h3>Dedicated Relationship Manager</h3>
+                    <p>Get personalized service and expert guidance from a dedicated relationship manager for all your business banking needs.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">
-                        <i class="fas fa-lock"></i>
+                        <i class="fas fa-bolt"></i>
                     </div>
-                    <h3>Secure & Regulated</h3>
-                    <p>All our investment products are regulated by SEBI, RBI, and IRDAI ensuring complete safety.</p>
+                    <h3>Quick Processing</h3>
+                    <p>Experience faster approval and disbursal with our streamlined processes designed specifically for businesses.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Customized Solutions</h3>
+                    <p>Tailored financial products and services designed to meet the unique requirements of your business.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Stats Section -->
-    <section class="stats">
+    <div class="stats">
         <div class="stat">
-            <div class="stat-number">10M+</div>
-            <div class="stat-label">Investors Trust Us</div>
+            <div class="stat-number">50,000+</div>
+            <div class="stat-label">Business Customers</div>
         </div>
         <div class="stat">
-            <div class="stat-number">₹5000Cr+</div>
-            <div class="stat-label">Assets Under Management</div>
+            <div class="stat-number">₹5,000Cr+</div>
+            <div class="stat-label">Business Loans Disbursed</div>
         </div>
         <div class="stat">
-            <div class="stat-number">25+</div>
-            <div class="stat-label">Years of Experience</div>
+            <div class="stat-number">48 Hrs</div>
+            <div class="stat-label">Average Loan Processing</div>
         </div>
-        <div class="stat">
-            <div class="stat-number">50+</div>
-            <div class="stat-label">Investment Products</div>
-        </div>
-    </section>
-
-    <!-- style -->
-      <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* body {
-            font-family: 'Poppins', sans-serif;
-            background: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-            overflow-x: hidden;
-        } */
-
-        /* .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        } */
-
-        /* Header */
-        /* header {
-            background: linear-gradient(135deg, #0077cc, #00aaff);
-            color: white;
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        } */
-
-        /* .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        } */
-
-        /* .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white;
-        } */
-
-        /* .logo span {
-            color: #87ceeb;
-        } */
-
-        /* nav {
-            display: flex;
-            gap: 30px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            transition: all 0.3s;
-            padding: 8px 15px;
-            border-radius: 5px;
-        }
-
-        nav a:hover {
-            background: rgba(255,255,255,0.2);
-        } */
-
-        /* .mobile-menu {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: white;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #0077cc, #00aaff);
-            color: white;
-            padding: 80px 20px;
-            position: relative;
-            overflow: hidden;
-        }  
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,50 Q300,100 600,50 T1200,50 L1200,120 L0,120 Z" fill="rgba(255,255,255,0.1)"/></svg>') no-repeat bottom;
-            background-size: cover;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 60px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-text {
-            flex: 1;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            line-height: 1.2;
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            opacity: 0.95;
-            animation: fadeInUp 1s ease;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 15px 40px;
-            background: white;
-            color: #0077cc;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-        }
-
-        /* Investment Products Section */
-        .investment-section {
-            padding: 80px 20px;
-            background: white;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.8rem;
-            color: #0077cc;
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(to right, #00aaff, #0077cc);
-            margin: 15px auto 0;
-            border-radius: 2px;
-        }
-
-        .investment-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .investment-card {
-            background: white;
-            border-radius: 20px;
-            padding: 35px 25px;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            border: 2px solid #f0f0f0;
-            text-align: center;
-        }
-
-        .investment-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,119,204,0.2);
-            border-color: #00aaff;
-        }
-
-        .investment-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #00aaff, #0077cc);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: white;
-            font-size: 2.5rem;
-        }
-
-        .investment-card h3 {
-            color: #0077cc;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-
-        .investment-card p {
-            color: #666;
-            font-size: 1rem;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .investment-features {
-            list-style: none;
-            text-align: left;
-        }
-
-        .investment-features li {
-            padding: 8px 0;
-            color: #555;
-            font-size: 0.95rem;
-        }
-
-        .investment-features li i {
-            color: #00cc66;
-            margin-right: 10px;
-            font-size: 0.9rem;
-        }
-
-        /* Features Section */
-        .features-section {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .feature {
-            text-align: center;
-            padding: 40px 25px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
-
-        .feature:hover {
-            transform: translateY(-10px);
-        }
-
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #00aaff, #0077cc);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: white;
-            font-size: 2.2rem;
-        }
-
-        .feature h3 {
-            color: #0077cc;
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-            font-weight: 600;
-        }
-
-        .feature p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Stats Section */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            background: linear-gradient(135deg, #0077cc, #00aaff);
-            padding: 60px 20px;
-            color: white;
-            text-align: center;
-        }
-
-        .stat {
-            padding: 20px;
-        }
-
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .stat-label {
-            font-size: 1.2rem;
-            opacity: 0.95;
-        }
-
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 60px 20px 30px;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-column h3 {
-            color: #00aaff;
-            margin-bottom: 20px;
-            font-size: 1.4rem;
-        }
-
-        .footer-column p {
-            line-height: 1.8;
-            color: #ccc;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer-column a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-column a:hover {
-            color: #00aaff;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            transition: all 0.3s;
-        }
-
-        .social-links a:hover {
-            background: #00aaff;
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #aaa;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            nav {
-                display: none;
-            }
-
-            .mobile-menu {
-                display: block;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 30px;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .investment-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .features {
-                grid-template-columns: 1fr;
-            }
-
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .stat-number {
-                font-size: 2.5rem;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .stats {
-                grid-template-columns: 1fr;
-            }
-
-            .investment-icon,
-            .feature-icon {
-                width: 70px;
-                height: 70px;
-                font-size: 2rem;
-            }
-        }
-    </style>
-
-    <!-- end style -->
-
-
-     <!-- Premium Footer -->
+    </div>
+
+    <script>
+        // Animation for counter elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            counters.forEach(counter => {
+                const targetText = counter.innerText;
+                let target;
+                
+                // Handle different formats
+                if (targetText.includes('Cr+')) {
+                    target = parseFloat(targetText.replace('₹', '')) * 10000000;
+                } else if (targetText.includes('Hrs')) {
+                    target = parseFloat(targetText);
+                } else if (targetText.includes('+')) {
+                    target = parseFloat(targetText.replace('+', '').replace(',', ''));
+                } else {
+                    target = parseFloat(targetText);
+                }
+                
+                let count = 0;
+                const duration = 2000; // 2 seconds
+                const increment = target / (duration / 16); // 60fps
+                
+                const updateCount = () => {
+                    if (count < target) {
+                        count += increment;
+                        
+                        // Format the number based on the original format
+                        if (targetText.includes('Cr+')) {
+                            counter.innerText = '₹' + Math.ceil(count/10000000) + 'Cr+';
+                        } else if (targetText.includes('Hrs')) {
+                            counter.innerText = Math.ceil(count) + ' Hrs';
+                        } else if (targetText.includes('+')) {
+                            counter.innerText = Math.ceil(count).toLocaleString() + '+';
+                        } else {
+                            counter.innerText = Math.ceil(count).toLocaleString();
+                        }
+                        
+                        setTimeout(updateCount, 16);
+                    } else {
+                        counter.innerText = targetText;
+                    }
+                };
+                
+                // Start counting when element is in viewport
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCount();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                
+                observer.observe(counter);
+            });
+        });
+    </script>
+
+    <!-- footer -->
+     <!-- here footer is finised -->
+<!-- Premium Footer -->
     <footer class="bg-gradient-to-br from-dark via-gray-900 to-dark text-white pt-20 pb-10 relative overflow-hidden">
         <div class="absolute inset-0 opacity-5">
             <div class="absolute top-20 left-20 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
