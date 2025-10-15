@@ -1,66 +1,1286 @@
-<!-- Compact Premium Footer -->
-<footer style="background: linear-gradient(135deg, #0b0b0f, #111827); color: white; padding: 50px 0 30px 0; position: relative; overflow: hidden;">
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 1; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px;">
-
-    <!-- Company Info -->
-    <div>
-      <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <div style="background: linear-gradient(135deg, #2563eb, #38bdf8); color: white; padding: 10px; border-radius: 10px; margin-right: 10px;">
-          <i class="fas fa-shield-alt" style="font-size: 18px;"></i>
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MJ FINSERV - Premium Financial Solutions</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1842b6",
+              secondary: "#e52429",
+              accent: "#0d2d7a",
+              light: "#f8fafc",
+              dark: "#1e293b",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-light text-dark">
+    <!-- Top Bar with Premium Look -->
+    <div class="animated-gradient py-3 px-4 md:px-8 relative overflow-hidden">
+      <!-- Background particles -->
+      <div class="absolute inset-0 opacity-20 pointer-events-none">
+        <div
+          class="particle bg-white"
+          style="width: 4px; height: 4px; top: 20%; left: 10%"
+        ></div>
+        <div
+          class="particle bg-white"
+          style="
+            width: 6px;
+            height: 6px;
+            top: 60%;
+            left: 30%;
+            animation-delay: 2s;
+          "
+        ></div>
+        <div
+          class="particle bg-white"
+          style="
+            width: 3px;
+            height: 3px;
+            top: 40%;
+            left: 70%;
+            animation-delay: 4s;
+          "
+        ></div>
+      </div>
+      <!-- Top bar content -->
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center relative z-10"
+      >
+        <!-- Email & Phone (responsive) -->
+        <div
+          class="flex w-full md:w-auto md:flex-row justify-between items-center text-sm text-white mb-2 md:mb-0"
+        >
+          <!-- Mobile View: Left (Email) and Right (Phone) -->
+          <div class="flex w-full justify-between items-center md:hidden">
+            <!-- Email -->
+            <span
+              class="flex items-center hover:scale-110 transition-transform duration-300"
+            >
+              <i class="fas fa-envelope mr-2"></i>Ajain0237@gmail.com
+            </span>
+            <!-- Phone -->
+            <span
+              class="flex items-center hover:scale-110 transition-transform duration-300"
+            >
+              <i class="fas fa-phone mr-2"></i> +91 7804-933617
+            </span>
+          </div>
+          <!-- Desktop View: Email & Phone stacked -->
+          <div class="hidden md:flex flex-row items-center space-x-6">
+            <!-- Email -->
+            <span
+              class="flex items-center hover:scale-110 transition-transform duration-300"
+            >
+              <i class="fas fa-envelope mr-2"></i>Ajain0237@gmail.com
+            </span>
+            <!-- Phone -->
+            <span
+              class="flex items-center hover:scale-110 transition-transform duration-300"
+            >
+              <i class="fas fa-phone mr-2"></i>   +91 7804-933617
+            </span>
+          </div>
         </div>
-        <div style="font-size: 22px; font-weight: 800;">MJ FINSERV</div>
+        <!-- Social Icons - hidden on mobile -->
+        <div class="hidden md:flex space-x-4">
+          <a
+            href="https://www.instagram.com/financewithanshul4055/"
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+           <a
+  href="https://www.youtube.com/@financewithanshul4055"
+  class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
+>
+  <i class="fab fa-youtube"></i>
+</a>
+
+          <a
+            href="#"
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="#"
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
       </div>
-      <p style="color: #9ca3af; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">
-        Your trusted partner for comprehensive insurance and loan solutions tailored to your financial needs.
-      </p>
-      <div style="display: flex; gap: 10px;">
-        <a href="#" style="width:35px;height:35px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,0.1);color:white;transition:0.3s;"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" style="width:35px;height:35px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,0.1);color:white;transition:0.3s;"><i class="fab fa-twitter"></i></a>
-        <a href="#" style="width:35px;height:35px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,0.1);color:white;transition:0.3s;"><i class="fab fa-instagram"></i></a>
-        <a href="#" style="width:35px;height:35px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,0.1);color:white;transition:0.3s;"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <!-- Premium Navbar -->
+    <nav
+      id="navbar"
+      class="bg-white sticky top-0 z-50 transition-all duration-500 shadow-sm"
+    >
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex justify-between items-center">
+          <!-- ✅ LOGO SECTION -->
+           <div class="flex items-center group cursor-pointer">
+  <img
+    src="./logomjfinserve.png"
+    alt="MJ FINSERV Logo"
+    class="logo min-h-[105px] min-w-[130px] object-contain mr-3 group-hover:scale-110 transition-transform duration-300"
+  />
+</div>
+
+<style>
+  /* ✅ Responsive transparent logo style */
+  .logo {
+    width: 80px;
+    height: auto;
+    transition: all 0.3s ease;
+  }
+
+  @media (min-width: 768px) {
+    .logo {
+      width: 120px;
+      height: auto;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .logo {
+      width: 140px;
+      height: auto;
+    }
+  }
+</style>
+
+          <!-- ✅ NAV LINKS -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="nav-link relative group">
+              <span
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium"
+                >Home</span
+              >
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a href="./about.html" class="nav-link relative group">
+              <span
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium"
+                >About</span
+              >
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <!-- ✅ SERVICES DROPDOWN -->
+            <div class="relative group">
+              <button
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center"
+              >
+                Services
+                <i
+                  class="fas fa-chevron-down ml-1 text-xs group-hover:rotate-180 transition-transform duration-300"
+                ></i>
+              </button>
+              <div
+                class="absolute left-0 mt-6 w-72 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 border border-gray-100"
+              >
+                <div class="py-2">
+                  <a
+                    href="./unsecureloans.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-briefcase mr-3 text-secondary"></i>
+                    Unsecured Loans
+                  </a>
+                  <a
+                    href="./securedloan.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-user mr-3 text-secondary"></i> Secure Loan
+                  </a>
+                  <a
+                    href="./insuranceservice.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-home mr-3 text-secondary"></i> Insurance
+                  </a>
+                  <a
+                    href="./investment.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-car mr-3 text-secondary"></i> Investments
+                  </a>
+                  <a
+                    href="./InternationalInsurance.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-user-tie mr-3 text-secondary"></i>
+                    International Insurance
+                  </a>
+                  <a
+                    href="./lifeinsurance.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-university mr-3 text-secondary"></i> Life
+                    Insurance
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- ✅ PRODUCTS DROPDOWN -->
+            <div class="relative group">
+              <button
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center"
+              >
+                Products
+                <i
+                  class="fas fa-chevron-down ml-1 text-xs group-hover:rotate-180 transition-transform duration-300"
+                ></i>
+              </button>
+              <div
+                class="absolute left-0 mt-6 w-72 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 border border-gray-100"
+              >
+                <div class="py-2">
+                  <a
+                    href="./products2.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-briefcase mr-3 text-secondary"></i> Loan
+                    Products
+                  </a>
+                  <a
+                    href="./products1.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-user mr-3 text-secondary"></i>  Investment And Wealth Products
+                    
+                  </a>
+                  <a
+                    href="./products3.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-home mr-3 text-secondary"></i>  Insurance Via(Bancassurance Channel)
+                  </a>
+                  <a
+                    href="./products4.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-car mr-3 text-secondary"></i> Digital/Payment Products 
+                  </a>
+                  <a
+                    href="./products5.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-user-tie mr-3 text-secondary"></i> Business Banking Products
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="./gallery.html" class="nav-link relative group">
+              <span
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium"
+                >Gallery</span
+              >
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a href="./contect.html" class="nav-link relative group">
+              <span
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium"
+                >Contact</span
+              >
+              <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+          </div>
+          <!-- ✅ QUOTE BUTTON (Desktop) -->
+          <button
+            id="quoteBtn"
+            class="btn-premium bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl hidden md:block"
+          >
+            Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+          <!-- ✅ MOBILE MENU BUTTON -->
+          <button id="mobileMenuBtn" class="md:hidden text-dark">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+        <!-- ✅ MOBILE MENU -->
+         <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden py-4 border-t border-gray-200 bg-white">
+            <a href="index.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-home mr-3 text-primary"></i> Home
+            </a>
+            <a href="about.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-info-circle mr-3 text-primary"></i> About
+            </a>
+
+             <!-- Mobile Services Dropdown -->
+<div class="border-b border-gray-100">
+  <button id="mobileServicesToggle" class="w-full flex justify-between items-center py-3 text-dark hover:text-primary transition-colors duration-300">
+    <span><i class="fas fa-concierge-bell mr-3 text-primary"></i> Services</span>
+    <i class="fas fa-chevron-down text-xs"></i>
+  </button>
+  <div id="mobileServicesMenu" class="hidden pl-8 pb-3">
+    <a href="./unsecureloans.html" class="block py-2 text-dark hover:text-primary">Unsecured Loans</a>
+    <a href="./securedloan.html" class="block py-2 text-dark hover:text-primary">Secured Loans</a>
+    <a href="./insuranceservice.html" class="block py-2 text-dark hover:text-primary">Insurance</a>
+    <a href="./investment.html" class="block py-2 text-dark hover:text-primary">Investments</a>
+    <a href="./InternationalInsurance.html" class="block py-2 text-dark hover:text-primary">International Insurance</a>
+    <a href="./lifeinsurance.html" class="block py-2 text-dark hover:text-primary">Life Insurance</a>
+  </div>
+</div>
+
+<!-- Mobile Products Dropdown -->
+<div class="border-b border-gray-100">
+  <button id="mobileProductsToggle" class="w-full flex justify-between items-center py-3 text-dark hover:text-primary transition-colors duration-300">
+    <span><i class="fas fa-box mr-3 text-primary"></i> Products</span>
+    <i class="fas fa-chevron-down text-xs"></i>
+  </button>
+  <div id="mobileProductsMenu" class="hidden pl-8 pb-3">
+    <a href="./products2.html" class="block py-2 text-dark hover:text-primary">Loan Products</a>
+    <a href="./products1.html" class="block py-2 text-dark hover:text-primary">Investment & Wealth Products</a>
+    <a href="./products3.html" class="block py-2 text-dark hover:text-primary">Insurance (Bancassurance Channel)</a>
+    <a href="./products4.html" class="block py-2 text-dark hover:text-primary">Digital/Payment Products</a>
+    <a href="./products5.html" class="block py-2 text-dark hover:text-primary">Business Banking Products</a>
+  </div>
+</div>
+
+
+            <a href="gallery.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-images mr-3 text-primary"></i> Gallery
+            </a>
+            <a href="contect.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+                <i class="fas fa-envelope mr-3 text-primary"></i> Contact
+            </a>
+            <button id="mobileQuoteBtn" class="mt-4 bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium w-full">
+                Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+      </div>
+    </nav>
+    <style>
+      /* ✅ Logo responsive adjustments */
+      @media (max-width: 768px) {
+        #navbar img {
+          width: 55px !important;
+          height: 55px !important;
+          margin-right: 10px;
+          border-radius: 15px;
+        }
+        #navbar .text-gradient {
+          font-size: 1.25rem !important;
+        }
+      }
+      @media (min-width: 769px) {
+        #navbar img {
+          width: 80px !important;
+          height: 80px !important;
+          border-radius: 20px;
+        }
+      }
+    </style>
+    <!--end Premium Navbar -->
+
+<!-- ✅ FIXED HERO SLIDER SECTION -->
+<section class="relative overflow-hidden">
+  <div class="hero-slider relative">
+    
+    <!-- Slide 1 -->
+    <div class="slide" style="display: none;">
+      <div class="relative text-white py-32 md:py-40" 
+           style="background: url('./image1.png') center/cover no-repeat;">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+          <div class="max-w-3xl">
+            <h1 style="font-family:'Poppins',sans-serif;font-size:36px;font-weight:700;color:white;margin:20px 0;">Plan Today, Prosper Tomorrow</h1>
+            <p style="font-size:20px;margin-bottom:32px;opacity:0.9;">Comprehensive insurance coverage and flexible loan solutions tailored to protect what matters most to you.</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Quick Links -->
-    <div>
-      <h3 style="font-size:18px;font-weight:700;margin-bottom:15px;">Quick Links</h3>
-      <ul style="list-style:none;padding:0;margin:0;">
-        <li><a href="./index.html" style="color:#9ca3af;text-decoration:none;font-size:14px;display:block;margin-bottom:6px;">› Home</a></li>
-        <li><a href="./about.html" style="color:#9ca3af;text-decoration:none;font-size:14px;display:block;margin-bottom:6px;">› About Us</a></li>
-        <li><a href="./securedloan.html" style="color:#9ca3af;text-decoration:none;font-size:14px;display:block;margin-bottom:6px;">› Services</a></li>
-        <li><a href="./gallery.html" style="color:#9ca3af;text-decoration:none;font-size:14px;display:block;margin-bottom:6px;">› Gallery</a></li>
-        <li><a href="./contect.html" style="color:#9ca3af;text-decoration:none;font-size:14px;display:block;">› Contact</a></li>
-      </ul>
+    <!-- Slide 2 -->
+    <div class="slide" style="display: none;">
+      <div class="relative text-white py-32 md:py-40" 
+           style="background: url('./image2.png') center/cover no-repeat;">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+          <div class="max-w-3xl">
+            <h1 style="font-family:'Poppins',sans-serif;font-size:36px;font-weight:700;color:white;margin:20px 0;">Empowering Your Financial Journey</h1>
+            <p style="font-size:20px;margin-bottom:32px;opacity:0.9;">Smart Financial Solutions to Safeguard What You Value Most</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Products -->
-    <div>
-      <h3 style="font-size:18px;font-weight:700;margin-bottom:15px;">Products</h3>
-      <ul style="list-style:none;padding:0;margin:0;">
-        <li><a href="#" style="color:#9ca3af;text-decoration:none;font-size:14px;display:block;margin-bottom:6px;">› Credit Cards</a></li>
-        <li><a href="#" style="color:#9ca3af;text-decoration:none;font-size:14px;display:block;margin-bottom:6px;">› Investment Plans</a></li>
-        <li><a href="#" style="color:#9ca3af;text-decoration:none;font-size:14px;display:block;margin-bottom:6px;">› Savings Accounts</a></li>
-        <li><a href="#" style="color:#9ca3af;text-decoration:none;font-size:14px;display:block;margin-bottom:6px;">› Mutual Funds</a></li>
-        <li><a href="#" style="color:#9ca3af;text-decoration:none;font-size:14px;display:block;">› Retirement Plans</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Info -->
-    <div>
-      <h3 style="font-size:18px;font-weight:700;margin-bottom:15px;">Contact Info</h3>
-      <ul style="list-style:none;padding:0;margin:0;">
-        <li style="color:#9ca3af;font-size:14px;margin-bottom:8px;"><i class="fas fa-map-marker-alt" style="color:#2563eb;margin-right:8px;"></i> 123 Financial District, NY 10001</li>
-        <li style="color:#9ca3af;font-size:14px;margin-bottom:8px;"><i class="fas fa-phone" style="color:#2563eb;margin-right:8px;"></i> +9035194055</li>
-        <li style="color:#9ca3af;font-size:14px;"><i class="fas fa-envelope" style="color:#2563eb;margin-right:8px;"></i> Ajain0237@gmail.com</li>
-      </ul>
+    <!-- Slide 3 -->
+    <div class="slide" style="display: none;">
+      <div class="relative text-white py-32 md:py-40" 
+           style="background: url('https://assets-global.website-files.com/5e864086022dd330b9a962af/6308d3abc58cd1f6bcf77848_BDO%20Business%20Loans.jpg') center/cover no-repeat;">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+          <div class="max-w-3xl">
+            <h1 style="font-family:'Poppins',sans-serif;font-size:36px;font-weight:700;color:white;margin:20px 0;">Secure Your Future With Confidence</h1>
+            <p style="font-size:20px;margin-bottom:32px;opacity:0.9;">Customized Protection and Loan Plans Designed for Your Needs</p>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
 
-  <!-- Bottom Bar -->
-  <div style="text-align:center;margin-top:30px;border-top:1px solid rgba(255,255,255,0.1);padding-top:15px;font-size:13px;color:#9ca3af;">
-    © 2023 MJ FINSERV. All rights reserved. |
-    <a href="#" style="color:#9ca3af;text-decoration:none;">Privacy Policy</a> |
-    <a href="#" style="color:#9ca3af;text-decoration:none;">Terms of Service</a>
+  <!-- Slider Dots -->
+  <div style="position:absolute;bottom:24px;left:0;right:0;display:flex;justify-content:center;gap:12px;z-index:20;">
+    <span class="dot" style="width:12px;height:12px;background:white;border-radius:50%;display:inline-block;cursor:pointer;transition:all 0.3s;"></span>
+    <span class="dot" style="width:12px;height:12px;background:white;opacity:0.5;border-radius:50%;display:inline-block;cursor:pointer;transition:all 0.3s;"></span>
+    <span class="dot" style="width:12px;height:12px;background:white;opacity:0.5;border-radius:50%;display:inline-block;cursor:pointer;transition:all 0.3s;"></span>
   </div>
-</footer>
+
+  <!-- Slider Navigation Buttons - Mobile Optimized -->
+  <button class="slider-prev" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.3);backdrop-filter:blur(10px);width:50px;height:50px;border-radius:50%;border:2px solid white;display:flex;align-items:center;justify-content:center;font-size:24px;color:white;cursor:pointer;z-index:20;transition:all 0.3s;">
+    <i class="fas fa-chevron-left"></i>
+  </button>
+  <button class="slider-next" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.3);backdrop-filter:blur(10px);width:50px;height:50px;border-radius:50%;border:2px solid white;display:flex;align-items:center;justify-content:center;font-size:24px;color:white;cursor:pointer;z-index:20;transition:all 0.3s;">
+    <i class="fas fa-chevron-right"></i>
+  </button>
+</section>
+
+<!-- ✅ FIXED SLIDER JAVASCRIPT -->
+<script>
+  // Mobile Menu Toggle
+  const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const mobileServicesToggle = document.getElementById("mobileServicesToggle");
+  const mobileServicesMenu = document.getElementById("mobileServicesMenu");
+  const mobileProductsToggle = document.getElementById("mobileProductsToggle");
+  const mobileProductsMenu = document.getElementById("mobileProductsMenu");
+
+  mobileMenuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  mobileServicesToggle.addEventListener("click", () => {
+    mobileServicesMenu.classList.toggle("hidden");
+  });
+
+  mobileProductsToggle.addEventListener("click", () => {
+    mobileProductsMenu.classList.toggle("hidden");
+  });
+
+  // ✅ FIXED SLIDER FUNCTIONALITY
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+  const prevBtn = document.querySelector('.slider-prev');
+  const nextBtn = document.querySelector('.slider-next');
+  let currentSlide = 0;
+  let autoSlideInterval;
+
+  function showSlide(index) {
+    // Hide all slides
+    slides.forEach((slide) => {
+      slide.style.display = 'none';
+    });
+    
+    // Reset all dots
+    dots.forEach((dot) => {
+      dot.style.opacity = '0.5';
+      dot.style.transform = 'scale(1)';
+    });
+    
+    // Show current slide
+    slides[index].style.display = 'block';
+    
+    // Highlight current dot
+    dots[index].style.opacity = '1';
+    dots[index].style.transform = 'scale(1.2)';
+    
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  }
+
+  function prevSlide() {
+    let prev = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(prev);
+  }
+
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 6000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+  }
+
+  // Event listeners for navigation buttons
+  nextBtn.addEventListener('click', () => {
+    stopAutoSlide();
+    nextSlide();
+    startAutoSlide();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    stopAutoSlide();
+    prevSlide();
+    startAutoSlide();
+  });
+
+  // Touch support for mobile
+  nextBtn.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    stopAutoSlide();
+    nextSlide();
+    startAutoSlide();
+  });
+
+  prevBtn.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    stopAutoSlide();
+    prevSlide();
+    startAutoSlide();
+  });
+
+  // Dots click functionality
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      stopAutoSlide();
+      showSlide(index);
+      startAutoSlide();
+    });
+  });
+
+  // Swipe functionality for mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  document.querySelector('.hero-slider').addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  document.querySelector('.hero-slider').addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    if (touchEndX < touchStartX - 50) {
+      // Swipe left - next slide
+      stopAutoSlide();
+      nextSlide();
+      startAutoSlide();
+    }
+    if (touchEndX > touchStartX + 50) {
+      // Swipe right - previous slide
+      stopAutoSlide();
+      prevSlide();
+      startAutoSlide();
+    }
+  }
+
+  // Initialize slider
+  showSlide(0);
+  startAutoSlide();
+</script>
+
+  <!-- Premium Stats Section -->
+<section class="py-16 md:py-20 bg-white relative overflow-hidden">
+  <!-- Background blur circles -->
+  <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+    <div class="absolute top-10 left-10 w-40 h-40 md:w-64 md:h-64 bg-primary rounded-full blur-2xl md:blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-60 h-60 md:w-96 md:h-96 bg-secondary rounded-full blur-2xl md:blur-3xl"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="container mx-auto px-4 md:px-8 relative z-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+      
+      <!-- Stat Item -->
+      <div class="text-center group">
+        <div class="text-4xl sm:text-5xl font-extrabold text-gradient mb-1 counter" data-target="15000">15,000</div>
+        <div class="text-sm sm:text-base text-dark font-medium">Happy Clients</div>
+        <div class="w-12 sm:w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-2 sm:mt-3 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+      </div>
+
+      <!-- Stat Item -->
+      <div class="text-center group">
+        <div class="text-4xl sm:text-5xl font-extrabold text-gradient mb-1 counter" data-target="25">25</div>
+        <div class="text-sm sm:text-base text-dark font-medium">Years Experience</div>
+        <div class="w-12 sm:w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-2 sm:mt-3 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+      </div>
+
+      <!-- Stat Item -->
+      <div class="text-center group">
+        <div class="text-4xl sm:text-5xl font-extrabold text-gradient mb-1 counter" data-target="50">50</div>
+        <div class="text-sm sm:text-base text-dark font-medium">Insurance Plans</div>
+        <div class="w-12 sm:w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-2 sm:mt-3 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+      </div>
+
+      <!-- Stat Item -->
+      <div class="text-center group">
+        <div class="text-4xl sm:text-5xl font-extrabold text-gradient mb-1">24/7</div>
+        <div class="text-sm sm:text-base text-dark font-medium">Customer Support</div>
+        <div class="w-12 sm:w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-2 sm:mt-3 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Premium About Section -->
+     <section id="about" class="pt-12 pb-24 bg-[#cacaca] from-light via-white to-light relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
+    <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+            <div class="lg:w-1/2 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6"
+                    style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:black; margin:20px 0;  ">
+                    Why Choose  MJ FINSERV? 
+                </h2>
+                <p class="text-gray-600 mb-6 leading-relaxed text-lg">With over 25 years of expertise in the financial
+                    services industry, MJ FINSERV has established itself as a premier provider of insurance and loan
+                    solutions.</p>
+                <p class="text-gray-600 mb-10 leading-relaxed text-lg">Our dedicated team of financial experts is
+                    committed to delivering personalized service and strategic guidance to help you achieve financial
+                    security.</p>
+
+                <div class="space-y-6">
+                    <div
+                        class="flex items-start group hover-lift p-6 rounded-2xl bg-white premium-shadow-hover">
+                        <div
+                            class="bg-gradient-to-br from-primary to-accent text-white p-4 rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark mb-2">Secure & Trusted</h3>
+                            <p class="text-gray-600">Your financial security is our top priority with industry-leading
+                                protection.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-start group hover-lift p-6 rounded-2xl bg-white premium-shadow-hover">
+                        <div
+                            class="bg-gradient-to-br from-primary to-accent text-white p-4 rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-award text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark mb-2">Award Winning Service</h3>
+                            <p class="text-gray-600">Recognized excellence in customer service and financial
+                                solutions.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-start group hover-lift p-6 rounded-2xl bg-white premium-shadow-hover">
+                        <div
+                            class="bg-gradient-to-br from-primary to-accent text-white p-4 rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-headset text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark mb-2">24/7 Support</h3>
+                            <p class="text-gray-600">Round-the-clock assistance whenever you need financial guidance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 fade-in-up delay-300">
+                <div class="relative">
+                    <div
+                        class="absolute -top-6 -left-6 w-full h-full bg-gradient-to-br from-primary to-secondary rounded-3xl opacity-20 blur-xl">
+                    </div>
+                    <div class="relative bg-white rounded-3xl p-10 premium-shadow hover-lift">
+                        <div
+                            class="bg-gradient-to-br from-light to-white rounded-2xl p-8 h-96 flex flex-col items-center justify-center text-center">
+                            <div
+                                class="bg-gradient-to-br from-primary to-accent text-white p-6 rounded-2xl mb-6 shadow-xl">
+                                <i class="fas fa-medal text-5xl"></i>
+                            </div>
+                            <h3 class="text-3xl font-black text-dark mb-4">Premium Financial Services</h3>
+                            <p class="text-gray-600 text-lg">Trusted by individuals and businesses for comprehensive
+                                financial protection and growth solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Premium Contact Section -->
+    <section id="contact" class="py-5 bg-white relative overflow-hidden">
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary opacity-5 rounded-full blur-3xl"></div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="text-center mb-20 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:black; margin:20px 0;">Contact <span class="text-gradient">Us</span></h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">Get in touch with our team for personalized insurance and loan solutions tailored to your financial goals.</p>
+            </div>
+            
+             <div class="flex flex-col lg:flex-row gap-12 mt-[-40px]">
+    <div class="lg:w-2/5 fade-in-up">
+        <h3 class="text-3xl font-black text-dark mb-8"
+            style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:black; margin:10px 0 20px 0; text-align:center;">
+            Get In Touch
+        </h3>
+    
+                    <div class="space-y-6">
+                        <div class="flex items-start group hover-lift p-6 rounded-2xl bg-gradient-to-br from-light to-white premium-shadow-hover">
+                            <div class="bg-gradient-to-br from-primary to-accent text-white p-4 rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2 text-lg">Our Office</h4>
+                                <p class="text-gray-600">123 Financial District, Suite 500<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start group hover-lift p-6 rounded-2xl bg-gradient-to-br from-light to-white premium-shadow-hover">
+                            <div class="bg-gradient-to-br from-primary to-accent text-white p-4 rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2 text-lg">Phone Number</h4>
+                                <p class="text-gray-600"> 9035194055<br>+91 7804-933617</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start group hover-lift p-6 rounded-2xl bg-gradient-to-br from-light to-white premium-shadow-hover">
+                            <div class="bg-gradient-to-br from-primary to-accent text-white p-4 rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2 text-lg">Email Address</h4>
+                                <p class="text-gray-600"> Ajain0237@gmail.com<br> </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10 p-6 rounded-2xl bg-gradient-to-br from-light to-white premium-shadow">
+                        <h4 class="font-bold text-dark mb-6 text-xl">Business Hours</h4>
+                        <ul class="space-y-3 text-gray-600 text-lg">
+                            <li class="flex justify-between pb-3 border-b border-gray-200">
+                                <span>Monday - Friday</span>
+                                <span class="font-bold text-primary">9:00 AM - 6:00 PM</span>
+                            </li>
+                            <li class="flex justify-between pb-3 border-b border-gray-200">
+                                <span>Saturday</span>
+                                <span class="font-bold text-primary">10:00 AM - 4:00 PM</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Sunday</span>
+                                <span class="font-bold text-gray-400">Closed</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="lg:w-3/5 fade-in-up delay-300">
+                    <div class="bg-gradient-to-br from-white to-light rounded-3xl premium-shadow p-10 hover-lift">
+                        <h3 class="text-3xl font-black text-dark mb-8" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:black; margin:20px 0;">Send Us a Message</h3>
+                        
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-dark mb-3 font-bold">Full Name</label>
+                                    <input type="text" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Name" required>
+                                </div>
+                                <div>
+                                    <label class="block text-dark mb-3 font-bold">Email Address</label>
+                                    <input type="email" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-dark mb-3 font-bold">Subject</label>
+                                <input type="text" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Subject" required>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-dark mb-3 font-bold">Message</label>
+                                <textarea rows="5" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Message" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-premium bg-gradient-to-r from-primary to-accent text-white px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 w-full md:w-auto">
+                                Send Message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Premium Footer -->
+    <footer class="bg-gradient-to-br from-dark via-gray-00 to-dark text-white pt-20 pb-10 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-20 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-80 h-80 bg-secondary rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="bg-gradient-to-br from-primary to-accent text-white p-3 rounded-xl mr-3 shadow-lg">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                        <div class="text-2xl font-black text-white">MJ FINSERV</div>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Your trusted partner for comprehensive insurance and loan solutions tailored to your financial needs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="./index.html" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Home
+                        </a></li>
+                        <li><a href="./about.html" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> About Us
+                        </a></li>
+                        <li><a href="./securedloan.html" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Services
+                        </a></li>
+                        <li><a href="./gallery.html" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Gallery
+                        </a></li>
+                        <li><a href="./contect.html" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Contact
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="./unsecureloans.html" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i>  Unsecure Loans
+                        </a></li>
+                        <li><a href="./securedloan.html" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i>  Secure Loans
+                        </a></li>
+                        <li><a href="./insuranceservice.html" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"> 
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i>  Insurances
+                        </a></li>
+                        <li><a href="./investment.html" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i>  Investments
+                        </a></li>
+                        <li><a href="./InternationalInsurance.html" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i>  International Insurances
+                        </a></li>
+
+                        <li><a href="./lifeinsurance.html" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-xs mr-3 text-primary group-hover:translate-x-1 transition-transform duration-300"></i> Life Insurances
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mr-3 mt-1"></i>
+                            <span class="text-gray-400">123 Financial District, Suite 500<br>New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-primary mr-3"></i>
+                            <span class="text-gray-400"> +9035194055 </span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-primary mr-3"></i>
+                            <span class="text-gray-400">Ajain0237@gmail.com </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 MJ FINSERV. All rights reserved. | 
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mx-2">Privacy Policy</a> | 
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mx-2">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Premium Quote Modal -->
+    <div id="quoteModal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center z-50 hidden transition-opacity duration-300">
+        <div class="bg-white rounded-3xl premium-shadow max-w-lg w-full mx-4 transform transition-all duration-300 scale-95 opacity-0">
+            <div class="p-10">
+                <div class="flex justify-between items-center mb-8">
+                    <h3 class="text-3xl font-black text-dark">Get a <span class="text-gradient">Quote</span></h3>
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700 transition-colors duration-300 hover:rotate-90 transform">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Full Name</label>
+                        <input type="text" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Email Address</label>
+                        <input type="email" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Email" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Phone Number</label>
+                        <input type="tel" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" placeholder="Your Phone" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-3 font-bold">Service Type</label>
+                        <select class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-300" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="life">Life Insurance</option>
+                            <option value="health">Health Insurance</option>
+                            <option value="home">Home Loan</option>
+                            <option value="business">Business Insurance</option>
+                            <option value="auto">Auto Insurance</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-premium bg-gradient-to-r from-primary to-accent text-white px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 w-full">
+                        Submit Request <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional JavaScript -->
+    <script>
+        // Quote Modal
+        const quoteBtn = document.getElementById('quoteBtn');
+        const mobileQuoteBtn = document.getElementById('mobileQuoteBtn');
+        const quoteModal = document.getElementById('quoteModal');
+        const closeModal = document.getElementById('closeModal');
+        
+        function openQuoteModal() {
+            quoteModal.classList.remove('hidden');
+            setTimeout(() => {
+                quoteModal.querySelector('div').classList.remove('scale-95', 'opacity-0');
+            }, 10);
+        }
+        
+        function closeQuoteModal() {
+            quoteModal.querySelector('div').classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                quoteModal.classList.add('hidden');
+            }, 300);
+        }
+        
+        quoteBtn.addEventListener('click', openQuoteModal);
+        mobileQuoteBtn.addEventListener('click', openQuoteModal);
+        closeModal.addEventListener('click', closeQuoteModal);
+        
+        quoteModal.addEventListener('click', (e) => {
+            if (e.target === quoteModal) {
+                closeQuoteModal();
+            }
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+        
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        function animateCounter() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText.replace(/,/g, '');
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment).toLocaleString();
+                    setTimeout(() => animateCounter(), 1);
+                } else {
+                    counter.innerText = target.toLocaleString();
+                }
+            });
+        }
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        document.querySelectorAll('.counter').forEach(counter => {
+            observer.observe(counter);
+        });
+        
+        // Fade in animations
+        const fadeElements = document.querySelectorAll('.fade-in-up');
+        
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            fadeObserver.observe(element);
+        });
+    </script>
+
+    <!-- CSS Styles -->
+    <style>
+        /* Animated Gradient Background */
+        .animated-gradient {
+            background: linear-gradient(135deg, #1842b6, #0d2d7a, #e52429);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Particle Animation */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Text Gradient */
+        .text-gradient {
+            background: linear-gradient(135deg, #1842b6, #e52429);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Premium Shadow */
+        .premium-shadow {
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .premium-shadow-hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .premium-shadow-hover:hover {
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+
+        /* Hover Lift Effect */
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Navbar Scrolled State */
+        .navbar-scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.98) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Button Premium Style */
+        .btn-premium {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-premium::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn-premium:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Fade In Up Animation */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease forwards;
+            animation-play-state: paused;
+        }
+
+        .fade-in-up.delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Slider Button Hover Effects */
+        .slider-prev:hover,
+        .slider-next:hover {
+            background: rgba(255, 255, 255, 0.5) !important;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-prev:active,
+        .slider-next:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        /* Responsive Slider Buttons */
+        @media (max-width: 768px) {
+            .slider-prev,
+            .slider-next {
+                width: 40px !important;
+                height: 40px !important;
+                font-size: 18px !important;
+            }
+        }
+
+        /* Mobile Menu Animation */
+        #mobileMenu {
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Remove default focus outline and add custom */
+        *:focus {
+            outline: none;
+        }
+
+        button:focus,
+        a:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            box-shadow: 0 0 0 3px rgba(24, 66, 182, 0.3);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #1842b6, #e52429);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #0d2d7a, #c41e22);
+        }
+
+        /* Loading Animation for Images */
+        img {
+            transition: opacity 0.3s ease;
+        }
+
+        img:not([src]) {
+            opacity: 0;
+        }
+
+        /* Touch Device Optimization */
+        @media (hover: none) {
+            .hover-lift:hover {
+                transform: none;
+            }
+            
+            .premium-shadow-hover:hover {
+                transform: none;
+            }
+        }
+    </style>
+</body>
+</html>
