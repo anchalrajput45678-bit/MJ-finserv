@@ -1,1 +1,659 @@
- 
+  
+    <div style="max-width: 1400px; margin: 0 auto; padding: 40px 20px;">
+        
+        <!-- Header -->
+        <h1 style="text-align: center; color: #1f2937; font-size: clamp(24px, 5vw, 36px); margin-bottom: 15px; font-weight: 600;">Choose Your Purpose</h1>
+        <p style="text-align: center; color: #6b7280; font-size: clamp(14px, 3vw, 18px); margin-bottom: 40px;">We'll show you the best options</p>
+        
+        <!-- Buttons Container -->
+        <!-- Button Container -->
+<div style="display: flex; justify-content: center; margin-bottom: 50px;">
+  <div id="loan-buttons" 
+       style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; max-width: 900px;">
+
+    <button onclick="showCategory('personal', this)" class="loan-btn">
+      Secured Loans
+    </button>
+
+    <button onclick="showCategory('business', this)" class="loan-btn">
+      Unsecured Loans
+    </button>
+
+    <button onclick="showCategory('insurance', this)" class="loan-btn">
+      Insurance Solutions
+    </button>
+
+    <button onclick="showCategory('investment', this)" class="loan-btn">
+      Investment Products
+    </button>
+
+    <button onclick="showCategory('international', this)" class="loan-btn">
+      International Insurance
+    </button>
+
+  </div>
+</div>
+
+<!-- ✅ CSS -->
+<style>
+  .loan-btn {
+    background: #f3f4f6;
+    color: blue;
+    border: 2px solid #e5e7eb;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: clamp(14px, 2.5vw, 16px);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 140px;
+  }
+
+  .loan-btn:hover {
+    border-color: blue;
+    transform: scale(1.05);
+  }
+
+  .active-btn {
+    background: blue !important;
+    color: white !important;
+    border-color: blue !important;
+    transform: scale(1.05);
+  }
+
+  /* ✅ Mobile Responsive */
+  @media (max-width: 768px) {
+    #loan-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .loan-btn {
+      width: 80%;
+      text-align: center;
+    }
+  }
+</style>
+
+<!-- ✅ JavaScript -->
+<script>
+  function showCategory(category, btn) {
+    const buttons = document.querySelectorAll("#loan-buttons button");
+    buttons.forEach(b => b.classList.remove("active-btn"));
+    btn.classList.add("active-btn");
+    console.log("Selected category:", category);
+  }
+</script>
+
+        <!-- Images Grid Container -->
+         <div id="imagesGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 20px 0;">
+            
+            <div id="placeholder" style="grid-column: 1 / -1; text-align: center; color: #9ca3af; padding: 80px 20px;">
+                <svg style="width: clamp(80px, 15vw, 120px); height: clamp(80px, 15vw, 120px); margin: 0 auto 20px; opacity: 0.5;" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+                </svg>
+                <p style="margin: 0; font-size: clamp(16px, 3vw, 20px);">Select a purpose to see all related options</p>
+             </div>
+             
+            
+            <!-- Personal Needs Images -->
+            <div class="category-group personal" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="personal-1.jpg" alt="Personal Option 1" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Personal Loan Option 1</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Quick approval for personal needs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group personal" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="personal-2.jpg" alt="Personal Option 2" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Personal Loan Option 2</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Flexible repayment terms</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group personal" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="personal-3.jpg" alt="Personal Option 3" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Personal Loan Option 3</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Low interest rates</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group personal" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="personal-4.jpg" alt="Personal Option 4" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Personal Loan Option 4</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Minimal documentation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group personal" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="personal-5.jpg" alt="Personal Option 5" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Personal Loan Option 5</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Same day approval</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group personal" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="" alt="Personal Option 6" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Personal Loan Option 6</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">No hidden charges</p>
+                    </div>
+                </div>
+            </div>
+
+              
+             <!-- Business Growth Images -->
+            <div class="category-group business" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="business-1.jpg" alt="Business Option 1" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Business Loan Option 1</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Expand your business</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group business" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="business-2.jpg" alt="Business Option 2" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Business Loan Option 2</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Working capital solutions</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group business" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="business-3.jpg" alt="Business Option 3" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Business Loan Option 3</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Equipment financing</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group business" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="business-4.jpg" alt="Business Option 4" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Business Loan Option 4</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Start-up funding</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group business" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="business-5.jpg" alt="Business Option 5" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Business Loan Option 5</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Business expansion</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group business" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="business-6.jpg" alt="Business Option 6" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Business Loan Option 6</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Trade finance</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group business" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="business-7.jpg" alt="Business Option 7" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Business Loan Option 7</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Invoice financing</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Education Images -->
+            <div class="category-group education" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="education-1.jpg" alt="Education Option 1" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Education Loan Option 1</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Higher education abroad</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group education" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="education-2.jpg" alt="Education Option 2" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Education Loan Option 2</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Domestic courses</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group education" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="education-3.jpg" alt="Education Option 3" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Education Loan Option 3</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Skill development</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group education" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="education-4.jpg" alt="Education Option 4" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Education Loan Option 4</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Professional courses</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group education" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="education-5.jpg" alt="Education Option 5" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Education Loan Option 5</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">MBA programs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group education" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="education-6.jpg" alt="Education Option 6" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Education Loan Option 6</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Online learning</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Medical Emergency Images -->
+            <div class="category-group medical" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="medical-1.jpg" alt="Medical Option 1" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Medical Loan Option 1</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Emergency treatments</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group medical" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="medical-2.jpg" alt="Medical Option 2" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Medical Loan Option 2</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Surgery financing</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group medical" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="medical-3.jpg" alt="Medical Option 3" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Medical Loan Option 3</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Hospital bills</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group medical" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="medical-4.jpg" alt="Medical Option 4" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Medical Loan Option 4</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Treatment abroad</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group medical" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="medical-5.jpg" alt="Medical Option 5" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Medical Loan Option 5</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Medicine costs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group medical" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="medical-6.jpg" alt="Medical Option 6" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Medical Loan Option 6</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Dental procedures</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group medical" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="medical-7.jpg" alt="Medical Option 7" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Medical Loan Option 7</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">ICU expenses</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Vehicle Purchase Images -->
+            <div class="category-group vehicle" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="vehicle-1.jpg" alt="Vehicle Option 1" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Vehicle Loan Option 1</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">New car financing</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group vehicle" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="vehicle-2.jpg" alt="Vehicle Option 2" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Vehicle Loan Option 2</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Used car loans</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group vehicle" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="vehicle-3.jpg" alt="Vehicle Option 3" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Vehicle Loan Option 3</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Two-wheeler loans</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group vehicle" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="vehicle-4.jpg" alt="Vehicle Option 4" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Vehicle Loan Option 4</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Commercial vehicles</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group vehicle" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="vehicle-5.jpg" alt="Vehicle Option 5" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Vehicle Loan Option 5</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Electric vehicles</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group vehicle" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="vehicle-6.jpg" alt="Vehicle Option 6" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Vehicle Loan Option 6</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Luxury car financing</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Home Loan Images -->
+            <div class="category-group home" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="home-1.jpg" alt="Home Option 1" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Home Loan Option 1</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">First home buyers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group home" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="home-2.jpg" alt="Home Option 2" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Home Loan Option 2</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Home construction</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group home" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="home-3.jpg" alt="Home Option 3" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Home Loan Option 3</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Home renovation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group home" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="home-4.jpg" alt="Home Option 4" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Home Loan Option 4</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Plot purchase</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group home" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="home-5.jpg" alt="Home Option 5" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Home Loan Option 5</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Balance transfer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group home" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="home-6.jpg" alt="Home Option 6" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Home Loan Option 6</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Second home</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group home" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="home-7.jpg" alt="Home Option 7" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Home Loan Option 7</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">NRI home loan</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Wedding Images -->
+            <div class="category-group wedding" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="wedding-1.jpg" alt="Wedding Option 1" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Wedding Loan Option 1</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Complete wedding financing</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group wedding" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="wedding-2.jpg" alt="Wedding Option 2" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Wedding Loan Option 2</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Venue booking</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group wedding" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="wedding-3.jpg" alt="Wedding Option 3" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Wedding Loan Option 3</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Jewelry purchase</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group wedding" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="wedding-4.jpg" alt="Wedding Option 4" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Wedding Loan Option 4</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Catering services</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group wedding" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="wedding-5.jpg" alt="Wedding Option 5" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Wedding Loan Option 5</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Decoration costs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group wedding" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="wedding-6.jpg" alt="Wedding Option 6" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Wedding Loan Option 6</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Photography packages</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Travel Images -->
+            <div class="category-group travel" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="travel-1.jpg" alt="Travel Option 1" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Travel Loan Option 1</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">International vacation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group travel" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="travel-2.jpg" alt="Travel Option 2" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Travel Loan Option 2</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Domestic tours</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group travel" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="travel-3.jpg" alt="Travel Option 3" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Travel Loan Option 3</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Family vacation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group travel" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="travel-4.jpg" alt="Travel Option 4" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Travel Loan Option 4</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Honeymoon packages</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group travel" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="travel-5.jpg" alt="Travel Option 5" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Travel Loan Option 5</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Adventure trips</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group travel" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="travel-6.jpg" alt="Travel Option 6" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Travel Loan Option 6</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Cruise packages</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-group travel" style="display: none;">
+                <div style="background: #f9fafb; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <img src="travel-7.jpg" alt="Travel Option 7" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 15px;">
+                        <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 18px;">Travel Loan Option 7</h3>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px;">Pilgrimage tours</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script>
+        let activeButton = null;
+        
+        // Add hover effect to buttons
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                if (this !== activeButton) {
+                    this.style.background = '#e5e7eb';
+                    this.style.borderColor = '#d1d5db';
+                }
+            });
+            btn.addEventListener('mouseleave', function() {
+                if (this !== activeButton) {
+                    this.style.background = '#f3f4f6';
+                    this.style.borderColor = '#e5e7eb';
+                }
+            });
+        });
+        
+        // Add hover effect to cards
+        const cards = document.querySelectorAll('#imagesGrid > div > div');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 8px 20px rgba(0,0,0,0.12)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
+            });
+        });
+        
+        function showCategory(category) {
+            // Hide placeholder
+            document.getElementById('placeholder').style.display = 'none';
+            
+            // Hide all category groups
+            const allGroups = document.querySelectorAll('.category-group');
+            allGroups.forEach(group => {
+                group.style.display = 'none';
+            });
+            
+            // Show selected category
+            const selectedGroups = document.querySelectorAll('.category-group.' + category);
+            selectedGroups.forEach(group => {
+                group.style.display = 'block';
+                // Add fade-in animation
+                group.style.opacity = '0';
+                setTimeout(() => {
+                    group.style.transition = 'opacity 0.5s ease';
+                    group.style.opacity = '1';
+                }, 10);
+            });
+            
+            // Update button styles
+            if (activeButton) {
+                activeButton.style.background = '#f3f4f6';
+                activeButton.style.color = '#374151';
+                activeButton.style.borderColor = '#e5e7eb';
+            }
+            
+            // Set new active button
+            activeButton = event.target;
+            activeButton.style.background = '#374151';
+            activeButton.style.color = '#ffffff';
+            activeButton.style.borderColor = '#374151';
+        }
+    </script>
+    
+</body>
+</html>

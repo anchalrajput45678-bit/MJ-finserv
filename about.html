@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -256,7 +256,7 @@
                     href="./products2.html"
                     class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
                   >
-                    <i class="fas fa-briefcase mr-3 text-secondary"></i> Loan
+                    <i class="fas fa-briefcase mr-3 text-secondary"></i> Loan Products
                     Products
                   </a>
                   <a
@@ -287,7 +287,43 @@
                 </div>
               </div>
             </div>
-            <a href="./gallery.html" class="nav-link relative group">
+
+
+
+            <!-- ✅ PRODUCTS DROPDOWN -->
+            <div class="relative group">
+              <button
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center"
+              >
+                Gallery
+                <i
+                  class="fas fa-chevron-down ml-1 text-xs group-hover:rotate-180 transition-transform duration-300"
+                ></i>
+              </button>
+              <div
+                class="absolute left-0 mt-6 w-72 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 border border-gray-100"
+              >
+                <div class="py-2">
+                  <a
+                    href="./securedgallery.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-briefcase mr-3 text-secondary"></i> Secure Loans
+                   
+                  </a>
+                  <a
+                    href="./unsecuregallery.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-user mr-3 text-secondary"></i>  Unsecure Loans
+                    
+                  </a>
+                   
+                  
+                </div>
+              </div>
+            </div>
+            <!-- <a href="./gallery.html" class="nav-link relative group">
               <span
                 class="text-dark hover:text-primary transition-colors duration-300 font-medium"
                 >Gallery</span
@@ -295,7 +331,7 @@
               <span
                 class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
               ></span>
-            </a>
+            </a> -->
             <a href="./contect.html" class="nav-link relative group">
               <span
                 class="text-dark hover:text-primary transition-colors duration-300 font-medium"
@@ -306,13 +342,7 @@
               ></span>
             </a>
           </div>
-          <!-- ✅ QUOTE BUTTON (Desktop) -->
-          <button
-            id="quoteBtn"
-            class="btn-premium bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl hidden md:block"
-          >
-            Get a Quote <i class="fas fa-arrow-right ml-2"></i>
-          </button>
+          
           <!-- ✅ MOBILE MENU BUTTON -->
           <button id="mobileMenuBtn" class="md:hidden text-dark">
             <i class="fas fa-bars text-2xl"></i>
@@ -344,13 +374,13 @@
   </div>
 </div>
 
-<!-- Mobile Products Dropdown -->
+ <!-- Mobile Products Dropdown -->
 <div class="border-b border-gray-100">
-  <button id="mobileProductsToggle" class="w-full flex justify-between items-center py-3 text-dark hover:text-primary transition-colors duration-300">
+  <button id="mobileProductsToggle1" class="w-full flex justify-between items-center py-3 text-dark hover:text-primary transition-colors duration-300">
     <span><i class="fas fa-box mr-3 text-primary"></i> Products</span>
     <i class="fas fa-chevron-down text-xs"></i>
   </button>
-  <div id="mobileProductsMenu" class="hidden pl-8 pb-3">
+  <div id="mobileProductsMenu1" class="hidden pl-8 pb-3">
     <a href="./products2.html" class="block py-2 text-dark hover:text-primary">Loan Products</a>
     <a href="./products1.html" class="block py-2 text-dark hover:text-primary">Investment & Wealth Products</a>
     <a href="./products3.html" class="block py-2 text-dark hover:text-primary">Insurance (Bancassurance Channel)</a>
@@ -359,16 +389,29 @@
   </div>
 </div>
 
+<!-- Mobile Gallery Dropdown -->
+<div class="border-b border-gray-100">
+  <button id="mobileProductsToggle2" class="w-full flex justify-between items-center py-3 text-dark hover:text-primary transition-colors duration-300">
+    <span><i class="fas fa-box mr-3 text-primary"></i> Gallery</span>
+    <i class="fas fa-chevron-down text-xs"></i>
+  </button>
 
-            <a href="gallery.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+  <div id="mobileProductsMenu2" class="hidden pl-8 pb-3">
+    <a href="./securegallery.html" class="block py-2 text-dark hover:text-primary">Secure Loans</a>
+    <a href="./unsecuregallery.html" class="block py-2 text-dark hover:text-primary">Unsecure Loans</a>
+  </div>
+</div>
+
+
+            <!-- <a href="gallery.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
                 <i class="fas fa-images mr-3 text-primary"></i> Gallery
-            </a>
+            </a> -->
             <a href="contect.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
                 <i class="fas fa-envelope mr-3 text-primary"></i> Contact
             </a>
-            <button id="mobileQuoteBtn" class="mt-4 bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium w-full">
+            <!-- <button id="mobileQuoteBtn" class="mt-4 bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium w-full">
                 Get a Quote <i class="fas fa-arrow-right ml-2"></i>
-            </button>
+            </button> -->
         </div>
       </div>
     </nav>
@@ -395,13 +438,19 @@
     </style>
     <!--end Premium Navbar -->
     <!-- JS for Mobile Menu Toggle -->
-     <script>
+      <script>
   const mobileMenuBtn = document.getElementById("mobileMenuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
   const mobileServicesToggle = document.getElementById("mobileServicesToggle");
   const mobileServicesMenu = document.getElementById("mobileServicesMenu");
-  const mobileProductsToggle = document.getElementById("mobileProductsToggle");
-  const mobileProductsMenu = document.getElementById("mobileProductsMenu");
+
+  // Products dropdown
+  const mobileProductsToggle1 = document.getElementById("mobileProductsToggle1");
+  const mobileProductsMenu1 = document.getElementById("mobileProductsMenu1");
+
+  // Gallery dropdown
+  const mobileProductsToggle2 = document.getElementById("mobileProductsToggle2");
+  const mobileProductsMenu2 = document.getElementById("mobileProductsMenu2");
 
   // Mobile main menu toggle
   mobileMenuBtn.addEventListener("click", () => {
@@ -414,8 +463,13 @@
   });
 
   // Products dropdown toggle
-  mobileProductsToggle.addEventListener("click", () => {
-    mobileProductsMenu.classList.toggle("hidden");
+  mobileProductsToggle1.addEventListener("click", () => {
+    mobileProductsMenu1.classList.toggle("hidden");
+  });
+
+  // Gallery dropdown toggle
+  mobileProductsToggle2.addEventListener("click", () => {
+    mobileProductsMenu2.classList.toggle("hidden");
   });
 </script>
 
@@ -424,12 +478,8 @@
     <!-- About Hero Section -->
      
       <!-- About Hero Section -->
-<section class="animated-gradient text-white relative overflow-hidden"
-    style="background: url('https://img1.wsimg.com/isteam/getty/2179769227/:/cr=t:0%25,l:0%25,w:100%25,h:100%25') center top/cover no-repeat; 
-    min-height: 500px; 
-    padding-top:6rem; 
-    padding-bottom:6rem; 
-    margin-top:0;">
+<section class="animated-gradient text-white relative overflow-hidden flex items-center justify-center text-center"
+    style="background: url('./herosectionloan.png') center top/cover no-repeat; min-height: 200px; padding-top:6rem; padding-bottom:6rem;">
 
     <!-- Dark overlay -->
     <div class="absolute inset-0 bg-black opacity-50"></div>
@@ -442,16 +492,15 @@
     </div>
 
     <!-- Content -->
-    <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
-        <h1 style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:white; margin:20px 0;">
-            About <span>MJ FINSERV</span>
+    <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <h1  
+            class="text-white font-bold"
+            style="font-family: 'Poppins', sans-serif; font-size: clamp(22px, 5vw, 36px); margin:0;">
+              About Mj Finserv
         </h1>
-        <p style="font-size:18px; margin-bottom:32px; opacity:0.9;" 
-           class="sm:text-lg md:text-2xl max-w-3xl mx-auto">
-           We've been providing trusted financial solutions that protect and empower our clients' futures.
-        </p>
     </div>
 </section>
+
 
 <style>
     /* Remove top gap globally */
@@ -480,7 +529,7 @@
         }
 
         h1 {
-            font-size: 24px !important;
+            font-size:  2rem !important;
         }
 
         p {
@@ -511,21 +560,13 @@
         <div class="container mx-auto px-4 md:px-8 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-16">
                 <div class="lg:w-1/2 fade-in-up">
-                    <h2 class="text-4xl md:text-5xl font-black text-dark mb-6" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:black; margin:20px 0;" >Our <span class="text-gradient">Story</span></h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">Founded in 1998, MJ FINSERV began with a simple mission: to make quality insurance and loan services accessible to everyone. What started as a small local agency has grown into a trusted financial partner for thousands of clients nationwide.</p>
-                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">Our journey has been guided by a commitment to integrity, innovation, and personalized service. We believe that financial security shouldn't be complicated or out of reach.</p>
-                    <p class="text-gray-600 mb-10 leading-relaxed text-lg">Today, we continue to evolve with the changing financial landscape while staying true to our core values of trust, transparency, and client-focused solutions.</p>
+                    <h2 class="text-4xl md:text-5xl font-black text-dark mb-6" style="font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight:700; color:black; margin:20px 0;" >Our <span class="text-gradient">Story</span></h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg" style="font-size: 16px;text-align: justify;">Founded in 1998, MJ FINSERV began with a simple mission: to make quality insurance and loan services accessible to everyone. What started as a small local agency has grown into a trusted financial partner for thousands of clients nationwide.</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg" style="font-size: 16px;text-align: justify;">Our journey has been guided by a commitment to integrity, innovation, and personalized service. We believe that financial security shouldn't be complicated or out of reach.</p>
+                    <p class="text-gray-600 mb-10 leading-relaxed text-lg" style="font-size: 16px;text-align: justify;">Today, we continue to evolve with the changing financial landscape while staying true to our core values of trust, transparency, and client-focused solutions.</p>
                     
-                    <div class="grid grid-cols-2 gap-8">
-                        <div class="text-center">
-                            <div class="text-4xl md:text-5xl font-black text-gradient mb-2" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">25+</div>
-                            <div class="text-dark font-medium">Years Experience</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl md:text-5xl font-black text-gradient mb-2" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:#0066ff; margin:20px 0;">15K+</div>
-                            <div class="text-dark font-medium">Happy Clients</div>
-                        </div>
-                    </div>
+                     
+                     
                 </div>
                 
                 <div class="lg:w-1/2 fade-in-up delay-300">
@@ -536,8 +577,8 @@
                                 <div class="bg-gradient-to-br from-primary to-accent text-white p-6 rounded-2xl mb-6 shadow-xl">
                                     <i class="fas fa-rocket text-5xl"></i>
                                 </div>
-                                <h3 class="text-3xl font-black text-dark mb-4">Our Mission</h3>
-                                <p class="text-gray-600 text-lg">To provide comprehensive financial solutions that protect our clients' assets, secure their futures, and help them achieve their financial goals through trusted insurance and loan services.</p>
+                                <h3 class="text-3xl font-black text-dark mb-4" style="font-size:  2rem;">Our Mission</h3>
+                                <p class="text-gray-600 text-lg" style="font-size: 16px;">To provide comprehensive financial solutions that protect our clients' assets, secure their futures, and help them achieve their financial goals through trusted insurance and loan services.</p>
                             </div>
                         </div>
                     </div>
@@ -551,8 +592,8 @@
         <div class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
         <div class="container mx-auto px-4 md:px-8 relative z-10">
             <div class="text-center mb-20 fade-in-up">
-                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:black; margin:20px 0;">Our <span class="text-gradient">Journey</span></h2>
-                <p class="text-gray-600 max-w-3xl mx-auto text-lg">From our humble beginnings to becoming a trusted financial partner, here are the key milestones in our journey.</p>
+                <h2 class="text-4xl md:text-5xl font-black text-dark mb-6" style="font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight:700; color:black; margin:20px 0;">Our <span class="text-gradient">Journey</span></h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg" style="font-size: 16px;">From our humble beginnings to becoming a trusted financial partner, here are the key milestones in our journey.</p>
             </div>
             
             <div class="timeline max-w-4xl mx-auto">
@@ -561,10 +602,10 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content w-full md:w-5/12 bg-white rounded-3xl premium-shadow p-8 hover-lift">
                         <div class="bg-gradient-to-br from-primary to-accent text-white px-4 py-2 rounded-full inline-block mb-4 text-sm font-bold">
-                            1998
+                            1
                         </div>
-                        <h3 class="text-2xl font-bold text-dark mb-4">Company Founded</h3>
-                        <p class="text-gray-600">MJ FINSERV was established with a vision to make insurance and loan services more accessible and transparent for everyone.</p>
+                        <h3 class="text-2xl font-bold text-dark mb-4"  >Company Founded</h3>
+                        <p class="text-gray-600" style="font-size: 16px;">MJ FINSERV was established with a vision to make insurance and loan services more accessible and transparent for everyone.</p>
                     </div>
                 </div>
                 
@@ -573,10 +614,10 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content w-full md:w-5/12 bg-white rounded-3xl premium-shadow p-8 hover-lift ml-auto">
                         <div class="bg-gradient-to-br from-primary to-accent text-white px-4 py-2 rounded-full inline-block mb-4 text-sm font-bold">
-                            2005
+                           2
                         </div>
                         <h3 class="text-2xl font-bold text-dark mb-4">National Expansion</h3>
-                        <p class="text-gray-600">We expanded our services nationwide, opening offices in key financial districts across the country to serve more clients.</p>
+                        <p class="text-gray-600" style="font-size: 16px;">We expanded our services nationwide, opening offices in key financial districts across the country to serve more clients.</p>
                     </div>
                 </div>
                 
@@ -585,10 +626,10 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content w-full md:w-5/12 bg-white rounded-3xl premium-shadow p-8 hover-lift">
                         <div class="bg-gradient-to-br from-primary to-accent text-white px-4 py-2 rounded-full inline-block mb-4 text-sm font-bold">
-                            2012
+                             3
                         </div>
                         <h3 class="text-2xl font-bold text-dark mb-4">Digital Transformation</h3>
-                        <p class="text-gray-600">Launched our digital platform, making it easier for clients to access our services online and manage their policies remotely.</p>
+                        <p class="text-gray-600" style="font-size: 16px;">Launched our digital platform, making it easier for clients to access our services online and manage their policies remotely.</p>
                     </div>
                 </div>
                 
@@ -597,25 +638,15 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content w-full md:w-5/12 bg-white rounded-3xl premium-shadow p-8 hover-lift ml-auto">
                         <div class="bg-gradient-to-br from-primary to-accent text-white px-4 py-2 rounded-full inline-block mb-4 text-sm font-bold">
-                            2018
+                            4
                         </div>
                         <h3 class="text-2xl font-bold text-dark mb-4">Award Recognition</h3>
-                        <p class="text-gray-600">Received the "Best Insurance Provider" award, recognizing our commitment to excellence and customer satisfaction.</p>
+                        <p class="text-gray-600" style="font-size: 16px;">Received the "Best Insurance Provider" award, recognizing our commitment to excellence and customer satisfaction.</p>
                     </div>
                 </div>
                 
                 <!-- Timeline Item 5 -->
-                <div class="timeline-item fade-in-up delay-400">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content w-full md:w-5/12 bg-white rounded-3xl premium-shadow p-8 hover-lift">
-                        <div class="bg-gradient-to-br from-primary to-accent text-white px-4 py-2 rounded-full inline-block mb-4 text-sm font-bold">
-                            2023
-                        </div>
-                        <h3 class="text-2xl font-bold text-dark mb-4">25th Anniversary</h3>
-                        <p class="text-gray-600">Celebrated 25 years of serving clients with trusted financial solutions and continued innovation in insurance and loan services.</p>
-                    </div>
-                </div>
-            </div>
+                 
         </div>
     </section>
 
@@ -627,7 +658,7 @@
         <div class="container mx-auto px-4 md:px-8 relative z-10">
             <div class="text-center mb-20 fade-in-up">
                 <h2 class="text-4xl md:text-5xl font-black text-dark mb-6" style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:black; margin:20px 0;">Our <span class="text-gradient">Values</span></h2>
-                <p class="text-gray-600 max-w-3xl mx-auto text-lg">These core principles guide everything we do and define who we are as a company.</p>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg" style="font-size: 16px;">These core principles guide everything we do and define who we are as a company.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -636,7 +667,7 @@
                         <i class="fas fa-shield-alt text-3xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-dark mb-4">Trust & Integrity</h3>
-                    <p class="text-gray-600">We build relationships based on honesty, transparency, and reliability in all our interactions.</p>
+                    <p class="text-gray-600" style="font-size: 16px;">We build relationships based on honesty, transparency, and reliability in all our interactions.</p>
                 </div>
                 
                 <div class="value-card bg-gradient-to-br from-white to-light rounded-3xl premium-shadow p-8 text-center hover-lift fade-in-up delay-100">
@@ -644,7 +675,7 @@
                         <i class="fas fa-users text-3xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-dark mb-4">Client Focus</h3>
-                    <p class="text-gray-600">Our clients' needs and goals are at the center of every decision we make and solution we offer.</p>
+                    <p class="text-gray-600" style="font-size: 16px;">Our clients' needs and goals are at the center of every decision we make and solution we offer.</p>
                 </div>
                 
                 <div class="value-card bg-gradient-to-br from-white to-light rounded-3xl premium-shadow p-8 text-center hover-lift fade-in-up delay-200">
@@ -652,7 +683,7 @@
                         <i class="fas fa-lightbulb text-3xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-dark mb-4">Innovation</h3>
-                    <p class="text-gray-600">We continuously evolve our services and embrace new technologies to better serve our clients.</p>
+                    <p class="text-gray-600" style="font-size: 16px;">We continuously evolve our services and embrace new technologies to better serve our clients.</p>
                 </div>
                 
                 <div class="value-card bg-gradient-to-br from-white to-light rounded-3xl premium-shadow p-8 text-center hover-lift fade-in-up delay-300">
@@ -660,7 +691,7 @@
                         <i class="fas fa-award text-3xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-dark mb-4">Excellence</h3>
-                    <p class="text-gray-600">We strive for the highest standards in service quality, expertise, and client satisfaction.</p>
+                    <p class="text-gray-600" style="font-size: 16px;">We strive for the highest standards in service quality, expertise, and client satisfaction.</p>
                 </div>
             </div>
         </div>
@@ -680,7 +711,7 @@
     Ready to Work With Our Team?
 </h2>
 
-        <p class="text-sm md:text-xl mb-6 md:mb-12 max-w-3xl mx-auto opacity-90 fade-in-up delay-200 px-2">
+        <p class="text-sm md:text-xl mb-6 md:mb-12 max-w-3xl mx-auto opacity-90 fade-in-up delay-200 px-2" style="font-size: 16px;">
             Contact us today to discuss your financial goals.
         </p>
 
@@ -990,7 +1021,7 @@
             </div>
             
             <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-400">
-                <p>&copy; 2023 MJ FINSERV. All rights reserved. | 
+                <p>&copy; 2025MJ FINSERV. All rights reserved. | 
                     <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mx-2">Privacy Policy</a> | 
                     <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mx-2">Terms of Service</a>
                 </p>

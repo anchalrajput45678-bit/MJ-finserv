@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -256,7 +256,7 @@
                     href="./products2.html"
                     class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
                   >
-                    <i class="fas fa-briefcase mr-3 text-secondary"></i> Loan
+                    <i class="fas fa-briefcase mr-3 text-secondary"></i> Loan Products
                     Products
                   </a>
                   <a
@@ -287,7 +287,43 @@
                 </div>
               </div>
             </div>
-            <a href="./gallery.html" class="nav-link relative group">
+
+
+
+            <!-- ✅ PRODUCTS DROPDOWN -->
+            <div class="relative group">
+              <button
+                class="text-dark hover:text-primary transition-colors duration-300 font-medium flex items-center"
+              >
+                Gallery
+                <i
+                  class="fas fa-chevron-down ml-1 text-xs group-hover:rotate-180 transition-transform duration-300"
+                ></i>
+              </button>
+              <div
+                class="absolute left-0 mt-6 w-72 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 border border-gray-100"
+              >
+                <div class="py-2">
+                  <a
+                    href="./securedgallery.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-briefcase mr-3 text-secondary"></i> Secure Loans
+                   
+                  </a>
+                  <a
+                    href="./unsecuregallery.html"
+                    class="block px-6 py-3 text-dark hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300 flex items-center"
+                  >
+                    <i class="fas fa-user mr-3 text-secondary"></i>  Unsecure Loans
+                    
+                  </a>
+                   
+                  
+                </div>
+              </div>
+            </div>
+            <!-- <a href="./gallery.html" class="nav-link relative group">
               <span
                 class="text-dark hover:text-primary transition-colors duration-300 font-medium"
                 >Gallery</span
@@ -295,7 +331,7 @@
               <span
                 class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"
               ></span>
-            </a>
+            </a> -->
             <a href="./contect.html" class="nav-link relative group">
               <span
                 class="text-dark hover:text-primary transition-colors duration-300 font-medium"
@@ -306,13 +342,7 @@
               ></span>
             </a>
           </div>
-          <!-- ✅ QUOTE BUTTON (Desktop) -->
-          <button
-            id="quoteBtn"
-            class="btn-premium bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl hidden md:block"
-          >
-            Get a Quote <i class="fas fa-arrow-right ml-2"></i>
-          </button>
+          
           <!-- ✅ MOBILE MENU BUTTON -->
           <button id="mobileMenuBtn" class="md:hidden text-dark">
             <i class="fas fa-bars text-2xl"></i>
@@ -344,13 +374,13 @@
   </div>
 </div>
 
-<!-- Mobile Products Dropdown -->
+ <!-- Mobile Products Dropdown -->
 <div class="border-b border-gray-100">
-  <button id="mobileProductsToggle" class="w-full flex justify-between items-center py-3 text-dark hover:text-primary transition-colors duration-300">
+  <button id="mobileProductsToggle1" class="w-full flex justify-between items-center py-3 text-dark hover:text-primary transition-colors duration-300">
     <span><i class="fas fa-box mr-3 text-primary"></i> Products</span>
     <i class="fas fa-chevron-down text-xs"></i>
   </button>
-  <div id="mobileProductsMenu" class="hidden pl-8 pb-3">
+  <div id="mobileProductsMenu1" class="hidden pl-8 pb-3">
     <a href="./products2.html" class="block py-2 text-dark hover:text-primary">Loan Products</a>
     <a href="./products1.html" class="block py-2 text-dark hover:text-primary">Investment & Wealth Products</a>
     <a href="./products3.html" class="block py-2 text-dark hover:text-primary">Insurance (Bancassurance Channel)</a>
@@ -359,16 +389,29 @@
   </div>
 </div>
 
+<!-- Mobile Gallery Dropdown -->
+<div class="border-b border-gray-100">
+  <button id="mobileProductsToggle2" class="w-full flex justify-between items-center py-3 text-dark hover:text-primary transition-colors duration-300">
+    <span><i class="fas fa-box mr-3 text-primary"></i> Gallery</span>
+    <i class="fas fa-chevron-down text-xs"></i>
+  </button>
 
-            <a href="gallery.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
+  <div id="mobileProductsMenu2" class="hidden pl-8 pb-3">
+    <a href="./securegallery.html" class="block py-2 text-dark hover:text-primary">Secure Loans</a>
+    <a href="./unsecuregallery.html" class="block py-2 text-dark hover:text-primary">Unsecure Loans</a>
+  </div>
+</div>
+
+
+            <!-- <a href="gallery.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
                 <i class="fas fa-images mr-3 text-primary"></i> Gallery
-            </a>
+            </a> -->
             <a href="contect.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
                 <i class="fas fa-envelope mr-3 text-primary"></i> Contact
             </a>
-            <button id="mobileQuoteBtn" class="mt-4 bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium w-full">
+            <!-- <button id="mobileQuoteBtn" class="mt-4 bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium w-full">
                 Get a Quote <i class="fas fa-arrow-right ml-2"></i>
-            </button>
+            </button> -->
         </div>
       </div>
     </nav>
@@ -395,13 +438,19 @@
     </style>
     <!--end Premium Navbar -->
     <!-- JS for Mobile Menu Toggle -->
-     <script>
+      <script>
   const mobileMenuBtn = document.getElementById("mobileMenuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
   const mobileServicesToggle = document.getElementById("mobileServicesToggle");
   const mobileServicesMenu = document.getElementById("mobileServicesMenu");
-  const mobileProductsToggle = document.getElementById("mobileProductsToggle");
-  const mobileProductsMenu = document.getElementById("mobileProductsMenu");
+
+  // Products dropdown
+  const mobileProductsToggle1 = document.getElementById("mobileProductsToggle1");
+  const mobileProductsMenu1 = document.getElementById("mobileProductsMenu1");
+
+  // Gallery dropdown
+  const mobileProductsToggle2 = document.getElementById("mobileProductsToggle2");
+  const mobileProductsMenu2 = document.getElementById("mobileProductsMenu2");
 
   // Mobile main menu toggle
   mobileMenuBtn.addEventListener("click", () => {
@@ -414,8 +463,13 @@
   });
 
   // Products dropdown toggle
-  mobileProductsToggle.addEventListener("click", () => {
-    mobileProductsMenu.classList.toggle("hidden");
+  mobileProductsToggle1.addEventListener("click", () => {
+    mobileProductsMenu1.classList.toggle("hidden");
+  });
+
+  // Gallery dropdown toggle
+  mobileProductsToggle2.addEventListener("click", () => {
+    mobileProductsMenu2.classList.toggle("hidden");
   });
 </script>
 
@@ -423,10 +477,10 @@
 
 
 
+ <!-- About Hero Section -->
+<section class="animated-gradient text-white relative overflow-hidden flex items-center justify-center text-center"
+    style="background: url('./herosectionloan.png') center top/cover no-repeat; min-height: 200px; padding-top:6rem; padding-bottom:6rem;">
 
-<!-- About Hero Section -->
-     <section class="animated-gradient text-white relative overflow-hidden"
-         style="background: url('https://img1.wsimg.com/isteam/getty/2179769227/:/cr=t:0%25,l:0%25,w:100%25,h:100%25') center top/cover no-repeat; min-height: 500px; padding-top:6rem; padding-bottom:6rem;">
     <!-- Dark overlay -->
     <div class="absolute inset-0 bg-black opacity-50"></div>
 
@@ -438,17 +492,15 @@
     </div>
 
     <!-- Content -->
-    <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
+    <div class="container mx-auto px-4 md:px-8 relative z-10">
         <h1  
-            style="font-family: 'Poppins', sans-serif; font-size:36px; font-weight:700; color:white; margin:20px 0;">
-               Investment & Wealth Products
+            class="text-white font-bold"
+            style="font-family: 'Poppins', sans-serif; font-size: clamp(22px, 5vw, 36px); margin:0;">
+              Investment and Wealth Products
         </h1>
-        <p style="font-size:18px; margin-bottom:32px; opacity:0.9;" class="sm:text-lg md:text-2xl max-w-3xl mx-auto">
-          
-              Borrow Smart, Stay Secure, and Protect Your Future
-            </p>
     </div>
 </section>
+
 
 <style>
     /* Mobile responsive adjustments */
@@ -1312,7 +1364,7 @@ section {
             </div>
             
             <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-400">
-                <p>&copy; 2023 MJ FINSERV. All rights reserved. | 
+                <p>&copy; 2025MJ FINSERV. All rights reserved. | 
                     <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mx-2">Privacy Policy</a> | 
                     <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mx-2">Terms of Service</a>
                 </p>
