@@ -1,787 +1,346 @@
- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unsecured Loans - Financial Solutions</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8fbfe;
-            color: #333;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+            padding: 0;
         }
-        
-        /* Header */
-        .main-header {
-            background: linear-gradient(135deg, #0066ff 0%, #00a2ff 100%);
-            color: white;
-            padding: 1.5rem 2rem;
-            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.2);
-        }
-        
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .logo i {
-            font-size: 2rem;
-        }
-        
-        .tagline {
-            font-size: 1rem;
-            opacity: 0.9;
-            margin-top: 5px;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #0066ff 0%, #00a2ff 50%, #87ceeb 100%);
+
+        .team-section {
             padding: 80px 20px;
-            text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
+            max-width: 1400px;
+            margin: 0 auto;
+            animation: fadeIn 1s ease-in;
         }
-        
-        .hero::before {
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-header h2 {
+            font-size: 48px;
+            color: #0a1e3d;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23ffffff" opacity="0.1"><polygon points="1000,100 1000,0 0,100"></polygon></svg>');
-            background-size: cover;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #2a8ca0, #1e8a9e);
+            border-radius: 2px;
+            animation: expandWidth 1s ease-out 0.5s backwards;
         }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
+
+        @keyframes expandWidth {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100px;
+            }
         }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+        .section-header p {
+            font-size: 18px;
+            color: #5a6c7d;
+            margin-top: 25px;
+            line-height: 1.6;
         }
-        
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            padding: 14px 32px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .btn-primary {
-            background: white;
-            color: #0066ff;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
-        }
-        
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 2px solid white;
-        }
-        
-        .btn-secondary:hover {
-            background: white;
-            color: #0066ff;
-        }
-        
-        /* Stats Section */
-        .stats-section {
-            padding: 70px 20px;
-            background: white;
-        }
-        
-        .stats-container {
-            max-width: 1200px;
-            margin: 0 auto;
+
+        .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 20px;
         }
-        
-        .stat-card {
-            text-align: center;
-            padding: 30px 20px;
-            border-radius: 15px;
-            background: #f8fbfe;
-            border: 1px solid #e6f0ff;
-            transition: all 0.3s ease;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.1);
-            border-color: #0066ff;
-        }
-        
-        .stat-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            color: #0066ff;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, #0066ff, #00a2ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
-        }
-        
-        .stat-label {
-            color: #666;
-            font-size: 1.1rem;
-        }
-        
-        /* Loans Section */
-        .loans-section {
-            padding: 80px 20px;
-            background: #f8fbfe;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #0066ff;
-            font-weight: 700;
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto 50px;
-        }
-        
-        .loans-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-        
-        .loan-card {
-            background: white;
+
+        .team-card {
+            background: #ffffff;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 102, 255, 0.08);
-            transition: all 0.4s ease;
-            border: 1px solid #e6f0ff;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid rgba(42, 140, 160, 0.1);
+            animation: cardFadeIn 0.8s ease-out backwards;
         }
-        
-        .loan-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.15);
+
+        .team-card:nth-child(1) { animation-delay: 0.1s; }
+        .team-card:nth-child(2) { animation-delay: 0.2s; }
+        .team-card:nth-child(3) { animation-delay: 0.3s; }
+        .team-card:nth-child(4) { animation-delay: 0.4s; }
+        .team-card:nth-child(5) { animation-delay: 0.5s; }
+        .team-card:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes cardFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
-        
-        .loan-header {
-            background: linear-gradient(135deg, #0066ff 0%, #00a2ff 100%);
-            color: white;
-            padding: 25px;
+
+        .team-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 60px rgba(42, 140, 160, 0.4);
+            border-color: #2a8ca0;
+        }
+
+        .team-image-wrapper {
             position: relative;
-        }
-        
-        .loan-icon {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            display: block;
-        }
-        
-        .loan-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-        
-        .loan-body {
-            padding: 25px;
-        }
-        
-        .loan-detail {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: flex-start;
-            font-size: 1rem;
-        }
-        
-        .loan-detail-label {
-            font-weight: 600;
-            color: #0066ff;
-            min-width: 120px;
-            flex-shrink: 0;
-        }
-        
-        .loan-detail-value {
-            color: #555;
-            flex: 1;
-        }
-        
-        .apply-btn {
             width: 100%;
-            padding: 15px;
-            background: linear-gradient(135deg, #0066ff, #00a2ff);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-        
-        .apply-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 102, 255, 0.3);
-        }
-        
-        /* Comparison Section */
-        .comparison-section {
-            padding: 80px 20px;
-            background: white;
-        }
-        
-        .comparison-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            margin-top: 50px;
-        }
-        
-        .comparison-card {
-            padding: 30px 20px;
-            background: #f8fbfe;
-            border-radius: 15px;
-            border: 2px solid #e6f0ff;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .comparison-card:hover {
-            background: linear-gradient(135deg, #0066ff, #00a2ff);
-            color: white;
-            transform: translateY(-5px);
-            border-color: #0066ff;
-        }
-        
-        .comparison-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-        
-        .comparison-card p {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-        
-        /* FAQ Section */
-        .faq-section {
-            padding: 80px 20px;
-            background: #f8fbfe;
-        }
-        
-        .faq-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            background: white;
-            margin-bottom: 20px;
-            border-radius: 15px;
+            height: 320px;
             overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0, 102, 255, 0.08);
-            border: 1px solid #e6f0ff;
+            background: #f8f9fa;
         }
-        
-        .faq-question {
-            padding: 25px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: white;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            font-size: 1.1rem;
+
+        .team-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* Removed all transitions and transforms */
+            filter: grayscale(0%);
+            /* Ensures image is always fully visible */
+            object-position: center center;
         }
-        
-        .faq-question:hover {
-            background: #f0f7ff;
-        }
-        
-        .faq-answer {
-            padding: 0 25px;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            color: #666;
-            line-height: 1.7;
-        }
-        
-        .faq-answer.active {
-            padding: 0 25px 25px;
-            max-height: 500px;
-        }
-        
-        .faq-toggle {
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
-            color: #0066ff;
-        }
-        
-        .faq-item.active .faq-toggle {
-            transform: rotate(45deg);
-        }
-        
-        /* Footer */
-        .footer {
-            background: linear-gradient(135deg, #0066ff 0%, #0044cc 100%);
-            color: white;
-            padding: 50px 20px 30px;
+
+        /* Removed all hover effects on images */
+        /* .team-card:hover .team-image {
+            transform: none;
+            filter: none;
+        } */
+
+        .team-info {
+            padding: 25px 20px;
             text-align: center;
+            background: #ffffff;
         }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
+
+        .team-name {
+            font-size: 24px;
+            color: #0a1e3d;
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
-        
-        .footer-logo {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 20px;
+
+        .team-position {
+            font-size: 16px;
+            color: #2a8ca0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 30px 0;
-            flex-wrap: wrap;
+
+        .team-description {
+            font-size: 14px;
+            color: #5a6c7d;
+            line-height: 1.6;
+            margin-bottom: 0;
         }
-        
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s ease;
+
+        /* Blue line under image */
+        .blue-line {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #2a8ca0, #1e8a9e);
+            margin: 15px auto;
+            border-radius: 2px;
         }
-        
-        .footer-links a:hover {
-            opacity: 0.8;
-        }
-        
-        .copyright {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            opacity: 0.8;
-        }
-        
-        /* Responsive */
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
+            .team-section {
+                padding: 50px 15px;
             }
-            
-            .hero p {
-                font-size: 1.1rem;
+
+            .section-header h2 {
+                font-size: 36px;
             }
-            
-            .section-title {
-                font-size: 2rem;
+
+            .section-header p {
+                font-size: 16px;
             }
-            
-            .loans-container {
-                grid-template-columns: 1fr;
+
+            .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 30px;
+                padding: 10px;
             }
-            
-            .loan-card {
-                margin: 0 10px;
+
+            .team-image-wrapper {
+                height: 280px;
             }
-            
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 15px;
+
+            .team-name {
+                font-size: 22px;
             }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
-                justify-content: center;
+
+            .team-position {
+                font-size: 14px;
             }
         }
-        
+
         @media (max-width: 480px) {
-            .hero {
-                padding: 60px 15px;
+            .section-header h2 {
+                font-size: 28px;
             }
-            
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            
-            .loan-detail {
-                flex-direction: column;
-            }
-            
-            .loan-detail-label {
-                margin-bottom: 5px;
-            }
-            
-            .stats-container {
+
+            .team-grid {
                 grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .team-info {
+                padding: 25px 20px;
+            }
+
+            .team-image-wrapper {
+                height: 250px;
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 360px) {
+            .team-image-wrapper {
+                height: 220px;
             }
             
-            .comparison-grid {
-                grid-template-columns: 1fr;
+            .team-grid {
+                gap: 20px;
+                padding: 5px;
             }
         }
     </style>
-</head>
-<body>
-    <!-- Header -->
-    <header class="main-header">
-        <div class="header-content">
-            <div class="logo">
-                <i class="fas fa-hand-holding-usd"></i>
-                <div>
-                    <div>FinSecure</div>
-                    <div class="tagline">Your Trusted Financial Partner</div>
-                </div>
-            </div>
+ 
+    <section class="team-section">
+        <div class="section-header">
+            <h2>Meet Our Team</h2>
+            <p>Dedicated professionals committed to your financial success and growth</p>
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Unsecured Loans Made Simple</h1>
-            <p>Get the financial freedom you deserve with our range of unsecured loan options. No collateral, quick approval, flexible terms.</p>
-            <div class="hero-buttons">
-                <a href="#loans" class="btn btn-primary">
-                    <i class="fas fa-search"></i> Explore Loan Options
-                </a>
-                <a href="./contect.html" class="btn btn-secondary">
-                    <i class="fas fa-phone-alt"></i> Contact Our Experts
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="stats-container">
-            <div class="stat-card">
-                <div class="stat-icon">🚀</div>
-                <div class="stat-number">24-48 Hrs</div>
-                <div class="stat-label">Quick Disbursal</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon">🏆</div>
-                <div class="stat-number">15+</div>
-                <div class="stat-label">Lending Partners</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon">👍</div>
-                <div class="stat-number">95%</div>
-                <div class="stat-label">Approval Rate</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon">💼</div>
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Loan Types</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- All Loan Types -->
-    <section class="loans-section" id="loans">
-        <h2 class="section-title">Our Unsecured Loan Products</h2>
-        <p class="section-subtitle">Choose from our wide range of unsecured loan options designed to meet your specific financial needs</p>
-        
-        <div class="loans-container">
-            
-            <!-- Personal Loan -->
-            <div class="loan-card">
-                <div class="loan-header">
-                    <div class="loan-icon">💼</div>
-                    <div class="loan-title">Personal Loan</div>
+        <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-card">
+                <div class="team-image-wrapper">
+                    <img src="./image.png" alt="Team Member" class="team-image">
                 </div>
-                <div class="loan-body">
-                    <div class="loan-detail">
-                        <span class="loan-detail-label">Purpose:</span>
-                        <span class="loan-detail-value">Medical, travel, home renovation, any personal need</span>
-                    </div>
-                    <div class="loan-detail">
-                        <span class="loan-detail-label">Eligibility:</span>
-                        <span class="loan-detail-value">Based on salary/income & credit score</span>
-                    </div>
-                    <div class="loan-detail">
-                        <span class="loan-detail-label">Tenure:</span>
-                        <span class="loan-detail-value">1-5 years</span>
-                    </div>
-                    <div class="loan-detail">
-                        <span class="loan-detail-label">Security:</span>
-                        <span class="loan-detail-value">No collateral required</span>
-                    </div>
-                    <a href="./contect.html" style="text-decoration:none;">
-                        <button class="apply-btn">
-                            <i class="fas fa-paper-plane"></i> Contact Us
-                        </button>
-                    </a>
+                <div class="blue-line"></div>
+                <div class="team-info">
+                    <h3 class="team-name">Rajesh Kumar</h3>
+                    <p class="team-position">Chief Executive Officer</p>
+                    <p class="team-description">With 15+ years of experience in financial services, leading our team with vision and expertise.</p>
                 </div>
             </div>
 
-            <!-- Business Loan -->
-            <div class="loan-card">
-                <div class="loan-header">
-                    <div class="loan-icon">🏢</div>
-                    <div class="loan-title">Business Loan</div>
+            <!-- Team Member 2 -->
+            <div class="team-card">
+                <div class="team-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop" alt="Team Member" class="team-image">
                 </div>
-                <div class="loan-body">
-                    <div class="loan-detail">
-                        <span class="loan-detail-label">Purpose:</span>
-                        <span class="loan-detail-value">Working capital, expansion, equipment</span>
-                    </div>
-                    <div class="loan-detail">
-                        <span class="loan-detail-label">For:</span>
-                        <span class="loan-detail-value">Proprietorship, Partnership, Pvt Ltd, LLP</span>
-                    </div>
-                    <div class="loan-detail">
-                        <span class="loan-detail-label">Limit:</span>
-                        <span class="loan-detail-value">₹1 lakh - ₹75 lakh</span>
-                    </div>
-                    <div class="loan-detail">
-                        <span class="loan-detail-label">Documents:</span>
-                        <span class="loan-detail-value">ITR, GST, bank statements, KYC</span>
-                    </div>
-                    <a href="./contect.html" style="text-decoration:none;">
-                        <button class="apply-btn">
-                            <i class="fas fa-paper-plane"></i> Contact Us
-                        </button>
-                    </a>
+                <div class="blue-line"></div>
+                <div class="team-info">
+                    <h3 class="team-name">Priya Sharma</h3>
+                    <p class="team-position">Senior Loan Advisor</p>
+                    <p class="team-description">Specializing in home loans and business financing with personalized solutions for every client.</p>
                 </div>
             </div>
 
-            <!-- Continue with other loan cards in similar structure -->
-            <!-- Credit Card Loan -->
-            <div class="loan-card">
-                <div class="loan-header">
-                    <div class="loan-icon">💳</div>
-                    <div class="loan-title">Credit Card Loan</div>
+            <!-- Team Member 3 -->
+            <div class="team-card">
+                <div class="team-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop" alt="Team Member" class="team-image">
                 </div>
-                <div class="loan-body">
-                    <div class="loan-detail">
-                        <span class="loan-detail-label">Purpose:</span>
-                        <span class="loan-detail-value">Instant cash or EMI conversion</span>
-                    </div>
-                    <div class="loan-detail">
-                        <span class="loan-detail-label">Limit:</span>
-                        <span class="loan-detail-value">Based on credit card limit</span>
-                    </div>
-                    <div class="loan-detail">
-                        <span class="loan-detail-label">Interest:</span>
-                        <span class="loan-detail-value">12%-36% per annum</span>
-                    </div>
-                    <div class="loan-detail">
-                        <span class="loan-detail-label">Approval:</span>
-                        <span class="loan-detail-value">Instant (if you have credit card)</span>
-                    </div>
-                    <a href="./contect.html" style="text-decoration:none;">
-                        <button class="apply-btn">
-                            <i class="fas fa-paper-plane"></i> Contact Us
-                        </button>
-                    </a>
+                <div class="blue-line"></div>
+                <div class="team-info">
+                    <h3 class="team-name">Amit Patel</h3>
+                    <p class="team-position">Investment Consultant</p>
+                    <p class="team-description">Expert in wealth management and investment strategies to help you achieve financial freedom.</p>
                 </div>
             </div>
 
-            <!-- Add remaining loan cards here with the same structure -->
-            
-        </div>
-    </section>
+            <!-- Team Member 4 -->
+            <div class="team-card">
+                <div class="team-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop" alt="Team Member" class="team-image">
+                </div>
+                <div class="blue-line"></div>
+                <div class="team-info">
+                    <h3 class="team-name">Neha Verma</h3>
+                    <p class="team-position">Customer Relations Manager</p>
+                    <p class="team-description">Ensuring exceptional customer service and building lasting relationships with our valued clients.</p>
+                </div>
+            </div>
 
-    <!-- Comparison Section -->
-    <section class="comparison-section">
-        <div class="comparison-container">
-            <h2 class="section-title">Why Choose Unsecured Loans?</h2>
-            <p class="section-subtitle">Experience the benefits of collateral-free financing with our unsecured loan solutions</p>
-            
-            <div class="comparison-grid">
-                <div class="comparison-card">
-                    <h3>✅ No Collateral</h3>
-                    <p>Your assets and property remain completely safe</p>
+            <!-- Team Member 5 -->
+            <div class="team-card">
+                <div class="team-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Team Member" class="team-image">
                 </div>
-                <div class="comparison-card">
-                    <h3>⚡ Quick Process</h3>
-                    <p>Get funds disbursed within 24-48 hours</p>
+                <div class="blue-line"></div>
+                <div class="team-info">
+                    <h3 class="team-name">Vikram Singh</h3>
+                    <p class="team-position">Financial Analyst</p>
+                    <p class="team-description">Providing detailed market analysis and strategic financial planning for optimal results.</p>
                 </div>
-                <div class="comparison-card">
-                    <h3>📝 Simple Docs</h3>
-                    <p>Minimal documentation and paperwork required</p>
+            </div>
+
+            <!-- Team Member 6 -->
+            <div class="team-card">
+                <div class="team-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop" alt="Team Member" class="team-image">
                 </div>
-                <div class="comparison-card">
-                    <h3>🎯 Flexible Use</h3>
-                    <p>Use the funds for any legitimate purpose</p>
+                <div class="blue-line"></div>
+                <div class="team-info">
+                    <h3 class="team-name">Kavita Mehta</h3>
+                    <p class="team-position">Operations Manager</p>
+                    <p class="team-description">Streamlining processes and ensuring smooth operations for efficient service delivery.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="faq-container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-subtitle">Find answers to common questions about unsecured loans</p>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>What is an unsecured loan?</span>
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    An unsecured loan is a loan that doesn't require any collateral or security. It's approved based on your creditworthiness, income, and repayment capacity. Your assets remain safe even if you default, though it may affect your credit score.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>How quickly can I get an unsecured loan?</span>
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    Most unsecured loans can be approved within 24-48 hours. Some lenders offer instant approval and same-day disbursal, especially for personal loans and salary loans with proper documentation.
-                </div>
-            </div>
-
-            <!-- Add remaining FAQ items here -->
-            
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <i class="fas fa-hand-holding-usd"></i> FinSecure
-            </div>
-            <p>Your trusted partner for unsecured financial solutions</p>
-            
-            <div class="footer-links">
-                <a href="#loans">Loan Products</a>
-                <a href="./contect.html">Contact Us</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-            </div>
-            
-            <div class="copyright">
-                &copy; 2024 FinSecure. All rights reserved.
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function toggleFaq(element) {
-            const faqItem = element.parentElement;
-            const answer = faqItem.querySelector('.faq-answer');
-            
-            // Close all other FAQs
-            document.querySelectorAll('.faq-item').forEach(item => {
-                if (item !== faqItem) {
-                    item.classList.remove('active');
-                    item.querySelector('.faq-answer').classList.remove('active');
-                }
-            });
-            
-            // Toggle current FAQ
-            faqItem.classList.toggle('active');
-            answer.classList.toggle('active');
-        }
-        
-        // Add smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+ 

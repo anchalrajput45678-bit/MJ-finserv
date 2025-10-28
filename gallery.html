@@ -1,4 +1,4 @@
-     <!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -27,6 +27,296 @@
     </script>
   </head>
   <body class="bg-light text-dark">
+    <!-- Floating Chat Button -->
+    <button id="chatButton" style="position: fixed; bottom: 30px; right: 30px; width: 70px; height: 70px; border-radius: 50%; background: linear-gradient(135deg, #1e5799 0%, #207cca 100%); border: none; box-shadow: 0 8px 20px rgba(30, 87, 153, 0.4); cursor: pointer; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; animation: pulse 2s infinite;">
+        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+    </button>
+
+    <style>
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 8px 20px rgba(30, 87, 153, 0.4); }
+            50% { box-shadow: 0 8px 30px rgba(30, 87, 153, 0.6), 0 0 0 10px rgba(30, 87, 153, 0.1); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px) scale(0.9); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            .chat-popup-container { width: 90vw !important; height: 70vh !important; max-height: 500px !important; }
+            .chat-button { width: 60px !important; height: 60px !important; bottom: 20px !important; right: 20px !important; }
+            .chat-header h3 { font-size: 18px !important; }
+            #chatPopup { bottom: 90px !important; right: 20px !important; }
+        }
+    </style>
+
+    <!-- Chat Popup -->
+    <div id="chatPopup" style="position: fixed; bottom: 110px; right: 30px; z-index: 10000; display: none; animation: fadeIn 0.3s ease;">
+        
+        <div class="chat-popup-container" style="background-color: white; width: 320px; max-width: 90vw; height: 480px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); overflow: hidden; display: flex; flex-direction: column; animation: slideUp 0.4s ease;">
+            
+            <!-- Header -->
+            <div class="chat-header" style="background: linear-gradient(135deg, #1e5799 0%, #207cca 100%); padding: 15px; display: flex; align-items: center; justify-content: space-between; color: white; position: relative;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="width: 38px; height: 38px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1e5799" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 style="margin: 0; font-size: 16px; font-weight: 600;"> MJ-Finserv Assistant</h3>
+                        <p style="margin: 0; font-size: 11px; opacity: 0.9;">Online • Ready to help</p>
+                    </div>
+                </div>
+                <button id="closeChat" style="background: rgba(255, 255, 255, 0.2); border: none; width: 30px; height: 30px; border-radius: 50%; color: white; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; font-weight: 300;">×</button>
+            </div>
+
+            <!-- Chat Body -->
+            <div id="chatBody" style="flex: 1; padding: 15px; overflow-y: auto; background-color: #f8f9fa;">
+                
+                <!-- Welcome Message -->
+                <div id="welcomeMessage" style="background-color: white; padding: 14px; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+                    <p style="margin: 0 0 10px 0; color: #333; font-size: 13px; line-height: 1.5;">
+                        Hi! 👋 Welcome to Quick Ex Assistant. How can we help you today? 
+                    </p>
+                    <p style="margin: 0; color: #999; font-size: 11px; text-align: right;">12:17 pm</p>
+                </div>
+
+                <!-- Loan Options -->
+                <div id="loanOptions">
+                    <button class="loan-option-btn" data-page="personal" style="width: 100%; background-color: white; border: 2px solid #1e5799; padding: 15px 20px; border-radius: 10px; margin-bottom: 12px; cursor: pointer; text-align: left; font-size: 15px; font-weight: 600; color: #1e5799; display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+                        <span style="font-size: 20px;">💼</span>
+                        <span>1 - Personal Loan </span>
+                    </button>
+                    
+                    <button class="loan-option-btn" data-page="home" style="width: 100%; background-color: white; border: 2px solid #1e5799; padding: 15px 20px; border-radius: 10px; margin-bottom: 12px; cursor: pointer; text-align: left; font-size: 15px; font-weight: 600; color: #1e5799; display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+                        <span style="font-size: 20px;">📋</span>
+                        <span>2 - Home Loan</span>
+                    </button>
+                    
+                    <button class="loan-option-btn" data-page="business" style="width: 100%; background-color: white; border: 2px solid #1e5799; padding: 15px 20px; border-radius: 10px; margin-bottom: 12px; cursor: pointer; text-align: left; font-size: 15px; font-weight: 600; color: #1e5799; display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+                        <span style="font-size: 20px;">✍️</span>
+                        <span>3 -Business Loan  </span>
+                    </button>
+                    
+                    <button class="loan-option-btn" data-page="education" style="width: 100%; background-color: white; border: 2px solid #1e5799; padding: 15px 20px; border-radius: 10px; margin-bottom: 12px; cursor: pointer; text-align: left; font-size: 15px; font-weight: 600; color: #1e5799; display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+                        <span style="font-size: 20px;">✉️</span>
+                        <span>4 - Contact Us</span>
+                    </button>
+                </div>
+
+                <!-- Loan Details Pages (Hidden Initially) -->
+                <div id="personalPage" class="loan-detail-page" style="display: none;">
+                    <div style="background-color: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+                        <h3 style="margin: 0 0 12px 0; font-size: 18px; color: #1e5799;">Personal Loan</h3>
+                        <p style="margin: 0 0 12px 0; color: #555; font-size: 13px; line-height: 1.5;">Our personal loans are designed to help you meet your immediate financial needs with flexible repayment options.</p>
+                        <ul style="margin: 0 0 12px 15px; padding: 0; color: #555; font-size: 12px; line-height: 1.6;">
+                            <!-- <li>Loan amount: ₹50,000 to ₹20,00,000</li>
+                            <li>Interest rates starting from 10.5% p.a.</li> -->
+                            <li>Flexible tenure: 1-5 years</li>
+                            <li>Quick approval within 24 hours</li>
+                            <li>Minimal documentation required</li>
+                        </ul>
+                        <div style="background-color: #f0f5ff; padding: 10px; border-radius: 8px; margin-bottom: 15px;">
+                            <p style="margin: 0 0 8px 0; color: #333; font-size: 12px; font-weight: 600;">📞 Call us: <a href="tel:+91 7804-933617" style="color: #1e5799; text-decoration: none;">+91 7804-933617</a></p>
+                            <p style="margin: 0; color: #333; font-size: 12px; font-weight: 600;">✉️ Email: <a href="mailto:mjfinserv2000@zohomail.in" style="color: #1e5799; text-decoration: none;">info@loanservice.com</a></p>
+                        </div>
+                        <button class="back-btn" style="background-color: #1e5799; color: white; border: none; padding: 8px 20px; border-radius: 50px; cursor: pointer; font-weight: 600; font-size: 12px; transition: all 0.3s ease;">← Back to Options</button>
+                    </div>
+                </div>
+
+                <div id="homePage" class="loan-detail-page" style="display: none;">
+                    <div style="background-color: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+                        <h3 style="margin: 0 0 12px 0; font-size: 18px; color: #1e5799;">Home Loan</h3>
+                        <p style="margin: 0 0 12px 0; color: #555; font-size: 13px; line-height: 1.5;">Make your dream of owning a home a reality with our attractive home loan options.</p>
+                        <ul style="margin: 0 0 12px 15px; padding: 0; color: #555; font-size: 12px; line-height: 1.6;">
+                            <!-- <li>Loan amount: Up to 80% of property value</li> -->
+                            <!-- <li>Interest rates starting from 8.4% p.a.</li> -->
+                            <li>Tenure: Up to 30 years</li>
+                            <li>Special schemes for women and first-time buyers</li>
+                            <li>Balance transfer facility available</li>
+                        </ul>
+                        <div style="background-color: #f0f5ff; padding: 10px; border-radius: 8px; margin-bottom: 15px;">
+                            <p style="margin: 0 0 8px 0; color: #333; font-size: 12px; font-weight: 600;">📞 Call us: <a href="tel:+91 7804-933617" style="color: #1e5799; text-decoration: none;"> +91 7804-933617</a></p>
+                            <p style="margin: 0; color: #333; font-size: 12px; font-weight: 600;">✉️ Email: <a href="mailto:mjfinserv2000@zohomail.in" style="color: #1e5799; text-decoration: none;">info@loanservice.com</a></p>
+                        </div>
+                        <button class="back-btn" style="background-color: #1e5799; color: white; border: none; padding: 8px 20px; border-radius: 50px; cursor: pointer; font-weight: 600; font-size: 12px; transition: all 0.3s ease;">← Back to Options</button>
+                    </div>
+                </div>
+
+                <div id="businessPage" class="loan-detail-page" style="display: none;">
+                    <div style="background-color: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+                        <h3 style="margin: 0 0 12px 0; font-size: 18px; color: #1e5799;">Business Loan</h3>
+                        <p style="margin: 0 0 12px 0; color: #555; font-size: 13px; line-height: 1.5;">Fuel your business growth with our customized business loan solutions.</p>
+                        <ul style="margin: 0 0 12px 15px; padding: 0; color: #555; font-size: 12px; line-height: 1.6;">
+                            <li>Loan amount:  ₹1 lakh - ₹75 lakh</li>
+                            <!-- <li>Interest rates starting from 11% p.a.</li> -->
+                            <li>Flexible repayment options</li>
+                            <li>Collateral and non-collateral options available</li>
+                            <li>Quick processing for established businesses</li>
+                        </ul>
+                        <div style="background-color: #f0f5ff; padding: 10px; border-radius: 8px; margin-bottom: 15px;">
+                            <p style="margin: 0 0 8px 0; color: #333; font-size: 12px; font-weight: 600;">📞 Call us: <a href="tel:+91 7804-933617" style="color: #1e5799; text-decoration: none;"> +91 7804-933617</a></p>
+                            <p style="margin: 0; color: #333; font-size: 12px; font-weight: 600;">✉️ Email: <a href="mjfinserv2000@zohomail.in" style="color: #1e5799; text-decoration: none;">mjfinserv2000@zohomail.in</a></p>
+                        </div>
+                        <button class="back-btn" style="background-color: #1e5799; color: white; border: none; padding: 8px 20px; border-radius: 50px; cursor: pointer; font-weight: 600; font-size: 12px; transition: all 0.3s ease;">← Back to Options</button>
+                    </div>
+                </div>
+
+                <div id="educationPage" class="loan-detail-page" style="display: none;">
+                    <div style="background-color: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+                        <h3 style="margin: 0 0 12px 0; font-size: 18px; color: #1e5799;">Contact Us</h3>
+                        <p style="margin: 0 0 15px 0; color: #555; font-size: 13px; line-height: 1.5;">Get in touch with us through any of the following options. We're here to help you!</p>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px;">
+                            <a href="tel:1800-123-4567" style="display: flex; align-items: center; gap: 12px; padding: 12px 15px; background: linear-gradient(135deg, #25D366, #128C7E); color: white; text-decoration: none; border-radius: 10px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <div style="flex: 1;">
+                                    <p style="margin: 0; font-size: 11px; opacity: 0.9;">Phone Call</p>
+                                    <p style="margin: 0; font-size: 13px; font-weight: 600;">+91 7804-933617 </p>
+                                </div>
+                            </a>
+
+                            <a href="sms: +91 7804-933617" style="display: flex; align-items: center; gap: 12px; padding: 12px 15px; background: linear-gradient(135deg, #1e5799, #207cca); color: white; text-decoration: none; border-radius: 10px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(30, 87, 153, 0.3);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                <div style="flex: 1;">
+                                    <p style="margin: 0; font-size: 11px; opacity: 0.9;">Send Message</p>
+                                    <p style="margin: 0; font-size: 13px; font-weight: 600;">SMS to  +91 7804-933617</p>
+                                </div>
+                            </a>
+
+                            <a href=" mjfinserv2000@zohomail.in
+
+" style="display: flex; align-items: center; gap: 12px; padding: 12px 15px; background: linear-gradient(135deg, #EA4335, #D32F2F); color: white; text-decoration: none; border-radius: 10px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(234, 67, 53, 0.3);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <div style="flex: 1;">
+                                    <p style="margin: 0; font-size: 11px; opacity: 0.9;">Email Us</p>
+                                    <p style="margin: 0; font-size: 13px; font-weight: 600;">  mjfinserv2000@zohomail.in
+
+</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <button class="back-btn" style="background-color: #1e5799; color: white; border: none; padding: 8px 20px; border-radius: 50px; cursor: pointer; font-weight: 600; font-size: 12px; transition: all 0.3s ease;">← Back to Options</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div style="padding: 12px 15px; background-color: #f0f5ff; border-top: 1px solid #e0e7ff; text-align: center;">
+                <p style="margin: 0; font-size: 11px; color: #666;">Contact: +91 7804-933617</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatButton = document.getElementById('chatButton');
+            const chatPopup = document.getElementById('chatPopup');
+            const closeChat = document.getElementById('closeChat');
+            const loanOptions = document.getElementById('loanOptions');
+            const welcomeMessage = document.getElementById('welcomeMessage');
+            const loanOptionBtns = document.querySelectorAll('.loan-option-btn');
+            const backBtns = document.querySelectorAll('.back-btn');
+            const loanDetailPages = document.querySelectorAll('.loan-detail-page');
+
+            // Add hover effect to chat button
+            chatButton.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1)';
+            });
+            chatButton.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+
+            // Add hover effect to loan option buttons
+            loanOptionBtns.forEach(btn => {
+                btn.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = '#1e5799';
+                    this.style.color = 'white';
+                    this.style.transform = 'translateX(5px)';
+                });
+                btn.addEventListener('mouseleave', function() {
+                    this.style.backgroundColor = 'white';
+                    this.style.color = '#1e5799';
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+
+            // Add hover effect to close button
+            closeChat.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+                this.style.transform = 'rotate(90deg)';
+            });
+            closeChat.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                this.style.transform = 'rotate(0deg)';
+            });
+
+            // Open chat popup
+            chatButton.addEventListener('click', function() {
+                chatPopup.style.display = 'flex';
+                // Reset to initial state
+                loanOptions.style.display = 'block';
+                welcomeMessage.style.display = 'block';
+                loanDetailPages.forEach(page => page.style.display = 'none');
+            });
+
+            // Close chat popup
+            closeChat.addEventListener('click', function() {
+                chatPopup.style.display = 'none';
+            });
+
+            // Close popup when clicking outside
+            chatPopup.addEventListener('click', function(e) {
+                if (e.target === chatPopup) {
+                    chatPopup.style.display = 'none';
+                }
+            });
+
+            // Handle loan option button clicks
+            loanOptionBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const pageId = this.getAttribute('data-page') + 'Page';
+                    loanOptions.style.display = 'none';
+                    welcomeMessage.style.display = 'none';
+                    document.getElementById(pageId).style.display = 'block';
+                });
+            });
+
+            // Handle back button clicks
+            backBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    loanDetailPages.forEach(page => page.style.display = 'none');
+                    loanOptions.style.display = 'block';
+                    welcomeMessage.style.display = 'block';
+                });
+
+                // Add hover effect to back buttons
+                btn.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = '#16437e';
+                    this.style.transform = 'translateX(-5px)';
+                });
+                btn.addEventListener('mouseleave', function() {
+                    this.style.backgroundColor = '#1e5799';
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+        });
+    </script>
     <!-- Top Bar with Premium Look -->
     <div class="animated-gradient py-3 px-4 md:px-8 relative overflow-hidden">
       <!-- Background particles -->
@@ -108,18 +398,28 @@
   class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
 >
   <i class="fab fa-youtube"></i>
-</a>          <a
-            href="#"
+   </a>          
+          
+           <a
+  href="mailto:mjfinserv2000@zohomail.in"
+  class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
+>
+  <i class="fas fa-envelope"></i>
+</a>
+
+            <!-- <a 
+              href="#"
             class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
-          >
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a
-            href="#"
-            class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
-          >
-            <i class="fab fa-twitter"></i>
-          </a>
+          >   <i class="fab fa-twitter"></i> 
+            </a> -->
+            <a 
+  href="https://wa.me/+91 9035194055" 
+  target="_blank"
+  class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white transition-all duration-300 hover:scale-110 hover:rotate-12"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>
+
         </div>
       </div>
     </div>
@@ -409,13 +709,7 @@
 
 <a href="contect.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100"> <i class="fas fa-envelope mr-3 text-primary"></i> Contact </a>
 
-            <!-- <a href="gallery.html" class="block py-3 text-dark hover:text-primary transition-colors duration-300 border-b border-gray-100">
-                <i class="fas fa-images mr-3 text-primary"></i> Gallery
-            </a> -->
             
-            <!-- <button id="mobileQuoteBtn" class="mt-4 bg-gradient-to-r from-secondary to-red-600 text-white px-6 py-3 rounded-xl font-medium w-full">
-                Get a Quote <i class="fas fa-arrow-right ml-2"></i>
-            </button> -->
         </div>
       </div>
     </nav>
